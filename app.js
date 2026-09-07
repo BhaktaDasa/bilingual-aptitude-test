@@ -101,10 +101,11 @@ const state = {
   searchQuery: '',
   theme: localStorage.getItem('aptitude_theme') || 'dark',
   currentStudent: JSON.parse(localStorage.getItem('aptitude_current_student') || 'null'),
+  authToken: localStorage.getItem('aptitude_token') || null, // JWT for API calls
   bookmarks: JSON.parse(localStorage.getItem('aptitude_bookmarks') || '[]'),
   mistakesVault: JSON.parse(localStorage.getItem('aptitude_mistakes') || '[]'),
   testHistory: JSON.parse(localStorage.getItem('aptitude_test_history') || '[]'),
-  practiceAttempts: JSON.parse(localStorage.getItem('aptitude_practice_attempts') || '{}'), // { [qId]: { correct: bool } }
+  practiceAttempts: JSON.parse(localStorage.getItem('aptitude_practice_attempts') || '{}'),
   soundEnabled: true,
   
   // Practice Stopwatch State
@@ -231,44 +232,129 @@ function initApp() {
   applyTheme(state.theme);
   updateStudentUI();
   setupEventListeners();
+  setupMobileDrawer();
+  setupBottomNav();
+  setupOnboarding();
   setupStopwatch();
   renderFormulaSheet();
   initScratchpad();
   updateStats();
   renderQuestions();
-}
+  updateStreakDisplay();
 
-// Student Registration, Authentication & Profile System
-function getRegisteredStudents() {
-  try {
-    return JSON.parse(localStorage.getItem('aptitude_registered_students') || '{}');
-  } catch (e) {
-    return {};
+  // If user has saved auth token, silently verify session & sync latest data from Neon DB
+  if (state.authToken) {
+    apiCall('/api/auth/me').then(res => {
+      if (res.ok && res.data.user) {
+        state.currentStudent = res.data.user;
+        localStorage.setItem('aptitude_current_student', JSON.stringify(res.data.user));
+        updateStudentUI();
+        loadUserDataFromAPI();
+      } else if (res.status === 401) {
+        // Token expired or invalid
+        setAuthToken(null);
+        state.currentStudent = null;
+        localStorage.removeItem('aptitude_current_student');
+        updateStudentUI();
+      }
+    }).catch(() => {
+      // Offline fallback: already loaded from local cache
+    });
+  }
+
+  // Check onboarding flag
+  if (!localStorage.getItem('aptitude_onboarded') && !state.currentStudent) {
+    // Show onboarding after small delay for first-time visitors
+    setTimeout(() => showOnboarding(), 800);
   }
 }
 
-function saveRegisteredStudents(students) {
-  localStorage.setItem('aptitude_registered_students', JSON.stringify(students));
+// =========================================================
+// API HELPER — All backend calls go through here
+// =========================================================
+async function apiCall(endpoint, method = 'GET', body = null) {
+  const headers = { 'Content-Type': 'application/json' };
+  if (state.authToken) headers['Authorization'] = `Bearer ${state.authToken}`;
+
+  const options = { method, headers };
+  if (body) options.body = JSON.stringify(body);
+
+  try {
+    const res = await fetch(endpoint, options);
+    const data = await res.json();
+    return { ok: res.ok, status: res.status, data };
+  } catch (err) {
+    console.error(`API ${method} ${endpoint} failed:`, err.message);
+    return { ok: false, status: 0, data: { error: 'Network error — working offline' } };
+  }
 }
 
+// Save JWT token to state + localStorage
+function setAuthToken(token) {
+  state.authToken = token;
+  if (token) {
+    localStorage.setItem('aptitude_token', token);
+  } else {
+    localStorage.removeItem('aptitude_token');
+  }
+}
+
+// Load all user progress from API, cache to localStorage
+async function loadUserDataFromAPI() {
+  if (!state.authToken) return;
+
+  // Fetch progress
+  const progressRes = await apiCall('/api/progress');
+  if (progressRes.ok && progressRes.data.data) {
+    const d = progressRes.data.data;
+    state.practiceAttempts = d.practiceAttempts || {};
+    state.bookmarks = d.bookmarks || [];
+    state.mistakesVault = d.mistakesVault || [];
+    // Cache locally
+    localStorage.setItem('aptitude_practice_attempts', JSON.stringify(state.practiceAttempts));
+    localStorage.setItem('aptitude_bookmarks', JSON.stringify(state.bookmarks));
+    localStorage.setItem('aptitude_mistakes', JSON.stringify(state.mistakesVault));
+    // Streak
+    if (d.streak) {
+      localStorage.setItem('aptitude_streak', JSON.stringify({
+        count: d.streak.count,
+        lastDate: d.streak.lastDate,
+        activityLog: d.streak.activityLog
+      }));
+    }
+  }
+
+  // Fetch test history
+  const testsRes = await apiCall('/api/tests');
+  if (testsRes.ok && testsRes.data.history) {
+    state.testHistory = testsRes.data.history;
+    localStorage.setItem('aptitude_test_history', JSON.stringify(state.testHistory));
+  }
+
+  updateStats();
+  updateStreakDisplay();
+  renderQuestions();
+}
+
+// =========================================================
+// Student Registration, Authentication & Profile System
+// (Now backed by Neon PostgreSQL via Vercel API routes)
+// =========================================================
+
+// Legacy localStorage helpers (used as offline cache fallback)
+function getRegisteredStudents() {
+  try { return JSON.parse(localStorage.getItem('aptitude_registered_students') || '{}'); } catch(e) { return {}; }
+}
+function saveRegisteredStudents(s) {
+  localStorage.setItem('aptitude_registered_students', JSON.stringify(s));
+}
+
+// Local cache sync (still used for offline PWA fallback)
 function persistCurrentUserData() {
   localStorage.setItem('aptitude_bookmarks', JSON.stringify(state.bookmarks));
   localStorage.setItem('aptitude_mistakes', JSON.stringify(state.mistakesVault));
   localStorage.setItem('aptitude_test_history', JSON.stringify(state.testHistory));
   localStorage.setItem('aptitude_practice_attempts', JSON.stringify(state.practiceAttempts));
-
-  if (state.currentStudent && state.currentStudent.identifier) {
-    const students = getRegisteredStudents();
-    if (students[state.currentStudent.identifier]) {
-      students[state.currentStudent.identifier].data = {
-        bookmarks: state.bookmarks,
-        mistakesVault: state.mistakesVault,
-        testHistory: state.testHistory,
-        practiceAttempts: state.practiceAttempts
-      };
-      saveRegisteredStudents(students);
-    }
-  }
 }
 
 function switchAuthTab(tab) {
@@ -296,7 +382,7 @@ function switchAuthTab(tab) {
   }
 }
 
-function handleStudentSignUp(e) {
+async function handleStudentSignUp(e) {
   if (e) e.preventDefault();
   const name = document.getElementById('regName')?.value.trim();
   const identifier = document.getElementById('regIdentifier')?.value.trim().toLowerCase();
@@ -309,65 +395,56 @@ function handleStudentSignUp(e) {
     showToast('Please fill in all required fields');
     return;
   }
-
-  if (password.length < 4) {
-    showToast('Password must be at least 4 characters');
+  if (password.length < 6) {
+    showToast('Password must be at least 6 characters');
     return;
   }
-
   if (password !== confirmPassword) {
     showToast('Passwords do not match. Please re-enter.');
     return;
   }
 
-  const students = getRegisteredStudents();
-  if (students[identifier]) {
-    showToast('An account with this email/username already exists. Please Sign In.');
-    switchAuthTab('signin');
-    const loginIdInput = document.getElementById('loginIdentifier');
-    if (loginIdInput) loginIdInput.value = identifier;
-    return;
-  }
+  // Show loading state
+  const submitBtn = document.querySelector('#signUpForm button[type="submit"]');
+  if (submitBtn) { submitBtn.disabled = true; submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating Account...'; }
 
-  // Create new student account
-  const newAccount = {
-    name,
-    identifier,
-    password,
-    targetExam,
-    dailyGoal,
-    registeredAt: new Date().toLocaleDateString('en-GB'),
-    data: {
-      bookmarks: [...state.bookmarks],
-      mistakesVault: [...state.mistakesVault],
-      testHistory: [...state.testHistory],
-      practiceAttempts: { ...state.practiceAttempts }
+  try {
+    const res = await apiCall('/api/auth/signup', 'POST', { name, identifier, password, targetExam, dailyGoal: parseInt(dailyGoal) });
+
+    if (!res.ok) {
+      showToast(res.data.error || 'Signup failed. Please try again.');
+      return;
     }
-  };
 
-  students[identifier] = newAccount;
-  saveRegisteredStudents(students);
+    const { token, user } = res.data;
+    setAuthToken(token);
 
-  // Set active session
-  state.currentStudent = {
-    name: newAccount.name,
-    identifier: newAccount.identifier,
-    targetExam: newAccount.targetExam,
-    dailyGoal: newAccount.dailyGoal,
-    registeredAt: newAccount.registeredAt
-  };
-  localStorage.setItem('aptitude_current_student', JSON.stringify(state.currentStudent));
+    state.currentStudent = {
+      id: user.id,
+      name: user.name,
+      identifier: user.identifier,
+      targetExam: user.targetExam,
+      dailyGoal: user.dailyGoal,
+      registeredAt: user.createdAt,
+    };
+    localStorage.setItem('aptitude_current_student', JSON.stringify(state.currentStudent));
 
-  updateStudentUI();
-  closeModal(elements.studentModal);
-  showToast(`Welcome, ${name}! Account created successfully 🎉`);
-  
-  if (document.getElementById('signUpForm')) {
-    document.getElementById('signUpForm').reset();
+    updateStudentUI();
+    updateStreakDisplay();
+    closeModal(elements.studentModal);
+    showToast(`Welcome, ${user.name}! Account created successfully!`);
+    localStorage.setItem('aptitude_onboarded', '1');
+
+    document.getElementById('signUpForm')?.reset();
+
+  } catch(err) {
+    showToast('Network error. Please check your connection.');
+  } finally {
+    if (submitBtn) { submitBtn.disabled = false; submitBtn.innerHTML = '<i class="fas fa-user-plus"></i> Create Account &amp; Start Learning'; }
   }
 }
 
-function handleStudentSignIn(e) {
+async function handleStudentSignIn(e) {
   if (e) e.preventDefault();
   const identifier = document.getElementById('loginIdentifier')?.value.trim().toLowerCase();
   const password = document.getElementById('loginPassword')?.value;
@@ -377,40 +454,45 @@ function handleStudentSignIn(e) {
     return;
   }
 
-  const students = getRegisteredStudents();
-  const student = students[identifier];
+  // Show loading state
+  const submitBtn = document.querySelector('#signInForm button[type="submit"]');
+  if (submitBtn) { submitBtn.disabled = true; submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Signing In...'; }
 
-  if (!student || student.password !== password) {
-    showToast('Invalid username or password. Please try again.');
-    return;
-  }
+  try {
+    const res = await apiCall('/api/auth/signin', 'POST', { identifier, password });
 
-  // Restore student data
-  state.currentStudent = {
-    name: student.name,
-    identifier: student.identifier,
-    targetExam: student.targetExam,
-    dailyGoal: student.dailyGoal,
-    registeredAt: student.registeredAt
-  };
-  localStorage.setItem('aptitude_current_student', JSON.stringify(state.currentStudent));
+    if (!res.ok) {
+      showToast(res.data.error || 'Sign in failed. Please check your credentials.');
+      return;
+    }
 
-  if (student.data) {
-    state.bookmarks = student.data.bookmarks || [];
-    state.mistakesVault = student.data.mistakesVault || [];
-    state.testHistory = student.data.testHistory || [];
-    state.practiceAttempts = student.data.practiceAttempts || {};
-    persistCurrentUserData();
-  }
+    const { token, user } = res.data;
+    setAuthToken(token);
 
-  updateStudentUI();
-  updateStats();
-  renderQuestions();
-  closeModal(elements.studentModal);
-  showToast(`Welcome back, ${student.name}! 👋`);
+    state.currentStudent = {
+      id: user.id,
+      name: user.name,
+      identifier: user.identifier,
+      targetExam: user.targetExam,
+      dailyGoal: user.dailyGoal,
+      registeredAt: user.createdAt,
+    };
+    localStorage.setItem('aptitude_current_student', JSON.stringify(state.currentStudent));
 
-  if (document.getElementById('signInForm')) {
-    document.getElementById('signInForm').reset();
+    updateStudentUI();
+    closeModal(elements.studentModal);
+    showToast(`Welcome back, ${user.name}!`);
+    localStorage.setItem('aptitude_onboarded', '1');
+
+    // Load all user data from DB
+    await loadUserDataFromAPI();
+
+    document.getElementById('signInForm')?.reset();
+
+  } catch(err) {
+    showToast('Network error. Please check your connection.');
+  } finally {
+    if (submitBtn) { submitBtn.disabled = false; submitBtn.innerHTML = '<i class="fas fa-sign-in-alt"></i> Sign In to Account'; }
   }
 }
 
@@ -467,6 +549,7 @@ function logoutStudent() {
   if (confirm('Do you want to log out? Your progress is saved to your account.')) {
     persistCurrentUserData();
     state.currentStudent = null;
+    setAuthToken(null);
     localStorage.removeItem('aptitude_current_student');
     updateStudentUI();
     closeModal(elements.studentModal);
@@ -1025,6 +1108,17 @@ function finishTestMode() {
   if (state.testHistory.length > 20) state.testHistory.pop();
   
   persistCurrentUserData();
+
+  // Cloud sync to Neon DB
+  if (state.authToken) {
+    apiCall('/api/tests', 'POST', {
+      setName: attemptRecord.setName,
+      total: total,
+      correct: correctCount,
+      scorePct: scorePct,
+      timeTakenSeconds: timeTaken
+    }).catch(err => console.warn('Failed to sync test to cloud:', err));
+  }
 
   updateStats();
 
@@ -2100,6 +2194,9 @@ function handleOptionSelect(questionId, optionIndex, isReview = false) {
           state.mistakesVault.splice(mIdx, 1);
           persistCurrentUserData();
           showToast('Mastered! Removed from Mistakes Vault ⭐');
+          if (state.authToken) {
+            apiCall('/api/progress', 'POST', { type: 'mistake_remove', questionId }).catch(() => {});
+          }
         }
       }
     } else {
@@ -2112,6 +2209,15 @@ function handleOptionSelect(questionId, optionIndex, isReview = false) {
       }
     }
     
+    // Cloud sync to Neon DB
+    if (state.authToken) {
+      apiCall('/api/progress', 'POST', {
+        type: 'attempt',
+        questionId: questionId,
+        correct: isCorrect
+      }).catch(err => console.warn('Progress cloud sync failed:', err));
+    }
+
     persistCurrentUserData();
     updateStats();
     renderQuestions();
@@ -2155,7 +2261,8 @@ function toggleTestFlag(questionId) {
 // Bookmarking
 function toggleBookmark(questionId) {
   const idx = state.bookmarks.indexOf(questionId);
-  if (idx > -1) {
+  const isRemoving = (idx > -1);
+  if (isRemoving) {
     state.bookmarks.splice(idx, 1);
     showToast('Removed from Bookmarks');
   } else {
@@ -2165,6 +2272,14 @@ function toggleBookmark(questionId) {
   persistCurrentUserData();
   updateStats();
   renderQuestions();
+
+  // Cloud sync to Neon DB
+  if (state.authToken) {
+    apiCall('/api/progress', 'POST', {
+      type: isRemoving ? 'bookmark_remove' : 'bookmark_add',
+      questionId: questionId
+    }).catch(err => console.warn('Bookmark cloud sync failed:', err));
+  }
 }
 
 function updateStats() {
@@ -2346,3 +2461,528 @@ function initScratchpad() {
 
 // Initialize on DOM Ready
 document.addEventListener('DOMContentLoaded', initApp);
+
+// =========================================================
+// PASSWORD VISIBILITY TOGGLE
+// =========================================================
+function togglePwdVisibility(inputId, btn) {
+  const input = document.getElementById(inputId);
+  if (!input) return;
+  if (input.type === 'password') {
+    input.type = 'text';
+    btn.innerHTML = '<i class="fas fa-eye-slash"></i>';
+  } else {
+    input.type = 'password';
+    btn.innerHTML = '<i class="fas fa-eye"></i>';
+  }
+}
+window.togglePwdVisibility = togglePwdVisibility;
+
+// =========================================================
+// CHANGE PASSWORD
+// =========================================================
+async function handleChangePassword(e) {
+  if (e) e.preventDefault();
+  const currentPwd = document.getElementById('currentPassword')?.value;
+  const newPwd = document.getElementById('newPassword')?.value;
+
+  if (!state.currentStudent) { showToast('Please sign in first'); return; }
+  if (!currentPwd || !newPwd) { showToast('Please fill both password fields'); return; }
+  if (newPwd.length < 6) { showToast('New password must be at least 6 characters'); return; }
+
+  // Cloud API route
+  if (state.authToken) {
+    const btn = e?.target?.querySelector('button[type="submit"]') || document.querySelector('#changePasswordForm button[type="submit"]');
+    if (btn) { btn.disabled = true; btn.innerText = 'Updating...'; }
+    try {
+      const res = await apiCall('/api/auth/change-password', 'POST', { currentPassword: currentPwd, newPassword: newPwd });
+      if (res.ok) {
+        showToast('Password updated successfully! / পাসওয়ার্ড সফলভাবে আপডেট হয়েছে 🎉');
+        document.getElementById('changePasswordForm')?.reset();
+      } else {
+        showToast(res.data?.error || 'Failed to update password');
+      }
+    } catch (err) {
+      showToast('Network error while updating password');
+    } finally {
+      if (btn) { btn.disabled = false; btn.innerText = 'Update Password'; }
+    }
+    return;
+  }
+
+  // Offline fallback
+  const students = getRegisteredStudents();
+  const student = students[state.currentStudent.identifier];
+  if (!student) { showToast('Account not found'); return; }
+
+  if (student.password !== currentPwd && student.passwordHash !== currentPwd) {
+    showToast('Current password is incorrect');
+    return;
+  }
+
+  student.password = newPwd;
+  student.passwordHash = null;
+  students[state.currentStudent.identifier] = student;
+  saveRegisteredStudents(students);
+  showToast('Password updated successfully!');
+
+  const form = document.getElementById('changePasswordForm');
+  if (form) form.reset();
+}
+window.handleChangePassword = handleChangePassword;
+
+// =========================================================
+// STREAK TRACKING
+// =========================================================
+function getStreakData() {
+  try {
+    return JSON.parse(localStorage.getItem('aptitude_streak') || '{"count":0,"lastDate":"","activityLog":{}}');
+  } catch (e) {
+    return { count: 0, lastDate: '', activityLog: {} };
+  }
+}
+
+function saveStreakData(data) {
+  localStorage.setItem('aptitude_streak', JSON.stringify(data));
+}
+
+function recordActivityToday(questionsAnswered = 1) {
+  const today = new Date().toISOString().split('T')[0]; // YYYY-MM-DD
+  const streakData = getStreakData();
+  const yesterday = new Date(Date.now() - 86400000).toISOString().split('T')[0];
+
+  // Update activity log
+  streakData.activityLog[today] = (streakData.activityLog[today] || 0) + questionsAnswered;
+
+  // Update streak
+  if (streakData.lastDate === today) {
+    // Already recorded today, no streak change
+  } else if (streakData.lastDate === yesterday) {
+    // Consecutive day — extend streak
+    streakData.count = (streakData.count || 0) + 1;
+    streakData.lastDate = today;
+  } else {
+    // Gap — reset streak
+    streakData.count = 1;
+    streakData.lastDate = today;
+  }
+
+  saveStreakData(streakData);
+  state.streak = streakData.count;
+  updateStreakDisplay();
+}
+
+function updateStreakDisplay() {
+  const streakData = getStreakData();
+  const count = streakData.count || 0;
+  state.streak = count;
+
+  const streakHeroRow = document.getElementById('streakHeroRow');
+  const streakCount = document.getElementById('streakCount');
+  const dailyGoalDisplay = document.getElementById('dailyGoalDisplay');
+
+  if (count > 0 || state.currentStudent) {
+    if (streakHeroRow) streakHeroRow.style.display = 'flex';
+    if (streakCount) streakCount.innerText = count;
+    if (dailyGoalDisplay && state.currentStudent) {
+      dailyGoalDisplay.innerText = state.currentStudent.dailyGoal || 20;
+    }
+  } else {
+    if (streakHeroRow) streakHeroRow.style.display = 'none';
+  }
+
+  // Update accuracy display in hero
+  const attempts = Object.values(state.practiceAttempts);
+  const totalAttempted = attempts.length;
+  const correct = attempts.filter(a => a.correct).length;
+  const acc = totalAttempted > 0 ? Math.round((correct / totalAttempted) * 100) : null;
+  const accEl = document.getElementById('accuracyDisplay');
+  if (accEl) accEl.innerText = acc !== null ? `${acc}%` : '—%';
+}
+
+// =========================================================
+// LEADERBOARD SYSTEM (Local)
+// =========================================================
+function getLeaderboard() {
+  try {
+    return JSON.parse(localStorage.getItem('aptitude_leaderboard') || '[]');
+  } catch (e) {
+    return [];
+  }
+}
+
+function saveLeaderboard(data) {
+  localStorage.setItem('aptitude_leaderboard', JSON.stringify(data));
+}
+
+function addToLeaderboard(name, scorePct, setName, total, correct) {
+  const lb = getLeaderboard();
+  lb.push({
+    name: name || 'Guest',
+    scorePct,
+    setName,
+    total,
+    correct,
+    date: new Date().toLocaleDateString('en-GB')
+  });
+  // Sort by score descending, keep top 20
+  lb.sort((a, b) => b.scorePct - a.scorePct);
+  saveLeaderboard(lb.slice(0, 20));
+}
+
+async function openLeaderboard() {
+  const modal = document.getElementById('leaderboardModal');
+  const body = document.getElementById('leaderboardBody');
+  if (!modal || !body) return;
+
+  openModal(modal);
+
+  body.innerHTML = `
+    <div style="text-align:center;padding:2.5rem 1rem;color:var(--text-muted);">
+      <i class="fas fa-spinner fa-spin" style="font-size:2rem;color:var(--accent-primary);margin-bottom:0.8rem;"></i>
+      <p style="font-size:0.9rem;">Fetching platform rankings from cloud...</p>
+    </div>
+  `;
+
+  let lb = [];
+  let isCloud = false;
+
+  try {
+    const res = await apiCall('/api/leaderboard');
+    if (res.ok && res.data.leaderboard && res.data.leaderboard.length > 0) {
+      lb = res.data.leaderboard;
+      isCloud = true;
+    }
+  } catch (err) {
+    console.warn('Could not fetch cloud leaderboard, falling back:', err);
+  }
+
+  // Fallback to local if cloud returned nothing
+  if (!lb || lb.length === 0) {
+    lb = getLeaderboard();
+    isCloud = false;
+  }
+
+  if (!lb || lb.length === 0) {
+    body.innerHTML = `
+      <div style="text-align:center;padding:3rem 1rem;color:var(--text-muted);">
+        <i class="fas fa-trophy" style="font-size:3rem;opacity:0.3;margin-bottom:1rem;"></i>
+        <h3>No scores yet!</h3>
+        <p>Complete a mock test to appear on the leaderboard.</p>
+        <button class="btn-primary" style="margin-top:1rem;" onclick="closeModal(document.getElementById('leaderboardModal'));setMode('test');">
+          <i class="fas fa-stopwatch"></i> Take a Mock Test
+        </button>
+      </div>
+    `;
+    return;
+  }
+
+  body.innerHTML = `
+    <p style="color:var(--text-secondary);font-size:0.88rem;margin-bottom:1rem;display:flex;align-items:center;justify-content:space-between;">
+      <span>${isCloud ? '🏆 Top scores across all students (Neon DB)' : 'Top scores from this device (Local)'}</span>
+      <span class="badge" style="background:rgba(99,102,241,0.15);color:var(--accent-primary);font-size:0.72rem;">${isCloud ? 'Live Cloud' : 'Local'}</span>
+    </p>
+    <div>
+      ${lb.map((entry, i) => {
+        const rankClass = i < 3 ? `rank-${i + 1}` : '';
+        const medal = i === 0 ? '🥇' : i === 1 ? '🥈' : i === 2 ? '🥉' : '';
+        return `
+          <div class="leaderboard-item ${rankClass}">
+            <div class="rank-badge">${i < 3 ? medal : i + 1}</div>
+            <div class="leaderboard-info">
+              <div class="leaderboard-name">${entry.name}</div>
+              <div class="leaderboard-meta">${entry.setName} &bull; ${entry.correct}/${entry.total} correct &bull; ${entry.date}</div>
+            </div>
+            <div class="leaderboard-score">${entry.scorePct}%</div>
+          </div>
+        `;
+      }).join('')}
+    </div>
+    ${!isCloud ? `
+      <div style="margin-top:1rem;text-align:center;">
+        <button class="btn-secondary" style="font-size:0.82rem;" onclick="if(confirm('Clear leaderboard?')){localStorage.removeItem('aptitude_leaderboard');openLeaderboard();}">
+          <i class="fas fa-trash-alt"></i> Clear Leaderboard
+        </button>
+      </div>
+    ` : ''}
+  `;
+}
+window.openLeaderboard = openLeaderboard;
+
+// =========================================================
+// PRACTICE HEATMAP (30-day activity grid)
+// =========================================================
+function renderHeatmap(container) {
+  const streakData = getStreakData();
+  const activityLog = streakData.activityLog || {};
+
+  const days = [];
+  for (let i = 29; i >= 0; i--) {
+    const d = new Date(Date.now() - i * 86400000);
+    const key = d.toISOString().split('T')[0];
+    days.push({ key, count: activityLog[key] || 0 });
+  }
+
+  const maxCount = Math.max(...days.map(d => d.count), 1);
+
+  container.innerHTML = `
+    <div class="diagnostics-title">
+      <i class="fas fa-calendar-alt" style="color:var(--accent-primary);"></i>
+      <span>30-Day Practice Activity Heatmap</span>
+    </div>
+    <div class="heatmap-grid">
+      ${days.map(d => {
+        let level = 0;
+        if (d.count > 0) level = Math.min(4, Math.ceil((d.count / maxCount) * 4));
+        const date = new Date(d.key + 'T12:00:00').toLocaleDateString('en-GB', {weekday:'short', day:'numeric', month:'short'});
+        return `<div class="heatmap-cell level-${level}" title="${date}: ${d.count} questions"></div>`;
+      }).join('')}
+    </div>
+    <div class="heatmap-legend">
+      Less <div class="heatmap-cell" style="width:12px;height:12px;display:inline-block;"></div>
+      <div class="heatmap-cell level-1" style="width:12px;height:12px;display:inline-block;"></div>
+      <div class="heatmap-cell level-2" style="width:12px;height:12px;display:inline-block;"></div>
+      <div class="heatmap-cell level-3" style="width:12px;height:12px;display:inline-block;"></div>
+      <div class="heatmap-cell level-4" style="width:12px;height:12px;display:inline-block;"></div>
+      More
+    </div>
+  `;
+}
+
+// =========================================================
+// ONBOARDING TOUR
+// =========================================================
+let onboardCurrentSlide = 0;
+const ONBOARD_TOTAL = 3;
+
+function showOnboarding() {
+  const modal = document.getElementById('onboardingModal');
+  if (modal) openModal(modal);
+}
+
+function setupOnboarding() {
+  const nextBtn = document.getElementById('btnOnboardNext');
+  const prevBtn = document.getElementById('btnOnboardPrev');
+  const skipBtn = document.getElementById('btnOnboardSkip');
+
+  if (!nextBtn) return;
+
+  nextBtn.addEventListener('click', () => {
+    if (onboardCurrentSlide < ONBOARD_TOTAL - 1) {
+      goToOnboardSlide(onboardCurrentSlide + 1);
+    } else {
+      finishOnboarding();
+    }
+  });
+
+  if (prevBtn) prevBtn.addEventListener('click', () => {
+    if (onboardCurrentSlide > 0) goToOnboardSlide(onboardCurrentSlide - 1);
+  });
+
+  if (skipBtn) skipBtn.addEventListener('click', finishOnboarding);
+}
+
+function goToOnboardSlide(idx) {
+  onboardCurrentSlide = idx;
+  // Show/hide slides
+  for (let i = 1; i <= ONBOARD_TOTAL; i++) {
+    const slide = document.getElementById(`onboardSlide${i}`);
+    if (slide) slide.classList.toggle('active', i - 1 === idx);
+  }
+  // Update dots
+  document.querySelectorAll('.onboard-dot').forEach((dot, i) => {
+    dot.classList.toggle('active', i === idx);
+  });
+  // Update buttons
+  const prevBtn = document.getElementById('btnOnboardPrev');
+  const nextBtn = document.getElementById('btnOnboardNext');
+  if (prevBtn) prevBtn.style.display = idx === 0 ? 'none' : 'inline-flex';
+  if (nextBtn) nextBtn.innerHTML = idx === ONBOARD_TOTAL - 1 ? '<i class="fas fa-check"></i> Get Started!' : 'Next <i class="fas fa-arrow-right"></i>';
+}
+
+function finishOnboarding() {
+  const modal = document.getElementById('onboardingModal');
+  if (modal) closeModal(modal);
+  localStorage.setItem('aptitude_onboarded', '1');
+  // Prompt sign in if not logged in
+  if (!state.currentStudent) {
+    setTimeout(() => {
+      showToast('Sign in or create a free account to save your progress!');
+    }, 500);
+  }
+}
+
+// =========================================================
+// MOBILE DRAWER SETUP
+// =========================================================
+function setupMobileDrawer() {
+  const hamburger = document.getElementById('btnHamburger');
+  const drawer = document.getElementById('mobileDrawer');
+  const overlay = document.getElementById('drawerOverlay');
+  const closeBtn = document.getElementById('btnCloseDrawer');
+
+  function openDrawer() {
+    if (drawer) drawer.classList.add('open');
+    if (overlay) overlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeDrawer() {
+    if (drawer) drawer.classList.remove('open');
+    if (overlay) overlay.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  if (hamburger) hamburger.addEventListener('click', openDrawer);
+  if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
+  if (overlay) overlay.addEventListener('click', closeDrawer);
+
+  // Mobile avatar button opens student auth
+  const mobileAvatar = document.getElementById('btnStudentProfileMobile');
+  if (mobileAvatar) {
+    mobileAvatar.addEventListener('click', () => openModal(elements.studentModal));
+  }
+
+  // Drawer language buttons
+  document.querySelectorAll('[data-drawer-lang]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.language = btn.dataset.drawerLang;
+      // Sync desktop lang buttons
+      document.querySelectorAll('.lang-btn').forEach(b => {
+        b.classList.toggle('active', b.dataset.lang === state.language);
+      });
+      // Sync drawer lang buttons
+      document.querySelectorAll('[data-drawer-lang]').forEach(b => {
+        b.classList.toggle('active', b.dataset.drawerLang === state.language);
+      });
+      if (state.mode === 'analytics') renderAnalyticsDashboard();
+      else renderQuestions();
+      closeDrawer();
+    });
+  });
+
+  // Drawer tool buttons
+  const drawerMap = [
+    ['btnOpenFormulasDrawer', () => { closeDrawer(); openModal(elements.formulaModal); }],
+    ['btnOpenScratchpadDrawer', () => { closeDrawer(); openModal(elements.scratchpadModal); }],
+    ['themeToggleBtnDrawer', () => { closeDrawer(); openModal(elements.themeModal); }],
+    ['leaderboardBtnDrawer', () => { closeDrawer(); openLeaderboard(); }],
+    ['btnPrintPageDrawer', () => { closeDrawer(); window.print(); }],
+    ['soundToggleBtnDrawer', () => {
+      state.soundEnabled = !state.soundEnabled;
+      const icon = state.soundEnabled ? 'fa-volume-up' : 'fa-volume-mute';
+      document.getElementById('soundToggleBtnDrawer').innerHTML = `<i class="fas ${icon}"></i><span>${state.soundEnabled ? 'Sound On' : 'Sound Off'}</span>`;
+      document.getElementById('soundToggleBtn') && (document.getElementById('soundToggleBtn').innerHTML = `<i class="fas ${icon}"></i>`);
+      showToast(state.soundEnabled ? 'Sound On' : 'Sound Muted');
+    }]
+  ];
+
+  drawerMap.forEach(([id, fn]) => {
+    const el = document.getElementById(id);
+    if (el) el.addEventListener('click', fn);
+  });
+
+  // Drawer stopwatch sync
+  setupDrawerStopwatch();
+}
+
+function setupDrawerStopwatch() {
+  const displayDrawer = document.getElementById('practiceStopwatchDisplayDrawer');
+  const toggleDrawer = document.getElementById('btnToggleStopwatchDrawer');
+  const resetDrawer = document.getElementById('btnResetStopwatchDrawer');
+
+  function updateDrawerDisplay() {
+    if (!displayDrawer) return;
+    const mins = Math.floor(state.stopwatchSeconds / 60);
+    const secs = state.stopwatchSeconds % 60;
+    displayDrawer.innerText = `${String(mins).padStart(2,'0')}:${String(secs).padStart(2,'0')}`;
+  }
+
+  if (toggleDrawer) {
+    toggleDrawer.addEventListener('click', () => {
+      document.getElementById('btnToggleStopwatch')?.click();
+      const isRunning = state.stopwatchRunning;
+      toggleDrawer.innerHTML = isRunning ? '<i class="fas fa-play"></i>' : '<i class="fas fa-pause"></i>';
+    });
+  }
+
+  if (resetDrawer) {
+    resetDrawer.addEventListener('click', () => {
+      document.getElementById('btnResetStopwatch')?.click();
+      updateDrawerDisplay();
+    });
+  }
+
+  // Sync drawer display every second when drawer is open
+  setInterval(updateDrawerDisplay, 1000);
+}
+
+// =========================================================
+// MOBILE BOTTOM NAV SETUP
+// =========================================================
+function setupBottomNav() {
+  const bottomNav = document.getElementById('mobileBottomNav');
+  if (!bottomNav) return;
+
+  bottomNav.querySelectorAll('.mob-nav-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      bottomNav.querySelectorAll('.mob-nav-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      // Also sync desktop mode tabs
+      document.querySelectorAll('.mode-tab').forEach(t => {
+        t.classList.toggle('active', t.dataset.mode === btn.dataset.mode);
+      });
+      setMode(btn.dataset.mode);
+    });
+  });
+}
+
+// =========================================================
+// PROFILE PROGRESS SUMMARY (shown in logged-in profile view)
+// =========================================================
+function renderProfileProgressSummary() {
+  const container = document.getElementById('profileProgressSummary');
+  if (!container) return;
+
+  const attempts = Object.values(state.practiceAttempts);
+  const totalAttempted = attempts.length;
+  const correct = attempts.filter(a => a.correct).length;
+  const acc = totalAttempted > 0 ? Math.round((correct / totalAttempted) * 100) : 0;
+  const streakData = getStreakData();
+
+  container.innerHTML = `
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:0.5rem;">
+      <div style="background:var(--bg-primary);border:1px solid var(--border-glass);border-radius:var(--radius-sm);padding:10px;text-align:center;">
+        <div style="font-size:1.3rem;font-weight:800;color:var(--accent-cyan);">${totalAttempted}</div>
+        <div style="font-size:0.72rem;color:var(--text-muted);">Attempted</div>
+      </div>
+      <div style="background:var(--bg-primary);border:1px solid var(--border-glass);border-radius:var(--radius-sm);padding:10px;text-align:center;">
+        <div style="font-size:1.3rem;font-weight:800;color:var(--accent-emerald);">${acc}%</div>
+        <div style="font-size:0.72rem;color:var(--text-muted);">Accuracy</div>
+      </div>
+      <div style="background:var(--bg-primary);border:1px solid var(--border-glass);border-radius:var(--radius-sm);padding:10px;text-align:center;">
+        <div style="font-size:1.3rem;font-weight:800;color:#f59e0b;">${streakData.count || 0}</div>
+        <div style="font-size:0.72rem;color:var(--text-muted);">Day Streak</div>
+      </div>
+    </div>
+  `;
+}
+
+// =========================================================
+// SHARE SCORE (Canvas-generated share card)
+// =========================================================
+function shareScore(scorePct, correct, total, setName) {
+  if (navigator.share) {
+    const name = state.currentStudent?.name || 'I';
+    navigator.share({
+      title: 'AptitudeMaster 2.0 Score',
+      text: `${name} scored ${scorePct}% (${correct}/${total} correct) on ${setName} — AptitudeMaster 2.0 Bilingual Aptitude Prep!`,
+      url: window.location.href
+    }).catch(() => {});
+  } else {
+    // Fallback: copy to clipboard
+    const name = state.currentStudent?.name || 'I';
+    const text = `${name} scored ${scorePct}% (${correct}/${total} correct) on ${setName} — AptitudeMaster 2.0!`;
+    navigator.clipboard?.writeText(text).then(() => showToast('Score copied to clipboard!')).catch(() => showToast(`Score: ${scorePct}%`));
+  }
+}

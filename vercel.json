@@ -1,15 +1,38 @@
 {
   "version": 2,
   "cleanUrls": true,
+  "functions": {
+    "api/**/*.js": {
+      "runtime": "nodejs20.x"
+    }
+  },
   "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET,POST,PUT,DELETE,OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type,Authorization" }
+      ]
+    },
     {
       "source": "/(.*)",
       "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=0, must-revalidate"
-        }
+        { "key": "Cache-Control", "value": "public, max-age=0, must-revalidate" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
       ]
     }
+  ],
+  "rewrites": [
+    { "source": "/api/auth/signup", "destination": "/api/auth/signup" },
+    { "source": "/api/auth/signin", "destination": "/api/auth/signin" },
+    { "source": "/api/auth/me", "destination": "/api/auth/me" },
+    { "source": "/api/auth/change-password", "destination": "/api/auth/change-password" },
+    { "source": "/api/progress", "destination": "/api/progress" },
+    { "source": "/api/tests", "destination": "/api/tests" },
+    { "source": "/api/leaderboard", "destination": "/api/leaderboard" },
+    { "source": "/api/admin", "destination": "/api/admin" }
   ]
 }

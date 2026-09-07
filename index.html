@@ -3,106 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
-  <meta name="description" content="Comprehensive Bilingual (Bengali & English) General Aptitude Test & Practice Platform. Quantitative Aptitude, Logical Reasoning, Verbal Ability & Data Interpretation with instant step-by-step solutions and shortcut tricks.">
+  <meta name="description" content="Comprehensive Bilingual (Bengali & English) General Aptitude Test & Practice Platform. Quantitative Aptitude, Logical Reasoning, Verbal Ability & Data Interpretation with instant step-by-step solutions.">
   <meta name="theme-color" content="#090d16">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <title>Bilingual General Aptitude Test | সাধারণ বুদ্ধিমত্তা ও গণিত প্রস্তুতি</title>
-  
-  <!-- FontAwesome Icons -->
+  <title>AptitudeMaster 2.0 | Bilingual General Aptitude Test</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  
-  <!-- Custom Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Ambient background glow effect -->
   <div class="ambient-glow"></div>
-
   <div class="app-wrapper">
-    <!-- Top Navigation Bar -->
-    <header class="navbar">
+
+    <!-- TOP NAV BAR -->
+    <header class="navbar" id="mainNavbar">
       <a href="#" class="brand-logo">
-        <div class="brand-icon">
-          <i class="fas fa-brain"></i>
-        </div>
+        <div class="brand-icon"><i class="fas fa-brain"></i></div>
         <div>
-          <div class="brand-title">AptitudeMaster <span style="font-size: 0.8rem; font-weight: normal; opacity: 0.8;">2.0</span></div>
-          <div class="brand-subtitle">সাধারণ বুদ্ধিমত্তা ও গণিত মূল্যায়ন (Bilingual)</div>
+          <div class="brand-title">AptitudeMaster <span style="font-size:0.75rem;font-weight:500;opacity:0.8;">2.0</span></div>
+          <div class="brand-subtitle">Bilingual Aptitude &amp; Reasoning Prep</div>
         </div>
       </a>
 
-      <!-- Navigation & Action Controls -->
-      <div class="nav-actions">
-        <!-- Language Switcher (No Flags, Clean Typography & Icons) -->
+      <!-- Desktop Nav Actions -->
+      <div class="nav-actions" id="desktopNavActions">
         <div class="lang-selector-group">
-          <button class="lang-btn active" data-lang="both" title="Show both English & Bengali side-by-side">
-            <i class="fas fa-globe"></i> Both / উভয়
-          </button>
-          <button class="lang-btn" data-lang="en" title="English only">
-            <i class="fas fa-font"></i> English
-          </button>
-          <button class="lang-btn" data-lang="bn" title="বাংলা শুধুমাত্র">
-            <i class="fas fa-language"></i> বাংলা
-          </button>
+          <button class="lang-btn active" data-lang="both"><i class="fas fa-globe"></i> Both</button>
+          <button class="lang-btn" data-lang="en"><i class="fas fa-font"></i> EN</button>
+          <button class="lang-btn" data-lang="bn"><i class="fas fa-language"></i> বাং</button>
         </div>
-
-        <!-- Quick Utility Tools -->
-        <!-- Student Profile / Sign-in Chip Button -->
-        <button class="btn-student-profile" id="btnStudentProfile" title="Student Profile & Login">
-          <i class="fas fa-user-graduate"></i>
-          <span id="studentNavName">Student Login</span>
-        </button>
-
-        <!-- Practice Stopwatch / Live Timer Widget -->
-        <div class="practice-timer-widget" id="practiceTimerWidget" title="Practice Stopwatch">
+        <div class="practice-timer-widget" id="practiceTimerWidget">
           <i class="fas fa-stopwatch"></i>
           <span id="practiceStopwatchDisplay">00:00</span>
-          <button class="timer-control-btn" id="btnToggleStopwatch" title="Start / Pause Stopwatch"><i class="fas fa-play"></i></button>
-          <button class="timer-control-btn" id="btnResetStopwatch" title="Reset Stopwatch"><i class="fas fa-redo"></i></button>
+          <button class="timer-control-btn" id="btnToggleStopwatch"><i class="fas fa-play"></i></button>
+          <button class="timer-control-btn" id="btnResetStopwatch"><i class="fas fa-redo"></i></button>
         </div>
-
-        <button class="btn-secondary" id="btnOpenFormulas" title="Aptitude Formula Cheat Sheet">
-          <i class="fas fa-square-root-alt"></i> Formulas / সূত্র
+        <button class="btn-secondary" id="btnOpenFormulas"><i class="fas fa-square-root-alt"></i> Formulas</button>
+        <button class="btn-secondary" id="btnOpenScratchpad"><i class="fas fa-pencil-alt"></i> Scratchpad</button>
+        <button class="icon-btn" id="soundToggleBtn"><i class="fas fa-volume-up"></i></button>
+        <button class="icon-btn" id="themeToggleBtn"><i class="fas fa-sun"></i></button>
+        <button class="icon-btn" id="btnPrintPage"><i class="fas fa-print"></i></button>
+        <button class="btn-student-profile" id="btnStudentProfile">
+          <i class="fas fa-user-graduate"></i>
+          <span id="studentNavName">Sign In</span>
         </button>
+      </div>
 
-        <button class="btn-secondary" id="btnOpenScratchpad" title="Rough Calculation Board">
-          <i class="fas fa-pencil-alt"></i> Scratchpad
-        </button>
-
-        <button class="icon-btn" id="soundToggleBtn" title="Toggle Sound Feedback">
-          <i class="fas fa-volume-up"></i>
-        </button>
-
-        <button class="icon-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme">
-          <i class="fas fa-sun"></i>
-        </button>
-
-        <button class="icon-btn" id="btnPrintPage" title="Print / Save PDF">
-          <i class="fas fa-print"></i>
-        </button>
+      <!-- Mobile Right Controls -->
+      <div class="mobile-nav-right">
+        <button class="mobile-avatar-btn" id="btnStudentProfileMobile"><i class="fas fa-user-graduate"></i></button>
+        <button class="hamburger-btn" id="btnHamburger" aria-label="Tools menu"><i class="fas fa-bars"></i></button>
       </div>
     </header>
 
-    <!-- Streamlined Hero Section -->
+    <!-- Mobile Drawer Overlay -->
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <!-- Mobile Tools Drawer -->
+    <aside class="mobile-drawer" id="mobileDrawer">
+      <div class="drawer-header">
+        <span class="drawer-title"><i class="fas fa-tools"></i> Tools &amp; Settings</span>
+        <button class="icon-btn" id="btnCloseDrawer"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="drawer-body">
+        <div class="drawer-section-label">Language / ভাষা</div>
+        <div class="lang-selector-group" style="width:100%;border-radius:var(--radius-md);padding:5px;">
+          <button class="lang-btn active" data-drawer-lang="both" style="flex:1;justify-content:center;"><i class="fas fa-globe"></i> Both</button>
+          <button class="lang-btn" data-drawer-lang="en" style="flex:1;justify-content:center;"><i class="fas fa-font"></i> EN</button>
+          <button class="lang-btn" data-drawer-lang="bn" style="flex:1;justify-content:center;"><i class="fas fa-language"></i> বাং</button>
+        </div>
+        <div class="drawer-section-label" style="margin-top:1rem;">Stopwatch</div>
+        <div class="practice-timer-widget" style="width:100%;border-radius:var(--radius-md);justify-content:space-between;">
+          <span style="display:flex;align-items:center;gap:6px;"><i class="fas fa-stopwatch"></i><span id="practiceStopwatchDisplayDrawer">00:00</span></span>
+          <div style="display:flex;gap:4px;">
+            <button class="timer-control-btn" id="btnToggleStopwatchDrawer"><i class="fas fa-play"></i></button>
+            <button class="timer-control-btn" id="btnResetStopwatchDrawer"><i class="fas fa-redo"></i></button>
+          </div>
+        </div>
+        <div class="drawer-section-label" style="margin-top:1rem;">Tools</div>
+        <div class="drawer-tools-grid">
+          <button class="drawer-tool-btn" id="btnOpenFormulasDrawer"><i class="fas fa-square-root-alt"></i><span>Formulas</span></button>
+          <button class="drawer-tool-btn" id="btnOpenScratchpadDrawer"><i class="fas fa-pencil-alt"></i><span>Scratchpad</span></button>
+          <button class="drawer-tool-btn" id="soundToggleBtnDrawer"><i class="fas fa-volume-up"></i><span>Sound</span></button>
+          <button class="drawer-tool-btn" id="themeToggleBtnDrawer"><i class="fas fa-palette"></i><span>Theme</span></button>
+          <button class="drawer-tool-btn" id="leaderboardBtnDrawer"><i class="fas fa-trophy"></i><span>Top Scores</span></button>
+          <button class="drawer-tool-btn" id="btnPrintPageDrawer"><i class="fas fa-print"></i><span>Print</span></button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- HERO SECTION -->
     <section class="hero-section">
       <div class="hero-content">
         <div class="hero-text">
-          <div style="display: inline-flex; align-items: center; gap: 6px; background: rgba(99, 102, 241, 0.15); border: 1px solid var(--border-accent); color: var(--accent-cyan); padding: 4px 12px; border-radius: var(--radius-full); font-size: 0.82rem; font-weight: 700; margin-bottom: 0.65rem;">
-            <i class="fas fa-brain"></i> Bilingual Aptitude & Reasoning Prep
+          <div class="hero-badge"><i class="fas fa-brain"></i> Bilingual Aptitude &amp; Reasoning Prep</div>
+          <h1>General Aptitude &amp; Reasoning Master</h1>
+          <p>Comprehensive English &amp; Bengali prep with 10 full sets (50 questions each) covering Quantitative, Reasoning, Verbal &amp; Data Interpretation — with step-by-step solutions.</p>
+          <div class="streak-hero-row" id="streakHeroRow" style="display:none;">
+            <div class="streak-badge-pill"><i class="fas fa-fire streak-fire"></i> <span id="streakCount">0</span> day streak</div>
+            <div class="streak-badge-pill" style="background:rgba(16,185,129,0.15);border-color:rgba(16,185,129,0.35);color:var(--accent-emerald);">
+              <i class="fas fa-bullseye"></i> Daily goal: <span id="dailyGoalDisplay">20</span> Qs
+            </div>
           </div>
-          <h1>General Aptitude & Reasoning Master</h1>
-          <p>
-            Comprehensive English & Bengali bilingual preparation with 10 full sets (50 questions each) covering Quantitative Aptitude, Logical Reasoning, Verbal Ability & Data Interpretation with step-by-step solutions and 1-by-1 Single Question Focus Mode.
-          </p>
         </div>
         <div class="hero-stats">
           <div class="stat-chip">
             <div class="stat-number" id="practiceCount">500</div>
-            <div class="stat-label">Total Questions</div>
+            <div class="stat-label">Questions</div>
           </div>
           <div class="stat-chip">
-            <div class="stat-number" style="color: var(--accent-cyan);">10</div>
+            <div class="stat-number" style="color:var(--accent-cyan);">10</div>
             <div class="stat-label">Full Sets</div>
           </div>
           <div class="stat-chip">
@@ -110,251 +119,251 @@
             <div class="stat-label">Saved ⭐</div>
           </div>
           <div class="stat-chip">
-            <div class="stat-number" style="color: var(--accent-emerald);">100%</div>
-            <div class="stat-label">Bilingual</div>
+            <div class="stat-number" id="accuracyDisplay" style="color:var(--accent-emerald);">—%</div>
+            <div class="stat-label">Accuracy</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Unified Mode Navigation Tabs -->
-    <nav class="mode-tabs">
+    <!-- MODE TABS -->
+    <nav class="mode-tabs" id="modeTabs">
       <button class="mode-tab active" data-mode="practice">
-        <i class="fas fa-book-reader"></i> Practice Mode / অনুশীলন মোড
+        <i class="fas fa-book-reader"></i><span class="mode-tab-label">Practice</span>
       </button>
       <button class="mode-tab" data-mode="test">
-        <i class="fas fa-stopwatch"></i> Timed Mock Test / মক টেস্ট মোড
+        <i class="fas fa-stopwatch"></i><span class="mode-tab-label">Mock Test</span>
       </button>
       <button class="mode-tab" data-mode="mistakes">
-        <i class="fas fa-history"></i> Mistakes Vault / ভুল সংশোধন (<span id="mistakesCount">0</span>)
+        <i class="fas fa-history"></i><span class="mode-tab-label">Mistakes (<span id="mistakesCount">0</span>)</span>
       </button>
       <button class="mode-tab" data-mode="bookmarks">
-        <i class="fas fa-star"></i> Saved / বুকমার্ক (<span id="bookmarkModeCount">0</span>)
+        <i class="fas fa-star"></i><span class="mode-tab-label">Saved (<span id="bookmarkModeCount">0</span>)</span>
       </button>
       <button class="mode-tab" data-mode="analytics">
-        <i class="fas fa-chart-pie"></i> Analytics / ফলাফল বিশ্লেষণ
+        <i class="fas fa-chart-pie"></i><span class="mode-tab-label">Analytics</span>
       </button>
       <button class="mode-tab" data-mode="admin">
-        <i class="fas fa-user-shield"></i> Admin Portal / অ্যাডমিন
+        <i class="fas fa-user-shield"></i><span class="mode-tab-label">Admin</span>
       </button>
     </nav>
 
-    <!-- Test Mode Live HUD & Countdown Panel -->
+    <!-- TEST HUD -->
     <div class="test-hud-panel" id="testHud">
-      <div class="timer-box" id="testTimerDisplay">
-        <i class="fas fa-stopwatch"></i> 45:00
-      </div>
-
+      <div class="timer-box" id="testTimerDisplay"><i class="fas fa-stopwatch"></i> 45:00</div>
       <div class="test-progress-bar-container">
         <div class="test-progress-info">
           <span id="testProgressText">Answered: 0 / 50</span>
           <span>Target: 45 Mins</span>
         </div>
-        <div class="progress-track">
-          <div class="progress-fill" id="testProgressBar"></div>
-        </div>
+        <div class="progress-track"><div class="progress-fill" id="testProgressBar"></div></div>
       </div>
-
-      <button class="btn-primary" id="btnSubmitTest" style="background: linear-gradient(135deg, #10b981, #059669);">
-        <i class="fas fa-paper-plane"></i> Submit Test / জমা দিন
+      <button class="btn-primary" id="btnSubmitTest" style="background:linear-gradient(135deg,#10b981,#059669);">
+        <i class="fas fa-paper-plane"></i> Submit Test
       </button>
     </div>
 
-    <!-- Test Mode Question Number Palette -->
-    <div class="test-palette" id="testPalette">
-      <!-- Generated dynamically in app.js -->
-    </div>
+    <!-- Test Mode Question Palette -->
+    <div class="test-palette" id="testPalette"></div>
 
-    <!-- Unified Study Control Strip (Sets, Topics, Search & Controls) -->
+    <!-- STUDY CONTROL STRIP -->
     <div class="study-control-strip" id="studyControlStrip">
-      <!-- 1. Quick Set Pills (Scrollable) -->
       <div class="set-pills-scroll-container" id="setPillsContainer">
         <div class="set-pills-label"><i class="fas fa-layer-group"></i> Sets:</div>
         <div class="set-pills-list" id="setPillsList">
-          <button class="set-pill active" data-set="all">All Sets (500)</button>
-          <button class="set-pill" data-set="1">Set 1 (50 Qs)</button>
-          <button class="set-pill" data-set="2">Set 2 (50 Qs)</button>
-          <button class="set-pill" data-set="3">Set 3 (50 Qs)</button>
-          <button class="set-pill" data-set="4">Set 4 (50 Qs)</button>
-          <button class="set-pill" data-set="5">Set 5 (50 Qs)</button>
-          <button class="set-pill" data-set="6">Set 6 (50 Qs)</button>
-          <button class="set-pill" data-set="7">Set 7 (50 Qs)</button>
-          <button class="set-pill" data-set="8">Set 8 (50 Qs)</button>
-          <button class="set-pill" data-set="9">Set 9 (50 Qs)</button>
-          <button class="set-pill" data-set="10">Set 10 (50 Qs)</button>
+          <button class="set-pill active" data-set="all">All (500)</button>
+          <button class="set-pill" data-set="1">Set 1</button>
+          <button class="set-pill" data-set="2">Set 2</button>
+          <button class="set-pill" data-set="3">Set 3</button>
+          <button class="set-pill" data-set="4">Set 4</button>
+          <button class="set-pill" data-set="5">Set 5</button>
+          <button class="set-pill" data-set="6">Set 6</button>
+          <button class="set-pill" data-set="7">Set 7</button>
+          <button class="set-pill" data-set="8">Set 8</button>
+          <button class="set-pill" data-set="9">Set 9</button>
+          <button class="set-pill" data-set="10">Set 10</button>
         </div>
       </div>
-
-      <!-- 2. Topic Filter Pills & Toolbar -->
       <section class="toolbar" id="mainToolbar">
         <div class="topic-pills-group" id="topicPillsGroup">
-          <button class="topic-pill active" data-topic="all" onclick="selectTopicCard('all')">
-            <i class="fas fa-globe"></i> All Topics
-          </button>
-          <button class="topic-pill" data-topic="quant" onclick="selectTopicCard('quant')">
-            <i class="fas fa-calculator"></i> Quantitative (গণিত)
-          </button>
-          <button class="topic-pill" data-topic="logical" onclick="selectTopicCard('logical')">
-            <i class="fas fa-brain"></i> Reasoning (যৌক্তিক)
-          </button>
-          <button class="topic-pill" data-topic="verbal" onclick="selectTopicCard('verbal')">
-            <i class="fas fa-book-open"></i> Verbal (ইংরেজি)
-          </button>
-          <button class="topic-pill" data-topic="di" onclick="selectTopicCard('di')">
-            <i class="fas fa-chart-pie"></i> DI (তথ্য বিশ্লেষণ)
-          </button>
+          <button class="topic-pill active" data-topic="all" onclick="selectTopicCard('all')"><i class="fas fa-globe"></i> All Topics</button>
+          <button class="topic-pill" data-topic="quant" onclick="selectTopicCard('quant')"><i class="fas fa-calculator"></i> Quant</button>
+          <button class="topic-pill" data-topic="logical" onclick="selectTopicCard('logical')"><i class="fas fa-brain"></i> Reasoning</button>
+          <button class="topic-pill" data-topic="verbal" onclick="selectTopicCard('verbal')"><i class="fas fa-book-open"></i> Verbal</button>
+          <button class="topic-pill" data-topic="di" onclick="selectTopicCard('di')"><i class="fas fa-chart-pie"></i> DI</button>
         </div>
-
         <div class="search-filter-row">
           <div class="search-box">
             <i class="fas fa-search search-icon"></i>
-            <input type="text" id="searchInput" placeholder="Search questions, formulas or topics...">
+            <input type="text" id="searchInput" placeholder="Search questions or topics...">
           </div>
-
           <div class="filter-group">
-            <select class="custom-select" id="difficultyFilter" style="max-width: 140px;">
-              <option value="all">All Difficulties</option>
+            <select class="custom-select" id="difficultyFilter" style="max-width:150px;">
+              <option value="all">All Levels</option>
               <option value="easy">Easy / সহজ</option>
               <option value="medium">Medium / মাঝারি</option>
               <option value="hard">Hard / কঠিন</option>
             </select>
-
-            <button class="btn-secondary" id="btnViewToggle" title="Toggle 1-by-1 Focus vs Full List" style="font-weight: 700; white-space: nowrap;">
-              <i class="fas fa-clone"></i> <span id="viewToggleText">1-by-1 View</span>
+            <button class="btn-secondary" id="btnViewToggle" style="font-weight:700;white-space:nowrap;">
+              <i class="fas fa-clone"></i> <span id="viewToggleText">List View</span>
             </button>
           </div>
         </div>
       </section>
     </div>
 
-    <!-- Analytics Dashboard View Container -->
-    <section class="analytics-dashboard" id="analyticsDashboard" style="display: none;">
-      <!-- Generated dynamically in app.js -->
-    </section>
+    <!-- ANALYTICS DASHBOARD -->
+    <section class="analytics-dashboard" id="analyticsDashboard" style="display:none;"></section>
 
-    <!-- Admin Dashboard View Container -->
-    <section class="admin-dashboard" id="adminDashboard" style="display: none;">
-      <!-- Generated dynamically in app.js -->
-    </section>
+    <!-- ADMIN DASHBOARD -->
+    <section class="admin-dashboard" id="adminDashboard" style="display:none;"></section>
 
-    <!-- Main Questions Container (Supports 1-by-1 Focus View and Full List View) -->
-    <main id="questionsContainer">
-      <!-- Dynamic Question Cards and 1-by-1 controls render here -->
-    </main>
+    <!-- QUESTIONS CONTAINER -->
+    <main id="questionsContainer"></main>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer class="app-footer">
-      <p>
-        Bilingual General Aptitude & Logical Reasoning Platform &bull; Bengali & English &bull; 
-        <span style="color: var(--accent-cyan);">Total Available Questions: <span id="totalQuestionsCount">500</span></span>
-      </p>
-      <p style="margin-top: 0.5rem; font-size: 0.8rem;">
-        Designed for WBCS, SSC CGL, CHSL, IBPS Bank PO/Clerk, RRB NTPC, Campus Placement & Competitive Exams.
-      </p>
+      <p>Bilingual Aptitude &bull; English &amp; Bengali &bull; <span style="color:var(--accent-cyan);">Questions: <span id="totalQuestionsCount">500</span></span></p>
+      <p style="margin-top:0.4rem;font-size:0.78rem;">WBCS &bull; SSC CGL &bull; IBPS PO &bull; UPSC &bull; Railways RRB &bull; Campus Placements</p>
     </footer>
   </div>
 
+  <!-- MOBILE BOTTOM NAV -->
+  <nav class="mobile-bottom-nav" id="mobileBottomNav">
+    <button class="mob-nav-btn active" data-mode="practice"><i class="fas fa-book-reader"></i><span>Practice</span></button>
+    <button class="mob-nav-btn" data-mode="test"><i class="fas fa-stopwatch"></i><span>Test</span></button>
+    <button class="mob-nav-btn" data-mode="mistakes"><i class="fas fa-history"></i><span>Mistakes</span></button>
+    <button class="mob-nav-btn" data-mode="analytics"><i class="fas fa-chart-pie"></i><span>Analytics</span></button>
+    <button class="mob-nav-btn" data-mode="bookmarks"><i class="fas fa-star"></i><span>Saved</span></button>
+  </nav>
+
   <!-- ==================== MODALS ==================== -->
 
-  <!-- 0. Student Authentication & Profile Modal -->
+  <!-- 0. Student Auth Modal -->
   <div class="modal-backdrop" id="studentModal">
-    <div class="modal-content" style="max-width: 500px;">
+    <div class="modal-content" style="max-width:500px;">
       <div class="modal-header">
         <div class="modal-title">
-          <i class="fas fa-user-graduate" style="color: var(--accent-cyan);"></i>
-          <span id="studentModalTitle">Student Account / ছাত্র অ্যাকাউন্ট</span>
+          <i class="fas fa-user-graduate" style="color:var(--accent-cyan);"></i>
+          <span id="studentModalTitle">Student Account</span>
         </div>
         <button class="icon-btn" id="btnCloseStudentModal">&times;</button>
       </div>
-
       <div class="modal-body">
-        <!-- Auth Tabs (Sign In vs Sign Up) -->
-        <div class="auth-tabs" id="authTabs" style="display: flex; background: var(--bg-primary); border-radius: var(--radius-full); padding: 4px; margin-bottom: 1.25rem; border: 1px solid var(--border-glass);">
-          <button type="button" class="auth-tab-btn active" id="tabSignInBtn" onclick="switchAuthTab('signin')" style="flex: 1; padding: 8px; border: none; border-radius: var(--radius-full); font-weight: 700; font-size: 0.88rem; cursor: pointer; transition: all 0.2s; background: linear-gradient(135deg, var(--accent-primary), var(--accent-cyan)); color: #fff;">
-            Sign In / লগইন
+        <div class="auth-tabs" id="authTabs">
+          <button type="button" class="auth-tab-btn active" id="tabSignInBtn" onclick="switchAuthTab('signin')">
+            <i class="fas fa-sign-in-alt"></i> Sign In
           </button>
-          <button type="button" class="auth-tab-btn" id="tabSignUpBtn" onclick="switchAuthTab('signup')" style="flex: 1; padding: 8px; border: none; border-radius: var(--radius-full); font-weight: 700; font-size: 0.88rem; cursor: pointer; transition: all 0.2s; background: transparent; color: var(--text-secondary);">
-            Sign Up / নতুন নিবন্ধন
+          <button type="button" class="auth-tab-btn" id="tabSignUpBtn" onclick="switchAuthTab('signup')">
+            <i class="fas fa-user-plus"></i> Sign Up
           </button>
         </div>
-
-        <!-- 1. Sign In Form -->
+        <!-- Sign In -->
         <form id="signInForm" onsubmit="handleStudentSignIn(event)">
-          <div style="margin-bottom: 1rem;">
-            <label style="display: block; margin-bottom: 6px; font-weight: 600; font-size: 0.86rem;">Email or Username / ইমেইল বা ইউজারনেম:</label>
-            <input type="text" id="loginIdentifier" required placeholder="e.g. rahul@gmail.com" style="width: 100%; padding: 10px 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary);">
+          <div class="form-group">
+            <label class="form-label">Email or Username:</label>
+            <input type="text" id="loginIdentifier" required placeholder="e.g. rahul@gmail.com" class="form-input" autocomplete="username">
           </div>
-          <div style="margin-bottom: 1.25rem;">
-            <label style="display: block; margin-bottom: 6px; font-weight: 600; font-size: 0.86rem;">Password / পাসওয়ার্ড:</label>
-            <input type="password" id="loginPassword" required placeholder="Enter your password" style="width: 100%; padding: 10px 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary);">
+          <div class="form-group">
+            <label class="form-label">Password:</label>
+            <div class="password-input-wrap">
+              <input type="password" id="loginPassword" required placeholder="Your password" class="form-input" autocomplete="current-password">
+              <button type="button" class="pwd-toggle-btn" onclick="togglePwdVisibility('loginPassword',this)"><i class="fas fa-eye"></i></button>
+            </div>
           </div>
-          <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; padding: 12px; background: linear-gradient(135deg, var(--accent-primary), var(--accent-cyan)); font-weight: 700;">
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:12px;font-weight:700;">
             <i class="fas fa-sign-in-alt"></i> Sign In to Account
           </button>
+          <p style="text-align:center;margin-top:0.85rem;font-size:0.82rem;color:var(--text-secondary);">
+            No account? <button type="button" onclick="switchAuthTab('signup')" class="inline-link-btn">Sign Up Free</button>
+          </p>
         </form>
-
-        <!-- 2. Sign Up Form -->
-        <form id="signUpForm" onsubmit="handleStudentSignUp(event)" style="display: none;">
-          <div style="margin-bottom: 0.85rem;">
-            <label style="display: block; margin-bottom: 4px; font-weight: 600; font-size: 0.86rem;">Full Name / পুরো নাম:</label>
-            <input type="text" id="regName" required placeholder="e.g. Rahul Sharma" style="width: 100%; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary);">
+        <!-- Sign Up -->
+        <form id="signUpForm" onsubmit="handleStudentSignUp(event)" style="display:none;">
+          <div class="form-group">
+            <label class="form-label">Full Name:</label>
+            <input type="text" id="regName" required placeholder="e.g. Rahul Sharma" class="form-input" autocomplete="name">
           </div>
-          <div style="margin-bottom: 0.85rem;">
-            <label style="display: block; margin-bottom: 4px; font-weight: 600; font-size: 0.86rem;">Email or Username / ইমেইল বা ইউজারনেম:</label>
-            <input type="text" id="regIdentifier" required placeholder="e.g. rahul@gmail.com" style="width: 100%; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary);">
+          <div class="form-group">
+            <label class="form-label">Email or Username:</label>
+            <input type="text" id="regIdentifier" required placeholder="e.g. rahul@gmail.com" class="form-input" autocomplete="username">
           </div>
-          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 0.85rem;">
-            <div>
-              <label style="display: block; margin-bottom: 4px; font-weight: 600; font-size: 0.86rem;">Create Password:</label>
-              <input type="password" id="regPassword" required placeholder="At least 4 chars" style="width: 100%; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary);">
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+            <div class="form-group">
+              <label class="form-label">Password:</label>
+              <div class="password-input-wrap">
+                <input type="password" id="regPassword" required placeholder="Min 6 chars" class="form-input" autocomplete="new-password">
+                <button type="button" class="pwd-toggle-btn" onclick="togglePwdVisibility('regPassword',this)"><i class="fas fa-eye"></i></button>
+              </div>
             </div>
-            <div>
-              <label style="display: block; margin-bottom: 4px; font-weight: 600; font-size: 0.86rem;">Confirm Password:</label>
-              <input type="password" id="regConfirmPassword" required placeholder="Re-enter password" style="width: 100%; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary);">
+            <div class="form-group">
+              <label class="form-label">Confirm:</label>
+              <div class="password-input-wrap">
+                <input type="password" id="regConfirmPassword" required placeholder="Re-enter" class="form-input" autocomplete="new-password">
+                <button type="button" class="pwd-toggle-btn" onclick="togglePwdVisibility('regConfirmPassword',this)"><i class="fas fa-eye"></i></button>
+              </div>
             </div>
           </div>
-          <div style="margin-bottom: 0.85rem;">
-            <label style="display: block; margin-bottom: 4px; font-weight: 600; font-size: 0.86rem;">Target Exam / উদ্দিষ্ট পরীক্ষা:</label>
-            <select id="regTargetExam" style="width: 100%; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary);">
-              <option value="WBCS (Executive & Allied)">WBCS (Executive & Allied)</option>
+          <div class="form-group">
+            <label class="form-label">Target Exam:</label>
+            <select id="regTargetExam" class="form-input">
+              <option value="WBCS (Executive &amp; Allied)">WBCS (Executive &amp; Allied)</option>
               <option value="SSC CGL / CHSL">SSC CGL / CHSL</option>
               <option value="Banking (IBPS PO / Clerk / SBI)">Banking (IBPS PO / Clerk / SBI)</option>
               <option value="UPSC Civil Services">UPSC Civil Services</option>
               <option value="Railways RRB NTPC / Group D">Railways RRB NTPC / Group D</option>
-              <option value="Campus Placements & IT">Campus Placements & IT</option>
+              <option value="Campus Placements &amp; IT">Campus Placements &amp; IT</option>
               <option value="General Preparation">General Preparation</option>
             </select>
           </div>
-          <div style="margin-bottom: 1.25rem;">
-            <label style="display: block; margin-bottom: 4px; font-weight: 600; font-size: 0.86rem;">Daily Goal / দৈনিক লক্ষ্য:</label>
-            <select id="regDailyGoal" style="width: 100%; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary);">
+          <div class="form-group">
+            <label class="form-label">Daily Practice Goal:</label>
+            <select id="regDailyGoal" class="form-input">
               <option value="10">10 Questions / Day</option>
               <option value="20" selected>20 Questions / Day</option>
               <option value="30">30 Questions / Day</option>
-              <option value="50">50 Questions (1 Set) / Day</option>
+              <option value="50">50 Questions (1 Full Set) / Day</option>
             </select>
           </div>
-          <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; padding: 12px; background: linear-gradient(135deg, var(--accent-emerald), #059669); font-weight: 700;">
-            <i class="fas fa-user-plus"></i> Create Account & Register
+          <button type="submit" class="btn-primary" style="width:100%;justify-content:center;padding:12px;background:linear-gradient(135deg,var(--accent-emerald),#059669);font-weight:700;">
+            <i class="fas fa-user-plus"></i> Create Account &amp; Start Learning
           </button>
+          <p style="text-align:center;margin-top:0.85rem;font-size:0.82rem;color:var(--text-secondary);">
+            Already have an account? <button type="button" onclick="switchAuthTab('signin')" class="inline-link-btn">Sign In</button>
+          </p>
         </form>
-
-        <!-- 3. Logged-in Profile View -->
-        <div id="loggedInProfileView" style="display: none;">
-          <div style="text-align: center; padding: 1rem 0; margin-bottom: 1rem; border-bottom: 1px solid var(--border-glass);">
-            <div style="width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, var(--accent-primary), var(--accent-cyan)); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: #fff; margin: 0 auto 0.75rem;">
-              <i class="fas fa-user-graduate"></i>
-            </div>
-            <h3 id="profileViewName" style="font-size: 1.25rem; margin-bottom: 4px;">Student Name</h3>
-            <p id="profileViewExam" style="color: var(--accent-cyan); font-size: 0.88rem; font-weight: 600;">Target Exam</p>
-            <p id="profileViewEmail" style="color: var(--text-secondary); font-size: 0.82rem;">email@example.com</p>
+        <!-- Logged-In Profile -->
+        <div id="loggedInProfileView" style="display:none;">
+          <div style="text-align:center;padding:1rem 0;margin-bottom:1rem;border-bottom:1px solid var(--border-glass);">
+            <div class="profile-avatar-circle"><i class="fas fa-user-graduate"></i></div>
+            <h3 id="profileViewName" style="font-size:1.2rem;margin-bottom:4px;"></h3>
+            <p id="profileViewExam" style="color:var(--accent-cyan);font-size:0.88rem;font-weight:600;"></p>
+            <p id="profileViewEmail" style="color:var(--text-secondary);font-size:0.82rem;"></p>
           </div>
-
-          <div style="display: flex; justify-content: space-between; gap: 10px;">
-            <button type="button" class="btn-secondary" style="flex: 1; justify-content: center;" onclick="logoutStudent()">
+          <div id="profileProgressSummary" style="margin-bottom:1rem;"></div>
+          <details style="margin-bottom:1rem;">
+            <summary style="cursor:pointer;font-size:0.88rem;font-weight:600;color:var(--text-secondary);padding:6px 0;list-style:none;">
+              <i class="fas fa-key"></i> Change Password
+            </summary>
+            <form id="changePasswordForm" onsubmit="handleChangePassword(event)" style="margin-top:0.75rem;">
+              <div class="form-group">
+                <label class="form-label">Current Password:</label>
+                <input type="password" id="currentPassword" class="form-input" placeholder="Enter current password">
+              </div>
+              <div class="form-group">
+                <label class="form-label">New Password (min 6 chars):</label>
+                <input type="password" id="newPassword" class="form-input" placeholder="New password">
+              </div>
+              <button type="submit" class="btn-secondary" style="width:100%;justify-content:center;">
+                <i class="fas fa-save"></i> Update Password
+              </button>
+            </form>
+          </details>
+          <div style="display:flex;gap:10px;">
+            <button type="button" class="btn-secondary" style="flex:1;justify-content:center;" onclick="logoutStudent()">
               <i class="fas fa-sign-out-alt"></i> Log Out
             </button>
-            <button type="button" class="btn-primary" style="flex: 1; justify-content: center;" onclick="closeModal(elements.studentModal)">
+            <button type="button" class="btn-primary" style="flex:1;justify-content:center;" onclick="closeModal(elements.studentModal)">
               <i class="fas fa-check"></i> Done
             </button>
           </div>
@@ -367,49 +376,38 @@
   <div class="modal-backdrop" id="formulaModal">
     <div class="modal-content">
       <div class="modal-header">
-        <div class="modal-title">
-          <i class="fas fa-square-root-alt" style="color: var(--accent-cyan);"></i>
-          <span>Aptitude Formula Cheat Sheet (সূত্র সংক্ষেপ)</span>
-        </div>
+        <div class="modal-title"><i class="fas fa-square-root-alt" style="color:var(--accent-cyan);"></i> <span>Formula Cheat Sheet (সূত্র সংক্ষেপ)</span></div>
         <button class="icon-btn" id="btnCloseFormulas">&times;</button>
       </div>
-      <div class="modal-body" id="formulaContainer">
-        <!-- Rendered dynamically -->
-      </div>
+      <div class="modal-body" id="formulaContainer"></div>
     </div>
   </div>
 
-  <!-- 2. Interactive Scratchpad / Rough Canvas Modal -->
+  <!-- 2. Scratchpad Modal -->
   <div class="modal-backdrop" id="scratchpadModal">
     <div class="modal-content">
       <div class="modal-header">
-        <div class="modal-title">
-          <i class="fas fa-pencil-alt" style="color: var(--accent-primary);"></i>
-          <span>Rough Work Scratchpad (রাফ কাজের খাতা)</span>
-        </div>
+        <div class="modal-title"><i class="fas fa-pencil-alt" style="color:var(--accent-primary);"></i> <span>Rough Work Scratchpad</span></div>
         <button class="icon-btn" id="btnCloseScratchpad">&times;</button>
       </div>
       <div class="modal-body">
         <div class="scratchpad-toolbar">
-          <button class="btn-secondary" id="colorCyan" style="color: #38bdf8;"><i class="fas fa-pen"></i> Cyan</button>
-          <button class="btn-secondary" id="colorYellow" style="color: #facc15;"><i class="fas fa-pen"></i> Yellow</button>
-          <button class="btn-secondary" id="colorWhite" style="color: #fff;"><i class="fas fa-pen"></i> White</button>
+          <button class="btn-secondary" id="colorCyan" style="color:#38bdf8;"><i class="fas fa-pen"></i> Cyan</button>
+          <button class="btn-secondary" id="colorYellow" style="color:#facc15;"><i class="fas fa-pen"></i> Yellow</button>
+          <button class="btn-secondary" id="colorWhite" style="color:#f8fafc;"><i class="fas fa-pen"></i> White</button>
           <button class="btn-secondary" id="colorEraser"><i class="fas fa-eraser"></i> Eraser</button>
-          <button class="btn-secondary" id="btnClearScratch" style="margin-left: auto; color: var(--accent-rose);"><i class="fas fa-trash-alt"></i> Clear Board</button>
+          <button class="btn-secondary" id="btnClearScratch" style="margin-left:auto;color:var(--accent-rose);"><i class="fas fa-trash-alt"></i> Clear</button>
         </div>
         <canvas id="scratchpadCanvas" class="scratchpad-canvas"></canvas>
       </div>
     </div>
   </div>
 
-  <!-- 3. Test Results & Scorecard Modal -->
+  <!-- 3. Results Modal -->
   <div class="modal-backdrop" id="resultsModal">
-    <div class="modal-content" style="max-width: 580px;">
+    <div class="modal-content" style="max-width:580px;">
       <div class="modal-header">
-        <div class="modal-title">
-          <i class="fas fa-trophy" style="color: var(--accent-amber);"></i>
-          <span>Test Performance Report / ফলাফল</span>
-        </div>
+        <div class="modal-title"><i class="fas fa-trophy" style="color:var(--accent-amber);"></i> <span>Test Performance Report</span></div>
         <button class="icon-btn" id="btnCloseResults">&times;</button>
       </div>
       <div class="modal-body results-card">
@@ -419,102 +417,140 @@
             <div class="score-sub">Accuracy</div>
           </div>
         </div>
-
         <h3>Test Summary</h3>
-        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Here is your performance breakdown:</p>
-
+        <p style="color:var(--text-secondary);margin-bottom:1rem;">Your performance breakdown:</p>
         <div class="results-stats-grid">
           <div class="result-stat-box">
-            <div style="font-size: 1.4rem; font-weight: 700; color: var(--accent-cyan);" id="resultTotalQuestions">0</div>
-            <div style="font-size: 0.78rem; color: var(--text-muted);">Total Questions</div>
+            <div style="font-size:1.6rem;font-weight:800;color:var(--accent-cyan);" id="resultTotalQuestions">0</div>
+            <div style="font-size:0.78rem;color:var(--text-muted);">Total Questions</div>
           </div>
           <div class="result-stat-box">
-            <div style="font-size: 1.4rem; font-weight: 700; color: var(--accent-emerald);" id="resultCorrect">0</div>
-            <div style="font-size: 0.78rem; color: var(--text-muted);">Correct / সঠিক</div>
+            <div style="font-size:1.6rem;font-weight:800;color:var(--accent-emerald);" id="resultCorrect">0</div>
+            <div style="font-size:0.78rem;color:var(--text-muted);">Correct / সঠিক</div>
           </div>
           <div class="result-stat-box">
-            <div style="font-size: 1.4rem; font-weight: 700; color: var(--accent-rose);" id="resultWrong">0</div>
-            <div style="font-size: 0.78rem; color: var(--text-muted);">Wrong / ভুল</div>
+            <div style="font-size:1.6rem;font-weight:800;color:var(--accent-rose);" id="resultWrong">0</div>
+            <div style="font-size:0.78rem;color:var(--text-muted);">Wrong / ভুল</div>
           </div>
         </div>
-
-        <div style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem;">
-          Unattempted: <span id="resultUnattempted" style="font-weight: 700; color: var(--accent-amber);">0</span>
+        <div style="margin-top:0.85rem;color:var(--text-secondary);font-size:0.9rem;text-align:center;">
+          Unattempted: <span id="resultUnattempted" style="font-weight:700;color:var(--accent-amber);">0</span>
         </div>
-
-        <div style="margin-top: 1.5rem; display: flex; gap: 10px; justify-content: center;">
-          <button class="btn-primary" id="btnRetakeTest">
-            <i class="fas fa-redo"></i> Retake Test
-          </button>
-          <button class="btn-secondary" onclick="closeModal(document.getElementById('resultsModal'))">
-            <i class="fas fa-search"></i> Review Solutions
-          </button>
+        <div id="resultFeedbackMsg" style="margin-top:0.85rem;text-align:center;font-size:1rem;font-weight:700;"></div>
+        <div style="margin-top:1.25rem;display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+          <button class="btn-primary" id="btnRetakeTest"><i class="fas fa-redo"></i> Retake Test</button>
+          <button class="btn-secondary" onclick="closeModal(document.getElementById('resultsModal'))"><i class="fas fa-search"></i> Review Answers</button>
+          <button class="btn-secondary" id="btnShareScore" style="color:var(--accent-emerald);"><i class="fas fa-share-alt"></i> Share</button>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- 4. Theme & Appearance Settings Modal -->
+  <!-- 4. Theme Modal -->
   <div class="modal-backdrop" id="themeModal">
-    <div class="modal-content" style="max-width: 480px;">
+    <div class="modal-content" style="max-width:480px;">
       <div class="modal-header">
-        <div class="modal-title">
-          <i class="fas fa-palette" style="color: var(--accent-cyan);"></i>
-          <span>Theme & Display Settings / থিম সেটিংস</span>
-        </div>
+        <div class="modal-title"><i class="fas fa-palette" style="color:var(--accent-cyan);"></i> <span>Theme &amp; Display Settings</span></div>
         <button class="icon-btn" id="btnCloseThemeModal">&times;</button>
       </div>
       <div class="modal-body">
-        <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 1rem;">
-          Choose your preferred theme appearance for optimal readability and focus.
-        </p>
-
+        <p style="color:var(--text-secondary);font-size:0.88rem;margin-bottom:1rem;">Choose your preferred appearance.</p>
         <div class="theme-options-grid">
           <div class="theme-option-card active" id="themeCardDark" onclick="selectThemeSetting('dark')">
-            <div class="theme-preview-icon" style="color: #6366f1;"><i class="fas fa-moon"></i></div>
-            <div style="font-weight: 700; font-size: 0.95rem;">Dark Mode</div>
-            <div style="font-size: 0.75rem; color: var(--text-muted);">Midnight Slate</div>
+            <div class="theme-preview-icon" style="color:#6366f1;"><i class="fas fa-moon"></i></div>
+            <div style="font-weight:700;">Dark Mode</div>
+            <div style="font-size:0.75rem;color:var(--text-muted);">Midnight Slate</div>
           </div>
-
           <div class="theme-option-card" id="themeCardLight" onclick="selectThemeSetting('light')">
-            <div class="theme-preview-icon" style="color: #f59e0b;"><i class="fas fa-sun"></i></div>
-            <div style="font-weight: 700; font-size: 0.95rem;">Light Mode</div>
-            <div style="font-size: 0.75rem; color: var(--text-muted);">Clean Bright</div>
+            <div class="theme-preview-icon" style="color:#f59e0b;"><i class="fas fa-sun"></i></div>
+            <div style="font-weight:700;">Light Mode</div>
+            <div style="font-size:0.75rem;color:var(--text-muted);">Clean Bright</div>
           </div>
-
           <div class="theme-option-card" id="themeCardAuto" onclick="selectThemeSetting('auto')">
-            <div class="theme-preview-icon" style="color: var(--accent-cyan);"><i class="fas fa-desktop"></i></div>
-            <div style="font-weight: 700; font-size: 0.95rem;">System Auto</div>
-            <div style="font-size: 0.75rem; color: var(--text-muted);">Device Sync</div>
+            <div class="theme-preview-icon" style="color:var(--accent-cyan);"><i class="fas fa-desktop"></i></div>
+            <div style="font-weight:700;">System Auto</div>
+            <div style="font-size:0.75rem;color:var(--text-muted);">Device Sync</div>
           </div>
         </div>
-
-        <div style="margin-top: 1.5rem; text-align: center;">
-          <button class="btn-primary" style="width: 100%; justify-content: center;" onclick="closeModal(document.getElementById('themeModal'))">
-            <i class="fas fa-check"></i> Apply & Done
+        <div style="margin-top:1.5rem;text-align:center;">
+          <button class="btn-primary" style="width:100%;justify-content:center;" onclick="closeModal(document.getElementById('themeModal'))">
+            <i class="fas fa-check"></i> Apply &amp; Done
           </button>
         </div>
       </div>
     </div>
   </div>
 
-  <!-- 5. Admin Student Detail & Drill-Down Modal -->
+  <!-- 5. Admin Student Detail Modal -->
   <div class="modal-backdrop" id="adminStudentModal">
-    <div class="modal-content" style="max-width: 680px;">
+    <div class="modal-content" style="max-width:680px;">
       <div class="modal-header">
-        <div class="modal-title">
-          <i class="fas fa-user-graduate" style="color: var(--accent-primary);"></i>
-          <span id="adminStudentModalTitle">Student Performance Report</span>
-        </div>
+        <div class="modal-title"><i class="fas fa-user-graduate" style="color:var(--accent-primary);"></i> <span id="adminStudentModalTitle">Student Performance Report</span></div>
         <button class="icon-btn" id="btnCloseAdminStudentModal">&times;</button>
       </div>
-      <div class="modal-body" id="adminStudentModalBody">
-        <!-- Filled dynamically -->
+      <div class="modal-body" id="adminStudentModalBody"></div>
+    </div>
+  </div>
+
+  <!-- 6. Leaderboard Modal -->
+  <div class="modal-backdrop" id="leaderboardModal">
+    <div class="modal-content" style="max-width:540px;">
+      <div class="modal-header">
+        <div class="modal-title"><i class="fas fa-trophy" style="color:var(--accent-amber);"></i> <span>Top Scores Leaderboard</span></div>
+        <button class="icon-btn" id="btnCloseLeaderboard">&times;</button>
+      </div>
+      <div class="modal-body" id="leaderboardBody"></div>
+    </div>
+  </div>
+
+  <!-- 7. Onboarding Tour Modal -->
+  <div class="modal-backdrop" id="onboardingModal">
+    <div class="modal-content onboarding-modal" style="max-width:520px;">
+      <div class="modal-body" style="padding:0;">
+        <div class="onboarding-slides" id="onboardingSlides">
+          <div class="onboarding-slide active" id="onboardSlide1">
+            <div class="onboarding-icon" style="background:linear-gradient(135deg,var(--accent-primary),var(--accent-cyan));"><i class="fas fa-brain"></i></div>
+            <h2 class="onboarding-title">Welcome to AptitudeMaster 2.0!</h2>
+            <p class="onboarding-desc">Your complete bilingual English &amp; Bengali aptitude platform. 500 questions across 10 sets — Quantitative, Reasoning, Verbal &amp; Data Interpretation.</p>
+          </div>
+          <div class="onboarding-slide" id="onboardSlide2">
+            <div class="onboarding-icon" style="background:linear-gradient(135deg,var(--accent-emerald),#059669);"><i class="fas fa-route"></i></div>
+            <h2 class="onboarding-title">Your Learning Flow</h2>
+            <p class="onboarding-desc">
+              <strong>1. Pick a Set</strong> (Set 1–10 or all 500 Qs)<br>
+              <strong>2. Choose a Topic</strong> (Quant, Reasoning, Verbal, DI)<br>
+              <strong>3. Answer 1-by-1</strong> with instant explanations<br>
+              <strong>4. Track progress</strong> in Analytics
+            </p>
+          </div>
+          <div class="onboarding-slide" id="onboardSlide3">
+            <div class="onboarding-icon" style="background:linear-gradient(135deg,var(--accent-amber),#d97706);"><i class="fas fa-rocket"></i></div>
+            <h2 class="onboarding-title">Pro Tips</h2>
+            <p class="onboarding-desc">
+              Use the <strong>Scratchpad</strong> for rough work &bull;
+              Open <strong>Formula Sheet</strong> anytime &bull;
+              Take <strong>Timed Mock Tests</strong> &bull;
+              Revisit errors in the <strong>Mistakes Vault</strong>
+            </p>
+          </div>
+        </div>
+        <div class="onboarding-footer">
+          <div class="onboarding-dots" id="onboardingDots">
+            <span class="onboard-dot active"></span>
+            <span class="onboard-dot"></span>
+            <span class="onboard-dot"></span>
+          </div>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <button class="btn-secondary" id="btnOnboardPrev" style="display:none;"><i class="fas fa-arrow-left"></i> Back</button>
+            <button class="btn-primary" id="btnOnboardNext">Next <i class="fas fa-arrow-right"></i></button>
+            <button class="btn-secondary" id="btnOnboardSkip" style="font-size:0.82rem;">Skip</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Toast Notification Container -->
+  <!-- Toast Container -->
   <div class="toast-container" id="toastContainer"></div>
 
   <!-- Scripts -->
