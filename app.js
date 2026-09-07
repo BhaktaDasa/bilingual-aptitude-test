@@ -803,6 +803,9 @@ function resetFilters() {
 function openModal(modal) {
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
+  if (modal === elements.scratchpadModal && window.resizeScratchpad) {
+    setTimeout(window.resizeScratchpad, 50);
+  }
 }
 
 function closeModal(modal) {
@@ -819,7 +822,7 @@ function showToast(message) {
   
   setTimeout(() => {
     toast.style.opacity = '0';
-    toast.style.transform = 'translateX(50px)';
+    toast.style.transform = 'translateY(20px)';
     setTimeout(() => toast.remove(), 300);
   }, 2500);
 }
@@ -855,12 +858,28 @@ function initScratchpad() {
   const ctx = canvas.getContext('2d');
   
   function resizeCanvas() {
-    canvas.width = canvas.parentElement.clientWidth || 700;
-    canvas.height = 360;
+    const parentWidth = canvas.parentElement.clientWidth || window.innerWidth - 32;
+    const parentHeight = window.innerWidth <= 768 ? window.innerHeight - 200 : 380;
+    
+    // Save image before resize
+    let imgData;
+    try {
+      if (canvas.width > 0 && canvas.height > 0) {
+        imgData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+      }
+    } catch (e) {}
+
+    canvas.width = parentWidth;
+    canvas.height = parentHeight;
     ctx.fillStyle = '#0f172a';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    if (imgData) {
+      try { ctx.putImageData(imgData, 0, 0); } catch (e) {}
+    }
   }
   
+  window.resizeScratchpad = resizeCanvas;
   resizeCanvas();
   window.addEventListener('resize', resizeCanvas);
 
@@ -881,8 +900,11 @@ function initScratchpad() {
   function draw(e) {
     if (!drawing) return;
     const rect = canvas.getBoundingClientRect();
-    const x = (e.clientX || (e.touches && e.touches[0].clientX)) - rect.left;
-    const y = (e.clientY || (e.touches && e.touches[0].clientY)) - rect.top;
+    const clientX = e.clientX || (e.touches && e.touches[0].clientX);
+    const clientY = e.clientY || (e.touches && e.touches[0].clientY);
+    
+    const x = clientX - rect.left;
+    const y = clientY - rect.top;
 
     ctx.lineWidth = lineWidth;
     ctx.lineCap = 'round';
@@ -898,19 +920,27 @@ function initScratchpad() {
   canvas.addEventListener('mouseup', endPosition);
   canvas.addEventListener('mousemove', draw);
   
-  canvas.addEventListener('touchstart', (e) => { e.preventDefault(); startPosition(e); });
-  canvas.addEventListener('touchend', endPosition);
-  canvas.addEventListener('touchmove', (e) => { e.preventDefault(); draw(e); });
+  canvas.addEventListener('touchstart', (e) => {
+    if (e.cancelable) e.preventDefault();
+    startPosition(e);
+  }, { passive: false });
+
+  canvas.addEventListener('touchend', endPosition, { passive: true });
+
+  canvas.addEventListener('touchmove', (e) => {
+    if (e.cancelable) e.preventDefault();
+    draw(e);
+  }, { passive: false });
 
   document.getElementById('btnClearScratch').addEventListener('click', () => {
     ctx.fillStyle = '#0f172a';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
   });
 
-  document.getElementById('colorYellow').addEventListener('click', () => { currentColor = '#facc15'; });
-  document.getElementById('colorCyan').addEventListener('click', () => { currentColor = '#38bdf8'; });
-  document.getElementById('colorWhite').addEventListener('click', () => { currentColor = '#ffffff'; });
-  document.getElementById('colorEraser').addEventListener('click', () => { currentColor = '#0f172a'; lineWidth = 15; });
+  document.getElementById('colorYellow').addEventListener('click', () => { currentColor = '#facc15'; lineWidth = 3; });
+  document.getElementById('colorCyan').addEventListener('click', () => { currentColor = '#38bdf8'; lineWidth = 3; });
+  document.getElementById('colorWhite').addEventListener('click', () => { currentColor = '#ffffff'; lineWidth = 3; });
+  document.getElementById('colorEraser').addEventListener('click', () => { currentColor = '#0f172a'; lineWidth = 18; });
 }
 
 // Initialize on DOM Ready
