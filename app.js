@@ -91,7 +91,7 @@ const formulaSheetData = [
 
 // Application State
 const state = {
-  language: 'both', // 'both', 'en', 'bn'
+  language: localStorage.getItem('aptitude_language') || 'both', // 'both', 'en', 'bn'
   mode: 'home', // 'home', 'practice', 'test', 'mistakes', 'bookmarks', 'analytics', 'admin'
   viewMode: 'single', // 'single' (1-by-1 Focus Mode), 'list' (Scrolling List)
   singleCurrentIndex: 0, // 0-based index in the current filtered list
@@ -230,6 +230,12 @@ const sfx = new SoundFX();
 // Initialize Application
 function initApp() {
   applyTheme(state.theme);
+  applyUILanguage(state.language);
+  // Sync active language buttons
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    const bLang = b.dataset.lang || b.dataset.drawerLang;
+    b.classList.toggle('active', bLang === state.language);
+  });
   updateStudentUI();
   setupEventListeners();
   setupMobileDrawer();
@@ -824,6 +830,325 @@ function setupStopwatch() {
   }
 }
 
+// =========================================================
+// UI TRANSLATIONS DICTIONARY (Natural English & Bengali)
+// =========================================================
+const UI_TRANSLATIONS = {
+  en: {
+    brandSubtitle: "Bilingual Aptitude & Reasoning Prep",
+    tabHome: "Home",
+    tabPractice: "Practice",
+    tabTest: "Mock Test",
+    tabMistakes: "Mistakes",
+    tabBookmarks: "Saved",
+    tabAnalytics: "Analytics",
+    tabAdmin: "Admin",
+    heroBadge: "Bilingual Exam Prep Hub • English & বাংলা",
+    heroTitle: "Master General Aptitude & Reasoning with Step-by-Step Clarity",
+    heroDesc: "Structured bilingual practice with 500 hand-picked questions across 10 full sets with instant solutions and shortcuts. Tailored for WBCS, SSC CGL, IBPS, Railways RRB, UPSC & campus placements.",
+    statBilingual: "Bilingual Questions",
+    statSets: "Full 50-Q Sets",
+    statBoth: "English & Bengali",
+    statTricks: "Shortcuts & Tricks",
+    whatYouGetTitle: "What You Get When You Join Free",
+    whatYouGetSub: "Everything you need to excel in your competitive examinations",
+    perk1Title: "4 Core Subject Coverage",
+    perk1Desc: "Quantitative Aptitude, Logical Reasoning, Verbal Ability & Data Interpretation in one unified portal.",
+    perk2Title: "1-by-1 Focus Mode & 45-Min Mock Tests",
+    perk2Desc: "Practice calmly one question at a time or simulate real exam conditions with negative marking.",
+    perk3Title: "Smart Mistakes Vault",
+    perk3Desc: "Questions you miss are saved automatically to your vault so you can practice until 100% mastered.",
+    perk4Title: "Cloud Sync & All-India Leaderboard",
+    perk4Desc: "Your practice streaks, accuracy diagnostics, and saved bookmarks sync across phone and laptop via Neon PostgreSQL.",
+    chooseTopic: "Choose Topic to Explore:",
+    topicQuant: "Quant",
+    topicReasoning: "Reasoning",
+    topicVerbal: "Verbal",
+    topicDI: "Data Interp.",
+    tabSignIn: "Sign In",
+    tabSignUp: "Create Account",
+    btnSignIn: "Sign In to Save Progress",
+    btnSignUp: "Create Free Account",
+    btnGuestDemo: "Try Demo Practice as Guest →",
+    navPrev: "Previous",
+    navSkip: "Skip",
+    navNext: "Next Question",
+    navSubmit: "Submit Test",
+    navFinish: "Finish Set 🎉",
+    solutionTitle: "Step-by-Step Descriptive Solution",
+    shortcutTitle: "Shortcut Trick / Pro Tip:",
+    qNumPrefix: "Question",
+    ofWord: "of",
+    toolsMenu: "Tools & Settings",
+    stopwatch: "Stopwatch",
+    formulas: "Formulas",
+    scratchpad: "Scratchpad",
+    sound: "Sound",
+    theme: "Theme",
+    leaderboard: "Leaderboard",
+    print: "Print"
+  },
+  bn: {
+    brandSubtitle: "দ্বিভাষিক অ্যাপটিটিউড ও রিজনিং প্রস্তুতি",
+    tabHome: "হোম",
+    tabPractice: "অনুশীলন",
+    tabTest: "মক টেস্ট",
+    tabMistakes: "ভুল ব্যাংক",
+    tabBookmarks: "সংরক্ষিত",
+    tabAnalytics: "অ্যানালিটিক্স",
+    tabAdmin: "অ্যাডমিন",
+    heroBadge: "দ্বিভাষিক প্রস্তুতি হাব • বাংলা ও ইংরেজি",
+    heroTitle: "ধাপে ধাপে সহজ ব্যাখ্যায় অ্যাপটিটিউড ও রিজনিংয়ে সম্পূর্ণ পারদর্শিতা",
+    heroDesc: "WBCS, SSC CGL, রেলওয়ে, ব্যাংকিং ও সরকারি চাকরির পরীক্ষার জন্য ৫০০টি সেরা দ্বিভাষিক প্রশ্ন, শর্টকাট কৌশল ও নির্ভুল সমাধান।",
+    statBilingual: "দ্বিভাষিক প্রশ্ন",
+    statSets: "১০টি পূর্ণাঙ্গ সেট",
+    statBoth: "ইংরেজি ও বাংলা",
+    statTricks: "শর্টকাট ও ট্রিকস",
+    whatYouGetTitle: "বিনামূল্যে রেজিস্ট্রেশন করে যা যা পাবেন",
+    whatYouGetSub: "প্রতিযোগিতামূলক পরীক্ষায় নিশ্চিত সাফল্যের জন্য প্রয়োজনীয় সবকিছু এক প্ল্যাটফর্মে",
+    perk1Title: "৪টি মূল বিষয়ের সম্পূর্ণ প্রস্তুতি",
+    perk1Desc: "পাটিগণিত (Quant), যুক্তি (Reasoning), ইংরেজি (Verbal) ও তথ্য বিশ্লেষণ (DI) একসাথে।",
+    perk2Title: "১-বাই-১ ফোকাস ও ৪৫ মিনিটের মক টেস্ট",
+    perk2Desc: "একটি করে প্রশ্নে নিবিষ্ট মনোযোগে অনুশীলন অথবা নেগেটিভ মার্কিংসহ বাস্তব পরীক্ষার প্রস্তুতি।",
+    perk3Title: "স্মার্ট ভুল সংশোধন ভল্ট",
+    perk3Desc: "ভুল উত্তরগুলো নিজে থেকেই জমা থাকবে যাতে বারবার অনুশীলন করে ১০০% নির্ভুল হতে পারেন।",
+    perk4Title: "ক্লাউড সিঙ্ক ও সর্বভারতীয় লিডারবোর্ড",
+    perk4Desc: "ফোন ও ল্যাপটপে আপনার প্রতিদিনের প্রগ্রেস, নির্ভুলতার হার ও বুকমার্ক সংরক্ষিত থাকবে।",
+    chooseTopic: "অনুশীলনের জন্য বিষয় বেছে নিন:",
+    topicQuant: "পাটিগণিত (Quant)",
+    topicReasoning: "রিজনিং (Reasoning)",
+    topicVerbal: "ইংরেজি (Verbal)",
+    topicDI: "তথ্য বিশ্লেষণ (DI)",
+    tabSignIn: "লগইন",
+    tabSignUp: "নতুন অ্যাকাউন্ট",
+    btnSignIn: "লগইন করে শুরু করুন",
+    btnSignUp: "বিনামূল্যে অ্যাকাউন্ট খুলুন",
+    btnGuestDemo: "লগইন না করে ডেমো অনুশীলন দেখুন →",
+    navPrev: "পূর্ববর্তী",
+    navSkip: "এড়িয়ে যান",
+    navNext: "পরবর্তী প্রশ্ন",
+    navSubmit: "পরীক্ষা জমা দিন",
+    navFinish: "সেট সম্পন্ন হয়েছে 🎉",
+    solutionTitle: "ধাপে ধাপে বিস্তারিত সমাধান",
+    shortcutTitle: "সংক্ষিপ্ত কৌশল / শর্টকাট:",
+    qNumPrefix: "প্রশ্ন",
+    ofWord: "/",
+    toolsMenu: "টুলস ও সেটিংস",
+    stopwatch: "স্টপওয়াচ",
+    formulas: "ফর্মুলা শিট",
+    scratchpad: "স্ক্র্যাচপ্যাড",
+    sound: "শব্দ",
+    theme: "থিম পরিবর্তন",
+    leaderboard: "লিডারবোর্ড",
+    print: "প্রিন্ট"
+  },
+  both: {
+    brandSubtitle: "Bilingual Aptitude & Reasoning Prep / দ্বিভাষিক প্রস্তুতি",
+    tabHome: "Home / হোম",
+    tabPractice: "Practice / অনুশীলন",
+    tabTest: "Mock Test / মক টেস্ট",
+    tabMistakes: "Mistakes / ভুল",
+    tabBookmarks: "Saved / সংরক্ষিত",
+    tabAnalytics: "Analytics / বিশ্লেষণ",
+    tabAdmin: "Admin",
+    heroBadge: "Bilingual Exam Prep Hub • বাংলা ও ইংরেজি",
+    heroTitle: "Master General Aptitude & Reasoning with Step-by-Step Clarity",
+    heroDesc: "Structured bilingual practice with 500 hand-picked questions across 10 full sets with instant solutions and shortcuts. Tailored for WBCS, SSC CGL, IBPS, Railways RRB, UPSC & campus placements.",
+    statBilingual: "Bilingual Questions",
+    statSets: "Full 50-Q Sets",
+    statBoth: "English & Bengali",
+    statTricks: "Shortcuts & Tricks",
+    whatYouGetTitle: "What You Get When You Join Free / যা যা পাবেন",
+    whatYouGetSub: "Everything you need to excel in your competitive examinations",
+    perk1Title: "4 Core Subject Coverage / ৪টি প্রধান বিষয়",
+    perk1Desc: "Quantitative Aptitude, Logical Reasoning, Verbal Ability & Data Interpretation in one unified portal.",
+    perk2Title: "1-by-1 Focus Mode & 45-Min Mock Tests / ১-বাই-১ টেস্ট",
+    perk2Desc: "Practice calmly one question at a time or simulate real exam conditions with negative marking.",
+    perk3Title: "Smart Mistakes Vault / ভুল সংশোধন ভল্ট",
+    perk3Desc: "Questions you miss are saved automatically to your vault so you can practice until 100% mastered.",
+    perk4Title: "Cloud Sync & All-India Leaderboard / ক্লাউড সিঙ্ক",
+    perk4Desc: "Your practice streaks, accuracy diagnostics, and saved bookmarks sync across phone and laptop via Neon PostgreSQL.",
+    chooseTopic: "Choose Topic to Explore / বিষয় বেছে নিন:",
+    topicQuant: "Quant / গণিত",
+    topicReasoning: "Reasoning / যুক্তি",
+    topicVerbal: "Verbal / ইংরেজি",
+    topicDI: "Data Interp. / তথ্য",
+    tabSignIn: "Sign In / লগইন",
+    tabSignUp: "Create Account / অ্যাকাউন্ট",
+    btnSignIn: "Sign In to Save Progress",
+    btnSignUp: "Create Free Account",
+    btnGuestDemo: "Try Demo Practice as Guest →",
+    navPrev: "Previous / পূর্ববর্তী",
+    navSkip: "Skip / এড়িয়ে যান",
+    navNext: "Next / পরবর্তী",
+    navSubmit: "Submit Test / পরীক্ষা জমা",
+    navFinish: "Finish Set 🎉",
+    solutionTitle: "Step-by-Step Solution / ধাপে ধাপে সমাধান",
+    shortcutTitle: "Shortcut Trick / শর্টকাট কৌশল:",
+    qNumPrefix: "Question",
+    ofWord: "of",
+    toolsMenu: "Tools & Settings / টুলস ও সেটিংস",
+    stopwatch: "Stopwatch / স্টপওয়াচ",
+    formulas: "Formulas / সূত্র",
+    scratchpad: "Scratchpad / খাতা",
+    sound: "Sound / শব্দ",
+    theme: "Theme / থিম",
+    leaderboard: "Top Scores / লিডারবোর্ড",
+    print: "Print / প্রিন্ট"
+  }
+};
+
+function applyUILanguage(lang) {
+  const t = UI_TRANSLATIONS[lang] || UI_TRANSLATIONS.both;
+
+  // 1. Header & Brand Subtitle
+  const brandSub = document.getElementById('brandSubtitle');
+  if (brandSub) brandSub.innerText = t.brandSubtitle;
+
+  // 2. Desktop Mode Tabs
+  const homeTab = document.getElementById('tabModeHome');
+  if (homeTab) {
+    const label = homeTab.querySelector('.mode-tab-label');
+    if (label) label.innerText = t.tabHome;
+  }
+  const practiceTab = document.querySelector('.mode-tab[data-mode="practice"] .mode-tab-label');
+  if (practiceTab) practiceTab.innerText = t.tabPractice;
+  const testTab = document.querySelector('.mode-tab[data-mode="test"] .mode-tab-label');
+  if (testTab) testTab.innerText = t.tabTest;
+  const mistakesTab = document.querySelector('.mode-tab[data-mode="mistakes"] .mode-tab-label');
+  if (mistakesTab) mistakesTab.innerHTML = `${t.tabMistakes} (<span id="mistakesCount">${state.mistakesVault.length}</span>)`;
+  const bookmarksTab = document.querySelector('.mode-tab[data-mode="bookmarks"] .mode-tab-label');
+  if (bookmarksTab) bookmarksTab.innerHTML = `${t.tabBookmarks} (<span id="bookmarkModeCount">${state.bookmarks.length}</span>)`;
+  const analyticsTab = document.querySelector('.mode-tab[data-mode="analytics"] .mode-tab-label');
+  if (analyticsTab) analyticsTab.innerText = t.tabAnalytics;
+
+  // 3. Mobile Bottom Nav Buttons
+  const mobHome = document.querySelector('.mob-nav-btn[data-mode="home"] span');
+  if (mobHome) mobHome.innerText = t.tabHome;
+  const mobPractice = document.querySelector('.mob-nav-btn[data-mode="practice"] span');
+  if (mobPractice) mobPractice.innerText = t.tabPractice;
+  const mobTest = document.querySelector('.mob-nav-btn[data-mode="test"] span');
+  if (mobTest) mobTest.innerText = t.tabTest;
+  const mobMistakes = document.querySelector('.mob-nav-btn[data-mode="mistakes"] span');
+  if (mobMistakes) mobMistakes.innerText = t.tabMistakes;
+  const mobBookmarks = document.querySelector('.mob-nav-btn[data-mode="bookmarks"] span');
+  if (mobBookmarks) mobBookmarks.innerText = t.tabBookmarks;
+
+  // 4. Home View Elements
+  const heroBadge = document.getElementById('homeHeroBadge');
+  if (heroBadge) heroBadge.innerHTML = `<i class="fas fa-graduation-cap"></i> ${t.heroBadge}`;
+  const heroTitle = document.getElementById('homeHeroTitle');
+  if (heroTitle) heroTitle.innerText = t.heroTitle;
+  const heroDesc = document.getElementById('homeHeroDesc');
+  if (heroDesc) heroDesc.innerText = t.heroDesc;
+
+  const statBi = document.getElementById('homeStatBilingual');
+  if (statBi) statBi.innerHTML = `<strong>500</strong> ${t.statBilingual}`;
+  const statSets = document.getElementById('homeStatSets');
+  if (statSets) statSets.innerHTML = `<strong>10</strong> ${t.statSets}`;
+  const statBoth = document.getElementById('homeStatBoth');
+  if (statBoth) statBoth.innerHTML = `<strong>${t.statBoth}</strong>`;
+  const statTricks = document.getElementById('homeStatTricks');
+  if (statTricks) statTricks.innerHTML = `<strong>${t.statTricks}</strong>`;
+
+  const whatTitle = document.getElementById('homeWhatYouGetTitle');
+  if (whatTitle) whatTitle.innerText = t.whatYouGetTitle;
+  const whatSub = document.getElementById('homeWhatYouGetSub');
+  if (whatSub) whatSub.innerText = t.whatYouGetSub;
+
+  const p1Title = document.getElementById('homePerk1Title');
+  if (p1Title) p1Title.innerText = t.perk1Title;
+  const p1Desc = document.getElementById('homePerk1Desc');
+  if (p1Desc) p1Desc.innerText = t.perk1Desc;
+
+  const p2Title = document.getElementById('homePerk2Title');
+  if (p2Title) p2Title.innerText = t.perk2Title;
+  const p2Desc = document.getElementById('homePerk2Desc');
+  if (p2Desc) p2Desc.innerText = t.perk2Desc;
+
+  const p3Title = document.getElementById('homePerk3Title');
+  if (p3Title) p3Title.innerText = t.perk3Title;
+  const p3Desc = document.getElementById('homePerk3Desc');
+  if (p3Desc) p3Desc.innerText = t.perk3Desc;
+
+  const p4Title = document.getElementById('homePerk4Title');
+  if (p4Title) p4Title.innerText = t.perk4Title;
+  const p4Desc = document.getElementById('homePerk4Desc');
+  if (p4Desc) p4Desc.innerText = t.perk4Desc;
+
+  const chooseTitle = document.getElementById('homeChooseTopicTitle');
+  if (chooseTitle) chooseTitle.innerText = t.chooseTopic;
+
+  const btnQ = document.getElementById('homeTopicBtnQuant');
+  if (btnQ) btnQ.innerHTML = `<i class="fas fa-calculator"></i> ${t.topicQuant}`;
+  const btnL = document.getElementById('homeTopicBtnLogical');
+  if (btnL) btnL.innerHTML = `<i class="fas fa-brain"></i> ${t.topicReasoning}`;
+  const btnV = document.getElementById('homeTopicBtnVerbal');
+  if (btnV) btnV.innerHTML = `<i class="fas fa-book-open"></i> ${t.topicVerbal}`;
+  const btnD = document.getElementById('homeTopicBtnDi');
+  if (btnD) btnD.innerHTML = `<i class="fas fa-chart-pie"></i> ${t.topicDI}`;
+
+  const guestDemoBtn = document.getElementById('homeGuestDemoBtn');
+  if (guestDemoBtn) guestDemoBtn.innerHTML = `<i class="fas fa-play-circle"></i> ${t.btnGuestDemo}`;
+  const cardSignInBtn = document.getElementById('btnHomeCardSignIn');
+  if (cardSignInBtn) cardSignInBtn.innerHTML = `<i class="fas fa-sign-in-alt"></i> ${t.btnSignIn}`;
+  const cardSignUpBtn = document.getElementById('btnHomeCardSignUp');
+  if (cardSignUpBtn) cardSignUpBtn.innerHTML = `<i class="fas fa-user-check"></i> ${t.btnSignUp}`;
+  const tabSignIn = document.getElementById('homeAuthTabSignIn');
+  if (tabSignIn) tabSignIn.innerHTML = `<i class="fas fa-sign-in-alt"></i> ${t.tabSignIn}`;
+  const tabSignUp = document.getElementById('homeAuthTabSignUp');
+  if (tabSignUp) tabSignUp.innerHTML = `<i class="fas fa-user-plus"></i> ${t.tabSignUp}`;
+
+  // 5. Drawer Labels
+  const drawerTitle = document.getElementById('drawerTitleText');
+  if (drawerTitle) drawerTitle.innerHTML = `<i class="fas fa-tools"></i> ${t.toolsMenu}`;
+  const drawerLang = document.getElementById('drawerLangLabel');
+  if (drawerLang) drawerLang.innerText = lang === 'bn' ? 'ভাষা নির্বাচন' : (lang === 'en' ? 'Language Selection' : 'Language / ভাষা');
+  const drawerTools = document.getElementById('drawerToolsLabel');
+  if (drawerTools) drawerTools.innerText = lang === 'bn' ? 'টুলস ও সাহায্য' : 'Tools';
+  const drawerFormulas = document.getElementById('drawerFormulasText');
+  if (drawerFormulas) drawerFormulas.innerText = t.formulas;
+  const drawerScratchpad = document.getElementById('drawerScratchpadText');
+  if (drawerScratchpad) drawerScratchpad.innerText = t.scratchpad;
+  const drawerSound = document.getElementById('drawerSoundText');
+  if (drawerSound) drawerSound.innerText = t.sound;
+  const drawerTheme = document.getElementById('drawerThemeText');
+  if (drawerTheme) drawerTheme.innerText = t.theme;
+  const drawerLeaderboard = document.getElementById('drawerLeaderboardText');
+  if (drawerLeaderboard) drawerLeaderboard.innerText = t.leaderboard;
+  const drawerPrint = document.getElementById('drawerPrintText');
+  if (drawerPrint) drawerPrint.innerText = t.print;
+}
+window.applyUILanguage = applyUILanguage;
+
+function setLanguage(lang) {
+  if (!['both', 'en', 'bn'].includes(lang)) lang = 'both';
+  state.language = lang;
+  localStorage.setItem('aptitude_language', lang);
+
+  // Sync active states on all language buttons
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    const btnLang = btn.dataset.lang || btn.dataset.drawerLang;
+    btn.classList.toggle('active', btnLang === lang);
+  });
+
+  // Apply UI translations across all static elements
+  applyUILanguage(lang);
+
+  // Re-render active view
+  if (state.mode === 'analytics') {
+    renderAnalyticsDashboard();
+  } else if (state.mode === 'admin') {
+    renderAdminDashboard();
+  } else if (state.mode !== 'home') {
+    renderQuestions();
+  }
+
+  const toastMsg = lang === 'bn' ? 'ভাষা নির্বাচন: বাংলা 🇧🇩' : (lang === 'en' ? 'Language: English 🇬🇧' : 'Bilingual Mode: English & বাংলা 🌐');
+  showToast(toastMsg);
+}
+window.setLanguage = setLanguage;
+
 // Theme Switcher & Appearance Settings
 function applyTheme(theme) {
   let effectiveTheme = theme;
@@ -833,12 +1158,31 @@ function applyTheme(theme) {
   document.documentElement.setAttribute('data-theme', effectiveTheme);
   state.theme = theme;
   localStorage.setItem('aptitude_theme', theme);
+
+  const iconClass = effectiveTheme === 'light' ? 'fa-moon' : 'fa-sun';
+  const labelText = effectiveTheme === 'light' ? 'Dark Mode' : 'Light Mode';
+
+  // Desktop Navbar Theme button
   const themeBtn = document.getElementById('themeToggleBtn');
   if (themeBtn) {
-    themeBtn.innerHTML = effectiveTheme === 'light' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+    themeBtn.innerHTML = `<i class="fas ${iconClass}"></i>`;
+    themeBtn.title = effectiveTheme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode';
   }
 
-  // Update theme option cards
+  // Mobile Header Theme button
+  const themeBtnMobile = document.getElementById('themeToggleBtnMobile');
+  if (themeBtnMobile) {
+    themeBtnMobile.innerHTML = `<i class="fas ${iconClass}"></i>`;
+    themeBtnMobile.title = effectiveTheme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode';
+  }
+
+  // Mobile Drawer Theme button
+  const themeBtnDrawer = document.getElementById('themeToggleBtnDrawer');
+  if (themeBtnDrawer) {
+    themeBtnDrawer.innerHTML = `<i class="fas ${iconClass}"></i><span id="drawerThemeText">${labelText}</span>`;
+  }
+
+  // Update theme option cards if present
   ['Dark', 'Light', 'Auto'].forEach(t => {
     const el = document.getElementById(`themeCard${t}`);
     if (el) {
@@ -846,18 +1190,36 @@ function applyTheme(theme) {
     }
   });
 }
+window.applyTheme = applyTheme;
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme') || 'dark';
+  const targetTheme = current === 'light' ? 'dark' : 'light';
+  applyTheme(targetTheme);
+  const msg = targetTheme === 'light' ? 'Switched to Light Mode ☀️' : 'Switched to Dark Mode 🌙';
+  showToast(msg);
+}
+window.toggleTheme = toggleTheme;
 
 function selectThemeSetting(theme) {
   applyTheme(theme);
   showToast(`Theme updated: ${theme.toUpperCase()} MODE ✨`);
 }
+window.selectThemeSetting = selectThemeSetting;
 
 // Event Listeners Setup
 function setupEventListeners() {
-  // Theme Settings Modal opener
-  document.getElementById('themeToggleBtn').addEventListener('click', () => {
-    openModal(elements.themeModal);
-  });
+  // Desktop Theme Toggle
+  const themeBtn = document.getElementById('themeToggleBtn');
+  if (themeBtn) {
+    themeBtn.addEventListener('click', toggleTheme);
+  }
+
+  // Mobile Header Theme Toggle
+  const themeBtnMobile = document.getElementById('themeToggleBtnMobile');
+  if (themeBtnMobile) {
+    themeBtnMobile.addEventListener('click', toggleTheme);
+  }
 
   const closeThemeBtn = document.getElementById('btnCloseThemeModal');
   if (closeThemeBtn) {
@@ -871,11 +1233,13 @@ function setupEventListeners() {
 
   // Sound toggle
   const soundBtn = document.getElementById('soundToggleBtn');
-  soundBtn.addEventListener('click', () => {
-    state.soundEnabled = !state.soundEnabled;
-    soundBtn.innerHTML = state.soundEnabled ? '<i class="fas fa-volume-up"></i>' : '<i class="fas fa-volume-mute"></i>';
-    showToast(state.soundEnabled ? 'Audio Feedback Enabled' : 'Audio Feedback Muted');
-  });
+  if (soundBtn) {
+    soundBtn.addEventListener('click', () => {
+      state.soundEnabled = !state.soundEnabled;
+      soundBtn.innerHTML = state.soundEnabled ? '<i class="fas fa-volume-up"></i>' : '<i class="fas fa-volume-mute"></i>';
+      showToast(state.soundEnabled ? 'Audio Feedback Enabled' : 'Audio Feedback Muted');
+    });
+  }
 
   // Student Profile Button
   if (elements.btnStudentProfile) {
@@ -896,18 +1260,9 @@ function setupEventListeners() {
   // Language switch buttons
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
-      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
       const target = e.currentTarget;
-      target.classList.add('active');
-      state.language = target.dataset.lang;
-      if (state.mode === 'analytics') {
-        renderAnalyticsDashboard();
-      } else if (state.mode === 'admin') {
-        renderAdminDashboard();
-      } else {
-        renderQuestions();
-      }
-      showToast(`Language: ${target.dataset.lang.toUpperCase()}`);
+      const lang = target.dataset.lang || target.dataset.drawerLang || 'both';
+      setLanguage(lang);
     });
   });
 
@@ -963,52 +1318,71 @@ function setupEventListeners() {
   }
 
   // Search input
-  elements.searchInput.addEventListener('input', (e) => {
-    state.searchQuery = e.target.value.toLowerCase().trim();
-    state.singleCurrentIndex = 0;
-    renderQuestions();
-  });
+  if (elements.searchInput) {
+    elements.searchInput.addEventListener('input', (e) => {
+      state.searchQuery = e.target.value.toLowerCase().trim();
+      state.singleCurrentIndex = 0;
+      renderQuestions();
+    });
+  }
 
-  // Category filter
-  elements.categoryFilter.addEventListener('change', (e) => {
-    state.category = e.target.value;
-    state.singleCurrentIndex = 0;
-    renderQuestions();
-  });
+  // Category filter (safe guarded)
+  if (elements.categoryFilter) {
+    elements.categoryFilter.addEventListener('change', (e) => {
+      state.category = e.target.value;
+      state.singleCurrentIndex = 0;
+      renderQuestions();
+    });
+  }
 
-  // Difficulty filter
-  elements.difficultyFilter.addEventListener('change', (e) => {
-    state.difficulty = e.target.value;
-    state.singleCurrentIndex = 0;
-    renderQuestions();
-  });
+  // Difficulty filter (safe guarded)
+  if (elements.difficultyFilter) {
+    elements.difficultyFilter.addEventListener('change', (e) => {
+      state.difficulty = e.target.value;
+      state.singleCurrentIndex = 0;
+      renderQuestions();
+    });
+  }
 
   // Scratchpad Modal openers/closers
-  document.getElementById('btnOpenScratchpad').addEventListener('click', () => openModal(elements.scratchpadModal));
-  document.getElementById('btnCloseScratchpad').addEventListener('click', () => closeModal(elements.scratchpadModal));
+  const btnOpenScratchpad = document.getElementById('btnOpenScratchpad');
+  if (btnOpenScratchpad) btnOpenScratchpad.addEventListener('click', () => openModal(elements.scratchpadModal));
+  const btnCloseScratchpad = document.getElementById('btnCloseScratchpad');
+  if (btnCloseScratchpad) btnCloseScratchpad.addEventListener('click', () => closeModal(elements.scratchpadModal));
 
   // Formula Modal openers/closers
-  document.getElementById('btnOpenFormulas').addEventListener('click', () => openModal(elements.formulaModal));
-  document.getElementById('btnCloseFormulas').addEventListener('click', () => closeModal(elements.formulaModal));
+  const btnOpenFormulas = document.getElementById('btnOpenFormulas');
+  if (btnOpenFormulas) btnOpenFormulas.addEventListener('click', () => openModal(elements.formulaModal));
+  const btnCloseFormulas = document.getElementById('btnCloseFormulas');
+  if (btnCloseFormulas) btnCloseFormulas.addEventListener('click', () => closeModal(elements.formulaModal));
 
   // Results Modal closers
-  document.getElementById('btnCloseResults').addEventListener('click', () => closeModal(elements.resultsModal));
-  document.getElementById('btnRetakeTest').addEventListener('click', () => {
-    closeModal(elements.resultsModal);
-    startTestMode();
-  });
+  const btnCloseResults = document.getElementById('btnCloseResults');
+  if (btnCloseResults) btnCloseResults.addEventListener('click', () => closeModal(elements.resultsModal));
+  const btnRetakeTest = document.getElementById('btnRetakeTest');
+  if (btnRetakeTest) {
+    btnRetakeTest.addEventListener('click', () => {
+      closeModal(elements.resultsModal);
+      startTestMode();
+    });
+  }
 
   // Submit test button
-  elements.btnSubmitTest.addEventListener('click', () => {
-    if (confirm('Are you sure you want to submit your test? / আপনি কি নিশ্চিত যে আপনি পরীক্ষা জমা দিতে চান?')) {
-      finishTestMode();
-    }
-  });
+  if (elements.btnSubmitTest) {
+    elements.btnSubmitTest.addEventListener('click', () => {
+      if (confirm('Are you sure you want to submit your test? / আপনি কি নিশ্চিত যে আপনি পরীক্ষা জমা দিতে চান?')) {
+        finishTestMode();
+      }
+    });
+  }
 
   // Print button
-  document.getElementById('btnPrintPage').addEventListener('click', () => {
-    window.print();
-  });
+  const btnPrintPage = document.getElementById('btnPrintPage');
+  if (btnPrintPage) {
+    btnPrintPage.addEventListener('click', () => {
+      window.print();
+    });
+  }
 
   // Close modals on backdrop click
   document.querySelectorAll('.modal-backdrop').forEach(modal => {
@@ -2097,12 +2471,13 @@ function renderQuestions(reviewMode = false) {
     `;
 
     // Explanation Box
+    const t = UI_TRANSLATIONS[state.language] || UI_TRANSLATIONS.both;
     const isExplanationVisible = isPractice && selectedAnswer !== undefined;
     const explanationHtml = `
       <div class="explanation-box ${isExplanationVisible ? 'visible' : ''}" id="exp-${q.id}">
         <div class="explanation-title">
           <i class="fas fa-lightbulb"></i>
-          <span>${state.language === 'bn' ? 'ধাপে ধাপে বিস্তারিত সমাধান' : 'Step-by-Step Descriptive Solution'}</span>
+          <span>${t.solutionTitle}</span>
         </div>
         <div class="explanation-content">
           ${state.language !== 'bn' ? `<div style="margin-bottom: 8px;">${q.explanation.en}</div>` : ''}
@@ -2110,7 +2485,7 @@ function renderQuestions(reviewMode = false) {
         </div>
         ${q.tips ? `
           <div class="explanation-tip">
-            <strong><i class="fas fa-bolt"></i> Shortcut Trick / শর্টকাট কৌশল:</strong><br>
+            <strong><i class="fas fa-bolt"></i> ${t.shortcutTitle}</strong><br>
             ${state.language !== 'bn' ? `<div>${q.tips.en}</div>` : ''}
             ${state.language !== 'en' ? `<div class="lang-bn">${q.tips.bn}</div>` : ''}
           </div>
@@ -2124,8 +2499,8 @@ function renderQuestions(reviewMode = false) {
         <!-- 1-by-1 Top Progress Track -->
         <div class="single-q-progress-bar-container">
           <div class="single-q-progress-info">
-            <span><i class="fas fa-bullseye" style="color: var(--accent-cyan);"></i> Question ${idx + 1} of ${total} (${progressPct}%)</span>
-            <span>Set ${q.setId || 1} &bull; ${state.language === 'bn' ? q.topic.bn : q.topic.en}</span>
+            <span><i class="fas fa-bullseye" style="color: var(--accent-cyan);"></i> ${t.qNumPrefix} ${idx + 1} ${t.ofWord} ${total} (${progressPct}%)</span>
+            <span>Set ${q.setId || 1} &bull; ${state.language === 'bn' ? q.topic.bn : (state.language === 'both' ? `${q.topic.en} / ${q.topic.bn}` : q.topic.en)}</span>
           </div>
           <div class="single-q-progress-track">
             <div class="single-q-progress-fill" style="width: ${progressPct}%;"></div>
@@ -2136,12 +2511,12 @@ function renderQuestions(reviewMode = false) {
         <div class="question-card" id="qcard-${q.id}">
           <div class="card-header">
             <div class="card-badges">
-              <span class="badge badge-qnum">Q #${idx + 1} / ${total}</span>
+              <span class="badge badge-qnum">#${idx + 1} / ${total}</span>
               <span class="badge ${categoryClass}">
-                ${state.language === 'bn' ? q.categoryName.bn : q.categoryName.en}
+                ${state.language === 'bn' ? q.categoryName.bn : (state.language === 'both' ? `${q.categoryName.en} • ${q.categoryName.bn}` : q.categoryName.en)}
               </span>
               <span class="badge" style="background: rgba(255,255,255,0.06); color: var(--text-secondary);">
-                ${state.language === 'bn' ? q.topic.bn : q.topic.en}
+                ${state.language === 'bn' ? q.topic.bn : (state.language === 'both' ? `${q.topic.en} • ${q.topic.bn}` : q.topic.en)}
               </span>
               <span class="badge ${diffClass}">
                 ${state.language === 'bn' ? q.difficultyName.bn : q.difficultyName.en}
@@ -2171,15 +2546,15 @@ function renderQuestions(reviewMode = false) {
         <!-- 1-by-1 Bottom Action Bar (Previous, Skip, Next/Submit) -->
         <div class="single-q-action-bar">
           <button class="btn-nav-action btn-nav-prev" onclick="navPrevQuestion()" ${idx === 0 ? 'disabled' : ''}>
-            <i class="fas fa-arrow-left"></i> Previous
+            <i class="fas fa-arrow-left"></i> ${t.navPrev}
           </button>
 
           <button class="btn-nav-action btn-nav-skip" onclick="navSkipQuestion()">
-            Skip <i class="fas fa-forward"></i>
+            ${t.navSkip} <i class="fas fa-forward"></i>
           </button>
 
           <button class="btn-nav-action btn-nav-next" onclick="navNextQuestion()">
-            ${idx === total - 1 ? (state.mode === 'test' ? '<i class="fas fa-paper-plane"></i> Submit Test' : 'Finish Set 🎉') : 'Next Question <i class="fas fa-arrow-right"></i>'}
+            ${idx === total - 1 ? (state.mode === 'test' ? `<i class="fas fa-paper-plane"></i> ${t.navSubmit}` : t.navFinish) : `${t.navNext} <i class="fas fa-arrow-right"></i>`}
           </button>
         </div>
       </div>
@@ -2967,71 +3342,92 @@ function finishOnboarding() {
 // =========================================================
 // MOBILE DRAWER SETUP
 // =========================================================
+function openMobileDrawer() {
+  const drawer = document.getElementById('mobileDrawer');
+  const overlay = document.getElementById('drawerOverlay');
+  if (drawer) drawer.classList.add('open');
+  if (overlay) overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+window.openMobileDrawer = openMobileDrawer;
+
+function closeMobileDrawer() {
+  const drawer = document.getElementById('mobileDrawer');
+  const overlay = document.getElementById('drawerOverlay');
+  if (drawer) drawer.classList.remove('open');
+  if (overlay) overlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+window.closeMobileDrawer = closeMobileDrawer;
+
+function toggleMobileDrawer(e) {
+  if (e) {
+    if (typeof e.preventDefault === 'function') e.preventDefault();
+    if (typeof e.stopPropagation === 'function') e.stopPropagation();
+  }
+  const drawer = document.getElementById('mobileDrawer');
+  if (drawer && drawer.classList.contains('open')) {
+    closeMobileDrawer();
+  } else {
+    openMobileDrawer();
+  }
+}
+window.toggleMobileDrawer = toggleMobileDrawer;
+
 function setupMobileDrawer() {
   const hamburger = document.getElementById('btnHamburger');
   const drawer = document.getElementById('mobileDrawer');
   const overlay = document.getElementById('drawerOverlay');
   const closeBtn = document.getElementById('btnCloseDrawer');
 
-  function openDrawer() {
-    if (drawer) drawer.classList.add('open');
-    if (overlay) overlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
+  if (hamburger) {
+    hamburger.onclick = toggleMobileDrawer;
   }
-
-  function closeDrawer() {
-    if (drawer) drawer.classList.remove('open');
-    if (overlay) overlay.classList.remove('active');
-    document.body.style.overflow = '';
+  if (closeBtn) {
+    closeBtn.onclick = closeMobileDrawer;
   }
-
-  if (hamburger) hamburger.addEventListener('click', openDrawer);
-  if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
-  if (overlay) overlay.addEventListener('click', closeDrawer);
+  if (overlay) {
+    overlay.onclick = closeMobileDrawer;
+  }
 
   // Mobile avatar button opens student auth
   const mobileAvatar = document.getElementById('btnStudentProfileMobile');
   if (mobileAvatar) {
-    mobileAvatar.addEventListener('click', () => openModal(elements.studentModal));
+    mobileAvatar.onclick = () => {
+      closeMobileDrawer();
+      openModal(elements.studentModal);
+    };
   }
 
   // Drawer language buttons
   document.querySelectorAll('[data-drawer-lang]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      state.language = btn.dataset.drawerLang;
-      // Sync desktop lang buttons
-      document.querySelectorAll('.lang-btn').forEach(b => {
-        b.classList.toggle('active', b.dataset.lang === state.language);
-      });
-      // Sync drawer lang buttons
-      document.querySelectorAll('[data-drawer-lang]').forEach(b => {
-        b.classList.toggle('active', b.dataset.drawerLang === state.language);
-      });
-      if (state.mode === 'analytics') renderAnalyticsDashboard();
-      else renderQuestions();
-      closeDrawer();
-    });
+    btn.onclick = () => {
+      setLanguage(btn.dataset.drawerLang);
+      closeMobileDrawer();
+    };
   });
 
   // Drawer tool buttons
   const drawerMap = [
-    ['btnOpenFormulasDrawer', () => { closeDrawer(); openModal(elements.formulaModal); }],
-    ['btnOpenScratchpadDrawer', () => { closeDrawer(); openModal(elements.scratchpadModal); }],
-    ['themeToggleBtnDrawer', () => { closeDrawer(); openModal(elements.themeModal); }],
-    ['leaderboardBtnDrawer', () => { closeDrawer(); openLeaderboard(); }],
-    ['btnPrintPageDrawer', () => { closeDrawer(); window.print(); }],
+    ['btnOpenFormulasDrawer', () => { closeMobileDrawer(); openModal(elements.formulaModal); }],
+    ['btnOpenScratchpadDrawer', () => { closeMobileDrawer(); openModal(elements.scratchpadModal); }],
+    ['themeToggleBtnDrawer', () => { toggleTheme(); }],
+    ['leaderboardBtnDrawer', () => { closeMobileDrawer(); openLeaderboard(); }],
+    ['btnPrintPageDrawer', () => { closeMobileDrawer(); window.print(); }],
     ['soundToggleBtnDrawer', () => {
       state.soundEnabled = !state.soundEnabled;
       const icon = state.soundEnabled ? 'fa-volume-up' : 'fa-volume-mute';
-      document.getElementById('soundToggleBtnDrawer').innerHTML = `<i class="fas ${icon}"></i><span>${state.soundEnabled ? 'Sound On' : 'Sound Off'}</span>`;
-      document.getElementById('soundToggleBtn') && (document.getElementById('soundToggleBtn').innerHTML = `<i class="fas ${icon}"></i>`);
-      showToast(state.soundEnabled ? 'Sound On' : 'Sound Muted');
+      const soundEl = document.getElementById('soundToggleBtnDrawer');
+      if (soundEl) soundEl.innerHTML = `<i class="fas ${icon}"></i><span>${state.soundEnabled ? 'Sound On' : 'Sound Off'}</span>`;
+      const dtSound = document.getElementById('soundToggleBtn');
+      if (dtSound) dtSound.innerHTML = `<i class="fas ${icon}"></i>`;
+      showToast(state.soundEnabled ? 'Audio Feedback Enabled' : 'Audio Feedback Muted');
     }]
   ];
 
   drawerMap.forEach(([id, fn]) => {
     const el = document.getElementById(id);
-    if (el) el.addEventListener('click', fn);
+    if (el) el.onclick = fn;
   });
 
   // Drawer stopwatch sync

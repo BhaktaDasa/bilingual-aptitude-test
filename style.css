@@ -2478,6 +2478,25 @@ body {
   gap: 8px;
 }
 
+.mobile-theme-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-glass);
+  color: var(--text-primary);
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.mobile-theme-btn:hover {
+  border-color: var(--accent-amber);
+  color: var(--accent-amber);
+}
+
 .mobile-avatar-btn {
   width: 38px;
   height: 38px;
@@ -2502,22 +2521,29 @@ body {
   background: var(--bg-secondary);
   border: 1px solid var(--border-glass);
   color: var(--text-primary);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all var(--transition-fast);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
-.hamburger-btn:hover { border-color: var(--accent-primary); color: var(--accent-primary); }
+.hamburger-btn:hover, .hamburger-btn:active {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  background: rgba(99,102,241,0.12);
+}
 
 /* Mobile Slide-Out Drawer */
 .drawer-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.55);
-  backdrop-filter: blur(4px);
-  z-index: 900;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 99998;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s ease;
@@ -2531,18 +2557,19 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  width: 300px;
+  width: 310px;
   max-width: 88vw;
   height: 100%;
   background: var(--bg-secondary);
   border-left: 1px solid var(--border-glass);
-  z-index: 1000;
+  z-index: 99999;
   transform: translateX(100%);
   transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   display: flex;
   flex-direction: column;
+  box-shadow: -4px 0 24px rgba(0,0,0,0.4);
 }
 .mobile-drawer.open {
   transform: translateX(0);
@@ -3386,538 +3413,3 @@ input, select {
     background: #ecfdf5 !important;
   }
 }
-
-    -webkit-text-size-adjust: 100%;
-    overflow-x: hidden;
-  }
-
-  /* Prevent iOS Safari 16px input zoom bug */
-  input[type="text"],
-  input[type="password"],
-  input[type="email"],
-  input[type="number"],
-  select,
-  textarea {
-    font-size: 16px !important;
-  }
-
-  .app-wrapper {
-    padding: 0.75rem 0.5rem;
-    max-width: 100vw;
-  }
-
-  .navbar {
-    padding: 0.75rem;
-    border-radius: var(--radius-md);
-    margin-bottom: 1.15rem;
-    gap: 0.65rem;
-  }
-
-  .brand-icon {
-    width: 36px;
-    height: 36px;
-    font-size: 1.15rem;
-  }
-
-  .brand-title {
-    font-size: 1.1rem;
-  }
-
-  .brand-subtitle {
-    font-size: 0.7rem;
-  }
-
-  .nav-actions {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-  }
-
-  .lang-selector-group {
-    padding: 2px;
-    gap: 2px;
-  }
-
-  .lang-btn {
-    padding: 5px 8px;
-    font-size: 0.74rem;
-  }
-
-  .btn-student-profile {
-    padding: 5px 10px;
-    font-size: 0.76rem;
-    max-width: 140px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .practice-timer-widget {
-    padding: 4px 8px;
-    font-size: 0.78rem;
-  }
-
-  .btn-secondary {
-    padding: 5px 9px;
-    font-size: 0.74rem;
-  }
-
-  .icon-btn {
-    width: 32px;
-    height: 32px;
-    font-size: 0.82rem;
-  }
-
-  /* Hero & Home Auth Section */
-  .hero-section {
-    padding: 1.15rem 0.85rem;
-    margin-bottom: 1.15rem;
-    border-radius: var(--radius-md);
-  }
-
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 1.15rem;
-  }
-
-  .hero-text h1 {
-    font-size: 1.35rem;
-    line-height: 1.25;
-  }
-
-  .hero-text p {
-    font-size: 0.84rem;
-    line-height: 1.5;
-  }
-
-  .hero-stats {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
-  }
-
-  .stat-chip {
-    padding: 0.5rem 0.35rem;
-  }
-
-  .stat-number {
-    font-size: 1.2rem;
-  }
-
-  .stat-label {
-    font-size: 0.7rem;
-  }
-
-  .home-auth-card {
-    padding: 1.1rem 0.85rem;
-    border-radius: var(--radius-md);
-  }
-
-  .home-auth-tabs {
-    padding: 2px;
-    margin-bottom: 0.85rem;
-  }
-
-  .home-auth-tab {
-    padding: 6px 10px;
-    font-size: 0.8rem;
-  }
-
-  /* Study Setup Hub */
-  .study-setup-hub {
-    padding: 1.15rem 0.85rem;
-    margin-bottom: 1.15rem;
-    border-radius: var(--radius-md);
-  }
-
-  .hub-title {
-    font-size: 1.05rem;
-    gap: 6px;
-  }
-
-  .study-topic-grid {
-    grid-template-columns: 1fr;
-    gap: 0.55rem;
-    margin: 0.85rem 0 1.15rem;
-  }
-
-  .study-topic-card {
-    padding: 0.85rem 0.75rem;
-    gap: 10px;
-  }
-
-  .topic-icon-wrap {
-    width: 38px;
-    height: 38px;
-    font-size: 1.15rem;
-  }
-
-  /* Mode Tabs */
-  .mode-tabs {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    padding: 4px 2px;
-    gap: 4px;
-    justify-content: flex-start;
-    scrollbar-width: none;
-  }
-
-  .mode-tabs::-webkit-scrollbar {
-    display: none;
-  }
-
-  .mode-tab {
-    padding: 7px 11px;
-    font-size: 0.78rem;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-
-  /* Quick Set Pills */
-  .set-pills-scroll-container {
-    gap: 6px;
-    margin-bottom: 0.85rem;
-    padding-bottom: 4px;
-  }
-
-  .set-pills-label {
-    font-size: 0.76rem;
-  }
-
-  .set-pill {
-    padding: 5px 11px;
-    font-size: 0.76rem;
-    flex-shrink: 0;
-  }
-
-  /* Toolbar */
-  .toolbar {
-    flex-direction: column;
-    padding: 0.85rem;
-    gap: 0.65rem;
-    margin-bottom: 1.15rem;
-    border-radius: var(--radius-md);
-  }
-
-  .search-box {
-    width: 100%;
-  }
-
-  .search-box input {
-    padding: 10px 12px 10px 38px;
-  }
-
-  .filter-group {
-    width: 100%;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .custom-select {
-    width: 100%;
-    padding: 10px 12px;
-  }
-
-  /* Question Cards */
-  .question-card {
-    padding: 1.15rem 0.85rem;
-    border-radius: var(--radius-md);
-    margin-bottom: 0.85rem;
-  }
-
-  .card-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-
-  .card-badges {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-  }
-
-  .badge {
-    padding: 3px 7px;
-    font-size: 0.7rem;
-  }
-
-  .card-actions {
-    align-self: flex-end;
-  }
-
-  .question-text-en {
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-
-  .question-text-bn {
-    font-size: 0.92rem;
-    line-height: 1.55;
-  }
-
-  /* Option Items - Touch Ergonomics */
-  .options-grid {
-    grid-template-columns: 1fr;
-    gap: 0.55rem;
-  }
-
-  .option-item {
-    padding: 11px 12px;
-    min-height: 48px;
-    border-radius: var(--radius-sm);
-  }
-
-  .option-text-en {
-    font-size: 0.88rem;
-  }
-
-  .option-text-bn {
-    font-size: 0.85rem;
-  }
-
-  .option-indicator {
-    width: 26px;
-    height: 26px;
-    font-size: 0.78rem;
-  }
-
-  /* Explanation Box */
-  .explanation-box {
-    padding: 0.9rem 0.8rem;
-    border-radius: var(--radius-sm);
-  }
-
-  .explanation-title {
-    font-size: 0.84rem;
-  }
-
-  .explanation-content {
-    font-size: 0.82rem;
-    line-height: 1.5;
-  }
-
-  /* World-Class 1-by-1 Action Bar (iPhone 6 / 375px Optimized) */
-  .single-q-action-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.75rem 0.5rem;
-    gap: 6px;
-    border-radius: var(--radius-md);
-    margin-top: 1.25rem;
-  }
-
-  .btn-nav-action {
-    padding: 10px 8px;
-    font-size: 0.8rem;
-    gap: 5px;
-    flex: 1;
-    justify-content: center;
-    text-align: center;
-    white-space: nowrap;
-  }
-
-  .btn-nav-prev {
-    flex: 1;
-    min-width: 70px;
-  }
-
-  .btn-nav-skip {
-    flex: 0.9;
-    min-width: 60px;
-  }
-
-  .btn-nav-next {
-    flex: 1.3;
-    min-width: 95px;
-    font-weight: 800;
-  }
-
-  /* Test HUD */
-  .test-hud-panel {
-    flex-direction: column;
-    padding: 0.85rem 0.75rem;
-    gap: 0.65rem;
-  }
-
-  .timer-box {
-    width: 100%;
-    text-align: center;
-    font-size: 1.2rem;
-  }
-
-  .test-progress-bar-container {
-    width: 100%;
-  }
-
-  #btnSubmitTest {
-    width: 100%;
-    justify-content: center;
-    padding: 11px;
-    font-size: 0.92rem;
-  }
-
-  .test-palette {
-    grid-template-columns: repeat(auto-fill, minmax(34px, 1fr));
-    gap: 5px;
-    max-height: 130px;
-  }
-
-  .palette-btn {
-    height: 34px;
-    font-size: 0.75rem;
-  }
-
-  /* Admin & Analytics on Mobile */
-  .admin-kpi-grid, .analytics-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-  }
-
-  .admin-kpi-card, .analytics-stat-card {
-    padding: 0.85rem 0.65rem;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-  }
-
-  .admin-kpi-val, .analytics-stat-val {
-    font-size: 1.35rem;
-  }
-
-  .admin-kpi-label, .analytics-stat-label {
-    font-size: 0.7rem;
-  }
-
-  .admin-table-card, .diagnostics-container, .history-container {
-    padding: 1rem 0.75rem;
-    border-radius: var(--radius-md);
-  }
-
-  /* Modals for Mobile / iPhone 6 */
-  .modal-backdrop {
-    padding: 0.5rem;
-  }
-
-  .modal-content {
-    max-width: 96vw;
-    width: 96vw;
-    max-height: 92vh;
-    border-radius: var(--radius-md);
-    margin: auto;
-  }
-
-  .modal-header {
-    padding: 0.85rem 1rem;
-  }
-
-  .modal-body {
-    padding: 0.85rem;
-    max-height: calc(92vh - 60px);
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .scratchpad-canvas {
-    height: calc(90vh - 180px);
-    touch-action: none;
-  }
-
-  .results-stats-grid {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-  }
-
-  /* Toast on mobile */
-  .toast-container {
-    left: 0.75rem;
-    right: 0.75rem;
-    bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
-  }
-
-  .toast {
-    width: 100%;
-    justify-content: center;
-    padding: 9px 12px;
-    font-size: 0.82rem;
-  }
-
-  .app-footer {
-    padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
-    font-size: 0.8rem;
-  }
-}
-
-/* Specific iPhone 6 / 7 / 8 / SE (<= 380px) */
-@media (max-width: 380px) {
-  .hero-text h1 {
-    font-size: 1.25rem;
-  }
-
-  .brand-title {
-    font-size: 1rem;
-  }
-
-  .brand-subtitle {
-    display: none;
-  }
-
-  .single-q-action-bar {
-    padding: 0.65rem 0.4rem;
-    gap: 4px;
-  }
-
-  .btn-nav-action {
-    padding: 9px 6px;
-    font-size: 0.76rem;
-  }
-
-  .btn-nav-prev {
-    min-width: 62px;
-  }
-
-  .btn-nav-skip {
-    min-width: 52px;
-  }
-
-  .btn-nav-next {
-    min-width: 85px;
-  }
-}
-
-/* Print Styles for PDF / Print */
-@media print {
-  body {
-    background: #fff !important;
-    color: #000 !important;
-  }
-  .navbar, .hero-section, .toolbar, .test-hud-panel, .app-footer, .nav-actions, .card-footer, .modal-backdrop, .set-pills-scroll-container {
-    display: none !important;
-  }
-  .question-card {
-    border: 1px solid #ddd !important;
-    box-shadow: none !important;
-    page-break-inside: avoid;
-    margin-bottom: 2rem;
-    background: #fff !important;
-  }
-  .explanation-box {
-    display: block !important;
-    background: #f9f9f9 !important;
-    border: 1px solid #ccc !important;
-    color: #222 !important;
-  }
-  .option-item {
-    border: 1px solid #ccc !important;
-    background: #fff !important;
-  }
-  .option-item.correct {
-    border-color: #059669 !important;
-    background: #ecfdf5 !important;
-  }
-}
-

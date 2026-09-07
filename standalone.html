@@ -2490,6 +2490,25 @@ body {
   gap: 8px;
 }
 
+.mobile-theme-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-glass);
+  color: var(--text-primary);
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+.mobile-theme-btn:hover {
+  border-color: var(--accent-amber);
+  color: var(--accent-amber);
+}
+
 .mobile-avatar-btn {
   width: 38px;
   height: 38px;
@@ -2514,22 +2533,29 @@ body {
   background: var(--bg-secondary);
   border: 1px solid var(--border-glass);
   color: var(--text-primary);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: all var(--transition-fast);
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
-.hamburger-btn:hover { border-color: var(--accent-primary); color: var(--accent-primary); }
+.hamburger-btn:hover, .hamburger-btn:active {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  background: rgba(99,102,241,0.12);
+}
 
 /* Mobile Slide-Out Drawer */
 .drawer-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.55);
-  backdrop-filter: blur(4px);
-  z-index: 900;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 99998;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.25s ease;
@@ -2543,18 +2569,19 @@ body {
   position: fixed;
   top: 0;
   right: 0;
-  width: 300px;
+  width: 310px;
   max-width: 88vw;
   height: 100%;
   background: var(--bg-secondary);
   border-left: 1px solid var(--border-glass);
-  z-index: 1000;
+  z-index: 99999;
   transform: translateX(100%);
   transition: transform 0.3s cubic-bezier(0.4,0,0.2,1);
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   display: flex;
   flex-direction: column;
+  box-shadow: -4px 0 24px rgba(0,0,0,0.4);
 }
 .mobile-drawer.open {
   transform: translateX(0);
@@ -3399,541 +3426,6 @@ input, select {
   }
 }
 
-    -webkit-text-size-adjust: 100%;
-    overflow-x: hidden;
-  }
-
-  /* Prevent iOS Safari 16px input zoom bug */
-  input[type="text"],
-  input[type="password"],
-  input[type="email"],
-  input[type="number"],
-  select,
-  textarea {
-    font-size: 16px !important;
-  }
-
-  .app-wrapper {
-    padding: 0.75rem 0.5rem;
-    max-width: 100vw;
-  }
-
-  .navbar {
-    padding: 0.75rem;
-    border-radius: var(--radius-md);
-    margin-bottom: 1.15rem;
-    gap: 0.65rem;
-  }
-
-  .brand-icon {
-    width: 36px;
-    height: 36px;
-    font-size: 1.15rem;
-  }
-
-  .brand-title {
-    font-size: 1.1rem;
-  }
-
-  .brand-subtitle {
-    font-size: 0.7rem;
-  }
-
-  .nav-actions {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-  }
-
-  .lang-selector-group {
-    padding: 2px;
-    gap: 2px;
-  }
-
-  .lang-btn {
-    padding: 5px 8px;
-    font-size: 0.74rem;
-  }
-
-  .btn-student-profile {
-    padding: 5px 10px;
-    font-size: 0.76rem;
-    max-width: 140px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
-
-  .practice-timer-widget {
-    padding: 4px 8px;
-    font-size: 0.78rem;
-  }
-
-  .btn-secondary {
-    padding: 5px 9px;
-    font-size: 0.74rem;
-  }
-
-  .icon-btn {
-    width: 32px;
-    height: 32px;
-    font-size: 0.82rem;
-  }
-
-  /* Hero & Home Auth Section */
-  .hero-section {
-    padding: 1.15rem 0.85rem;
-    margin-bottom: 1.15rem;
-    border-radius: var(--radius-md);
-  }
-
-  .hero-grid {
-    grid-template-columns: 1fr;
-    gap: 1.15rem;
-  }
-
-  .hero-text h1 {
-    font-size: 1.35rem;
-    line-height: 1.25;
-  }
-
-  .hero-text p {
-    font-size: 0.84rem;
-    line-height: 1.5;
-  }
-
-  .hero-stats {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.5rem;
-  }
-
-  .stat-chip {
-    padding: 0.5rem 0.35rem;
-  }
-
-  .stat-number {
-    font-size: 1.2rem;
-  }
-
-  .stat-label {
-    font-size: 0.7rem;
-  }
-
-  .home-auth-card {
-    padding: 1.1rem 0.85rem;
-    border-radius: var(--radius-md);
-  }
-
-  .home-auth-tabs {
-    padding: 2px;
-    margin-bottom: 0.85rem;
-  }
-
-  .home-auth-tab {
-    padding: 6px 10px;
-    font-size: 0.8rem;
-  }
-
-  /* Study Setup Hub */
-  .study-setup-hub {
-    padding: 1.15rem 0.85rem;
-    margin-bottom: 1.15rem;
-    border-radius: var(--radius-md);
-  }
-
-  .hub-title {
-    font-size: 1.05rem;
-    gap: 6px;
-  }
-
-  .study-topic-grid {
-    grid-template-columns: 1fr;
-    gap: 0.55rem;
-    margin: 0.85rem 0 1.15rem;
-  }
-
-  .study-topic-card {
-    padding: 0.85rem 0.75rem;
-    gap: 10px;
-  }
-
-  .topic-icon-wrap {
-    width: 38px;
-    height: 38px;
-    font-size: 1.15rem;
-  }
-
-  /* Mode Tabs */
-  .mode-tabs {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    padding: 4px 2px;
-    gap: 4px;
-    justify-content: flex-start;
-    scrollbar-width: none;
-  }
-
-  .mode-tabs::-webkit-scrollbar {
-    display: none;
-  }
-
-  .mode-tab {
-    padding: 7px 11px;
-    font-size: 0.78rem;
-    white-space: nowrap;
-    flex-shrink: 0;
-  }
-
-  /* Quick Set Pills */
-  .set-pills-scroll-container {
-    gap: 6px;
-    margin-bottom: 0.85rem;
-    padding-bottom: 4px;
-  }
-
-  .set-pills-label {
-    font-size: 0.76rem;
-  }
-
-  .set-pill {
-    padding: 5px 11px;
-    font-size: 0.76rem;
-    flex-shrink: 0;
-  }
-
-  /* Toolbar */
-  .toolbar {
-    flex-direction: column;
-    padding: 0.85rem;
-    gap: 0.65rem;
-    margin-bottom: 1.15rem;
-    border-radius: var(--radius-md);
-  }
-
-  .search-box {
-    width: 100%;
-  }
-
-  .search-box input {
-    padding: 10px 12px 10px 38px;
-  }
-
-  .filter-group {
-    width: 100%;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-
-  .custom-select {
-    width: 100%;
-    padding: 10px 12px;
-  }
-
-  /* Question Cards */
-  .question-card {
-    padding: 1.15rem 0.85rem;
-    border-radius: var(--radius-md);
-    margin-bottom: 0.85rem;
-  }
-
-  .card-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-  }
-
-  .card-badges {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 4px;
-  }
-
-  .badge {
-    padding: 3px 7px;
-    font-size: 0.7rem;
-  }
-
-  .card-actions {
-    align-self: flex-end;
-  }
-
-  .question-text-en {
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-
-  .question-text-bn {
-    font-size: 0.92rem;
-    line-height: 1.55;
-  }
-
-  /* Option Items - Touch Ergonomics */
-  .options-grid {
-    grid-template-columns: 1fr;
-    gap: 0.55rem;
-  }
-
-  .option-item {
-    padding: 11px 12px;
-    min-height: 48px;
-    border-radius: var(--radius-sm);
-  }
-
-  .option-text-en {
-    font-size: 0.88rem;
-  }
-
-  .option-text-bn {
-    font-size: 0.85rem;
-  }
-
-  .option-indicator {
-    width: 26px;
-    height: 26px;
-    font-size: 0.78rem;
-  }
-
-  /* Explanation Box */
-  .explanation-box {
-    padding: 0.9rem 0.8rem;
-    border-radius: var(--radius-sm);
-  }
-
-  .explanation-title {
-    font-size: 0.84rem;
-  }
-
-  .explanation-content {
-    font-size: 0.82rem;
-    line-height: 1.5;
-  }
-
-  /* World-Class 1-by-1 Action Bar (iPhone 6 / 375px Optimized) */
-  .single-q-action-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.75rem 0.5rem;
-    gap: 6px;
-    border-radius: var(--radius-md);
-    margin-top: 1.25rem;
-  }
-
-  .btn-nav-action {
-    padding: 10px 8px;
-    font-size: 0.8rem;
-    gap: 5px;
-    flex: 1;
-    justify-content: center;
-    text-align: center;
-    white-space: nowrap;
-  }
-
-  .btn-nav-prev {
-    flex: 1;
-    min-width: 70px;
-  }
-
-  .btn-nav-skip {
-    flex: 0.9;
-    min-width: 60px;
-  }
-
-  .btn-nav-next {
-    flex: 1.3;
-    min-width: 95px;
-    font-weight: 800;
-  }
-
-  /* Test HUD */
-  .test-hud-panel {
-    flex-direction: column;
-    padding: 0.85rem 0.75rem;
-    gap: 0.65rem;
-  }
-
-  .timer-box {
-    width: 100%;
-    text-align: center;
-    font-size: 1.2rem;
-  }
-
-  .test-progress-bar-container {
-    width: 100%;
-  }
-
-  #btnSubmitTest {
-    width: 100%;
-    justify-content: center;
-    padding: 11px;
-    font-size: 0.92rem;
-  }
-
-  .test-palette {
-    grid-template-columns: repeat(auto-fill, minmax(34px, 1fr));
-    gap: 5px;
-    max-height: 130px;
-  }
-
-  .palette-btn {
-    height: 34px;
-    font-size: 0.75rem;
-  }
-
-  /* Admin & Analytics on Mobile */
-  .admin-kpi-grid, .analytics-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-  }
-
-  .admin-kpi-card, .analytics-stat-card {
-    padding: 0.85rem 0.65rem;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-  }
-
-  .admin-kpi-val, .analytics-stat-val {
-    font-size: 1.35rem;
-  }
-
-  .admin-kpi-label, .analytics-stat-label {
-    font-size: 0.7rem;
-  }
-
-  .admin-table-card, .diagnostics-container, .history-container {
-    padding: 1rem 0.75rem;
-    border-radius: var(--radius-md);
-  }
-
-  /* Modals for Mobile / iPhone 6 */
-  .modal-backdrop {
-    padding: 0.5rem;
-  }
-
-  .modal-content {
-    max-width: 96vw;
-    width: 96vw;
-    max-height: 92vh;
-    border-radius: var(--radius-md);
-    margin: auto;
-  }
-
-  .modal-header {
-    padding: 0.85rem 1rem;
-  }
-
-  .modal-body {
-    padding: 0.85rem;
-    max-height: calc(92vh - 60px);
-    overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
-  }
-
-  .scratchpad-canvas {
-    height: calc(90vh - 180px);
-    touch-action: none;
-  }
-
-  .results-stats-grid {
-    grid-template-columns: 1fr;
-    gap: 0.5rem;
-  }
-
-  /* Toast on mobile */
-  .toast-container {
-    left: 0.75rem;
-    right: 0.75rem;
-    bottom: calc(0.75rem + env(safe-area-inset-bottom, 0px));
-  }
-
-  .toast {
-    width: 100%;
-    justify-content: center;
-    padding: 9px 12px;
-    font-size: 0.82rem;
-  }
-
-  .app-footer {
-    padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
-    font-size: 0.8rem;
-  }
-}
-
-/* Specific iPhone 6 / 7 / 8 / SE (<= 380px) */
-@media (max-width: 380px) {
-  .hero-text h1 {
-    font-size: 1.25rem;
-  }
-
-  .brand-title {
-    font-size: 1rem;
-  }
-
-  .brand-subtitle {
-    display: none;
-  }
-
-  .single-q-action-bar {
-    padding: 0.65rem 0.4rem;
-    gap: 4px;
-  }
-
-  .btn-nav-action {
-    padding: 9px 6px;
-    font-size: 0.76rem;
-  }
-
-  .btn-nav-prev {
-    min-width: 62px;
-  }
-
-  .btn-nav-skip {
-    min-width: 52px;
-  }
-
-  .btn-nav-next {
-    min-width: 85px;
-  }
-}
-
-/* Print Styles for PDF / Print */
-@media print {
-  body {
-    background: #fff !important;
-    color: #000 !important;
-  }
-  .navbar, .hero-section, .toolbar, .test-hud-panel, .app-footer, .nav-actions, .card-footer, .modal-backdrop, .set-pills-scroll-container {
-    display: none !important;
-  }
-  .question-card {
-    border: 1px solid #ddd !important;
-    box-shadow: none !important;
-    page-break-inside: avoid;
-    margin-bottom: 2rem;
-    background: #fff !important;
-  }
-  .explanation-box {
-    display: block !important;
-    background: #f9f9f9 !important;
-    border: 1px solid #ccc !important;
-    color: #222 !important;
-  }
-  .option-item {
-    border: 1px solid #ccc !important;
-    background: #fff !important;
-  }
-  .option-item.correct {
-    border-color: #059669 !important;
-    background: #ecfdf5 !important;
-  }
-}
-
-
 </style>
 </head>
 <body>
@@ -3942,20 +3434,20 @@ input, select {
 
     <!-- TOP NAV BAR -->
     <header class="navbar" id="mainNavbar">
-      <a href="#" class="brand-logo">
+      <a href="#" class="brand-logo" onclick="setMode('home'); return false;">
         <div class="brand-icon"><i class="fas fa-brain"></i></div>
         <div>
           <div class="brand-title">AptitudeMaster <span style="font-size:0.75rem;font-weight:500;opacity:0.8;">2.0</span></div>
-          <div class="brand-subtitle">Bilingual Aptitude &amp; Reasoning Prep</div>
+          <div class="brand-subtitle" id="brandSubtitle">Bilingual Aptitude &amp; Reasoning Prep</div>
         </div>
       </a>
 
       <!-- Desktop Nav Actions -->
       <div class="nav-actions" id="desktopNavActions">
         <div class="lang-selector-group">
-          <button class="lang-btn active" data-lang="both"><i class="fas fa-globe"></i> Both</button>
-          <button class="lang-btn" data-lang="en"><i class="fas fa-font"></i> EN</button>
-          <button class="lang-btn" data-lang="bn"><i class="fas fa-language"></i> বাং</button>
+          <button type="button" class="lang-btn active" data-lang="both" onclick="setLanguage('both')"><i class="fas fa-globe"></i> Both</button>
+          <button type="button" class="lang-btn" data-lang="en" onclick="setLanguage('en')"><i class="fas fa-font"></i> EN</button>
+          <button type="button" class="lang-btn" data-lang="bn" onclick="setLanguage('bn')"><i class="fas fa-language"></i> বাং</button>
         </div>
         <div class="practice-timer-widget" id="practiceTimerWidget">
           <i class="fas fa-stopwatch"></i>
@@ -3966,7 +3458,7 @@ input, select {
         <button class="btn-secondary" id="btnOpenFormulas"><i class="fas fa-square-root-alt"></i> Formulas</button>
         <button class="btn-secondary" id="btnOpenScratchpad"><i class="fas fa-pencil-alt"></i> Scratchpad</button>
         <button class="icon-btn" id="soundToggleBtn"><i class="fas fa-volume-up"></i></button>
-        <button class="icon-btn" id="themeToggleBtn"><i class="fas fa-sun"></i></button>
+        <button class="icon-btn" id="themeToggleBtn" title="Toggle Dark/Light Mode" onclick="toggleTheme()"><i class="fas fa-sun"></i></button>
         <button class="icon-btn" id="btnPrintPage"><i class="fas fa-print"></i></button>
         <button class="btn-student-profile" id="btnStudentProfile">
           <i class="fas fa-user-graduate"></i>
@@ -3976,27 +3468,28 @@ input, select {
 
       <!-- Mobile Right Controls -->
       <div class="mobile-nav-right">
-        <button class="mobile-avatar-btn" id="btnStudentProfileMobile"><i class="fas fa-user-graduate"></i></button>
-        <button class="hamburger-btn" id="btnHamburger" aria-label="Tools menu"><i class="fas fa-bars"></i></button>
+        <button type="button" class="mobile-theme-btn" id="themeToggleBtnMobile" title="Toggle Theme" aria-label="Toggle Dark/Light Mode" onclick="toggleTheme()"><i class="fas fa-sun"></i></button>
+        <button type="button" class="mobile-avatar-btn" id="btnStudentProfileMobile" title="Account"><i class="fas fa-user-graduate"></i></button>
+        <button type="button" class="hamburger-btn" id="btnHamburger" aria-label="Tools menu" onclick="toggleMobileDrawer(event)"><i class="fas fa-bars"></i></button>
       </div>
     </header>
 
     <!-- Mobile Drawer Overlay -->
-    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <div class="drawer-overlay" id="drawerOverlay" onclick="closeMobileDrawer()"></div>
     <!-- Mobile Tools Drawer -->
     <aside class="mobile-drawer" id="mobileDrawer">
       <div class="drawer-header">
-        <span class="drawer-title"><i class="fas fa-tools"></i> Tools &amp; Settings</span>
-        <button class="icon-btn" id="btnCloseDrawer"><i class="fas fa-times"></i></button>
+        <span class="drawer-title" id="drawerTitleText"><i class="fas fa-tools"></i> Tools &amp; Settings</span>
+        <button type="button" class="icon-btn" id="btnCloseDrawer" onclick="closeMobileDrawer()"><i class="fas fa-times"></i></button>
       </div>
       <div class="drawer-body">
-        <div class="drawer-section-label">Language / ভাষা</div>
+        <div class="drawer-section-label" id="drawerLangLabel">Language / ভাষা</div>
         <div class="lang-selector-group" style="width:100%;border-radius:var(--radius-md);padding:5px;">
-          <button class="lang-btn active" data-drawer-lang="both" style="flex:1;justify-content:center;"><i class="fas fa-globe"></i> Both</button>
-          <button class="lang-btn" data-drawer-lang="en" style="flex:1;justify-content:center;"><i class="fas fa-font"></i> EN</button>
-          <button class="lang-btn" data-drawer-lang="bn" style="flex:1;justify-content:center;"><i class="fas fa-language"></i> বাং</button>
+          <button type="button" class="lang-btn active" data-lang="both" data-drawer-lang="both" onclick="setLanguage('both')" style="flex:1;justify-content:center;"><i class="fas fa-globe"></i> Both</button>
+          <button type="button" class="lang-btn" data-lang="en" data-drawer-lang="en" onclick="setLanguage('en')" style="flex:1;justify-content:center;"><i class="fas fa-font"></i> EN</button>
+          <button type="button" class="lang-btn" data-lang="bn" data-drawer-lang="bn" onclick="setLanguage('bn')" style="flex:1;justify-content:center;"><i class="fas fa-language"></i> বাং</button>
         </div>
-        <div class="drawer-section-label" style="margin-top:1rem;">Stopwatch</div>
+        <div class="drawer-section-label" id="drawerStopwatchLabel" style="margin-top:1rem;">Stopwatch</div>
         <div class="practice-timer-widget" style="width:100%;border-radius:var(--radius-md);justify-content:space-between;">
           <span style="display:flex;align-items:center;gap:6px;"><i class="fas fa-stopwatch"></i><span id="practiceStopwatchDisplayDrawer">00:00</span></span>
           <div style="display:flex;gap:4px;">
@@ -4004,14 +3497,14 @@ input, select {
             <button class="timer-control-btn" id="btnResetStopwatchDrawer"><i class="fas fa-redo"></i></button>
           </div>
         </div>
-        <div class="drawer-section-label" style="margin-top:1rem;">Tools</div>
+        <div class="drawer-section-label" id="drawerToolsLabel" style="margin-top:1rem;">Tools</div>
         <div class="drawer-tools-grid">
-          <button class="drawer-tool-btn" id="btnOpenFormulasDrawer"><i class="fas fa-square-root-alt"></i><span>Formulas</span></button>
-          <button class="drawer-tool-btn" id="btnOpenScratchpadDrawer"><i class="fas fa-pencil-alt"></i><span>Scratchpad</span></button>
-          <button class="drawer-tool-btn" id="soundToggleBtnDrawer"><i class="fas fa-volume-up"></i><span>Sound</span></button>
-          <button class="drawer-tool-btn" id="themeToggleBtnDrawer"><i class="fas fa-palette"></i><span>Theme</span></button>
-          <button class="drawer-tool-btn" id="leaderboardBtnDrawer"><i class="fas fa-trophy"></i><span>Top Scores</span></button>
-          <button class="drawer-tool-btn" id="btnPrintPageDrawer"><i class="fas fa-print"></i><span>Print</span></button>
+          <button type="button" class="drawer-tool-btn" id="btnOpenFormulasDrawer"><i class="fas fa-square-root-alt"></i><span id="drawerFormulasText">Formulas</span></button>
+          <button type="button" class="drawer-tool-btn" id="btnOpenScratchpadDrawer"><i class="fas fa-pencil-alt"></i><span id="drawerScratchpadText">Scratchpad</span></button>
+          <button type="button" class="drawer-tool-btn" id="soundToggleBtnDrawer"><i class="fas fa-volume-up"></i><span id="drawerSoundText">Sound</span></button>
+          <button type="button" class="drawer-tool-btn" id="themeToggleBtnDrawer" onclick="toggleTheme()"><i class="fas fa-sun"></i><span id="drawerThemeText">Theme</span></button>
+          <button type="button" class="drawer-tool-btn" id="leaderboardBtnDrawer"><i class="fas fa-trophy"></i><span id="drawerLeaderboardText">Leaderboard</span></button>
+          <button type="button" class="drawer-tool-btn" id="btnPrintPageDrawer"><i class="fas fa-print"></i><span id="drawerPrintText">Print</span></button>
         </div>
       </div>
     </aside>
@@ -4048,13 +3541,13 @@ input, select {
       
       <!-- Top Hero / Welcome Banner -->
       <div class="home-hero">
-        <div class="home-hero-badge">
+        <div class="home-hero-badge" id="homeHeroBadge">
           <i class="fas fa-graduation-cap"></i> Bilingual Exam Prep Hub &bull; বাংলা ও ইংরেজি
         </div>
-        <h1 class="home-hero-title">
+        <h1 class="home-hero-title" id="homeHeroTitle">
           Master General Aptitude &amp; Reasoning with Step-by-Step Clarity
         </h1>
-        <p class="home-hero-desc">
+        <p class="home-hero-desc" id="homeHeroDesc">
           Structured bilingual practice with 500 hand-picked questions across 10 full sets with instant solutions and shortcuts. Tailored for WBCS, SSC CGL, IBPS, Railways RRB, UPSC &amp; campus placements.
         </p>
 
@@ -4062,19 +3555,19 @@ input, select {
         <div class="home-stats-strip">
           <div class="home-stat-chip">
             <i class="fas fa-check-double" style="color:var(--accent-primary);"></i>
-            <span><strong>500</strong> Bilingual Questions</span>
+            <span id="homeStatBilingual"><strong>500</strong> Bilingual Questions</span>
           </div>
           <div class="home-stat-chip">
             <i class="fas fa-layer-group" style="color:var(--accent-cyan);"></i>
-            <span><strong>10</strong> Full 50-Q Sets</span>
+            <span id="homeStatSets"><strong>10</strong> Full 50-Q Sets</span>
           </div>
           <div class="home-stat-chip">
             <i class="fas fa-language" style="color:var(--accent-emerald);"></i>
-            <span><strong>English &amp; Bengali</strong></span>
+            <span id="homeStatBoth"><strong>English &amp; Bengali</strong></span>
           </div>
           <div class="home-stat-chip">
             <i class="fas fa-bolt" style="color:var(--accent-amber);"></i>
-            <span><strong>Shortcuts &amp; Tricks</strong></span>
+            <span id="homeStatTricks"><strong>Shortcuts &amp; Tricks</strong></span>
           </div>
         </div>
       </div>
@@ -4087,8 +3580,8 @@ input, select {
           <div class="home-section-header">
             <i class="fas fa-gift" style="color:var(--accent-cyan);"></i>
             <div>
-              <h3>What You Get When You Join Free</h3>
-              <p>Everything you need to excel in your competitive examinations</p>
+              <h3 id="homeWhatYouGetTitle">What You Get When You Join Free</h3>
+              <p id="homeWhatYouGetSub">Everything you need to excel in your competitive examinations</p>
             </div>
           </div>
 
@@ -4098,8 +3591,8 @@ input, select {
                 <i class="fas fa-brain"></i>
               </div>
               <div class="perk-text">
-                <strong>4 Core Subject Coverage</strong>
-                <span>Quantitative Aptitude, Logical Reasoning, Verbal Ability &amp; Data Interpretation in one unified portal.</span>
+                <strong id="homePerk1Title">4 Core Subject Coverage</strong>
+                <span id="homePerk1Desc">Quantitative Aptitude, Logical Reasoning, Verbal Ability &amp; Data Interpretation in one unified portal.</span>
               </div>
             </div>
 
@@ -4108,8 +3601,8 @@ input, select {
                 <i class="fas fa-stopwatch"></i>
               </div>
               <div class="perk-text">
-                <strong>1-by-1 Focus Mode &amp; 45-Min Mock Tests</strong>
-                <span>Practice calmly one question at a time or simulate real exam conditions with negative marking.</span>
+                <strong id="homePerk2Title">1-by-1 Focus Mode &amp; 45-Min Mock Tests</strong>
+                <span id="homePerk2Desc">Practice calmly one question at a time or simulate real exam conditions with negative marking.</span>
               </div>
             </div>
 
@@ -4118,8 +3611,8 @@ input, select {
                 <i class="fas fa-history"></i>
               </div>
               <div class="perk-text">
-                <strong>Smart Mistakes Vault</strong>
-                <span>Questions you miss are saved automatically to your vault so you can practice until 100% mastered.</span>
+                <strong id="homePerk3Title">Smart Mistakes Vault</strong>
+                <span id="homePerk3Desc">Questions you miss are saved automatically to your vault so you can practice until 100% mastered.</span>
               </div>
             </div>
 
@@ -4128,26 +3621,26 @@ input, select {
                 <i class="fas fa-cloud"></i>
               </div>
               <div class="perk-text">
-                <strong>Cloud Sync &amp; All-India Leaderboard</strong>
-                <span>Your practice streaks, accuracy diagnostics, and saved bookmarks sync across phone and laptop via Neon PostgreSQL.</span>
+                <strong id="homePerk4Title">Cloud Sync &amp; All-India Leaderboard</strong>
+                <span id="homePerk4Desc">Your practice streaks, accuracy diagnostics, and saved bookmarks sync across phone and laptop via Neon PostgreSQL.</span>
               </div>
             </div>
           </div>
 
           <!-- Quick Topic Jump Buttons -->
           <div class="home-topics-preview">
-            <div class="home-topics-preview-title">Choose Topic to Explore:</div>
+            <div class="home-topics-preview-title" id="homeChooseTopicTitle">Choose Topic to Explore:</div>
             <div class="home-topics-pills">
-              <button class="home-topic-btn" onclick="startPracticeTopic('quant')">
+              <button class="home-topic-btn" id="homeTopicBtnQuant" onclick="startPracticeTopic('quant')">
                 <i class="fas fa-calculator"></i> Quant
               </button>
-              <button class="home-topic-btn" onclick="startPracticeTopic('logical')">
+              <button class="home-topic-btn" id="homeTopicBtnLogical" onclick="startPracticeTopic('logical')">
                 <i class="fas fa-brain"></i> Reasoning
               </button>
-              <button class="home-topic-btn" onclick="startPracticeTopic('verbal')">
+              <button class="home-topic-btn" id="homeTopicBtnVerbal" onclick="startPracticeTopic('verbal')">
                 <i class="fas fa-book-open"></i> Verbal
               </button>
-              <button class="home-topic-btn" onclick="startPracticeTopic('di')">
+              <button class="home-topic-btn" id="homeTopicBtnDi" onclick="startPracticeTopic('di')">
                 <i class="fas fa-chart-pie"></i> Data Interp.
               </button>
             </div>
@@ -4235,7 +3728,7 @@ input, select {
             <div class="home-guest-divider">
               <span>OR</span>
             </div>
-            <button type="button" class="btn-secondary" style="width:100%;justify-content:center;padding:10px;font-size:0.88rem;" onclick="setMode('practice')">
+            <button type="button" class="btn-secondary" id="homeGuestDemoBtn" style="width:100%;justify-content:center;padding:10px;font-size:0.88rem;" onclick="setMode('practice')">
               <i class="fas fa-play-circle"></i> Try Demo Practice as Guest &rarr;
             </button>
           </div>
@@ -29797,7 +29290,7 @@ const formulaSheetData = [
 
 // Application State
 const state = {
-  language: 'both', // 'both', 'en', 'bn'
+  language: localStorage.getItem('aptitude_language') || 'both', // 'both', 'en', 'bn'
   mode: 'home', // 'home', 'practice', 'test', 'mistakes', 'bookmarks', 'analytics', 'admin'
   viewMode: 'single', // 'single' (1-by-1 Focus Mode), 'list' (Scrolling List)
   singleCurrentIndex: 0, // 0-based index in the current filtered list
@@ -29936,6 +29429,12 @@ const sfx = new SoundFX();
 // Initialize Application
 function initApp() {
   applyTheme(state.theme);
+  applyUILanguage(state.language);
+  // Sync active language buttons
+  document.querySelectorAll('.lang-btn').forEach(b => {
+    const bLang = b.dataset.lang || b.dataset.drawerLang;
+    b.classList.toggle('active', bLang === state.language);
+  });
   updateStudentUI();
   setupEventListeners();
   setupMobileDrawer();
@@ -30530,6 +30029,325 @@ function setupStopwatch() {
   }
 }
 
+// =========================================================
+// UI TRANSLATIONS DICTIONARY (Natural English & Bengali)
+// =========================================================
+const UI_TRANSLATIONS = {
+  en: {
+    brandSubtitle: "Bilingual Aptitude & Reasoning Prep",
+    tabHome: "Home",
+    tabPractice: "Practice",
+    tabTest: "Mock Test",
+    tabMistakes: "Mistakes",
+    tabBookmarks: "Saved",
+    tabAnalytics: "Analytics",
+    tabAdmin: "Admin",
+    heroBadge: "Bilingual Exam Prep Hub • English & বাংলা",
+    heroTitle: "Master General Aptitude & Reasoning with Step-by-Step Clarity",
+    heroDesc: "Structured bilingual practice with 500 hand-picked questions across 10 full sets with instant solutions and shortcuts. Tailored for WBCS, SSC CGL, IBPS, Railways RRB, UPSC & campus placements.",
+    statBilingual: "Bilingual Questions",
+    statSets: "Full 50-Q Sets",
+    statBoth: "English & Bengali",
+    statTricks: "Shortcuts & Tricks",
+    whatYouGetTitle: "What You Get When You Join Free",
+    whatYouGetSub: "Everything you need to excel in your competitive examinations",
+    perk1Title: "4 Core Subject Coverage",
+    perk1Desc: "Quantitative Aptitude, Logical Reasoning, Verbal Ability & Data Interpretation in one unified portal.",
+    perk2Title: "1-by-1 Focus Mode & 45-Min Mock Tests",
+    perk2Desc: "Practice calmly one question at a time or simulate real exam conditions with negative marking.",
+    perk3Title: "Smart Mistakes Vault",
+    perk3Desc: "Questions you miss are saved automatically to your vault so you can practice until 100% mastered.",
+    perk4Title: "Cloud Sync & All-India Leaderboard",
+    perk4Desc: "Your practice streaks, accuracy diagnostics, and saved bookmarks sync across phone and laptop via Neon PostgreSQL.",
+    chooseTopic: "Choose Topic to Explore:",
+    topicQuant: "Quant",
+    topicReasoning: "Reasoning",
+    topicVerbal: "Verbal",
+    topicDI: "Data Interp.",
+    tabSignIn: "Sign In",
+    tabSignUp: "Create Account",
+    btnSignIn: "Sign In to Save Progress",
+    btnSignUp: "Create Free Account",
+    btnGuestDemo: "Try Demo Practice as Guest →",
+    navPrev: "Previous",
+    navSkip: "Skip",
+    navNext: "Next Question",
+    navSubmit: "Submit Test",
+    navFinish: "Finish Set 🎉",
+    solutionTitle: "Step-by-Step Descriptive Solution",
+    shortcutTitle: "Shortcut Trick / Pro Tip:",
+    qNumPrefix: "Question",
+    ofWord: "of",
+    toolsMenu: "Tools & Settings",
+    stopwatch: "Stopwatch",
+    formulas: "Formulas",
+    scratchpad: "Scratchpad",
+    sound: "Sound",
+    theme: "Theme",
+    leaderboard: "Leaderboard",
+    print: "Print"
+  },
+  bn: {
+    brandSubtitle: "দ্বিভাষিক অ্যাপটিটিউড ও রিজনিং প্রস্তুতি",
+    tabHome: "হোম",
+    tabPractice: "অনুশীলন",
+    tabTest: "মক টেস্ট",
+    tabMistakes: "ভুল ব্যাংক",
+    tabBookmarks: "সংরক্ষিত",
+    tabAnalytics: "অ্যানালিটিক্স",
+    tabAdmin: "অ্যাডমিন",
+    heroBadge: "দ্বিভাষিক প্রস্তুতি হাব • বাংলা ও ইংরেজি",
+    heroTitle: "ধাপে ধাপে সহজ ব্যাখ্যায় অ্যাপটিটিউড ও রিজনিংয়ে সম্পূর্ণ পারদর্শিতা",
+    heroDesc: "WBCS, SSC CGL, রেলওয়ে, ব্যাংকিং ও সরকারি চাকরির পরীক্ষার জন্য ৫০০টি সেরা দ্বিভাষিক প্রশ্ন, শর্টকাট কৌশল ও নির্ভুল সমাধান।",
+    statBilingual: "দ্বিভাষিক প্রশ্ন",
+    statSets: "১০টি পূর্ণাঙ্গ সেট",
+    statBoth: "ইংরেজি ও বাংলা",
+    statTricks: "শর্টকাট ও ট্রিকস",
+    whatYouGetTitle: "বিনামূল্যে রেজিস্ট্রেশন করে যা যা পাবেন",
+    whatYouGetSub: "প্রতিযোগিতামূলক পরীক্ষায় নিশ্চিত সাফল্যের জন্য প্রয়োজনীয় সবকিছু এক প্ল্যাটফর্মে",
+    perk1Title: "৪টি মূল বিষয়ের সম্পূর্ণ প্রস্তুতি",
+    perk1Desc: "পাটিগণিত (Quant), যুক্তি (Reasoning), ইংরেজি (Verbal) ও তথ্য বিশ্লেষণ (DI) একসাথে।",
+    perk2Title: "১-বাই-১ ফোকাস ও ৪৫ মিনিটের মক টেস্ট",
+    perk2Desc: "একটি করে প্রশ্নে নিবিষ্ট মনোযোগে অনুশীলন অথবা নেগেটিভ মার্কিংসহ বাস্তব পরীক্ষার প্রস্তুতি।",
+    perk3Title: "স্মার্ট ভুল সংশোধন ভল্ট",
+    perk3Desc: "ভুল উত্তরগুলো নিজে থেকেই জমা থাকবে যাতে বারবার অনুশীলন করে ১০০% নির্ভুল হতে পারেন।",
+    perk4Title: "ক্লাউড সিঙ্ক ও সর্বভারতীয় লিডারবোর্ড",
+    perk4Desc: "ফোন ও ল্যাপটপে আপনার প্রতিদিনের প্রগ্রেস, নির্ভুলতার হার ও বুকমার্ক সংরক্ষিত থাকবে।",
+    chooseTopic: "অনুশীলনের জন্য বিষয় বেছে নিন:",
+    topicQuant: "পাটিগণিত (Quant)",
+    topicReasoning: "রিজনিং (Reasoning)",
+    topicVerbal: "ইংরেজি (Verbal)",
+    topicDI: "তথ্য বিশ্লেষণ (DI)",
+    tabSignIn: "লগইন",
+    tabSignUp: "নতুন অ্যাকাউন্ট",
+    btnSignIn: "লগইন করে শুরু করুন",
+    btnSignUp: "বিনামূল্যে অ্যাকাউন্ট খুলুন",
+    btnGuestDemo: "লগইন না করে ডেমো অনুশীলন দেখুন →",
+    navPrev: "পূর্ববর্তী",
+    navSkip: "এড়িয়ে যান",
+    navNext: "পরবর্তী প্রশ্ন",
+    navSubmit: "পরীক্ষা জমা দিন",
+    navFinish: "সেট সম্পন্ন হয়েছে 🎉",
+    solutionTitle: "ধাপে ধাপে বিস্তারিত সমাধান",
+    shortcutTitle: "সংক্ষিপ্ত কৌশল / শর্টকাট:",
+    qNumPrefix: "প্রশ্ন",
+    ofWord: "/",
+    toolsMenu: "টুলস ও সেটিংস",
+    stopwatch: "স্টপওয়াচ",
+    formulas: "ফর্মুলা শিট",
+    scratchpad: "স্ক্র্যাচপ্যাড",
+    sound: "শব্দ",
+    theme: "থিম পরিবর্তন",
+    leaderboard: "লিডারবোর্ড",
+    print: "প্রিন্ট"
+  },
+  both: {
+    brandSubtitle: "Bilingual Aptitude & Reasoning Prep / দ্বিভাষিক প্রস্তুতি",
+    tabHome: "Home / হোম",
+    tabPractice: "Practice / অনুশীলন",
+    tabTest: "Mock Test / মক টেস্ট",
+    tabMistakes: "Mistakes / ভুল",
+    tabBookmarks: "Saved / সংরক্ষিত",
+    tabAnalytics: "Analytics / বিশ্লেষণ",
+    tabAdmin: "Admin",
+    heroBadge: "Bilingual Exam Prep Hub • বাংলা ও ইংরেজি",
+    heroTitle: "Master General Aptitude & Reasoning with Step-by-Step Clarity",
+    heroDesc: "Structured bilingual practice with 500 hand-picked questions across 10 full sets with instant solutions and shortcuts. Tailored for WBCS, SSC CGL, IBPS, Railways RRB, UPSC & campus placements.",
+    statBilingual: "Bilingual Questions",
+    statSets: "Full 50-Q Sets",
+    statBoth: "English & Bengali",
+    statTricks: "Shortcuts & Tricks",
+    whatYouGetTitle: "What You Get When You Join Free / যা যা পাবেন",
+    whatYouGetSub: "Everything you need to excel in your competitive examinations",
+    perk1Title: "4 Core Subject Coverage / ৪টি প্রধান বিষয়",
+    perk1Desc: "Quantitative Aptitude, Logical Reasoning, Verbal Ability & Data Interpretation in one unified portal.",
+    perk2Title: "1-by-1 Focus Mode & 45-Min Mock Tests / ১-বাই-১ টেস্ট",
+    perk2Desc: "Practice calmly one question at a time or simulate real exam conditions with negative marking.",
+    perk3Title: "Smart Mistakes Vault / ভুল সংশোধন ভল্ট",
+    perk3Desc: "Questions you miss are saved automatically to your vault so you can practice until 100% mastered.",
+    perk4Title: "Cloud Sync & All-India Leaderboard / ক্লাউড সিঙ্ক",
+    perk4Desc: "Your practice streaks, accuracy diagnostics, and saved bookmarks sync across phone and laptop via Neon PostgreSQL.",
+    chooseTopic: "Choose Topic to Explore / বিষয় বেছে নিন:",
+    topicQuant: "Quant / গণিত",
+    topicReasoning: "Reasoning / যুক্তি",
+    topicVerbal: "Verbal / ইংরেজি",
+    topicDI: "Data Interp. / তথ্য",
+    tabSignIn: "Sign In / লগইন",
+    tabSignUp: "Create Account / অ্যাকাউন্ট",
+    btnSignIn: "Sign In to Save Progress",
+    btnSignUp: "Create Free Account",
+    btnGuestDemo: "Try Demo Practice as Guest →",
+    navPrev: "Previous / পূর্ববর্তী",
+    navSkip: "Skip / এড়িয়ে যান",
+    navNext: "Next / পরবর্তী",
+    navSubmit: "Submit Test / পরীক্ষা জমা",
+    navFinish: "Finish Set 🎉",
+    solutionTitle: "Step-by-Step Solution / ধাপে ধাপে সমাধান",
+    shortcutTitle: "Shortcut Trick / শর্টকাট কৌশল:",
+    qNumPrefix: "Question",
+    ofWord: "of",
+    toolsMenu: "Tools & Settings / টুলস ও সেটিংস",
+    stopwatch: "Stopwatch / স্টপওয়াচ",
+    formulas: "Formulas / সূত্র",
+    scratchpad: "Scratchpad / খাতা",
+    sound: "Sound / শব্দ",
+    theme: "Theme / থিম",
+    leaderboard: "Top Scores / লিডারবোর্ড",
+    print: "Print / প্রিন্ট"
+  }
+};
+
+function applyUILanguage(lang) {
+  const t = UI_TRANSLATIONS[lang] || UI_TRANSLATIONS.both;
+
+  // 1. Header & Brand Subtitle
+  const brandSub = document.getElementById('brandSubtitle');
+  if (brandSub) brandSub.innerText = t.brandSubtitle;
+
+  // 2. Desktop Mode Tabs
+  const homeTab = document.getElementById('tabModeHome');
+  if (homeTab) {
+    const label = homeTab.querySelector('.mode-tab-label');
+    if (label) label.innerText = t.tabHome;
+  }
+  const practiceTab = document.querySelector('.mode-tab[data-mode="practice"] .mode-tab-label');
+  if (practiceTab) practiceTab.innerText = t.tabPractice;
+  const testTab = document.querySelector('.mode-tab[data-mode="test"] .mode-tab-label');
+  if (testTab) testTab.innerText = t.tabTest;
+  const mistakesTab = document.querySelector('.mode-tab[data-mode="mistakes"] .mode-tab-label');
+  if (mistakesTab) mistakesTab.innerHTML = `${t.tabMistakes} (<span id="mistakesCount">${state.mistakesVault.length}</span>)`;
+  const bookmarksTab = document.querySelector('.mode-tab[data-mode="bookmarks"] .mode-tab-label');
+  if (bookmarksTab) bookmarksTab.innerHTML = `${t.tabBookmarks} (<span id="bookmarkModeCount">${state.bookmarks.length}</span>)`;
+  const analyticsTab = document.querySelector('.mode-tab[data-mode="analytics"] .mode-tab-label');
+  if (analyticsTab) analyticsTab.innerText = t.tabAnalytics;
+
+  // 3. Mobile Bottom Nav Buttons
+  const mobHome = document.querySelector('.mob-nav-btn[data-mode="home"] span');
+  if (mobHome) mobHome.innerText = t.tabHome;
+  const mobPractice = document.querySelector('.mob-nav-btn[data-mode="practice"] span');
+  if (mobPractice) mobPractice.innerText = t.tabPractice;
+  const mobTest = document.querySelector('.mob-nav-btn[data-mode="test"] span');
+  if (mobTest) mobTest.innerText = t.tabTest;
+  const mobMistakes = document.querySelector('.mob-nav-btn[data-mode="mistakes"] span');
+  if (mobMistakes) mobMistakes.innerText = t.tabMistakes;
+  const mobBookmarks = document.querySelector('.mob-nav-btn[data-mode="bookmarks"] span');
+  if (mobBookmarks) mobBookmarks.innerText = t.tabBookmarks;
+
+  // 4. Home View Elements
+  const heroBadge = document.getElementById('homeHeroBadge');
+  if (heroBadge) heroBadge.innerHTML = `<i class="fas fa-graduation-cap"></i> ${t.heroBadge}`;
+  const heroTitle = document.getElementById('homeHeroTitle');
+  if (heroTitle) heroTitle.innerText = t.heroTitle;
+  const heroDesc = document.getElementById('homeHeroDesc');
+  if (heroDesc) heroDesc.innerText = t.heroDesc;
+
+  const statBi = document.getElementById('homeStatBilingual');
+  if (statBi) statBi.innerHTML = `<strong>500</strong> ${t.statBilingual}`;
+  const statSets = document.getElementById('homeStatSets');
+  if (statSets) statSets.innerHTML = `<strong>10</strong> ${t.statSets}`;
+  const statBoth = document.getElementById('homeStatBoth');
+  if (statBoth) statBoth.innerHTML = `<strong>${t.statBoth}</strong>`;
+  const statTricks = document.getElementById('homeStatTricks');
+  if (statTricks) statTricks.innerHTML = `<strong>${t.statTricks}</strong>`;
+
+  const whatTitle = document.getElementById('homeWhatYouGetTitle');
+  if (whatTitle) whatTitle.innerText = t.whatYouGetTitle;
+  const whatSub = document.getElementById('homeWhatYouGetSub');
+  if (whatSub) whatSub.innerText = t.whatYouGetSub;
+
+  const p1Title = document.getElementById('homePerk1Title');
+  if (p1Title) p1Title.innerText = t.perk1Title;
+  const p1Desc = document.getElementById('homePerk1Desc');
+  if (p1Desc) p1Desc.innerText = t.perk1Desc;
+
+  const p2Title = document.getElementById('homePerk2Title');
+  if (p2Title) p2Title.innerText = t.perk2Title;
+  const p2Desc = document.getElementById('homePerk2Desc');
+  if (p2Desc) p2Desc.innerText = t.perk2Desc;
+
+  const p3Title = document.getElementById('homePerk3Title');
+  if (p3Title) p3Title.innerText = t.perk3Title;
+  const p3Desc = document.getElementById('homePerk3Desc');
+  if (p3Desc) p3Desc.innerText = t.perk3Desc;
+
+  const p4Title = document.getElementById('homePerk4Title');
+  if (p4Title) p4Title.innerText = t.perk4Title;
+  const p4Desc = document.getElementById('homePerk4Desc');
+  if (p4Desc) p4Desc.innerText = t.perk4Desc;
+
+  const chooseTitle = document.getElementById('homeChooseTopicTitle');
+  if (chooseTitle) chooseTitle.innerText = t.chooseTopic;
+
+  const btnQ = document.getElementById('homeTopicBtnQuant');
+  if (btnQ) btnQ.innerHTML = `<i class="fas fa-calculator"></i> ${t.topicQuant}`;
+  const btnL = document.getElementById('homeTopicBtnLogical');
+  if (btnL) btnL.innerHTML = `<i class="fas fa-brain"></i> ${t.topicReasoning}`;
+  const btnV = document.getElementById('homeTopicBtnVerbal');
+  if (btnV) btnV.innerHTML = `<i class="fas fa-book-open"></i> ${t.topicVerbal}`;
+  const btnD = document.getElementById('homeTopicBtnDi');
+  if (btnD) btnD.innerHTML = `<i class="fas fa-chart-pie"></i> ${t.topicDI}`;
+
+  const guestDemoBtn = document.getElementById('homeGuestDemoBtn');
+  if (guestDemoBtn) guestDemoBtn.innerHTML = `<i class="fas fa-play-circle"></i> ${t.btnGuestDemo}`;
+  const cardSignInBtn = document.getElementById('btnHomeCardSignIn');
+  if (cardSignInBtn) cardSignInBtn.innerHTML = `<i class="fas fa-sign-in-alt"></i> ${t.btnSignIn}`;
+  const cardSignUpBtn = document.getElementById('btnHomeCardSignUp');
+  if (cardSignUpBtn) cardSignUpBtn.innerHTML = `<i class="fas fa-user-check"></i> ${t.btnSignUp}`;
+  const tabSignIn = document.getElementById('homeAuthTabSignIn');
+  if (tabSignIn) tabSignIn.innerHTML = `<i class="fas fa-sign-in-alt"></i> ${t.tabSignIn}`;
+  const tabSignUp = document.getElementById('homeAuthTabSignUp');
+  if (tabSignUp) tabSignUp.innerHTML = `<i class="fas fa-user-plus"></i> ${t.tabSignUp}`;
+
+  // 5. Drawer Labels
+  const drawerTitle = document.getElementById('drawerTitleText');
+  if (drawerTitle) drawerTitle.innerHTML = `<i class="fas fa-tools"></i> ${t.toolsMenu}`;
+  const drawerLang = document.getElementById('drawerLangLabel');
+  if (drawerLang) drawerLang.innerText = lang === 'bn' ? 'ভাষা নির্বাচন' : (lang === 'en' ? 'Language Selection' : 'Language / ভাষা');
+  const drawerTools = document.getElementById('drawerToolsLabel');
+  if (drawerTools) drawerTools.innerText = lang === 'bn' ? 'টুলস ও সাহায্য' : 'Tools';
+  const drawerFormulas = document.getElementById('drawerFormulasText');
+  if (drawerFormulas) drawerFormulas.innerText = t.formulas;
+  const drawerScratchpad = document.getElementById('drawerScratchpadText');
+  if (drawerScratchpad) drawerScratchpad.innerText = t.scratchpad;
+  const drawerSound = document.getElementById('drawerSoundText');
+  if (drawerSound) drawerSound.innerText = t.sound;
+  const drawerTheme = document.getElementById('drawerThemeText');
+  if (drawerTheme) drawerTheme.innerText = t.theme;
+  const drawerLeaderboard = document.getElementById('drawerLeaderboardText');
+  if (drawerLeaderboard) drawerLeaderboard.innerText = t.leaderboard;
+  const drawerPrint = document.getElementById('drawerPrintText');
+  if (drawerPrint) drawerPrint.innerText = t.print;
+}
+window.applyUILanguage = applyUILanguage;
+
+function setLanguage(lang) {
+  if (!['both', 'en', 'bn'].includes(lang)) lang = 'both';
+  state.language = lang;
+  localStorage.setItem('aptitude_language', lang);
+
+  // Sync active states on all language buttons
+  document.querySelectorAll('.lang-btn').forEach(btn => {
+    const btnLang = btn.dataset.lang || btn.dataset.drawerLang;
+    btn.classList.toggle('active', btnLang === lang);
+  });
+
+  // Apply UI translations across all static elements
+  applyUILanguage(lang);
+
+  // Re-render active view
+  if (state.mode === 'analytics') {
+    renderAnalyticsDashboard();
+  } else if (state.mode === 'admin') {
+    renderAdminDashboard();
+  } else if (state.mode !== 'home') {
+    renderQuestions();
+  }
+
+  const toastMsg = lang === 'bn' ? 'ভাষা নির্বাচন: বাংলা 🇧🇩' : (lang === 'en' ? 'Language: English 🇬🇧' : 'Bilingual Mode: English & বাংলা 🌐');
+  showToast(toastMsg);
+}
+window.setLanguage = setLanguage;
+
 // Theme Switcher & Appearance Settings
 function applyTheme(theme) {
   let effectiveTheme = theme;
@@ -30539,12 +30357,31 @@ function applyTheme(theme) {
   document.documentElement.setAttribute('data-theme', effectiveTheme);
   state.theme = theme;
   localStorage.setItem('aptitude_theme', theme);
+
+  const iconClass = effectiveTheme === 'light' ? 'fa-moon' : 'fa-sun';
+  const labelText = effectiveTheme === 'light' ? 'Dark Mode' : 'Light Mode';
+
+  // Desktop Navbar Theme button
   const themeBtn = document.getElementById('themeToggleBtn');
   if (themeBtn) {
-    themeBtn.innerHTML = effectiveTheme === 'light' ? '<i class="fas fa-moon"></i>' : '<i class="fas fa-sun"></i>';
+    themeBtn.innerHTML = `<i class="fas ${iconClass}"></i>`;
+    themeBtn.title = effectiveTheme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode';
   }
 
-  // Update theme option cards
+  // Mobile Header Theme button
+  const themeBtnMobile = document.getElementById('themeToggleBtnMobile');
+  if (themeBtnMobile) {
+    themeBtnMobile.innerHTML = `<i class="fas ${iconClass}"></i>`;
+    themeBtnMobile.title = effectiveTheme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode';
+  }
+
+  // Mobile Drawer Theme button
+  const themeBtnDrawer = document.getElementById('themeToggleBtnDrawer');
+  if (themeBtnDrawer) {
+    themeBtnDrawer.innerHTML = `<i class="fas ${iconClass}"></i><span id="drawerThemeText">${labelText}</span>`;
+  }
+
+  // Update theme option cards if present
   ['Dark', 'Light', 'Auto'].forEach(t => {
     const el = document.getElementById(`themeCard${t}`);
     if (el) {
@@ -30552,18 +30389,36 @@ function applyTheme(theme) {
     }
   });
 }
+window.applyTheme = applyTheme;
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute('data-theme') || 'dark';
+  const targetTheme = current === 'light' ? 'dark' : 'light';
+  applyTheme(targetTheme);
+  const msg = targetTheme === 'light' ? 'Switched to Light Mode ☀️' : 'Switched to Dark Mode 🌙';
+  showToast(msg);
+}
+window.toggleTheme = toggleTheme;
 
 function selectThemeSetting(theme) {
   applyTheme(theme);
   showToast(`Theme updated: ${theme.toUpperCase()} MODE ✨`);
 }
+window.selectThemeSetting = selectThemeSetting;
 
 // Event Listeners Setup
 function setupEventListeners() {
-  // Theme Settings Modal opener
-  document.getElementById('themeToggleBtn').addEventListener('click', () => {
-    openModal(elements.themeModal);
-  });
+  // Desktop Theme Toggle
+  const themeBtn = document.getElementById('themeToggleBtn');
+  if (themeBtn) {
+    themeBtn.addEventListener('click', toggleTheme);
+  }
+
+  // Mobile Header Theme Toggle
+  const themeBtnMobile = document.getElementById('themeToggleBtnMobile');
+  if (themeBtnMobile) {
+    themeBtnMobile.addEventListener('click', toggleTheme);
+  }
 
   const closeThemeBtn = document.getElementById('btnCloseThemeModal');
   if (closeThemeBtn) {
@@ -30577,11 +30432,13 @@ function setupEventListeners() {
 
   // Sound toggle
   const soundBtn = document.getElementById('soundToggleBtn');
-  soundBtn.addEventListener('click', () => {
-    state.soundEnabled = !state.soundEnabled;
-    soundBtn.innerHTML = state.soundEnabled ? '<i class="fas fa-volume-up"></i>' : '<i class="fas fa-volume-mute"></i>';
-    showToast(state.soundEnabled ? 'Audio Feedback Enabled' : 'Audio Feedback Muted');
-  });
+  if (soundBtn) {
+    soundBtn.addEventListener('click', () => {
+      state.soundEnabled = !state.soundEnabled;
+      soundBtn.innerHTML = state.soundEnabled ? '<i class="fas fa-volume-up"></i>' : '<i class="fas fa-volume-mute"></i>';
+      showToast(state.soundEnabled ? 'Audio Feedback Enabled' : 'Audio Feedback Muted');
+    });
+  }
 
   // Student Profile Button
   if (elements.btnStudentProfile) {
@@ -30602,18 +30459,9 @@ function setupEventListeners() {
   // Language switch buttons
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
-      document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
       const target = e.currentTarget;
-      target.classList.add('active');
-      state.language = target.dataset.lang;
-      if (state.mode === 'analytics') {
-        renderAnalyticsDashboard();
-      } else if (state.mode === 'admin') {
-        renderAdminDashboard();
-      } else {
-        renderQuestions();
-      }
-      showToast(`Language: ${target.dataset.lang.toUpperCase()}`);
+      const lang = target.dataset.lang || target.dataset.drawerLang || 'both';
+      setLanguage(lang);
     });
   });
 
@@ -30669,52 +30517,71 @@ function setupEventListeners() {
   }
 
   // Search input
-  elements.searchInput.addEventListener('input', (e) => {
-    state.searchQuery = e.target.value.toLowerCase().trim();
-    state.singleCurrentIndex = 0;
-    renderQuestions();
-  });
+  if (elements.searchInput) {
+    elements.searchInput.addEventListener('input', (e) => {
+      state.searchQuery = e.target.value.toLowerCase().trim();
+      state.singleCurrentIndex = 0;
+      renderQuestions();
+    });
+  }
 
-  // Category filter
-  elements.categoryFilter.addEventListener('change', (e) => {
-    state.category = e.target.value;
-    state.singleCurrentIndex = 0;
-    renderQuestions();
-  });
+  // Category filter (safe guarded)
+  if (elements.categoryFilter) {
+    elements.categoryFilter.addEventListener('change', (e) => {
+      state.category = e.target.value;
+      state.singleCurrentIndex = 0;
+      renderQuestions();
+    });
+  }
 
-  // Difficulty filter
-  elements.difficultyFilter.addEventListener('change', (e) => {
-    state.difficulty = e.target.value;
-    state.singleCurrentIndex = 0;
-    renderQuestions();
-  });
+  // Difficulty filter (safe guarded)
+  if (elements.difficultyFilter) {
+    elements.difficultyFilter.addEventListener('change', (e) => {
+      state.difficulty = e.target.value;
+      state.singleCurrentIndex = 0;
+      renderQuestions();
+    });
+  }
 
   // Scratchpad Modal openers/closers
-  document.getElementById('btnOpenScratchpad').addEventListener('click', () => openModal(elements.scratchpadModal));
-  document.getElementById('btnCloseScratchpad').addEventListener('click', () => closeModal(elements.scratchpadModal));
+  const btnOpenScratchpad = document.getElementById('btnOpenScratchpad');
+  if (btnOpenScratchpad) btnOpenScratchpad.addEventListener('click', () => openModal(elements.scratchpadModal));
+  const btnCloseScratchpad = document.getElementById('btnCloseScratchpad');
+  if (btnCloseScratchpad) btnCloseScratchpad.addEventListener('click', () => closeModal(elements.scratchpadModal));
 
   // Formula Modal openers/closers
-  document.getElementById('btnOpenFormulas').addEventListener('click', () => openModal(elements.formulaModal));
-  document.getElementById('btnCloseFormulas').addEventListener('click', () => closeModal(elements.formulaModal));
+  const btnOpenFormulas = document.getElementById('btnOpenFormulas');
+  if (btnOpenFormulas) btnOpenFormulas.addEventListener('click', () => openModal(elements.formulaModal));
+  const btnCloseFormulas = document.getElementById('btnCloseFormulas');
+  if (btnCloseFormulas) btnCloseFormulas.addEventListener('click', () => closeModal(elements.formulaModal));
 
   // Results Modal closers
-  document.getElementById('btnCloseResults').addEventListener('click', () => closeModal(elements.resultsModal));
-  document.getElementById('btnRetakeTest').addEventListener('click', () => {
-    closeModal(elements.resultsModal);
-    startTestMode();
-  });
+  const btnCloseResults = document.getElementById('btnCloseResults');
+  if (btnCloseResults) btnCloseResults.addEventListener('click', () => closeModal(elements.resultsModal));
+  const btnRetakeTest = document.getElementById('btnRetakeTest');
+  if (btnRetakeTest) {
+    btnRetakeTest.addEventListener('click', () => {
+      closeModal(elements.resultsModal);
+      startTestMode();
+    });
+  }
 
   // Submit test button
-  elements.btnSubmitTest.addEventListener('click', () => {
-    if (confirm('Are you sure you want to submit your test? / আপনি কি নিশ্চিত যে আপনি পরীক্ষা জমা দিতে চান?')) {
-      finishTestMode();
-    }
-  });
+  if (elements.btnSubmitTest) {
+    elements.btnSubmitTest.addEventListener('click', () => {
+      if (confirm('Are you sure you want to submit your test? / আপনি কি নিশ্চিত যে আপনি পরীক্ষা জমা দিতে চান?')) {
+        finishTestMode();
+      }
+    });
+  }
 
   // Print button
-  document.getElementById('btnPrintPage').addEventListener('click', () => {
-    window.print();
-  });
+  const btnPrintPage = document.getElementById('btnPrintPage');
+  if (btnPrintPage) {
+    btnPrintPage.addEventListener('click', () => {
+      window.print();
+    });
+  }
 
   // Close modals on backdrop click
   document.querySelectorAll('.modal-backdrop').forEach(modal => {
@@ -31805,12 +31672,13 @@ function renderQuestions(reviewMode = false) {
     `;
 
     // Explanation Box
+    const t = UI_TRANSLATIONS[state.language] || UI_TRANSLATIONS.both;
     const isExplanationVisible = isPractice && selectedAnswer !== undefined;
     const explanationHtml = `
       <div class="explanation-box ${isExplanationVisible ? 'visible' : ''}" id="exp-${q.id}">
         <div class="explanation-title">
           <i class="fas fa-lightbulb"></i>
-          <span>${state.language === 'bn' ? 'ধাপে ধাপে বিস্তারিত সমাধান' : 'Step-by-Step Descriptive Solution'}</span>
+          <span>${t.solutionTitle}</span>
         </div>
         <div class="explanation-content">
           ${state.language !== 'bn' ? `<div style="margin-bottom: 8px;">${q.explanation.en}</div>` : ''}
@@ -31818,7 +31686,7 @@ function renderQuestions(reviewMode = false) {
         </div>
         ${q.tips ? `
           <div class="explanation-tip">
-            <strong><i class="fas fa-bolt"></i> Shortcut Trick / শর্টকাট কৌশল:</strong><br>
+            <strong><i class="fas fa-bolt"></i> ${t.shortcutTitle}</strong><br>
             ${state.language !== 'bn' ? `<div>${q.tips.en}</div>` : ''}
             ${state.language !== 'en' ? `<div class="lang-bn">${q.tips.bn}</div>` : ''}
           </div>
@@ -31832,8 +31700,8 @@ function renderQuestions(reviewMode = false) {
         <!-- 1-by-1 Top Progress Track -->
         <div class="single-q-progress-bar-container">
           <div class="single-q-progress-info">
-            <span><i class="fas fa-bullseye" style="color: var(--accent-cyan);"></i> Question ${idx + 1} of ${total} (${progressPct}%)</span>
-            <span>Set ${q.setId || 1} &bull; ${state.language === 'bn' ? q.topic.bn : q.topic.en}</span>
+            <span><i class="fas fa-bullseye" style="color: var(--accent-cyan);"></i> ${t.qNumPrefix} ${idx + 1} ${t.ofWord} ${total} (${progressPct}%)</span>
+            <span>Set ${q.setId || 1} &bull; ${state.language === 'bn' ? q.topic.bn : (state.language === 'both' ? `${q.topic.en} / ${q.topic.bn}` : q.topic.en)}</span>
           </div>
           <div class="single-q-progress-track">
             <div class="single-q-progress-fill" style="width: ${progressPct}%;"></div>
@@ -31844,12 +31712,12 @@ function renderQuestions(reviewMode = false) {
         <div class="question-card" id="qcard-${q.id}">
           <div class="card-header">
             <div class="card-badges">
-              <span class="badge badge-qnum">Q #${idx + 1} / ${total}</span>
+              <span class="badge badge-qnum">#${idx + 1} / ${total}</span>
               <span class="badge ${categoryClass}">
-                ${state.language === 'bn' ? q.categoryName.bn : q.categoryName.en}
+                ${state.language === 'bn' ? q.categoryName.bn : (state.language === 'both' ? `${q.categoryName.en} • ${q.categoryName.bn}` : q.categoryName.en)}
               </span>
               <span class="badge" style="background: rgba(255,255,255,0.06); color: var(--text-secondary);">
-                ${state.language === 'bn' ? q.topic.bn : q.topic.en}
+                ${state.language === 'bn' ? q.topic.bn : (state.language === 'both' ? `${q.topic.en} • ${q.topic.bn}` : q.topic.en)}
               </span>
               <span class="badge ${diffClass}">
                 ${state.language === 'bn' ? q.difficultyName.bn : q.difficultyName.en}
@@ -31879,15 +31747,15 @@ function renderQuestions(reviewMode = false) {
         <!-- 1-by-1 Bottom Action Bar (Previous, Skip, Next/Submit) -->
         <div class="single-q-action-bar">
           <button class="btn-nav-action btn-nav-prev" onclick="navPrevQuestion()" ${idx === 0 ? 'disabled' : ''}>
-            <i class="fas fa-arrow-left"></i> Previous
+            <i class="fas fa-arrow-left"></i> ${t.navPrev}
           </button>
 
           <button class="btn-nav-action btn-nav-skip" onclick="navSkipQuestion()">
-            Skip <i class="fas fa-forward"></i>
+            ${t.navSkip} <i class="fas fa-forward"></i>
           </button>
 
           <button class="btn-nav-action btn-nav-next" onclick="navNextQuestion()">
-            ${idx === total - 1 ? (state.mode === 'test' ? '<i class="fas fa-paper-plane"></i> Submit Test' : 'Finish Set 🎉') : 'Next Question <i class="fas fa-arrow-right"></i>'}
+            ${idx === total - 1 ? (state.mode === 'test' ? `<i class="fas fa-paper-plane"></i> ${t.navSubmit}` : t.navFinish) : `${t.navNext} <i class="fas fa-arrow-right"></i>`}
           </button>
         </div>
       </div>
@@ -32675,71 +32543,92 @@ function finishOnboarding() {
 // =========================================================
 // MOBILE DRAWER SETUP
 // =========================================================
+function openMobileDrawer() {
+  const drawer = document.getElementById('mobileDrawer');
+  const overlay = document.getElementById('drawerOverlay');
+  if (drawer) drawer.classList.add('open');
+  if (overlay) overlay.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+window.openMobileDrawer = openMobileDrawer;
+
+function closeMobileDrawer() {
+  const drawer = document.getElementById('mobileDrawer');
+  const overlay = document.getElementById('drawerOverlay');
+  if (drawer) drawer.classList.remove('open');
+  if (overlay) overlay.classList.remove('active');
+  document.body.style.overflow = '';
+}
+window.closeMobileDrawer = closeMobileDrawer;
+
+function toggleMobileDrawer(e) {
+  if (e) {
+    if (typeof e.preventDefault === 'function') e.preventDefault();
+    if (typeof e.stopPropagation === 'function') e.stopPropagation();
+  }
+  const drawer = document.getElementById('mobileDrawer');
+  if (drawer && drawer.classList.contains('open')) {
+    closeMobileDrawer();
+  } else {
+    openMobileDrawer();
+  }
+}
+window.toggleMobileDrawer = toggleMobileDrawer;
+
 function setupMobileDrawer() {
   const hamburger = document.getElementById('btnHamburger');
   const drawer = document.getElementById('mobileDrawer');
   const overlay = document.getElementById('drawerOverlay');
   const closeBtn = document.getElementById('btnCloseDrawer');
 
-  function openDrawer() {
-    if (drawer) drawer.classList.add('open');
-    if (overlay) overlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
+  if (hamburger) {
+    hamburger.onclick = toggleMobileDrawer;
   }
-
-  function closeDrawer() {
-    if (drawer) drawer.classList.remove('open');
-    if (overlay) overlay.classList.remove('active');
-    document.body.style.overflow = '';
+  if (closeBtn) {
+    closeBtn.onclick = closeMobileDrawer;
   }
-
-  if (hamburger) hamburger.addEventListener('click', openDrawer);
-  if (closeBtn) closeBtn.addEventListener('click', closeDrawer);
-  if (overlay) overlay.addEventListener('click', closeDrawer);
+  if (overlay) {
+    overlay.onclick = closeMobileDrawer;
+  }
 
   // Mobile avatar button opens student auth
   const mobileAvatar = document.getElementById('btnStudentProfileMobile');
   if (mobileAvatar) {
-    mobileAvatar.addEventListener('click', () => openModal(elements.studentModal));
+    mobileAvatar.onclick = () => {
+      closeMobileDrawer();
+      openModal(elements.studentModal);
+    };
   }
 
   // Drawer language buttons
   document.querySelectorAll('[data-drawer-lang]').forEach(btn => {
-    btn.addEventListener('click', () => {
-      state.language = btn.dataset.drawerLang;
-      // Sync desktop lang buttons
-      document.querySelectorAll('.lang-btn').forEach(b => {
-        b.classList.toggle('active', b.dataset.lang === state.language);
-      });
-      // Sync drawer lang buttons
-      document.querySelectorAll('[data-drawer-lang]').forEach(b => {
-        b.classList.toggle('active', b.dataset.drawerLang === state.language);
-      });
-      if (state.mode === 'analytics') renderAnalyticsDashboard();
-      else renderQuestions();
-      closeDrawer();
-    });
+    btn.onclick = () => {
+      setLanguage(btn.dataset.drawerLang);
+      closeMobileDrawer();
+    };
   });
 
   // Drawer tool buttons
   const drawerMap = [
-    ['btnOpenFormulasDrawer', () => { closeDrawer(); openModal(elements.formulaModal); }],
-    ['btnOpenScratchpadDrawer', () => { closeDrawer(); openModal(elements.scratchpadModal); }],
-    ['themeToggleBtnDrawer', () => { closeDrawer(); openModal(elements.themeModal); }],
-    ['leaderboardBtnDrawer', () => { closeDrawer(); openLeaderboard(); }],
-    ['btnPrintPageDrawer', () => { closeDrawer(); window.print(); }],
+    ['btnOpenFormulasDrawer', () => { closeMobileDrawer(); openModal(elements.formulaModal); }],
+    ['btnOpenScratchpadDrawer', () => { closeMobileDrawer(); openModal(elements.scratchpadModal); }],
+    ['themeToggleBtnDrawer', () => { toggleTheme(); }],
+    ['leaderboardBtnDrawer', () => { closeMobileDrawer(); openLeaderboard(); }],
+    ['btnPrintPageDrawer', () => { closeMobileDrawer(); window.print(); }],
     ['soundToggleBtnDrawer', () => {
       state.soundEnabled = !state.soundEnabled;
       const icon = state.soundEnabled ? 'fa-volume-up' : 'fa-volume-mute';
-      document.getElementById('soundToggleBtnDrawer').innerHTML = `<i class="fas ${icon}"></i><span>${state.soundEnabled ? 'Sound On' : 'Sound Off'}</span>`;
-      document.getElementById('soundToggleBtn') && (document.getElementById('soundToggleBtn').innerHTML = `<i class="fas ${icon}"></i>`);
-      showToast(state.soundEnabled ? 'Sound On' : 'Sound Muted');
+      const soundEl = document.getElementById('soundToggleBtnDrawer');
+      if (soundEl) soundEl.innerHTML = `<i class="fas ${icon}"></i><span>${state.soundEnabled ? 'Sound On' : 'Sound Off'}</span>`;
+      const dtSound = document.getElementById('soundToggleBtn');
+      if (dtSound) dtSound.innerHTML = `<i class="fas ${icon}"></i>`;
+      showToast(state.soundEnabled ? 'Audio Feedback Enabled' : 'Audio Feedback Muted');
     }]
   ];
 
   drawerMap.forEach(([id, fn]) => {
     const el = document.getElementById(id);
-    if (el) el.addEventListener('click', fn);
+    if (el) el.onclick = fn;
   });
 
   // Drawer stopwatch sync

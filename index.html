@@ -17,20 +17,20 @@
 
     <!-- TOP NAV BAR -->
     <header class="navbar" id="mainNavbar">
-      <a href="#" class="brand-logo">
+      <a href="#" class="brand-logo" onclick="setMode('home'); return false;">
         <div class="brand-icon"><i class="fas fa-brain"></i></div>
         <div>
           <div class="brand-title">AptitudeMaster <span style="font-size:0.75rem;font-weight:500;opacity:0.8;">2.0</span></div>
-          <div class="brand-subtitle">Bilingual Aptitude &amp; Reasoning Prep</div>
+          <div class="brand-subtitle" id="brandSubtitle">Bilingual Aptitude &amp; Reasoning Prep</div>
         </div>
       </a>
 
       <!-- Desktop Nav Actions -->
       <div class="nav-actions" id="desktopNavActions">
         <div class="lang-selector-group">
-          <button class="lang-btn active" data-lang="both"><i class="fas fa-globe"></i> Both</button>
-          <button class="lang-btn" data-lang="en"><i class="fas fa-font"></i> EN</button>
-          <button class="lang-btn" data-lang="bn"><i class="fas fa-language"></i> বাং</button>
+          <button type="button" class="lang-btn active" data-lang="both" onclick="setLanguage('both')"><i class="fas fa-globe"></i> Both</button>
+          <button type="button" class="lang-btn" data-lang="en" onclick="setLanguage('en')"><i class="fas fa-font"></i> EN</button>
+          <button type="button" class="lang-btn" data-lang="bn" onclick="setLanguage('bn')"><i class="fas fa-language"></i> বাং</button>
         </div>
         <div class="practice-timer-widget" id="practiceTimerWidget">
           <i class="fas fa-stopwatch"></i>
@@ -41,7 +41,7 @@
         <button class="btn-secondary" id="btnOpenFormulas"><i class="fas fa-square-root-alt"></i> Formulas</button>
         <button class="btn-secondary" id="btnOpenScratchpad"><i class="fas fa-pencil-alt"></i> Scratchpad</button>
         <button class="icon-btn" id="soundToggleBtn"><i class="fas fa-volume-up"></i></button>
-        <button class="icon-btn" id="themeToggleBtn"><i class="fas fa-sun"></i></button>
+        <button class="icon-btn" id="themeToggleBtn" title="Toggle Dark/Light Mode" onclick="toggleTheme()"><i class="fas fa-sun"></i></button>
         <button class="icon-btn" id="btnPrintPage"><i class="fas fa-print"></i></button>
         <button class="btn-student-profile" id="btnStudentProfile">
           <i class="fas fa-user-graduate"></i>
@@ -51,27 +51,28 @@
 
       <!-- Mobile Right Controls -->
       <div class="mobile-nav-right">
-        <button class="mobile-avatar-btn" id="btnStudentProfileMobile"><i class="fas fa-user-graduate"></i></button>
-        <button class="hamburger-btn" id="btnHamburger" aria-label="Tools menu"><i class="fas fa-bars"></i></button>
+        <button type="button" class="mobile-theme-btn" id="themeToggleBtnMobile" title="Toggle Theme" aria-label="Toggle Dark/Light Mode" onclick="toggleTheme()"><i class="fas fa-sun"></i></button>
+        <button type="button" class="mobile-avatar-btn" id="btnStudentProfileMobile" title="Account"><i class="fas fa-user-graduate"></i></button>
+        <button type="button" class="hamburger-btn" id="btnHamburger" aria-label="Tools menu" onclick="toggleMobileDrawer(event)"><i class="fas fa-bars"></i></button>
       </div>
     </header>
 
     <!-- Mobile Drawer Overlay -->
-    <div class="drawer-overlay" id="drawerOverlay"></div>
+    <div class="drawer-overlay" id="drawerOverlay" onclick="closeMobileDrawer()"></div>
     <!-- Mobile Tools Drawer -->
     <aside class="mobile-drawer" id="mobileDrawer">
       <div class="drawer-header">
-        <span class="drawer-title"><i class="fas fa-tools"></i> Tools &amp; Settings</span>
-        <button class="icon-btn" id="btnCloseDrawer"><i class="fas fa-times"></i></button>
+        <span class="drawer-title" id="drawerTitleText"><i class="fas fa-tools"></i> Tools &amp; Settings</span>
+        <button type="button" class="icon-btn" id="btnCloseDrawer" onclick="closeMobileDrawer()"><i class="fas fa-times"></i></button>
       </div>
       <div class="drawer-body">
-        <div class="drawer-section-label">Language / ভাষা</div>
+        <div class="drawer-section-label" id="drawerLangLabel">Language / ভাষা</div>
         <div class="lang-selector-group" style="width:100%;border-radius:var(--radius-md);padding:5px;">
-          <button class="lang-btn active" data-drawer-lang="both" style="flex:1;justify-content:center;"><i class="fas fa-globe"></i> Both</button>
-          <button class="lang-btn" data-drawer-lang="en" style="flex:1;justify-content:center;"><i class="fas fa-font"></i> EN</button>
-          <button class="lang-btn" data-drawer-lang="bn" style="flex:1;justify-content:center;"><i class="fas fa-language"></i> বাং</button>
+          <button type="button" class="lang-btn active" data-lang="both" data-drawer-lang="both" onclick="setLanguage('both')" style="flex:1;justify-content:center;"><i class="fas fa-globe"></i> Both</button>
+          <button type="button" class="lang-btn" data-lang="en" data-drawer-lang="en" onclick="setLanguage('en')" style="flex:1;justify-content:center;"><i class="fas fa-font"></i> EN</button>
+          <button type="button" class="lang-btn" data-lang="bn" data-drawer-lang="bn" onclick="setLanguage('bn')" style="flex:1;justify-content:center;"><i class="fas fa-language"></i> বাং</button>
         </div>
-        <div class="drawer-section-label" style="margin-top:1rem;">Stopwatch</div>
+        <div class="drawer-section-label" id="drawerStopwatchLabel" style="margin-top:1rem;">Stopwatch</div>
         <div class="practice-timer-widget" style="width:100%;border-radius:var(--radius-md);justify-content:space-between;">
           <span style="display:flex;align-items:center;gap:6px;"><i class="fas fa-stopwatch"></i><span id="practiceStopwatchDisplayDrawer">00:00</span></span>
           <div style="display:flex;gap:4px;">
@@ -79,14 +80,14 @@
             <button class="timer-control-btn" id="btnResetStopwatchDrawer"><i class="fas fa-redo"></i></button>
           </div>
         </div>
-        <div class="drawer-section-label" style="margin-top:1rem;">Tools</div>
+        <div class="drawer-section-label" id="drawerToolsLabel" style="margin-top:1rem;">Tools</div>
         <div class="drawer-tools-grid">
-          <button class="drawer-tool-btn" id="btnOpenFormulasDrawer"><i class="fas fa-square-root-alt"></i><span>Formulas</span></button>
-          <button class="drawer-tool-btn" id="btnOpenScratchpadDrawer"><i class="fas fa-pencil-alt"></i><span>Scratchpad</span></button>
-          <button class="drawer-tool-btn" id="soundToggleBtnDrawer"><i class="fas fa-volume-up"></i><span>Sound</span></button>
-          <button class="drawer-tool-btn" id="themeToggleBtnDrawer"><i class="fas fa-palette"></i><span>Theme</span></button>
-          <button class="drawer-tool-btn" id="leaderboardBtnDrawer"><i class="fas fa-trophy"></i><span>Top Scores</span></button>
-          <button class="drawer-tool-btn" id="btnPrintPageDrawer"><i class="fas fa-print"></i><span>Print</span></button>
+          <button type="button" class="drawer-tool-btn" id="btnOpenFormulasDrawer"><i class="fas fa-square-root-alt"></i><span id="drawerFormulasText">Formulas</span></button>
+          <button type="button" class="drawer-tool-btn" id="btnOpenScratchpadDrawer"><i class="fas fa-pencil-alt"></i><span id="drawerScratchpadText">Scratchpad</span></button>
+          <button type="button" class="drawer-tool-btn" id="soundToggleBtnDrawer"><i class="fas fa-volume-up"></i><span id="drawerSoundText">Sound</span></button>
+          <button type="button" class="drawer-tool-btn" id="themeToggleBtnDrawer" onclick="toggleTheme()"><i class="fas fa-sun"></i><span id="drawerThemeText">Theme</span></button>
+          <button type="button" class="drawer-tool-btn" id="leaderboardBtnDrawer"><i class="fas fa-trophy"></i><span id="drawerLeaderboardText">Leaderboard</span></button>
+          <button type="button" class="drawer-tool-btn" id="btnPrintPageDrawer"><i class="fas fa-print"></i><span id="drawerPrintText">Print</span></button>
         </div>
       </div>
     </aside>
@@ -123,13 +124,13 @@
       
       <!-- Top Hero / Welcome Banner -->
       <div class="home-hero">
-        <div class="home-hero-badge">
+        <div class="home-hero-badge" id="homeHeroBadge">
           <i class="fas fa-graduation-cap"></i> Bilingual Exam Prep Hub &bull; বাংলা ও ইংরেজি
         </div>
-        <h1 class="home-hero-title">
+        <h1 class="home-hero-title" id="homeHeroTitle">
           Master General Aptitude &amp; Reasoning with Step-by-Step Clarity
         </h1>
-        <p class="home-hero-desc">
+        <p class="home-hero-desc" id="homeHeroDesc">
           Structured bilingual practice with 500 hand-picked questions across 10 full sets with instant solutions and shortcuts. Tailored for WBCS, SSC CGL, IBPS, Railways RRB, UPSC &amp; campus placements.
         </p>
 
@@ -137,19 +138,19 @@
         <div class="home-stats-strip">
           <div class="home-stat-chip">
             <i class="fas fa-check-double" style="color:var(--accent-primary);"></i>
-            <span><strong>500</strong> Bilingual Questions</span>
+            <span id="homeStatBilingual"><strong>500</strong> Bilingual Questions</span>
           </div>
           <div class="home-stat-chip">
             <i class="fas fa-layer-group" style="color:var(--accent-cyan);"></i>
-            <span><strong>10</strong> Full 50-Q Sets</span>
+            <span id="homeStatSets"><strong>10</strong> Full 50-Q Sets</span>
           </div>
           <div class="home-stat-chip">
             <i class="fas fa-language" style="color:var(--accent-emerald);"></i>
-            <span><strong>English &amp; Bengali</strong></span>
+            <span id="homeStatBoth"><strong>English &amp; Bengali</strong></span>
           </div>
           <div class="home-stat-chip">
             <i class="fas fa-bolt" style="color:var(--accent-amber);"></i>
-            <span><strong>Shortcuts &amp; Tricks</strong></span>
+            <span id="homeStatTricks"><strong>Shortcuts &amp; Tricks</strong></span>
           </div>
         </div>
       </div>
@@ -162,8 +163,8 @@
           <div class="home-section-header">
             <i class="fas fa-gift" style="color:var(--accent-cyan);"></i>
             <div>
-              <h3>What You Get When You Join Free</h3>
-              <p>Everything you need to excel in your competitive examinations</p>
+              <h3 id="homeWhatYouGetTitle">What You Get When You Join Free</h3>
+              <p id="homeWhatYouGetSub">Everything you need to excel in your competitive examinations</p>
             </div>
           </div>
 
@@ -173,8 +174,8 @@
                 <i class="fas fa-brain"></i>
               </div>
               <div class="perk-text">
-                <strong>4 Core Subject Coverage</strong>
-                <span>Quantitative Aptitude, Logical Reasoning, Verbal Ability &amp; Data Interpretation in one unified portal.</span>
+                <strong id="homePerk1Title">4 Core Subject Coverage</strong>
+                <span id="homePerk1Desc">Quantitative Aptitude, Logical Reasoning, Verbal Ability &amp; Data Interpretation in one unified portal.</span>
               </div>
             </div>
 
@@ -183,8 +184,8 @@
                 <i class="fas fa-stopwatch"></i>
               </div>
               <div class="perk-text">
-                <strong>1-by-1 Focus Mode &amp; 45-Min Mock Tests</strong>
-                <span>Practice calmly one question at a time or simulate real exam conditions with negative marking.</span>
+                <strong id="homePerk2Title">1-by-1 Focus Mode &amp; 45-Min Mock Tests</strong>
+                <span id="homePerk2Desc">Practice calmly one question at a time or simulate real exam conditions with negative marking.</span>
               </div>
             </div>
 
@@ -193,8 +194,8 @@
                 <i class="fas fa-history"></i>
               </div>
               <div class="perk-text">
-                <strong>Smart Mistakes Vault</strong>
-                <span>Questions you miss are saved automatically to your vault so you can practice until 100% mastered.</span>
+                <strong id="homePerk3Title">Smart Mistakes Vault</strong>
+                <span id="homePerk3Desc">Questions you miss are saved automatically to your vault so you can practice until 100% mastered.</span>
               </div>
             </div>
 
@@ -203,26 +204,26 @@
                 <i class="fas fa-cloud"></i>
               </div>
               <div class="perk-text">
-                <strong>Cloud Sync &amp; All-India Leaderboard</strong>
-                <span>Your practice streaks, accuracy diagnostics, and saved bookmarks sync across phone and laptop via Neon PostgreSQL.</span>
+                <strong id="homePerk4Title">Cloud Sync &amp; All-India Leaderboard</strong>
+                <span id="homePerk4Desc">Your practice streaks, accuracy diagnostics, and saved bookmarks sync across phone and laptop via Neon PostgreSQL.</span>
               </div>
             </div>
           </div>
 
           <!-- Quick Topic Jump Buttons -->
           <div class="home-topics-preview">
-            <div class="home-topics-preview-title">Choose Topic to Explore:</div>
+            <div class="home-topics-preview-title" id="homeChooseTopicTitle">Choose Topic to Explore:</div>
             <div class="home-topics-pills">
-              <button class="home-topic-btn" onclick="startPracticeTopic('quant')">
+              <button class="home-topic-btn" id="homeTopicBtnQuant" onclick="startPracticeTopic('quant')">
                 <i class="fas fa-calculator"></i> Quant
               </button>
-              <button class="home-topic-btn" onclick="startPracticeTopic('logical')">
+              <button class="home-topic-btn" id="homeTopicBtnLogical" onclick="startPracticeTopic('logical')">
                 <i class="fas fa-brain"></i> Reasoning
               </button>
-              <button class="home-topic-btn" onclick="startPracticeTopic('verbal')">
+              <button class="home-topic-btn" id="homeTopicBtnVerbal" onclick="startPracticeTopic('verbal')">
                 <i class="fas fa-book-open"></i> Verbal
               </button>
-              <button class="home-topic-btn" onclick="startPracticeTopic('di')">
+              <button class="home-topic-btn" id="homeTopicBtnDi" onclick="startPracticeTopic('di')">
                 <i class="fas fa-chart-pie"></i> Data Interp.
               </button>
             </div>
@@ -310,7 +311,7 @@
             <div class="home-guest-divider">
               <span>OR</span>
             </div>
-            <button type="button" class="btn-secondary" style="width:100%;justify-content:center;padding:10px;font-size:0.88rem;" onclick="setMode('practice')">
+            <button type="button" class="btn-secondary" id="homeGuestDemoBtn" style="width:100%;justify-content:center;padding:10px;font-size:0.88rem;" onclick="setMode('practice')">
               <i class="fas fa-play-circle"></i> Try Demo Practice as Guest &rarr;
             </button>
           </div>
