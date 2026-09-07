@@ -116,8 +116,14 @@
       <button class="mode-tab" data-mode="test">
         <i class="fas fa-stopwatch"></i> Timed Mock Test / মক টেস্ট মোড
       </button>
+      <button class="mode-tab" data-mode="mistakes">
+        <i class="fas fa-history"></i> Mistakes Vault / ভুল সংশোধন (<span id="mistakesCount">0</span>)
+      </button>
       <button class="mode-tab" data-mode="bookmarks">
-        <i class="fas fa-star"></i> Saved Questions / বুকমার্ক
+        <i class="fas fa-star"></i> Saved / বুকমার্ক (<span id="bookmarkModeCount">0</span>)
+      </button>
+      <button class="mode-tab" data-mode="analytics">
+        <i class="fas fa-chart-pie"></i> Analytics / ফলাফল বিশ্লেষণ
       </button>
     </nav>
 
@@ -148,7 +154,7 @@
     </div>
 
     <!-- 10 Sets Quick Selector Navigation Bar -->
-    <div class="set-pills-scroll-container">
+    <div class="set-pills-scroll-container" id="setPillsContainer">
       <div class="set-pills-label"><i class="fas fa-layer-group"></i> Quick Sets:</div>
       <div class="set-pills-list" id="setPillsList">
         <button class="set-pill active" data-set="all">All Sets (500)</button>
@@ -166,7 +172,7 @@
     </div>
 
     <!-- Search & Filter Controls Toolbar -->
-    <section class="toolbar">
+    <section class="toolbar" id="mainToolbar">
       <div class="search-box">
         <i class="fas fa-search search-icon"></i>
         <input type="text" id="searchInput" placeholder="Search question or topic (e.g. 'work', 'train', 'percentage', 'series')...">
@@ -205,8 +211,15 @@
       </div>
     </section>
 
+    <!-- Analytics Dashboard View Container -->
+    <section class="analytics-dashboard" id="analyticsDashboard" style="display: none;">
+      <!-- Generated dynamically in app.js -->
+    </section>
+
     <!-- Main Questions List Container -->
     <main id="questionsContainer">
+      <!-- Dynamic Question Cards will render here -->
+    </main>
       <!-- Dynamic Question Cards will render here -->
     </main>
 

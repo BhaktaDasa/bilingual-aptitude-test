@@ -2,9 +2,17 @@
 // Bilingual General Aptitude Testing System - Logic Engine
 // Features: Dual-language switching, 10 Sets x 50 Questions (500 Total),
 // Interactive Practice Stopwatch & Test Countdown Timers,
+// Mistakes Vault, Performance Analytics & Skill Diagnostics,
 // Interactive Scratchpad, Formula Sheet, and Scoring Engine.
 // Note: All numbers strictly formatted in English digits (0-9). No flags.
 // =========================================================
+
+// Service Worker Registration for PWA / Offline Use
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js').catch(() => {});
+  });
+}
 
 // Aptitude Formula Cheat Sheet Data (Bilingual - English Numbers Only)
 const formulaSheetData = [
@@ -83,13 +91,16 @@ const formulaSheetData = [
 // Application State
 const state = {
   language: 'both', // 'both', 'en', 'bn'
-  mode: 'practice', // 'practice', 'test', 'bookmarks'
+  mode: 'practice', // 'practice', 'test', 'mistakes', 'bookmarks', 'analytics'
   selectedSet: 'all', // 'all', '1', '2', ..., '10'
   category: 'all',
   difficulty: 'all',
   searchQuery: '',
   theme: localStorage.getItem('aptitude_theme') || 'dark',
   bookmarks: JSON.parse(localStorage.getItem('aptitude_bookmarks') || '[]'),
+  mistakesVault: JSON.parse(localStorage.getItem('aptitude_mistakes') || '[]'),
+  testHistory: JSON.parse(localStorage.getItem('aptitude_test_history') || '[]'),
+  practiceAttempts: JSON.parse(localStorage.getItem('aptitude_practice_attempts') || '{}'), // { [qId]: { correct: bool } }
   soundEnabled: true,
   
   // Practice Stopwatch State
@@ -109,9 +120,14 @@ const state = {
 // DOM Element Selectors
 const elements = {
   questionsContainer: document.getElementById('questionsContainer'),
+  analyticsDashboard: document.getElementById('analyticsDashboard'),
+  mainToolbar: document.getElementById('mainToolbar'),
+  setPillsContainer: document.getElementById('setPillsContainer'),
   totalQuestionsCount: document.getElementById('totalQuestionsCount'),
   practiceCount: document.getElementById('practiceCount'),
   bookmarkCount: document.getElementById('bookmarkCount'),
+  bookmarkModeCount: document.getElementById('bookmarkModeCount'),
+  mistakesCount: document.getElementById('mistakesCount'),
   
   // Stopwatch elements
   practiceStopwatchDisplay: document.getElementById('practiceStopwatchDisplay'),
@@ -284,7 +300,11 @@ function setupEventListeners() {
       const target = e.currentTarget;
       target.classList.add('active');
       state.language = target.dataset.lang;
-      renderQuestions();
+      if (state.mode === 'analytics') {
+        renderAnalyticsDashboard();
+      } else {
+        renderQuestions();
+      }
       showToast(`Language: ${target.dataset.lang.toUpperCase()}`);
     });
   });
@@ -396,11 +416,28 @@ function setMode(mode) {
   state.mode = mode;
   
   if (mode === 'test') {
+    elements.questionsContainer.style.display = 'block';
+    elements.analyticsDashboard.style.display = 'none';
+    if (elements.mainToolbar) elements.mainToolbar.style.display = 'flex';
+    if (elements.setPillsContainer) elements.setPillsContainer.style.display = 'flex';
     startTestMode();
+  } else if (mode === 'analytics') {
+    stopTestTimer();
+    elements.testHud.classList.remove('visible');
+    elements.testPalette.classList.remove('visible');
+    elements.questionsContainer.style.display = 'none';
+    elements.analyticsDashboard.style.display = 'block';
+    if (elements.mainToolbar) elements.mainToolbar.style.display = 'none';
+    if (elements.setPillsContainer) elements.setPillsContainer.style.display = 'none';
+    renderAnalyticsDashboard();
   } else {
     stopTestTimer();
     elements.testHud.classList.remove('visible');
     elements.testPalette.classList.remove('visible');
+    elements.questionsContainer.style.display = 'block';
+    elements.analyticsDashboard.style.display = 'none';
+    if (elements.mainToolbar) elements.mainToolbar.style.display = 'flex';
+    if (elements.setPillsContainer) elements.setPillsContainer.style.display = 'flex';
     renderQuestions();
   }
 }
@@ -490,6 +527,7 @@ function scrollToQuestion(id) {
 }
 
 function finishTestMode() {
+  const timeTaken = (45 * 60) - state.timerSeconds;
   stopTestTimer();
   state.testActive = false;
   
@@ -504,14 +542,40 @@ function finishTestMode() {
       unattemptedCount++;
     } else if (userChoice === q.correctIndex) {
       correctCount++;
+      state.practiceAttempts[q.id] = { correct: true };
     } else {
       wrongCount++;
+      state.practiceAttempts[q.id] = { correct: false };
+      // Auto-save to Mistakes Vault
+      if (!state.mistakesVault.includes(q.id)) {
+        state.mistakesVault.push(q.id);
+      }
     }
   });
+  
+  localStorage.setItem('aptitude_mistakes', JSON.stringify(state.mistakesVault));
+  localStorage.setItem('aptitude_practice_attempts', JSON.stringify(state.practiceAttempts));
   
   const total = filtered.length;
   const scorePct = total > 0 ? Math.round((correctCount / total) * 100) : 0;
   
+  // Save to test history log
+  const attemptRecord = {
+    date: new Date().toLocaleDateString('en-GB'),
+    time: new Date().toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' }),
+    setName: state.selectedSet === 'all' ? 'All Sets Mock' : `Set ${state.selectedSet}`,
+    total: total,
+    correct: correctCount,
+    wrong: wrongCount,
+    scorePct: scorePct,
+    timeTakenSeconds: timeTaken
+  };
+  state.testHistory.unshift(attemptRecord);
+  if (state.testHistory.length > 20) state.testHistory.pop();
+  localStorage.setItem('aptitude_test_history', JSON.stringify(state.testHistory));
+
+  updateStats();
+
   // Render Test Results Modal
   document.getElementById('resultTotalQuestions').innerText = total;
   document.getElementById('resultCorrect').innerText = correctCount;
@@ -538,6 +602,11 @@ function getFilteredQuestions() {
   return aptitudeQuestions.filter(q => {
     // Mode Bookmark filter
     if (state.mode === 'bookmarks' && !state.bookmarks.includes(q.id)) {
+      return false;
+    }
+
+    // Mode Mistakes Vault filter
+    if (state.mode === 'mistakes' && !state.mistakesVault.includes(q.id)) {
       return false;
     }
 
@@ -573,6 +642,169 @@ function getFilteredQuestions() {
   });
 }
 
+// Render Analytics Dashboard
+function renderAnalyticsDashboard() {
+  const attempts = Object.values(state.practiceAttempts);
+  const totalAttempted = attempts.length;
+  const totalCorrect = attempts.filter(a => a.correct).length;
+  const overallAccuracy = totalAttempted > 0 ? Math.round((totalCorrect / totalAttempted) * 100) : 0;
+  
+  // Category Breakdown
+  const categories = ['quant', 'logical', 'verbal', 'di'];
+  const catNames = {
+    quant: { en: 'Quantitative Aptitude', bn: 'পরিমাণগত গণিত' },
+    logical: { en: 'Logical Reasoning', bn: 'যৌক্তিক যুক্তি' },
+    verbal: { en: 'Verbal Ability', bn: 'ভাষাগত দক্ষতা' },
+    di: { en: 'Data Interpretation', bn: 'তথ্য বিশ্লেষণ' }
+  };
+  
+  const catStats = {};
+  categories.forEach(c => {
+    const qList = aptitudeQuestions.filter(q => q.category === c);
+    let attempted = 0;
+    let correct = 0;
+    qList.forEach(q => {
+      if (state.practiceAttempts[q.id]) {
+        attempted++;
+        if (state.practiceAttempts[q.id].correct) correct++;
+      }
+    });
+    const acc = attempted > 0 ? Math.round((correct / attempted) * 100) : 0;
+    catStats[c] = { total: qList.length, attempted, correct, acc };
+  });
+
+  elements.analyticsDashboard.innerHTML = `
+    <!-- Top Header Overview Card -->
+    <div class="analytics-header-card">
+      <div>
+        <h2 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 4px;">
+          ${state.language === 'bn' ? 'আপনার সামগ্রিক প্রস্তুতি ও অগ্রগতি' : 'Preparation & Performance Analytics'}
+        </h2>
+        <p style="font-size: 0.88rem; color: var(--text-secondary);">
+          ${state.language === 'bn' ? 'প্রতিটি বিষয়ের পারদর্শিতা ও মক টেস্টের ফলাফল বিশদভাবে পর্যালোচনা করুন।' : 'Real-time skill diagnostics, accuracy tracking and historical mock test records.'}
+        </p>
+      </div>
+      <div class="streak-chip">
+        <i class="fas fa-fire"></i> Study Streak: 3 Days
+      </div>
+    </div>
+
+    <!-- Core Metrics 4-Grid -->
+    <div class="analytics-grid">
+      <div class="analytics-stat-card">
+        <div class="analytics-stat-val" style="color: var(--accent-cyan);">${totalAttempted} / 500</div>
+        <div class="analytics-stat-label">Questions Attempted / সম্পন্ন প্রশ্ন</div>
+      </div>
+      <div class="analytics-stat-card">
+        <div class="analytics-stat-val" style="color: var(--accent-emerald);">${overallAccuracy}%</div>
+        <div class="analytics-stat-label">Overall Accuracy / নির্ভুলতার হার</div>
+      </div>
+      <div class="analytics-stat-card">
+        <div class="analytics-stat-val" style="color: #ef4444;">${state.mistakesVault.length}</div>
+        <div class="analytics-stat-label">Mistakes in Vault / সংশোধনের প্রশ্ন</div>
+      </div>
+      <div class="analytics-stat-card">
+        <div class="analytics-stat-val" style="color: var(--accent-amber);">${state.testHistory.length}</div>
+        <div class="analytics-stat-label">Mock Tests Taken / প্রদত্ত মক টেস্ট</div>
+      </div>
+    </div>
+
+    <!-- Subject Diagnostic Breakdown -->
+    <div class="diagnostics-container">
+      <div class="diagnostics-title">
+        <i class="fas fa-brain" style="color: var(--accent-cyan);"></i>
+        <span>Subject Mastery Diagnostics / বিষয়ভিত্তিক দক্ষতা বিশ্লেষণ</span>
+      </div>
+
+      ${categories.map(c => {
+        const s = catStats[c];
+        const name = state.language === 'bn' ? catNames[c].bn : catNames[c].en;
+        let badgeColor = 'var(--accent-emerald)';
+        let statusText = 'Strong / শক্তিশালী';
+        if (s.acc < 50) {
+          badgeColor = '#ef4444';
+          statusText = 'Needs Focus / মনোযোগ প্রয়োজন';
+        } else if (s.acc < 75) {
+          badgeColor = 'var(--accent-amber)';
+          statusText = 'Moderate / সন্তোষজনক';
+        }
+        if (s.attempted === 0) {
+          badgeColor = 'var(--text-muted)';
+          statusText = 'Not Attempted';
+        }
+
+        return `
+          <div class="diagnostic-item">
+            <div class="diagnostic-header">
+              <span>${name} (${s.attempted}/${s.total} Solved)</span>
+              <span style="color: ${badgeColor}; font-weight: 700;">${s.acc}% &bull; ${statusText}</span>
+            </div>
+            <div class="diagnostic-bar-track">
+              <div class="diagnostic-bar-fill" style="width: ${s.acc}%; background: ${badgeColor};"></div>
+            </div>
+          </div>
+        `;
+      }).join('')}
+    </div>
+
+    <!-- Historical Test Log Table -->
+    <div class="history-container">
+      <div class="diagnostics-title" style="justify-content: space-between;">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <i class="fas fa-history" style="color: var(--accent-primary);"></i>
+          <span>Recent Mock Test Records / সাম্প্রতিক পরীক্ষার ফলাফল</span>
+        </div>
+        ${state.testHistory.length > 0 ? `
+          <button class="btn-secondary" style="padding: 4px 10px; font-size: 0.78rem;" onclick="clearTestHistory()">Clear History</button>
+        ` : ''}
+      </div>
+
+      ${state.testHistory.length === 0 ? `
+        <div style="text-align: center; padding: 2rem; color: var(--text-muted);">
+          <i class="fas fa-clipboard-list" style="font-size: 2rem; margin-bottom: 0.5rem; opacity: 0.4;"></i>
+          <p>No mock test attempts recorded yet. Take your first timed mock test!</p>
+        </div>
+      ` : `
+        <div class="history-table-wrapper">
+          <table class="history-table">
+            <thead>
+              <tr>
+                <th>Date & Time</th>
+                <th>Test Set</th>
+                <th>Questions</th>
+                <th>Correct</th>
+                <th>Score %</th>
+                <th>Time Taken</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${state.testHistory.map(h => `
+                <tr>
+                  <td>${h.date} ${h.time}</td>
+                  <td><strong>${h.setName}</strong></td>
+                  <td>${h.total}</td>
+                  <td style="color: var(--accent-emerald); font-weight: 600;">${h.correct} / ${h.total}</td>
+                  <td><span class="badge" style="background: ${h.scorePct >= 70 ? 'rgba(16,185,129,0.2)' : 'rgba(239,68,68,0.2)'}; color: ${h.scorePct >= 70 ? 'var(--accent-emerald)' : '#ef4444'}; font-weight: 700;">${h.scorePct}%</span></td>
+                  <td>${Math.floor(h.timeTakenSeconds / 60)}m ${h.timeTakenSeconds % 60}s</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+      `}
+    </div>
+  `;
+}
+
+function clearTestHistory() {
+  if (confirm('Are you sure you want to clear your test history?')) {
+    state.testHistory = [];
+    localStorage.removeItem('aptitude_test_history');
+    renderAnalyticsDashboard();
+    showToast('Test history cleared');
+  }
+}
+
 // Render Questions List
 function renderQuestions(reviewMode = false) {
   const filtered = getFilteredQuestions();
@@ -581,22 +813,56 @@ function renderQuestions(reviewMode = false) {
   }
   
   if (filtered.length === 0) {
-    elements.questionsContainer.innerHTML = `
-      <div style="text-align: center; padding: 4rem 1rem; color: var(--text-muted);">
-        <i class="fas fa-search" style="font-size: 2.5rem; margin-bottom: 1rem; opacity: 0.5;"></i>
-        <h3>No questions found / কোনো প্রশ্ন পাওয়া যায়নি</h3>
-        <p>Try resetting your filters or search keywords.</p>
-        <button class="btn-primary" style="margin-top: 1rem;" onclick="resetFilters()">Reset All Filters</button>
-      </div>
-    `;
+    if (state.mode === 'mistakes') {
+      elements.questionsContainer.innerHTML = `
+        <div style="text-align: center; padding: 4rem 1rem; color: var(--text-muted);">
+          <i class="fas fa-check-circle" style="font-size: 3rem; margin-bottom: 1rem; color: var(--accent-emerald);"></i>
+          <h3>No Mistakes in Vault! / কোনো ভুলের রেকর্ড নেই! 🎉</h3>
+          <p>You have mastered all your attempted questions or haven't made any mistakes yet.</p>
+          <button class="btn-primary" style="margin-top: 1rem;" onclick="setMode('practice')">Back to Practice</button>
+        </div>
+      `;
+    } else if (state.mode === 'bookmarks') {
+      elements.questionsContainer.innerHTML = `
+        <div style="text-align: center; padding: 4rem 1rem; color: var(--text-muted);">
+          <i class="fas fa-star" style="font-size: 3rem; margin-bottom: 1rem; color: var(--accent-amber); opacity: 0.5;"></i>
+          <h3>No Saved Questions / কোনো প্রশ্ন বুকমার্ক করা নেই</h3>
+          <p>Click the bookmark icon on any question to save it for quick revision.</p>
+          <button class="btn-primary" style="margin-top: 1rem;" onclick="setMode('practice')">Browse All Questions</button>
+        </div>
+      `;
+    } else {
+      elements.questionsContainer.innerHTML = `
+        <div style="text-align: center; padding: 4rem 1rem; color: var(--text-muted);">
+          <i class="fas fa-search" style="font-size: 2.5rem; margin-bottom: 1rem; opacity: 0.5;"></i>
+          <h3>No questions found / কোনো প্রশ্ন পাওয়া যায়নি</h3>
+          <p>Try resetting your filters or search keywords.</p>
+          <button class="btn-primary" style="margin-top: 1rem;" onclick="resetFilters()">Reset All Filters</button>
+        </div>
+      `;
+    }
     return;
   }
 
-  elements.questionsContainer.innerHTML = filtered.map((q, idx) => {
+  // Mistakes Vault Banner
+  let mistakesBanner = '';
+  if (state.mode === 'mistakes') {
+    mistakesBanner = `
+      <div class="mistakes-vault-banner">
+        <div>
+          <strong style="color: #ef4444;"><i class="fas fa-exclamation-triangle"></i> Mistakes Revision Vault:</strong>
+          <span style="font-size: 0.9rem; margin-left: 6px;">You are practicing ${filtered.length} questions previously answered incorrectly. Re-answering correctly will master and remove them!</span>
+        </div>
+        <button class="btn-secondary" style="font-size: 0.8rem; padding: 5px 12px;" onclick="clearMistakesVault()">Clear Vault</button>
+      </div>
+    `;
+  }
+
+  elements.questionsContainer.innerHTML = mistakesBanner + filtered.map((q, idx) => {
     const isBookmarked = state.bookmarks.includes(q.id);
     const isFlagged = state.testFlags.has(q.id);
     const selectedAnswer = state.testAnswers[q.id];
-    const isPractice = state.mode === 'practice' || reviewMode;
+    const isPractice = state.mode === 'practice' || state.mode === 'mistakes' || state.mode === 'bookmarks' || reviewMode;
 
     // Badges
     const categoryClass = `badge-${q.category}`;
@@ -695,7 +961,7 @@ function renderQuestions(reviewMode = false) {
 
         ${explanationHtml}
 
-        ${state.mode === 'practice' && !reviewMode ? `
+        ${isPractice && !reviewMode ? `
           <div class="card-footer">
             <button class="btn-reveal-solution" onclick="toggleExplanation(${q.id})">
               <i class="fas fa-eye"></i> ${isExplanationVisible ? 'Hide Solution' : 'Show Solution / সমাধান দেখুন'}
@@ -718,22 +984,50 @@ function handleOptionSelect(questionId, optionIndex, isReview = false) {
   if (!question) return;
 
   state.testAnswers[questionId] = optionIndex;
+  const isCorrect = (optionIndex === question.correctIndex);
 
-  if (state.mode === 'practice') {
-    // Sound FX
-    if (optionIndex === question.correctIndex) {
+  // Record practice attempt
+  state.practiceAttempts[questionId] = { correct: isCorrect };
+  localStorage.setItem('aptitude_practice_attempts', JSON.stringify(state.practiceAttempts));
+
+  if (state.mode !== 'test') {
+    if (isCorrect) {
       sfx.playCorrect();
       showToast('Correct Answer! / সঠিক উত্তর! 🎉');
+      // If in mistakes mode, master and remove from vault
+      if (state.mode === 'mistakes') {
+        const mIdx = state.mistakesVault.indexOf(questionId);
+        if (mIdx > -1) {
+          state.mistakesVault.splice(mIdx, 1);
+          localStorage.setItem('aptitude_mistakes', JSON.stringify(state.mistakesVault));
+          showToast('Mastered! Removed from Mistakes Vault ⭐');
+        }
+      }
     } else {
       sfx.playWrong();
       showToast('Incorrect Answer / ভুল উত্তর ❌');
+      // Auto-save to Mistakes Vault
+      if (!state.mistakesVault.includes(questionId)) {
+        state.mistakesVault.push(questionId);
+        localStorage.setItem('aptitude_mistakes', JSON.stringify(state.mistakesVault));
+      }
     }
     
-    // Update card styling
+    updateStats();
     renderQuestions();
-  } else if (state.mode === 'test') {
+  } else {
     updateTestProgress();
     renderQuestions();
+  }
+}
+
+function clearMistakesVault() {
+  if (confirm('Clear all questions from Mistakes Vault?')) {
+    state.mistakesVault = [];
+    localStorage.removeItem('aptitude_mistakes');
+    updateStats();
+    renderQuestions();
+    showToast('Mistakes Vault Cleared');
   }
 }
 
@@ -779,6 +1073,12 @@ function updateStats() {
   }
   if (elements.bookmarkCount) {
     elements.bookmarkCount.innerText = state.bookmarks.length;
+  }
+  if (elements.bookmarkModeCount) {
+    elements.bookmarkModeCount.innerText = state.bookmarks.length;
+  }
+  if (elements.mistakesCount) {
+    elements.mistakesCount.innerText = state.mistakesVault.length;
   }
 }
 

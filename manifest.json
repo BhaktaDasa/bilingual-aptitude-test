@@ -1,0 +1,18 @@
+{
+  "name": "Bilingual General Aptitude Master",
+  "short_name": "AptitudeMaster",
+  "description": "Comprehensive 500-question English & Bengali competitive aptitude practice & mock test platform.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#090d16",
+  "theme_color": "#090d16",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/svgs/solid/brain.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
