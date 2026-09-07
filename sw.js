@@ -1,5 +1,5 @@
 // Service Worker for 100% Offline Aptitude Testing
-const CACHE_NAME = 'aptitude-master-v2';
+const CACHE_NAME = 'aptitude-master-v3';
 const STATIC_ASSETS = [
   './',
   './index.html',

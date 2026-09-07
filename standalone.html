@@ -29303,8 +29303,8 @@ function selectTopicCard(cat) {
   state.category = cat;
   state.singleCurrentIndex = 0;
   
-  document.querySelectorAll('.study-topic-card').forEach(card => {
-    card.classList.toggle('active', card.dataset.cat === cat);
+  document.querySelectorAll('.topic-pill').forEach(card => {
+    card.classList.toggle('active', card.dataset.topic === cat);
   });
 
   if (elements.categoryFilter) {
@@ -29357,9 +29357,6 @@ window.switchAuthTab = switchAuthTab;
 window.handleStudentSignIn = handleStudentSignIn;
 window.handleStudentSignUp = handleStudentSignUp;
 window.logoutStudent = logoutStudent;
-window.switchHomeAuthTab = switchHomeAuthTab;
-window.handleHomeSignIn = handleHomeSignIn;
-window.handleHomeSignUp = handleHomeSignUp;
 window.selectTopicCard = selectTopicCard;
 window.syncHubSet = syncHubSet;
 window.scrollToStudyHub = scrollToStudyHub;
@@ -31418,9 +31415,12 @@ function resetFilters() {
       p.classList.toggle('active', p.dataset.set === 'all');
     });
   }
-  elements.categoryFilter.value = 'all';
-  elements.difficultyFilter.value = 'all';
-  elements.searchInput.value = '';
+  document.querySelectorAll('.topic-pill').forEach(p => {
+    p.classList.toggle('active', p.dataset.topic === 'all');
+  });
+  if (elements.categoryFilter) elements.categoryFilter.value = 'all';
+  if (elements.difficultyFilter) elements.difficultyFilter.value = 'all';
+  if (elements.searchInput) elements.searchInput.value = '';
   renderQuestions();
 }
 
