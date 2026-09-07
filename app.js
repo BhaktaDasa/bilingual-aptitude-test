@@ -92,7 +92,7 @@ const formulaSheetData = [
 // Application State
 const state = {
   language: localStorage.getItem('aptitude_language') || 'both', // 'both', 'en', 'bn'
-  mode: 'home', // 'home', 'practice', 'test', 'mistakes', 'bookmarks', 'analytics', 'admin'
+  mode: 'practice', // 'practice', 'test', 'mistakes', 'bookmarks', 'analytics', 'admin'
   viewMode: 'single', // 'single' (1-by-1 Focus Mode), 'list' (Scrolling List)
   singleCurrentIndex: 0, // 0-based index in the current filtered list
   selectedSet: 'all', // 'all', '1', '2', ..., '10'
@@ -106,6 +106,7 @@ const state = {
   mistakesVault: JSON.parse(localStorage.getItem('aptitude_mistakes') || '[]'),
   testHistory: JSON.parse(localStorage.getItem('aptitude_test_history') || '[]'),
   practiceAttempts: JSON.parse(localStorage.getItem('aptitude_practice_attempts') || '{}'),
+  practiceAnswers: JSON.parse(localStorage.getItem('aptitude_practice_answers') || '{}'),
   soundEnabled: true,
   
   // Practice Stopwatch State
@@ -246,7 +247,7 @@ function initApp() {
   initScratchpad();
   updateStats();
   updateStreakDisplay();
-  setMode('home');
+  setMode('practice');
 
   // If user has saved auth token, silently verify session & sync latest data from Neon DB
   if (state.authToken) {
@@ -320,6 +321,17 @@ async function loadUserDataFromAPI() {
     localStorage.setItem('aptitude_practice_attempts', JSON.stringify(state.practiceAttempts));
     localStorage.setItem('aptitude_bookmarks', JSON.stringify(state.bookmarks));
     localStorage.setItem('aptitude_mistakes', JSON.stringify(state.mistakesVault));
+
+    // Reconstruct practice answers for any correct attempts not yet stored locally
+    if (typeof aptitudeQuestions !== 'undefined') {
+      aptitudeQuestions.forEach(q => {
+        if (state.practiceAttempts[q.id]?.correct && state.practiceAnswers[q.id] === undefined) {
+          state.practiceAnswers[q.id] = q.correctIndex;
+        }
+      });
+      localStorage.setItem('aptitude_practice_answers', JSON.stringify(state.practiceAnswers));
+    }
+
     // Streak
     if (d.streak) {
       localStorage.setItem('aptitude_streak', JSON.stringify({
@@ -361,6 +373,7 @@ function persistCurrentUserData() {
   localStorage.setItem('aptitude_mistakes', JSON.stringify(state.mistakesVault));
   localStorage.setItem('aptitude_test_history', JSON.stringify(state.testHistory));
   localStorage.setItem('aptitude_practice_attempts', JSON.stringify(state.practiceAttempts));
+  localStorage.setItem('aptitude_practice_answers', JSON.stringify(state.practiceAnswers));
 }
 
 function switchAuthTab(tab) {
@@ -516,9 +529,6 @@ function updateStudentUI() {
   const signUpForm = document.getElementById('signUpForm');
   const loggedInProfileView = document.getElementById('loggedInProfileView');
   const studentModalTitle = document.getElementById('studentModalTitle');
-
-  const guestCard = document.getElementById('homeGuestAuthCard');
-  const studentCard = document.getElementById('homeStudentActiveCard');
   const adminTab = document.getElementById('adminModeTab');
 
   // Admin visibility check: STRICTLY ONLY FOR bhaktadas12345@gmail.com
@@ -544,31 +554,6 @@ function updateStudentUI() {
     if (pExam) pExam.innerText = `Target: ${state.currentStudent.targetExam || 'General Preparation'}`;
     if (pEmail) pEmail.innerText = state.currentStudent.identifier || 'Signed In';
 
-    // Update Home Active Student Card
-    if (guestCard) guestCard.style.display = 'none';
-    if (studentCard) studentCard.style.display = 'block';
-
-    const nameEl = document.getElementById('homeStudentName');
-    const examEl = document.getElementById('homeStudentExam');
-    const avatarEl = document.getElementById('homeStudentAvatar');
-    const attEl = document.getElementById('homeKpiAttempted');
-    const accEl = document.getElementById('homeKpiAccuracy');
-    const strkEl = document.getElementById('homeKpiStreak');
-
-    if (nameEl) nameEl.innerText = state.currentStudent.name;
-    if (examEl) examEl.innerText = `Target Exam: ${state.currentStudent.targetExam || 'General Preparation'}`;
-    if (avatarEl) avatarEl.innerText = (state.currentStudent.name || 'S').charAt(0).toUpperCase();
-
-    const attemptsList = Object.values(state.practiceAttempts);
-    const attCount = attemptsList.length;
-    const correctCount = attemptsList.filter(a => a.correct).length;
-    const accPct = attCount > 0 ? Math.round((correctCount / attCount) * 100) : 0;
-    const streak = getStreakData();
-
-    if (attEl) attEl.innerText = attCount;
-    if (accEl) accEl.innerText = `${accPct}%`;
-    if (strkEl) strkEl.innerText = streak.count || 0;
-
     renderProfileProgressSummary();
 
   } else {
@@ -579,10 +564,6 @@ function updateStudentUI() {
     if (loggedInProfileView) loggedInProfileView.style.display = 'none';
     if (studentModalTitle) studentModalTitle.innerText = 'Student Account / ছাত্র অ্যাকাউন্ট';
     switchAuthTab('signin');
-
-    // Update Home Auth card view for guest
-    if (guestCard) guestCard.style.display = 'block';
-    if (studentCard) studentCard.style.display = 'none';
   }
 }
 
@@ -1394,11 +1375,14 @@ function setupEventListeners() {
 
 // Mode Management
 function setMode(mode) {
+  // Safe redirect if mode is 'home'
+  if (mode === 'home') mode = 'practice';
+
   // Admin guard: only bhaktadas12345@gmail.com is authorized
   if (mode === 'admin') {
     if (!isCurrentUserAdmin()) {
       showToast('Admin access restricted to bhaktadas12345@gmail.com', 'error');
-      setMode('home');
+      setMode('practice');
       return;
     }
   }
@@ -1416,51 +1400,34 @@ function setMode(mode) {
     btn.classList.toggle('active', btn.getAttribute('data-mode') === mode);
   });
 
-  const homeView = document.getElementById('homeView');
   const studyStrip = document.getElementById('studyControlStrip');
 
-  if (mode === 'home') {
-    stopTestTimer();
-    if (elements.testHud) elements.testHud.classList.remove('visible');
-    if (elements.testPalette) elements.testPalette.classList.remove('visible');
-    if (homeView) homeView.style.display = 'block';
-    if (studyStrip) studyStrip.style.display = 'none';
-    if (elements.questionsContainer) elements.questionsContainer.style.display = 'none';
-    if (elements.analyticsDashboard) elements.analyticsDashboard.style.display = 'none';
-    if (elements.adminDashboard) elements.adminDashboard.style.display = 'none';
-    if (elements.mainToolbar) elements.mainToolbar.style.display = 'none';
-    if (elements.setPillsContainer) elements.setPillsContainer.style.display = 'none';
-    updateStudentUI();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  } else if (mode === 'test') {
-    if (homeView) homeView.style.display = 'none';
+  if (mode === 'test') {
     if (studyStrip) studyStrip.style.display = 'block';
-    elements.questionsContainer.style.display = 'block';
-    elements.analyticsDashboard.style.display = 'none';
+    if (elements.questionsContainer) elements.questionsContainer.style.display = 'block';
+    if (elements.analyticsDashboard) elements.analyticsDashboard.style.display = 'none';
     if (elements.adminDashboard) elements.adminDashboard.style.display = 'none';
     if (elements.mainToolbar) elements.mainToolbar.style.display = 'flex';
     if (elements.setPillsContainer) elements.setPillsContainer.style.display = 'flex';
     startTestMode();
   } else if (mode === 'analytics') {
     stopTestTimer();
-    if (homeView) homeView.style.display = 'none';
-    if (studyStrip) studyStrip.style.display = 'block';
+    if (studyStrip) studyStrip.style.display = 'none';
     if (elements.testHud) elements.testHud.classList.remove('visible');
     if (elements.testPalette) elements.testPalette.classList.remove('visible');
-    elements.questionsContainer.style.display = 'none';
-    elements.analyticsDashboard.style.display = 'block';
+    if (elements.questionsContainer) elements.questionsContainer.style.display = 'none';
+    if (elements.analyticsDashboard) elements.analyticsDashboard.style.display = 'block';
     if (elements.adminDashboard) elements.adminDashboard.style.display = 'none';
     if (elements.mainToolbar) elements.mainToolbar.style.display = 'none';
     if (elements.setPillsContainer) elements.setPillsContainer.style.display = 'none';
     renderAnalyticsDashboard();
   } else if (mode === 'admin') {
     stopTestTimer();
-    if (homeView) homeView.style.display = 'none';
     if (studyStrip) studyStrip.style.display = 'none';
     if (elements.testHud) elements.testHud.classList.remove('visible');
     if (elements.testPalette) elements.testPalette.classList.remove('visible');
-    elements.questionsContainer.style.display = 'none';
-    elements.analyticsDashboard.style.display = 'none';
+    if (elements.questionsContainer) elements.questionsContainer.style.display = 'none';
+    if (elements.analyticsDashboard) elements.analyticsDashboard.style.display = 'none';
     if (elements.adminDashboard) elements.adminDashboard.style.display = 'block';
     if (elements.mainToolbar) elements.mainToolbar.style.display = 'none';
     if (elements.setPillsContainer) elements.setPillsContainer.style.display = 'none';
@@ -1468,12 +1435,11 @@ function setMode(mode) {
   } else {
     // 'practice', 'mistakes', 'bookmarks'
     stopTestTimer();
-    if (homeView) homeView.style.display = 'none';
     if (studyStrip) studyStrip.style.display = 'block';
     if (elements.testHud) elements.testHud.classList.remove('visible');
     if (elements.testPalette) elements.testPalette.classList.remove('visible');
-    elements.questionsContainer.style.display = 'block';
-    elements.analyticsDashboard.style.display = 'none';
+    if (elements.questionsContainer) elements.questionsContainer.style.display = 'block';
+    if (elements.analyticsDashboard) elements.analyticsDashboard.style.display = 'none';
     if (elements.adminDashboard) elements.adminDashboard.style.display = 'none';
     if (elements.mainToolbar) elements.mainToolbar.style.display = 'flex';
     if (elements.setPillsContainer) elements.setPillsContainer.style.display = 'flex';
@@ -2425,8 +2391,12 @@ function renderQuestions(reviewMode = false) {
     const idx = state.singleCurrentIndex;
     const isBookmarked = state.bookmarks.includes(q.id);
     const isFlagged = state.testFlags.has(q.id);
-    const selectedAnswer = state.testAnswers[q.id];
     const isPractice = state.mode !== 'test';
+    const selectedAnswer = isPractice
+      ? (state.practiceAnswers[q.id] !== undefined
+          ? state.practiceAnswers[q.id]
+          : (state.practiceAttempts[q.id]?.correct ? q.correctIndex : undefined))
+      : state.testAnswers[q.id];
     const total = filtered.length;
     const progressPct = Math.round(((idx + 1) / total) * 100);
 
@@ -2581,8 +2551,12 @@ function renderQuestions(reviewMode = false) {
   elements.questionsContainer.innerHTML = mistakesBanner + filtered.map((q, idx) => {
     const isBookmarked = state.bookmarks.includes(q.id);
     const isFlagged = state.testFlags.has(q.id);
-    const selectedAnswer = state.testAnswers[q.id];
     const isPractice = state.mode !== 'test' || reviewMode;
+    const selectedAnswer = (state.mode !== 'test')
+      ? (state.practiceAnswers[q.id] !== undefined
+          ? state.practiceAnswers[q.id]
+          : (state.practiceAttempts[q.id]?.correct ? q.correctIndex : undefined))
+      : state.testAnswers[q.id];
 
     // Badges
     const categoryClass = `badge-${q.category}`;
@@ -2706,11 +2680,14 @@ function handleOptionSelect(questionId, optionIndex, isReview = false) {
   state.testAnswers[questionId] = optionIndex;
   const isCorrect = (optionIndex === question.correctIndex);
 
-  // Record practice attempt
+  // Record practice attempt & selected answer
   state.practiceAttempts[questionId] = { correct: isCorrect };
   localStorage.setItem('aptitude_practice_attempts', JSON.stringify(state.practiceAttempts));
 
   if (state.mode !== 'test') {
+    state.practiceAnswers[questionId] = optionIndex;
+    localStorage.setItem('aptitude_practice_answers', JSON.stringify(state.practiceAnswers));
+
     if (isCorrect) {
       sfx.playCorrect();
       showToast('Correct Answer! / সঠিক উত্তর! 🎉');

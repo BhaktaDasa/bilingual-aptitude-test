@@ -17,7 +17,7 @@
 
     <!-- TOP NAV BAR -->
     <header class="navbar" id="mainNavbar">
-      <a href="#" class="brand-logo" onclick="setMode('home'); return false;">
+      <a href="#" class="brand-logo" onclick="setMode('practice'); return false;">
         <div class="brand-icon"><i class="fas fa-brain"></i></div>
         <div>
           <div class="brand-title">AptitudeMaster <span style="font-size:0.75rem;font-weight:500;opacity:0.8;">2.0</span></div>
@@ -32,18 +32,18 @@
           <button type="button" class="lang-btn" data-lang="en" onclick="setLanguage('en')"><i class="fas fa-font"></i> EN</button>
           <button type="button" class="lang-btn" data-lang="bn" onclick="setLanguage('bn')"><i class="fas fa-language"></i> বাং</button>
         </div>
-        <div class="practice-timer-widget" id="practiceTimerWidget">
+        <button class="btn-secondary" id="btnOpenFormulas" title="Aptitude Formula Cheat Sheet"><i class="fas fa-square-root-alt"></i> Formulas</button>
+        <button class="btn-secondary" id="btnOpenScratchpad" title="Rough Calculation Board"><i class="fas fa-pencil-alt"></i> Scratchpad</button>
+        <div class="practice-timer-widget" id="practiceTimerWidget" title="Practice Stopwatch">
           <i class="fas fa-stopwatch"></i>
           <span id="practiceStopwatchDisplay">00:00</span>
-          <button class="timer-control-btn" id="btnToggleStopwatch"><i class="fas fa-play"></i></button>
-          <button class="timer-control-btn" id="btnResetStopwatch"><i class="fas fa-redo"></i></button>
+          <button class="timer-control-btn" id="btnToggleStopwatch" title="Start / Pause Stopwatch"><i class="fas fa-play"></i></button>
+          <button class="timer-control-btn" id="btnResetStopwatch" title="Reset Stopwatch"><i class="fas fa-redo"></i></button>
         </div>
-        <button class="btn-secondary" id="btnOpenFormulas"><i class="fas fa-square-root-alt"></i> Formulas</button>
-        <button class="btn-secondary" id="btnOpenScratchpad"><i class="fas fa-pencil-alt"></i> Scratchpad</button>
-        <button class="icon-btn" id="soundToggleBtn"><i class="fas fa-volume-up"></i></button>
+        <button class="icon-btn" id="soundToggleBtn" title="Toggle Sound Feedback"><i class="fas fa-volume-up"></i></button>
         <button class="icon-btn" id="themeToggleBtn" title="Toggle Dark/Light Mode" onclick="toggleTheme()"><i class="fas fa-sun"></i></button>
-        <button class="icon-btn" id="btnPrintPage"><i class="fas fa-print"></i></button>
-        <button class="btn-student-profile" id="btnStudentProfile">
+        <button class="icon-btn" id="btnPrintPage" title="Print Page"><i class="fas fa-print"></i></button>
+        <button class="btn-student-profile" id="btnStudentProfile" title="Student Profile &amp; Login">
           <i class="fas fa-user-graduate"></i>
           <span id="studentNavName">Sign In</span>
         </button>
@@ -94,14 +94,11 @@
 
     <!-- MODE TABS -->
     <nav class="mode-tabs" id="modeTabs">
-      <button class="mode-tab active" data-mode="home" id="tabModeHome">
-        <i class="fas fa-home"></i><span class="mode-tab-label">Home</span>
-      </button>
-      <button class="mode-tab" data-mode="practice">
+      <button class="mode-tab active" data-mode="practice" id="tabModePractice">
         <i class="fas fa-book-reader"></i><span class="mode-tab-label">Practice</span>
       </button>
       <button class="mode-tab" data-mode="test">
-        <i class="fas fa-stopwatch"></i><span class="mode-tab-label">Mock Test</span>
+        <i class="fas fa-stopwatch"></i><span class="mode-tab-label">Mock Test (45m)</span>
       </button>
       <button class="mode-tab" data-mode="mistakes">
         <i class="fas fa-history"></i><span class="mode-tab-label">Mistakes (<span id="mistakesCount">0</span>)</span>
@@ -117,254 +114,13 @@
       </button>
     </nav>
 
-    <!-- ========================================================= -->
-    <!-- HOME VIEW (Clean, Clutter-Free Value & Auth Gateway Hub) -->
-    <!-- ========================================================= -->
-    <section class="home-view" id="homeView">
-      
-      <!-- Top Hero / Welcome Banner -->
-      <div class="home-hero">
-        <div class="home-hero-badge" id="homeHeroBadge">
-          <i class="fas fa-graduation-cap"></i> Bilingual Exam Prep Hub &bull; বাংলা ও ইংরেজি
-        </div>
-        <h1 class="home-hero-title" id="homeHeroTitle">
-          Master General Aptitude &amp; Reasoning with Step-by-Step Clarity
-        </h1>
-        <p class="home-hero-desc" id="homeHeroDesc">
-          Structured bilingual practice with 500 hand-picked questions across 10 full sets with instant solutions and shortcuts. Tailored for WBCS, SSC CGL, IBPS, Railways RRB, UPSC &amp; campus placements.
-        </p>
-
-        <!-- Quick Platform Stats Pills -->
-        <div class="home-stats-strip">
-          <div class="home-stat-chip">
-            <i class="fas fa-check-double" style="color:var(--accent-primary);"></i>
-            <span id="homeStatBilingual"><strong>500</strong> Bilingual Questions</span>
-          </div>
-          <div class="home-stat-chip">
-            <i class="fas fa-layer-group" style="color:var(--accent-cyan);"></i>
-            <span id="homeStatSets"><strong>10</strong> Full 50-Q Sets</span>
-          </div>
-          <div class="home-stat-chip">
-            <i class="fas fa-language" style="color:var(--accent-emerald);"></i>
-            <span id="homeStatBoth"><strong>English &amp; Bengali</strong></span>
-          </div>
-          <div class="home-stat-chip">
-            <i class="fas fa-bolt" style="color:var(--accent-amber);"></i>
-            <span id="homeStatTricks"><strong>Shortcuts &amp; Tricks</strong></span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Two-Column Section: What You Get vs Account Gateway -->
-      <div class="home-main-grid">
-
-        <!-- Left Column: What You Get (Value Proposition) -->
-        <div class="home-value-card">
-          <div class="home-section-header">
-            <i class="fas fa-gift" style="color:var(--accent-cyan);"></i>
-            <div>
-              <h3 id="homeWhatYouGetTitle">What You Get When You Join Free</h3>
-              <p id="homeWhatYouGetSub">Everything you need to excel in your competitive examinations</p>
-            </div>
-          </div>
-
-          <div class="value-perks-list">
-            <div class="value-perk-item">
-              <div class="perk-icon" style="background:rgba(99,102,241,0.15);color:var(--accent-primary);">
-                <i class="fas fa-brain"></i>
-              </div>
-              <div class="perk-text">
-                <strong id="homePerk1Title">4 Core Subject Coverage</strong>
-                <span id="homePerk1Desc">Quantitative Aptitude, Logical Reasoning, Verbal Ability &amp; Data Interpretation in one unified portal.</span>
-              </div>
-            </div>
-
-            <div class="value-perk-item">
-              <div class="perk-icon" style="background:rgba(16,185,129,0.15);color:var(--accent-emerald);">
-                <i class="fas fa-stopwatch"></i>
-              </div>
-              <div class="perk-text">
-                <strong id="homePerk2Title">1-by-1 Focus Mode &amp; 45-Min Mock Tests</strong>
-                <span id="homePerk2Desc">Practice calmly one question at a time or simulate real exam conditions with negative marking.</span>
-              </div>
-            </div>
-
-            <div class="value-perk-item">
-              <div class="perk-icon" style="background:rgba(244,63,94,0.15);color:var(--accent-rose);">
-                <i class="fas fa-history"></i>
-              </div>
-              <div class="perk-text">
-                <strong id="homePerk3Title">Smart Mistakes Vault</strong>
-                <span id="homePerk3Desc">Questions you miss are saved automatically to your vault so you can practice until 100% mastered.</span>
-              </div>
-            </div>
-
-            <div class="value-perk-item">
-              <div class="perk-icon" style="background:rgba(245,158,11,0.15);color:var(--accent-amber);">
-                <i class="fas fa-cloud"></i>
-              </div>
-              <div class="perk-text">
-                <strong id="homePerk4Title">Cloud Sync &amp; All-India Leaderboard</strong>
-                <span id="homePerk4Desc">Your practice streaks, accuracy diagnostics, and saved bookmarks sync across phone and laptop via Neon PostgreSQL.</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Quick Topic Jump Buttons -->
-          <div class="home-topics-preview">
-            <div class="home-topics-preview-title" id="homeChooseTopicTitle">Choose Topic to Explore:</div>
-            <div class="home-topics-pills">
-              <button class="home-topic-btn" id="homeTopicBtnQuant" onclick="startPracticeTopic('quant')">
-                <i class="fas fa-calculator"></i> Quant
-              </button>
-              <button class="home-topic-btn" id="homeTopicBtnLogical" onclick="startPracticeTopic('logical')">
-                <i class="fas fa-brain"></i> Reasoning
-              </button>
-              <button class="home-topic-btn" id="homeTopicBtnVerbal" onclick="startPracticeTopic('verbal')">
-                <i class="fas fa-book-open"></i> Verbal
-              </button>
-              <button class="home-topic-btn" id="homeTopicBtnDi" onclick="startPracticeTopic('di')">
-                <i class="fas fa-chart-pie"></i> Data Interp.
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right Column: Interactive Auth or Active Student Dashboard -->
-        <div class="home-auth-column">
-          
-          <!-- 1. Guest Auth Card (when logged out) -->
-          <div class="home-auth-card" id="homeGuestAuthCard">
-            <div class="home-auth-tabs">
-              <button type="button" class="home-auth-tab active" id="homeAuthTabSignIn" onclick="switchHomeAuthCardTab('signin')">
-                <i class="fas fa-sign-in-alt"></i> Sign In
-              </button>
-              <button type="button" class="home-auth-tab" id="homeAuthTabSignUp" onclick="switchHomeAuthCardTab('signup')">
-                <i class="fas fa-user-plus"></i> Create Account
-              </button>
-            </div>
-
-            <!-- Inline Sign In Form -->
-            <form id="homeCardSignInForm" onsubmit="handleHomeCardSignIn(event)">
-              <div class="form-group">
-                <label class="form-label">Email or Username</label>
-                <input type="text" id="homeCardLoginId" required placeholder="name@example.com" class="form-input" autocomplete="username">
-              </div>
-              <div class="form-group">
-                <label class="form-label">Password</label>
-                <div class="password-input-wrap">
-                  <input type="password" id="homeCardLoginPass" required placeholder="Enter password" class="form-input" autocomplete="current-password">
-                  <button type="button" class="pwd-toggle-btn" onclick="togglePwdVisibility('homeCardLoginPass', this)">
-                    <i class="fas fa-eye"></i>
-                  </button>
-                </div>
-              </div>
-              <button type="submit" class="btn-primary" id="btnHomeCardSignIn" style="width:100%;justify-content:center;padding:12px;margin-top:0.5rem;">
-                <i class="fas fa-sign-in-alt"></i> Sign In to Save Progress
-              </button>
-              <div class="home-auth-footer">
-                <span>New here?</span>
-                <button type="button" class="inline-link-btn" onclick="switchHomeAuthCardTab('signup')">Create Free Account</button>
-              </div>
-            </form>
-
-            <!-- Inline Sign Up Form -->
-            <form id="homeCardSignUpForm" onsubmit="handleHomeCardSignUp(event)" style="display:none;">
-              <div class="form-group">
-                <label class="form-label">Your Full Name</label>
-                <input type="text" id="homeCardRegName" required placeholder="e.g. Rahul Sen" class="form-input">
-              </div>
-              <div class="form-group">
-                <label class="form-label">Email or Phone Number</label>
-                <input type="text" id="homeCardRegId" required placeholder="e.g. rahul@gmail.com" class="form-input" autocomplete="username">
-              </div>
-              <div class="form-group">
-                <label class="form-label">Target Examination</label>
-                <select id="homeCardRegExam" class="form-input custom-select">
-                  <option value="WBCS">WBCS (West Bengal Civil Service)</option>
-                  <option value="SSC CGL">SSC CGL / CHSL</option>
-                  <option value="IBPS">Banking (IBPS PO / Clerk / SBI)</option>
-                  <option value="Railways RRB">Railways (RRB NTPC / Group D)</option>
-                  <option value="UPSC CSAT">UPSC CSAT</option>
-                  <option value="Campus Placement">Campus Placements / IT Job</option>
-                  <option value="General Preparation">General All-Round Prep</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label class="form-label">Password (min 6 characters)</label>
-                <div class="password-input-wrap">
-                  <input type="password" id="homeCardRegPass" required minlength="6" placeholder="Create a strong password" class="form-input" autocomplete="new-password">
-                  <button type="button" class="pwd-toggle-btn" onclick="togglePwdVisibility('homeCardRegPass', this)">
-                    <i class="fas fa-eye"></i>
-                  </button>
-                </div>
-              </div>
-              <button type="submit" class="btn-primary" id="btnHomeCardSignUp" style="width:100%;justify-content:center;padding:12px;margin-top:0.5rem;background:linear-gradient(135deg,var(--accent-emerald),var(--accent-cyan));">
-                <i class="fas fa-user-check"></i> Create Free Account
-              </button>
-              <div class="home-auth-footer">
-                <span>Already registered?</span>
-                <button type="button" class="inline-link-btn" onclick="switchHomeAuthCardTab('signin')">Sign In</button>
-              </div>
-            </form>
-
-            <div class="home-guest-divider">
-              <span>OR</span>
-            </div>
-            <button type="button" class="btn-secondary" id="homeGuestDemoBtn" style="width:100%;justify-content:center;padding:10px;font-size:0.88rem;" onclick="setMode('practice')">
-              <i class="fas fa-play-circle"></i> Try Demo Practice as Guest &rarr;
-            </button>
-          </div>
-
-          <!-- 2. Active Student Card (when logged in) -->
-          <div class="home-student-card" id="homeStudentActiveCard" style="display:none;">
-            <div class="student-card-header">
-              <div class="student-card-avatar" id="homeStudentAvatar">S</div>
-              <div>
-                <div class="student-card-greeting">Welcome back,</div>
-                <div class="student-card-name" id="homeStudentName">Student</div>
-                <div class="student-card-badge" id="homeStudentExam">Target: WBCS</div>
-              </div>
-            </div>
-
-            <!-- Student KPI Mini Grid -->
-            <div class="student-kpi-row">
-              <div class="student-kpi-cell">
-                <div class="kpi-num" id="homeKpiAttempted" style="color:var(--accent-cyan);">0</div>
-                <div class="kpi-txt">Attempted</div>
-              </div>
-              <div class="student-kpi-cell">
-                <div class="kpi-num" id="homeKpiAccuracy" style="color:var(--accent-emerald);">0%</div>
-                <div class="kpi-txt">Accuracy</div>
-              </div>
-              <div class="student-kpi-cell">
-                <div class="kpi-num" id="homeKpiStreak" style="color:var(--accent-amber);">0</div>
-                <div class="kpi-txt">Day Streak 🔥</div>
-              </div>
-            </div>
-
-            <!-- Quick Action Buttons -->
-            <div class="student-action-stack">
-              <button class="btn-primary" style="width:100%;justify-content:center;padding:12px;" onclick="setMode('practice')">
-                <i class="fas fa-book-reader"></i> Resume Daily Practice
-              </button>
-              <button class="btn-secondary" style="width:100%;justify-content:center;padding:10px;" onclick="setMode('test')">
-                <i class="fas fa-stopwatch"></i> Take 45-Min Mock Test
-              </button>
-              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
-                <button class="btn-secondary" style="justify-content:center;padding:8px;font-size:0.82rem;" onclick="setMode('mistakes')">
-                  <i class="fas fa-history" style="color:var(--accent-rose);"></i> Mistakes Vault
-                </button>
-                <button class="btn-secondary" style="justify-content:center;padding:8px;font-size:0.82rem;" onclick="openLeaderboard()">
-                  <i class="fas fa-trophy" style="color:var(--accent-amber);"></i> Leaderboard
-                </button>
-              </div>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
+    <!-- COMPACT PLATFORM STRIP -->
+    <div class="platform-strip" id="platformStrip">
+      <div class="platform-strip-item"><i class="fas fa-check-circle" style="color:var(--accent-cyan);"></i> <strong>500</strong> Questions</div>
+      <div class="platform-strip-item"><i class="fas fa-layer-group" style="color:var(--accent-primary);"></i> <strong>10</strong> Full Sets</div>
+      <div class="platform-strip-item"><i class="fas fa-language" style="color:var(--accent-emerald);"></i> <strong>Bilingual</strong> (English &amp; বাংলা)</div>
+      <div class="platform-strip-item"><i class="fas fa-bolt" style="color:var(--accent-amber);"></i> <strong>Step-by-Step</strong> Solutions</div>
+    </div>
 
     <!-- TEST HUD -->
     <div class="test-hud-panel" id="testHud">
@@ -448,11 +204,11 @@
 
   <!-- MOBILE BOTTOM NAV -->
   <nav class="mobile-bottom-nav" id="mobileBottomNav">
-    <button class="mob-nav-btn active" data-mode="home"><i class="fas fa-home"></i><span>Home</span></button>
-    <button class="mob-nav-btn" data-mode="practice"><i class="fas fa-book-reader"></i><span>Practice</span></button>
+    <button class="mob-nav-btn active" data-mode="practice"><i class="fas fa-book-reader"></i><span>Practice</span></button>
     <button class="mob-nav-btn" data-mode="test"><i class="fas fa-stopwatch"></i><span>Mock Test</span></button>
     <button class="mob-nav-btn" data-mode="mistakes"><i class="fas fa-history"></i><span>Mistakes</span></button>
     <button class="mob-nav-btn" data-mode="bookmarks"><i class="fas fa-star"></i><span>Saved</span></button>
+    <button class="mob-nav-btn" data-mode="analytics"><i class="fas fa-chart-pie"></i><span>Analytics</span></button>
   </nav>
 
   <!-- ==================== MODALS ==================== -->
