@@ -2238,25 +2238,66 @@ input, select {
 
   <!-- ==================== MODALS ==================== -->
 
-  <!-- 0. Student Profile & Sign-in Modal -->
+  <!-- 0. Student Authentication & Profile Modal -->
   <div class="modal-backdrop" id="studentModal">
-    <div class="modal-content" style="max-width: 480px;">
+    <div class="modal-content" style="max-width: 500px;">
       <div class="modal-header">
         <div class="modal-title">
           <i class="fas fa-user-graduate" style="color: var(--accent-cyan);"></i>
-          <span>Student Profile & Login / ছাত্র প্রোফাইল</span>
+          <span id="studentModalTitle">Student Account / ছাত্র অ্যাকাউন্ট</span>
         </div>
         <button class="icon-btn" id="btnCloseStudentModal">&times;</button>
       </div>
+
       <div class="modal-body">
-        <form id="studentLoginForm" onsubmit="event.preventDefault(); saveStudentProfile();">
+        <!-- Auth Tabs (Sign In vs Sign Up) -->
+        <div class="auth-tabs" id="authTabs" style="display: flex; background: var(--bg-primary); border-radius: var(--radius-full); padding: 4px; margin-bottom: 1.25rem; border: 1px solid var(--border-glass);">
+          <button type="button" class="auth-tab-btn active" id="tabSignInBtn" onclick="switchAuthTab('signin')" style="flex: 1; padding: 8px; border: none; border-radius: var(--radius-full); font-weight: 700; font-size: 0.88rem; cursor: pointer; transition: all 0.2s; background: linear-gradient(135deg, var(--accent-primary), var(--accent-cyan)); color: #fff;">
+            Sign In / লগইন
+          </button>
+          <button type="button" class="auth-tab-btn" id="tabSignUpBtn" onclick="switchAuthTab('signup')" style="flex: 1; padding: 8px; border: none; border-radius: var(--radius-full); font-weight: 700; font-size: 0.88rem; cursor: pointer; transition: all 0.2s; background: transparent; color: var(--text-secondary);">
+            Sign Up / নতুন নিবন্ধন
+          </button>
+        </div>
+
+        <!-- 1. Sign In Form -->
+        <form id="signInForm" onsubmit="handleStudentSignIn(event)">
           <div style="margin-bottom: 1rem;">
-            <label style="display: block; margin-bottom: 6px; font-weight: 600; font-size: 0.88rem;">Student Name / শিক্ষার্থীর নাম:</label>
-            <input type="text" id="studentNameInput" required placeholder="e.g. Rahul Sharma" style="width: 100%; padding: 10px 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary);">
+            <label style="display: block; margin-bottom: 6px; font-weight: 600; font-size: 0.86rem;">Email or Username / ইমেইল বা ইউজারনেম:</label>
+            <input type="text" id="loginIdentifier" required placeholder="e.g. rahul@gmail.com" style="width: 100%; padding: 10px 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary);">
           </div>
-          <div style="margin-bottom: 1rem;">
-            <label style="display: block; margin-bottom: 6px; font-weight: 600; font-size: 0.88rem;">Target Competitive Exam / উদ্দিষ্ট পরীক্ষা:</label>
-            <select id="studentTargetExam" style="width: 100%; padding: 10px 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary);">
+          <div style="margin-bottom: 1.25rem;">
+            <label style="display: block; margin-bottom: 6px; font-weight: 600; font-size: 0.86rem;">Password / পাসওয়ার্ড:</label>
+            <input type="password" id="loginPassword" required placeholder="Enter your password" style="width: 100%; padding: 10px 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary);">
+          </div>
+          <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; padding: 12px; background: linear-gradient(135deg, var(--accent-primary), var(--accent-cyan)); font-weight: 700;">
+            <i class="fas fa-sign-in-alt"></i> Sign In to Account
+          </button>
+        </form>
+
+        <!-- 2. Sign Up Form -->
+        <form id="signUpForm" onsubmit="handleStudentSignUp(event)" style="display: none;">
+          <div style="margin-bottom: 0.85rem;">
+            <label style="display: block; margin-bottom: 4px; font-weight: 600; font-size: 0.86rem;">Full Name / পুরো নাম:</label>
+            <input type="text" id="regName" required placeholder="e.g. Rahul Sharma" style="width: 100%; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary);">
+          </div>
+          <div style="margin-bottom: 0.85rem;">
+            <label style="display: block; margin-bottom: 4px; font-weight: 600; font-size: 0.86rem;">Email or Username / ইমেইল বা ইউজারনেম:</label>
+            <input type="text" id="regIdentifier" required placeholder="e.g. rahul@gmail.com" style="width: 100%; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary);">
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 0.85rem;">
+            <div>
+              <label style="display: block; margin-bottom: 4px; font-weight: 600; font-size: 0.86rem;">Create Password:</label>
+              <input type="password" id="regPassword" required placeholder="At least 4 chars" style="width: 100%; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary);">
+            </div>
+            <div>
+              <label style="display: block; margin-bottom: 4px; font-weight: 600; font-size: 0.86rem;">Confirm Password:</label>
+              <input type="password" id="regConfirmPassword" required placeholder="Re-enter password" style="width: 100%; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary);">
+            </div>
+          </div>
+          <div style="margin-bottom: 0.85rem;">
+            <label style="display: block; margin-bottom: 4px; font-weight: 600; font-size: 0.86rem;">Target Exam / উদ্দিষ্ট পরীক্ষা:</label>
+            <select id="regTargetExam" style="width: 100%; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary);">
               <option value="WBCS (Executive & Allied)">WBCS (Executive & Allied)</option>
               <option value="SSC CGL / CHSL">SSC CGL / CHSL</option>
               <option value="Banking (IBPS PO / Clerk / SBI)">Banking (IBPS PO / Clerk / SBI)</option>
@@ -2266,20 +2307,40 @@ input, select {
               <option value="General Preparation">General Preparation</option>
             </select>
           </div>
-          <div style="margin-bottom: 1.5rem;">
-            <label style="display: block; margin-bottom: 6px; font-weight: 600; font-size: 0.88rem;">Daily Study Goal / দৈনিক লক্ষ্য:</label>
-            <select id="studentDailyGoal" style="width: 100%; padding: 10px 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary);">
-              <option value="10">10 Questions per Day</option>
-              <option value="20" selected>20 Questions per Day</option>
-              <option value="30">30 Questions per Day</option>
-              <option value="50">50 Questions (1 Full Set) per Day</option>
+          <div style="margin-bottom: 1.25rem;">
+            <label style="display: block; margin-bottom: 4px; font-weight: 600; font-size: 0.86rem;">Daily Goal / দৈনিক লক্ষ্য:</label>
+            <select id="regDailyGoal" style="width: 100%; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary);">
+              <option value="10">10 Questions / Day</option>
+              <option value="20" selected>20 Questions / Day</option>
+              <option value="30">30 Questions / Day</option>
+              <option value="50">50 Questions (1 Set) / Day</option>
             </select>
           </div>
-          <div style="display: flex; gap: 10px; justify-content: flex-end;">
-            <button type="button" class="btn-secondary" id="btnLogoutStudent" style="display: none;" onclick="logoutStudent()">Log Out</button>
-            <button type="submit" class="btn-primary" style="background: linear-gradient(135deg, var(--accent-primary), var(--accent-cyan));">Save & Continue</button>
-          </div>
+          <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; padding: 12px; background: linear-gradient(135deg, var(--accent-emerald), #059669); font-weight: 700;">
+            <i class="fas fa-user-plus"></i> Create Account & Register
+          </button>
         </form>
+
+        <!-- 3. Logged-in Profile View -->
+        <div id="loggedInProfileView" style="display: none;">
+          <div style="text-align: center; padding: 1rem 0; margin-bottom: 1rem; border-bottom: 1px solid var(--border-glass);">
+            <div style="width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, var(--accent-primary), var(--accent-cyan)); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; color: #fff; margin: 0 auto 0.75rem;">
+              <i class="fas fa-user-graduate"></i>
+            </div>
+            <h3 id="profileViewName" style="font-size: 1.25rem; margin-bottom: 4px;">Student Name</h3>
+            <p id="profileViewExam" style="color: var(--accent-cyan); font-size: 0.88rem; font-weight: 600;">Target Exam</p>
+            <p id="profileViewEmail" style="color: var(--text-secondary); font-size: 0.82rem;">email@example.com</p>
+          </div>
+
+          <div style="display: flex; justify-content: space-between; gap: 10px;">
+            <button type="button" class="btn-secondary" style="flex: 1; justify-content: center;" onclick="logoutStudent()">
+              <i class="fas fa-sign-out-alt"></i> Log Out
+            </button>
+            <button type="button" class="btn-primary" style="flex: 1; justify-content: center;" onclick="closeModal(elements.studentModal)">
+              <i class="fas fa-check"></i> Done
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -27624,52 +27685,231 @@ function initApp() {
   renderQuestions();
 }
 
-// Student Login / Profile Controller
-function updateStudentUI() {
-  if (state.currentStudent && state.currentStudent.name) {
-    if (elements.studentNavName) {
-      elements.studentNavName.innerText = `${state.currentStudent.name} (${state.currentStudent.targetExam || 'Student'})`;
-    }
-    const nameInput = document.getElementById('studentNameInput');
-    const examSelect = document.getElementById('studentTargetExam');
-    const goalSelect = document.getElementById('studentDailyGoal');
-    const logoutBtn = document.getElementById('btnLogoutStudent');
-    if (nameInput) nameInput.value = state.currentStudent.name;
-    if (examSelect) examSelect.value = state.currentStudent.targetExam || 'General Preparation';
-    if (goalSelect) goalSelect.value = state.currentStudent.dailyGoal || '20';
-    if (logoutBtn) logoutBtn.style.display = 'inline-block';
-  } else {
-    if (elements.studentNavName) {
-      elements.studentNavName.innerText = 'Student Login / লগইন';
-    }
-    const logoutBtn = document.getElementById('btnLogoutStudent');
-    if (logoutBtn) logoutBtn.style.display = 'none';
+// Student Registration, Authentication & Profile System
+function getRegisteredStudents() {
+  try {
+    return JSON.parse(localStorage.getItem('aptitude_registered_students') || '{}');
+  } catch (e) {
+    return {};
   }
 }
 
-function saveStudentProfile() {
-  const name = document.getElementById('studentNameInput').value.trim();
-  const targetExam = document.getElementById('studentTargetExam').value;
-  const dailyGoal = document.getElementById('studentDailyGoal').value;
-  
-  if (!name) return;
+function saveRegisteredStudents(students) {
+  localStorage.setItem('aptitude_registered_students', JSON.stringify(students));
+}
 
-  state.currentStudent = { name, targetExam, dailyGoal };
+function persistCurrentUserData() {
+  localStorage.setItem('aptitude_bookmarks', JSON.stringify(state.bookmarks));
+  localStorage.setItem('aptitude_mistakes', JSON.stringify(state.mistakesVault));
+  localStorage.setItem('aptitude_test_history', JSON.stringify(state.testHistory));
+  localStorage.setItem('aptitude_practice_attempts', JSON.stringify(state.practiceAttempts));
+
+  if (state.currentStudent && state.currentStudent.identifier) {
+    const students = getRegisteredStudents();
+    if (students[state.currentStudent.identifier]) {
+      students[state.currentStudent.identifier].data = {
+        bookmarks: state.bookmarks,
+        mistakesVault: state.mistakesVault,
+        testHistory: state.testHistory,
+        practiceAttempts: state.practiceAttempts
+      };
+      saveRegisteredStudents(students);
+    }
+  }
+}
+
+function switchAuthTab(tab) {
+  const tabSignInBtn = document.getElementById('tabSignInBtn');
+  const tabSignUpBtn = document.getElementById('tabSignUpBtn');
+  const signInForm = document.getElementById('signInForm');
+  const signUpForm = document.getElementById('signUpForm');
+
+  if (!tabSignInBtn || !tabSignUpBtn || !signInForm || !signUpForm) return;
+
+  if (tab === 'signup') {
+    tabSignUpBtn.style.background = 'linear-gradient(135deg, var(--accent-primary), var(--accent-cyan))';
+    tabSignUpBtn.style.color = '#fff';
+    tabSignInBtn.style.background = 'transparent';
+    tabSignInBtn.style.color = 'var(--text-secondary)';
+    signInForm.style.display = 'none';
+    signUpForm.style.display = 'block';
+  } else {
+    tabSignInBtn.style.background = 'linear-gradient(135deg, var(--accent-primary), var(--accent-cyan))';
+    tabSignInBtn.style.color = '#fff';
+    tabSignUpBtn.style.background = 'transparent';
+    tabSignUpBtn.style.color = 'var(--text-secondary)';
+    signInForm.style.display = 'block';
+    signUpForm.style.display = 'none';
+  }
+}
+
+function handleStudentSignUp(e) {
+  if (e) e.preventDefault();
+  const name = document.getElementById('regName')?.value.trim();
+  const identifier = document.getElementById('regIdentifier')?.value.trim().toLowerCase();
+  const password = document.getElementById('regPassword')?.value;
+  const confirmPassword = document.getElementById('regConfirmPassword')?.value;
+  const targetExam = document.getElementById('regTargetExam')?.value || 'General Preparation';
+  const dailyGoal = document.getElementById('regDailyGoal')?.value || '20';
+
+  if (!name || !identifier || !password) {
+    showToast('Please fill in all required fields');
+    return;
+  }
+
+  if (password.length < 4) {
+    showToast('Password must be at least 4 characters');
+    return;
+  }
+
+  if (password !== confirmPassword) {
+    showToast('Passwords do not match. Please re-enter.');
+    return;
+  }
+
+  const students = getRegisteredStudents();
+  if (students[identifier]) {
+    showToast('An account with this email/username already exists. Please Sign In.');
+    switchAuthTab('signin');
+    const loginIdInput = document.getElementById('loginIdentifier');
+    if (loginIdInput) loginIdInput.value = identifier;
+    return;
+  }
+
+  // Create new student account
+  const newAccount = {
+    name,
+    identifier,
+    password,
+    targetExam,
+    dailyGoal,
+    registeredAt: new Date().toLocaleDateString('en-GB'),
+    data: {
+      bookmarks: [...state.bookmarks],
+      mistakesVault: [...state.mistakesVault],
+      testHistory: [...state.testHistory],
+      practiceAttempts: { ...state.practiceAttempts }
+    }
+  };
+
+  students[identifier] = newAccount;
+  saveRegisteredStudents(students);
+
+  // Set active session
+  state.currentStudent = {
+    name: newAccount.name,
+    identifier: newAccount.identifier,
+    targetExam: newAccount.targetExam,
+    dailyGoal: newAccount.dailyGoal,
+    registeredAt: newAccount.registeredAt
+  };
   localStorage.setItem('aptitude_current_student', JSON.stringify(state.currentStudent));
+
   updateStudentUI();
   closeModal(elements.studentModal);
-  showToast(`Welcome, ${name}! (${targetExam}) 🎉`);
+  showToast(`Welcome, ${name}! Account created successfully 🎉`);
+  
+  if (document.getElementById('signUpForm')) {
+    document.getElementById('signUpForm').reset();
+  }
+}
+
+function handleStudentSignIn(e) {
+  if (e) e.preventDefault();
+  const identifier = document.getElementById('loginIdentifier')?.value.trim().toLowerCase();
+  const password = document.getElementById('loginPassword')?.value;
+
+  if (!identifier || !password) {
+    showToast('Please enter your email/username and password');
+    return;
+  }
+
+  const students = getRegisteredStudents();
+  const student = students[identifier];
+
+  if (!student || student.password !== password) {
+    showToast('Invalid username or password. Please try again.');
+    return;
+  }
+
+  // Restore student data
+  state.currentStudent = {
+    name: student.name,
+    identifier: student.identifier,
+    targetExam: student.targetExam,
+    dailyGoal: student.dailyGoal,
+    registeredAt: student.registeredAt
+  };
+  localStorage.setItem('aptitude_current_student', JSON.stringify(state.currentStudent));
+
+  if (student.data) {
+    state.bookmarks = student.data.bookmarks || [];
+    state.mistakesVault = student.data.mistakesVault || [];
+    state.testHistory = student.data.testHistory || [];
+    state.practiceAttempts = student.data.practiceAttempts || {};
+    persistCurrentUserData();
+  }
+
+  updateStudentUI();
+  updateStats();
+  renderQuestions();
+  closeModal(elements.studentModal);
+  showToast(`Welcome back, ${student.name}! 👋`);
+
+  if (document.getElementById('signInForm')) {
+    document.getElementById('signInForm').reset();
+  }
+}
+
+function updateStudentUI() {
+  const authTabs = document.getElementById('authTabs');
+  const signInForm = document.getElementById('signInForm');
+  const signUpForm = document.getElementById('signUpForm');
+  const loggedInProfileView = document.getElementById('loggedInProfileView');
+  const studentModalTitle = document.getElementById('studentModalTitle');
+
+  if (state.currentStudent && state.currentStudent.name) {
+    if (elements.studentNavName) {
+      elements.studentNavName.innerText = `${state.currentStudent.name}`;
+    }
+    if (authTabs) authTabs.style.display = 'none';
+    if (signInForm) signInForm.style.display = 'none';
+    if (signUpForm) signUpForm.style.display = 'none';
+    if (loggedInProfileView) loggedInProfileView.style.display = 'block';
+    if (studentModalTitle) studentModalTitle.innerText = 'Student Profile / প্রোফাইল';
+
+    const pName = document.getElementById('profileViewName');
+    const pExam = document.getElementById('profileViewExam');
+    const pEmail = document.getElementById('profileViewEmail');
+    if (pName) pName.innerText = state.currentStudent.name;
+    if (pExam) pExam.innerText = `Target: ${state.currentStudent.targetExam || 'General Preparation'}`;
+    if (pEmail) pEmail.innerText = state.currentStudent.identifier || 'Signed In';
+  } else {
+    if (elements.studentNavName) {
+      elements.studentNavName.innerText = 'Student Login';
+    }
+    if (authTabs) authTabs.style.display = 'flex';
+    if (loggedInProfileView) loggedInProfileView.style.display = 'none';
+    if (studentModalTitle) studentModalTitle.innerText = 'Student Account / ছাত্র অ্যাকাউন্ট';
+    switchAuthTab('signin');
+  }
 }
 
 function logoutStudent() {
-  if (confirm('Do you want to log out? Your progress remains saved locally.')) {
+  if (confirm('Do you want to log out? Your progress is saved to your account.')) {
+    persistCurrentUserData();
     state.currentStudent = null;
     localStorage.removeItem('aptitude_current_student');
     updateStudentUI();
     closeModal(elements.studentModal);
-    showToast('Logged out successfully');
+    showToast('Logged out successfully. You are in guest mode.');
   }
 }
+
+window.switchAuthTab = switchAuthTab;
+window.handleStudentSignIn = handleStudentSignIn;
+window.handleStudentSignUp = handleStudentSignUp;
+window.logoutStudent = logoutStudent;
 
 // View Toggle (1-by-1 Focus vs Full List)
 function toggleViewMode() {
@@ -28044,10 +28284,7 @@ function finishTestMode() {
       }
     }
   });
-  
-  localStorage.setItem('aptitude_mistakes', JSON.stringify(state.mistakesVault));
-  localStorage.setItem('aptitude_practice_attempts', JSON.stringify(state.practiceAttempts));
-  
+
   const total = filtered.length;
   const scorePct = total > 0 ? Math.round((correctCount / total) * 100) : 0;
   
@@ -28064,7 +28301,8 @@ function finishTestMode() {
   };
   state.testHistory.unshift(attemptRecord);
   if (state.testHistory.length > 20) state.testHistory.pop();
-  localStorage.setItem('aptitude_test_history', JSON.stringify(state.testHistory));
+  
+  persistCurrentUserData();
 
   updateStats();
 
@@ -28675,7 +28913,7 @@ function handleOptionSelect(questionId, optionIndex, isReview = false) {
         const mIdx = state.mistakesVault.indexOf(questionId);
         if (mIdx > -1) {
           state.mistakesVault.splice(mIdx, 1);
-          localStorage.setItem('aptitude_mistakes', JSON.stringify(state.mistakesVault));
+          persistCurrentUserData();
           showToast('Mastered! Removed from Mistakes Vault ⭐');
         }
       }
@@ -28685,10 +28923,11 @@ function handleOptionSelect(questionId, optionIndex, isReview = false) {
       // Auto-save to Mistakes Vault
       if (!state.mistakesVault.includes(questionId)) {
         state.mistakesVault.push(questionId);
-        localStorage.setItem('aptitude_mistakes', JSON.stringify(state.mistakesVault));
+        persistCurrentUserData();
       }
     }
     
+    persistCurrentUserData();
     updateStats();
     renderQuestions();
   } else {
@@ -28700,7 +28939,7 @@ function handleOptionSelect(questionId, optionIndex, isReview = false) {
 function clearMistakesVault() {
   if (confirm('Clear all questions from Mistakes Vault?')) {
     state.mistakesVault = [];
-    localStorage.removeItem('aptitude_mistakes');
+    persistCurrentUserData();
     updateStats();
     renderQuestions();
     showToast('Mistakes Vault Cleared');
@@ -28738,7 +28977,7 @@ function toggleBookmark(questionId) {
     state.bookmarks.push(questionId);
     showToast('Saved to Bookmarks ⭐');
   }
-  localStorage.setItem('aptitude_bookmarks', JSON.stringify(state.bookmarks));
+  persistCurrentUserData();
   updateStats();
   renderQuestions();
 }

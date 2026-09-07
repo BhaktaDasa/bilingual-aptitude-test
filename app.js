@@ -235,52 +235,231 @@ function initApp() {
   renderQuestions();
 }
 
-// Student Login / Profile Controller
-function updateStudentUI() {
-  if (state.currentStudent && state.currentStudent.name) {
-    if (elements.studentNavName) {
-      elements.studentNavName.innerText = `${state.currentStudent.name} (${state.currentStudent.targetExam || 'Student'})`;
-    }
-    const nameInput = document.getElementById('studentNameInput');
-    const examSelect = document.getElementById('studentTargetExam');
-    const goalSelect = document.getElementById('studentDailyGoal');
-    const logoutBtn = document.getElementById('btnLogoutStudent');
-    if (nameInput) nameInput.value = state.currentStudent.name;
-    if (examSelect) examSelect.value = state.currentStudent.targetExam || 'General Preparation';
-    if (goalSelect) goalSelect.value = state.currentStudent.dailyGoal || '20';
-    if (logoutBtn) logoutBtn.style.display = 'inline-block';
-  } else {
-    if (elements.studentNavName) {
-      elements.studentNavName.innerText = 'Student Login / লগইন';
-    }
-    const logoutBtn = document.getElementById('btnLogoutStudent');
-    if (logoutBtn) logoutBtn.style.display = 'none';
+// Student Registration, Authentication & Profile System
+function getRegisteredStudents() {
+  try {
+    return JSON.parse(localStorage.getItem('aptitude_registered_students') || '{}');
+  } catch (e) {
+    return {};
   }
 }
 
-function saveStudentProfile() {
-  const name = document.getElementById('studentNameInput').value.trim();
-  const targetExam = document.getElementById('studentTargetExam').value;
-  const dailyGoal = document.getElementById('studentDailyGoal').value;
-  
-  if (!name) return;
+function saveRegisteredStudents(students) {
+  localStorage.setItem('aptitude_registered_students', JSON.stringify(students));
+}
 
-  state.currentStudent = { name, targetExam, dailyGoal };
+function persistCurrentUserData() {
+  localStorage.setItem('aptitude_bookmarks', JSON.stringify(state.bookmarks));
+  localStorage.setItem('aptitude_mistakes', JSON.stringify(state.mistakesVault));
+  localStorage.setItem('aptitude_test_history', JSON.stringify(state.testHistory));
+  localStorage.setItem('aptitude_practice_attempts', JSON.stringify(state.practiceAttempts));
+
+  if (state.currentStudent && state.currentStudent.identifier) {
+    const students = getRegisteredStudents();
+    if (students[state.currentStudent.identifier]) {
+      students[state.currentStudent.identifier].data = {
+        bookmarks: state.bookmarks,
+        mistakesVault: state.mistakesVault,
+        testHistory: state.testHistory,
+        practiceAttempts: state.practiceAttempts
+      };
+      saveRegisteredStudents(students);
+    }
+  }
+}
+
+function switchAuthTab(tab) {
+  const tabSignInBtn = document.getElementById('tabSignInBtn');
+  const tabSignUpBtn = document.getElementById('tabSignUpBtn');
+  const signInForm = document.getElementById('signInForm');
+  const signUpForm = document.getElementById('signUpForm');
+
+  if (!tabSignInBtn || !tabSignUpBtn || !signInForm || !signUpForm) return;
+
+  if (tab === 'signup') {
+    tabSignUpBtn.style.background = 'linear-gradient(135deg, var(--accent-primary), var(--accent-cyan))';
+    tabSignUpBtn.style.color = '#fff';
+    tabSignInBtn.style.background = 'transparent';
+    tabSignInBtn.style.color = 'var(--text-secondary)';
+    signInForm.style.display = 'none';
+    signUpForm.style.display = 'block';
+  } else {
+    tabSignInBtn.style.background = 'linear-gradient(135deg, var(--accent-primary), var(--accent-cyan))';
+    tabSignInBtn.style.color = '#fff';
+    tabSignUpBtn.style.background = 'transparent';
+    tabSignUpBtn.style.color = 'var(--text-secondary)';
+    signInForm.style.display = 'block';
+    signUpForm.style.display = 'none';
+  }
+}
+
+function handleStudentSignUp(e) {
+  if (e) e.preventDefault();
+  const name = document.getElementById('regName')?.value.trim();
+  const identifier = document.getElementById('regIdentifier')?.value.trim().toLowerCase();
+  const password = document.getElementById('regPassword')?.value;
+  const confirmPassword = document.getElementById('regConfirmPassword')?.value;
+  const targetExam = document.getElementById('regTargetExam')?.value || 'General Preparation';
+  const dailyGoal = document.getElementById('regDailyGoal')?.value || '20';
+
+  if (!name || !identifier || !password) {
+    showToast('Please fill in all required fields');
+    return;
+  }
+
+  if (password.length < 4) {
+    showToast('Password must be at least 4 characters');
+    return;
+  }
+
+  if (password !== confirmPassword) {
+    showToast('Passwords do not match. Please re-enter.');
+    return;
+  }
+
+  const students = getRegisteredStudents();
+  if (students[identifier]) {
+    showToast('An account with this email/username already exists. Please Sign In.');
+    switchAuthTab('signin');
+    const loginIdInput = document.getElementById('loginIdentifier');
+    if (loginIdInput) loginIdInput.value = identifier;
+    return;
+  }
+
+  // Create new student account
+  const newAccount = {
+    name,
+    identifier,
+    password,
+    targetExam,
+    dailyGoal,
+    registeredAt: new Date().toLocaleDateString('en-GB'),
+    data: {
+      bookmarks: [...state.bookmarks],
+      mistakesVault: [...state.mistakesVault],
+      testHistory: [...state.testHistory],
+      practiceAttempts: { ...state.practiceAttempts }
+    }
+  };
+
+  students[identifier] = newAccount;
+  saveRegisteredStudents(students);
+
+  // Set active session
+  state.currentStudent = {
+    name: newAccount.name,
+    identifier: newAccount.identifier,
+    targetExam: newAccount.targetExam,
+    dailyGoal: newAccount.dailyGoal,
+    registeredAt: newAccount.registeredAt
+  };
   localStorage.setItem('aptitude_current_student', JSON.stringify(state.currentStudent));
+
   updateStudentUI();
   closeModal(elements.studentModal);
-  showToast(`Welcome, ${name}! (${targetExam}) 🎉`);
+  showToast(`Welcome, ${name}! Account created successfully 🎉`);
+  
+  if (document.getElementById('signUpForm')) {
+    document.getElementById('signUpForm').reset();
+  }
+}
+
+function handleStudentSignIn(e) {
+  if (e) e.preventDefault();
+  const identifier = document.getElementById('loginIdentifier')?.value.trim().toLowerCase();
+  const password = document.getElementById('loginPassword')?.value;
+
+  if (!identifier || !password) {
+    showToast('Please enter your email/username and password');
+    return;
+  }
+
+  const students = getRegisteredStudents();
+  const student = students[identifier];
+
+  if (!student || student.password !== password) {
+    showToast('Invalid username or password. Please try again.');
+    return;
+  }
+
+  // Restore student data
+  state.currentStudent = {
+    name: student.name,
+    identifier: student.identifier,
+    targetExam: student.targetExam,
+    dailyGoal: student.dailyGoal,
+    registeredAt: student.registeredAt
+  };
+  localStorage.setItem('aptitude_current_student', JSON.stringify(state.currentStudent));
+
+  if (student.data) {
+    state.bookmarks = student.data.bookmarks || [];
+    state.mistakesVault = student.data.mistakesVault || [];
+    state.testHistory = student.data.testHistory || [];
+    state.practiceAttempts = student.data.practiceAttempts || {};
+    persistCurrentUserData();
+  }
+
+  updateStudentUI();
+  updateStats();
+  renderQuestions();
+  closeModal(elements.studentModal);
+  showToast(`Welcome back, ${student.name}! 👋`);
+
+  if (document.getElementById('signInForm')) {
+    document.getElementById('signInForm').reset();
+  }
+}
+
+function updateStudentUI() {
+  const authTabs = document.getElementById('authTabs');
+  const signInForm = document.getElementById('signInForm');
+  const signUpForm = document.getElementById('signUpForm');
+  const loggedInProfileView = document.getElementById('loggedInProfileView');
+  const studentModalTitle = document.getElementById('studentModalTitle');
+
+  if (state.currentStudent && state.currentStudent.name) {
+    if (elements.studentNavName) {
+      elements.studentNavName.innerText = `${state.currentStudent.name}`;
+    }
+    if (authTabs) authTabs.style.display = 'none';
+    if (signInForm) signInForm.style.display = 'none';
+    if (signUpForm) signUpForm.style.display = 'none';
+    if (loggedInProfileView) loggedInProfileView.style.display = 'block';
+    if (studentModalTitle) studentModalTitle.innerText = 'Student Profile / প্রোফাইল';
+
+    const pName = document.getElementById('profileViewName');
+    const pExam = document.getElementById('profileViewExam');
+    const pEmail = document.getElementById('profileViewEmail');
+    if (pName) pName.innerText = state.currentStudent.name;
+    if (pExam) pExam.innerText = `Target: ${state.currentStudent.targetExam || 'General Preparation'}`;
+    if (pEmail) pEmail.innerText = state.currentStudent.identifier || 'Signed In';
+  } else {
+    if (elements.studentNavName) {
+      elements.studentNavName.innerText = 'Student Login';
+    }
+    if (authTabs) authTabs.style.display = 'flex';
+    if (loggedInProfileView) loggedInProfileView.style.display = 'none';
+    if (studentModalTitle) studentModalTitle.innerText = 'Student Account / ছাত্র অ্যাকাউন্ট';
+    switchAuthTab('signin');
+  }
 }
 
 function logoutStudent() {
-  if (confirm('Do you want to log out? Your progress remains saved locally.')) {
+  if (confirm('Do you want to log out? Your progress is saved to your account.')) {
+    persistCurrentUserData();
     state.currentStudent = null;
     localStorage.removeItem('aptitude_current_student');
     updateStudentUI();
     closeModal(elements.studentModal);
-    showToast('Logged out successfully');
+    showToast('Logged out successfully. You are in guest mode.');
   }
 }
+
+window.switchAuthTab = switchAuthTab;
+window.handleStudentSignIn = handleStudentSignIn;
+window.handleStudentSignUp = handleStudentSignUp;
+window.logoutStudent = logoutStudent;
 
 // View Toggle (1-by-1 Focus vs Full List)
 function toggleViewMode() {
@@ -655,10 +834,7 @@ function finishTestMode() {
       }
     }
   });
-  
-  localStorage.setItem('aptitude_mistakes', JSON.stringify(state.mistakesVault));
-  localStorage.setItem('aptitude_practice_attempts', JSON.stringify(state.practiceAttempts));
-  
+
   const total = filtered.length;
   const scorePct = total > 0 ? Math.round((correctCount / total) * 100) : 0;
   
@@ -675,7 +851,8 @@ function finishTestMode() {
   };
   state.testHistory.unshift(attemptRecord);
   if (state.testHistory.length > 20) state.testHistory.pop();
-  localStorage.setItem('aptitude_test_history', JSON.stringify(state.testHistory));
+  
+  persistCurrentUserData();
 
   updateStats();
 
@@ -1286,7 +1463,7 @@ function handleOptionSelect(questionId, optionIndex, isReview = false) {
         const mIdx = state.mistakesVault.indexOf(questionId);
         if (mIdx > -1) {
           state.mistakesVault.splice(mIdx, 1);
-          localStorage.setItem('aptitude_mistakes', JSON.stringify(state.mistakesVault));
+          persistCurrentUserData();
           showToast('Mastered! Removed from Mistakes Vault ⭐');
         }
       }
@@ -1296,10 +1473,11 @@ function handleOptionSelect(questionId, optionIndex, isReview = false) {
       // Auto-save to Mistakes Vault
       if (!state.mistakesVault.includes(questionId)) {
         state.mistakesVault.push(questionId);
-        localStorage.setItem('aptitude_mistakes', JSON.stringify(state.mistakesVault));
+        persistCurrentUserData();
       }
     }
     
+    persistCurrentUserData();
     updateStats();
     renderQuestions();
   } else {
@@ -1311,7 +1489,7 @@ function handleOptionSelect(questionId, optionIndex, isReview = false) {
 function clearMistakesVault() {
   if (confirm('Clear all questions from Mistakes Vault?')) {
     state.mistakesVault = [];
-    localStorage.removeItem('aptitude_mistakes');
+    persistCurrentUserData();
     updateStats();
     renderQuestions();
     showToast('Mistakes Vault Cleared');
@@ -1349,7 +1527,7 @@ function toggleBookmark(questionId) {
     state.bookmarks.push(questionId);
     showToast('Saved to Bookmarks ⭐');
   }
-  localStorage.setItem('aptitude_bookmarks', JSON.stringify(state.bookmarks));
+  persistCurrentUserData();
   updateStats();
   renderQuestions();
 }
