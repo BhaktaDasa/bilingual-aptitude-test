@@ -561,24 +561,84 @@ body {
   box-shadow: var(--shadow-sm);
 }
 
-/* Control & Filter Toolbar */
-.toolbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+/* Unified Study Control Strip & Toolbar */
+.study-control-strip {
   background: var(--bg-card);
   border: 1px solid var(--border-glass);
   border-radius: var(--radius-lg);
-  padding: 1rem 1.25rem;
-  margin-bottom: 1.75rem;
+  padding: 1.15rem 1.25rem;
+  margin-bottom: 1.5rem;
+  box-shadow: var(--shadow-md);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.topic-pills-group {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.topic-pills-group::-webkit-scrollbar {
+  display: none;
+}
+
+.topic-pill {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-glass);
+  color: var(--text-secondary);
+  padding: 7px 15px;
+  border-radius: var(--radius-full);
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all var(--transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.topic-pill:hover {
+  border-color: var(--accent-cyan);
+  color: var(--text-primary);
+  transform: translateY(-1px);
+}
+
+.topic-pill.active {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-cyan));
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+}
+
+.search-filter-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 1rem;
   flex-wrap: wrap;
+}
+
+.toolbar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 0;
+  background: transparent;
+  border: none;
+  margin-bottom: 0;
 }
 
 .search-box {
   position: relative;
   flex: 1;
-  min-width: 260px;
+  min-width: 240px;
 }
 
 .search-box input {
@@ -1969,33 +2029,9 @@ input, select {
   }
 }
 
-/* Mobile Devices & Phones (<= 768px) */
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 0.85rem 1rem;
-    gap: 0.75rem;
-  }
-
-  .brand-logo {
-    justify-content: flex-start;
-  }
-
-  .brand-icon {
-    width: 38px;
-    height: 38px;
-    font-size: 1.2rem;
-  }
-
-  .brand-title {
-    font-size: 1.15rem;
-  }
-
-  .brand-subtitle {
 /* =========================================================
    Mobile & iPhone 6 / Small Viewport Deep Optimizations
-   (320px - 480px, iOS Safari WebKit & Touch Ergonomics)
+   (320px - 768px, iOS Safari WebKit & Touch Ergonomics)
    ========================================================= */
 
 @media (max-width: 768px) {
@@ -2606,220 +2642,40 @@ input, select {
       </div>
     </header>
 
-    <!-- Hero Section with Dual-Grid: Info & Live Home Auth Gateway -->
+    <!-- Streamlined Hero Section -->
     <section class="hero-section">
-      <div class="hero-grid">
+      <div class="hero-content">
         <div class="hero-text">
-          <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(99, 102, 241, 0.15); border: 1px solid var(--border-accent); color: var(--accent-cyan); padding: 5px 14px; border-radius: var(--radius-full); font-size: 0.84rem; font-weight: 700; margin-bottom: 1rem;">
-            <i class="fas fa-certificate"></i> Premium Bilingual Preparation Engine
+          <div style="display: inline-flex; align-items: center; gap: 6px; background: rgba(99, 102, 241, 0.15); border: 1px solid var(--border-accent); color: var(--accent-cyan); padding: 4px 12px; border-radius: var(--radius-full); font-size: 0.82rem; font-weight: 700; margin-bottom: 0.65rem;">
+            <i class="fas fa-brain"></i> Bilingual Aptitude & Reasoning Prep
           </div>
-          <h1 style="font-size: 2.1rem; line-height: 1.25; margin-bottom: 0.75rem;">
-            General Aptitude & Reasoning Master
-          </h1>
-          <p style="font-size: 0.96rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: 1.5rem;">
-            Comprehensive English & Bengali bilingual preparation with 10 full sets (50 questions each) covering Quantitative Aptitude, Logical Reasoning, Verbal Ability & Data Interpretation with step-by-step solutions and 1-by-1 Focus Mode.
+          <h1>General Aptitude & Reasoning Master</h1>
+          <p>
+            Comprehensive English & Bengali bilingual preparation with 10 full sets (50 questions each) covering Quantitative Aptitude, Logical Reasoning, Verbal Ability & Data Interpretation with step-by-step solutions and 1-by-1 Single Question Focus Mode.
           </p>
-
-          <div class="hero-stats" style="margin-bottom: 0;">
-            <div class="stat-chip">
-              <div class="stat-number" id="practiceCount">500</div>
-              <div class="stat-label">Total Questions</div>
-            </div>
-            <div class="stat-chip">
-              <div class="stat-number" style="color: var(--accent-cyan);">10</div>
-              <div class="stat-label">Full Sets</div>
-            </div>
-            <div class="stat-chip">
-              <div class="stat-number" id="bookmarkCount">0</div>
-              <div class="stat-label">Saved ⭐</div>
-            </div>
-            <div class="stat-chip">
-              <div class="stat-number" style="color: var(--accent-emerald);">100%</div>
-              <div class="stat-label">Bilingual</div>
-            </div>
-          </div>
         </div>
-
-        <!-- Right Side: Home Auth Gateway / Student Welcome Hub -->
-        <div class="home-auth-card" id="homeAuthBox">
-          <!-- Guest / Not Logged In View -->
-          <div id="homeGuestAuthView">
-            <div class="home-auth-tabs">
-              <button type="button" class="home-auth-tab active" id="homeTabSignIn" onclick="switchHomeAuthTab('signin')">
-                <i class="fas fa-sign-in-alt"></i> Sign In
-              </button>
-              <button type="button" class="home-auth-tab" id="homeTabSignUp" onclick="switchHomeAuthTab('signup')">
-                <i class="fas fa-user-plus"></i> Sign Up
-              </button>
-            </div>
-
-            <!-- Home Sign In Form -->
-            <form id="homeSignInForm" onsubmit="handleHomeSignIn(event)">
-              <div style="margin-bottom: 0.85rem;">
-                <label style="display: block; font-size: 0.84rem; font-weight: 600; margin-bottom: 4px;">Email or Username:</label>
-                <input type="text" id="homeLoginId" required placeholder="e.g. student@gmail.com" style="width: 100%; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary); font-size: 0.88rem;">
-              </div>
-              <div style="margin-bottom: 1rem;">
-                <label style="display: block; font-size: 0.84rem; font-weight: 600; margin-bottom: 4px;">Password:</label>
-                <input type="password" id="homeLoginPass" required placeholder="Enter password" style="width: 100%; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary); font-size: 0.88rem;">
-              </div>
-              <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; padding: 10px; font-weight: 700; margin-bottom: 0.75rem;">
-                <i class="fas fa-arrow-right"></i> Sign In & Select Topic
-              </button>
-              <button type="button" class="btn-secondary" style="width: 100%; justify-content: center; padding: 8px; font-size: 0.82rem;" onclick="scrollToStudyHub()">
-                <i class="fas fa-bolt"></i> Practice as Guest (No login required)
-              </button>
-            </form>
-
-            <!-- Home Sign Up Form -->
-            <form id="homeSignUpForm" onsubmit="handleHomeSignUp(event)" style="display: none;">
-              <div style="margin-bottom: 0.65rem;">
-                <label style="display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 3px;">Full Name / পুরো নাম:</label>
-                <input type="text" id="homeRegName" required placeholder="e.g. Rahul Sharma" style="width: 100%; padding: 8px 10px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary); font-size: 0.85rem;">
-              </div>
-              <div style="margin-bottom: 0.65rem;">
-                <label style="display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 3px;">Email or Username:</label>
-                <input type="text" id="homeRegId" required placeholder="e.g. rahul@wbcs.in" style="width: 100%; padding: 8px 10px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary); font-size: 0.85rem;">
-              </div>
-              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 0.65rem;">
-                <div>
-                  <label style="display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 3px;">Password:</label>
-                  <input type="password" id="homeRegPass" required placeholder="Min 4 chars" style="width: 100%; padding: 8px 10px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary); font-size: 0.85rem;">
-                </div>
-                <div>
-                  <label style="display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 3px;">Confirm:</label>
-                  <input type="password" id="homeRegConfirm" required placeholder="Re-enter" style="width: 100%; padding: 8px 10px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary); font-size: 0.85rem;">
-                </div>
-              </div>
-              <div style="margin-bottom: 0.85rem;">
-                <label style="display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 3px;">Target Exam:</label>
-                <select id="homeRegExam" style="width: 100%; padding: 8px 10px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary); font-size: 0.85rem;">
-                  <option value="WBCS (Executive & Allied)">WBCS (Executive & Allied)</option>
-                  <option value="SSC CGL / CHSL">SSC CGL / CHSL</option>
-                  <option value="Banking (IBPS PO / Clerk / SBI)">Banking (IBPS/SBI)</option>
-                  <option value="UPSC Civil Services">UPSC Civil Services</option>
-                  <option value="Railways RRB NTPC / Group D">Railways RRB</option>
-                  <option value="Campus Placements & IT">Campus Placements & IT</option>
-                  <option value="General Preparation">General Preparation</option>
-                </select>
-              </div>
-              <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; padding: 10px; font-weight: 700; background: linear-gradient(135deg, var(--accent-emerald), #059669);">
-                <i class="fas fa-user-check"></i> Register & Start Learning
-              </button>
-            </form>
+        <div class="hero-stats">
+          <div class="stat-chip">
+            <div class="stat-number" id="practiceCount">500</div>
+            <div class="stat-label">Total Questions</div>
           </div>
-
-          <!-- Logged In Student Quick Hub -->
-          <div id="homeUserActiveView" style="display: none;">
-            <div class="home-user-card">
-              <div style="width: 52px; height: 52px; border-radius: 50%; background: linear-gradient(135deg, var(--accent-primary), var(--accent-cyan)); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 0.75rem;">
-                <i class="fas fa-user-graduate"></i>
-              </div>
-              <h3 id="homeUserCardName" style="font-size: 1.25rem; font-weight: 800; margin-bottom: 2px;">Student Name</h3>
-              <p id="homeUserCardExam" style="color: var(--accent-cyan); font-weight: 600; font-size: 0.85rem; margin-bottom: 0.85rem;">Target Exam</p>
-              
-              <div style="display: flex; gap: 8px; justify-content: center;">
-                <button class="btn-primary" style="flex: 1; justify-content: center; padding: 9px;" onclick="scrollToStudyHub()">
-                  <i class="fas fa-rocket"></i> Select Set & Topic
-                </button>
-                <button class="btn-secondary" style="padding: 9px 14px;" onclick="logoutStudent()">
-                  <i class="fas fa-sign-out-alt"></i>
-                </button>
-              </div>
-            </div>
+          <div class="stat-chip">
+            <div class="stat-number" style="color: var(--accent-cyan);">10</div>
+            <div class="stat-label">Full Sets</div>
+          </div>
+          <div class="stat-chip">
+            <div class="stat-number" id="bookmarkCount">0</div>
+            <div class="stat-label">Saved ⭐</div>
+          </div>
+          <div class="stat-chip">
+            <div class="stat-number" style="color: var(--accent-emerald);">100%</div>
+            <div class="stat-label">Bilingual</div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Interactive Study Topic & Set Setup Hub -->
-    <section class="study-setup-hub" id="studySetupHub">
-      <div class="hub-title">
-        <i class="fas fa-compass" style="color: var(--accent-cyan);"></i>
-        <span>Study Setup: Select Topic & Set / বিষয় ও সেট নির্বাচন করুন</span>
-      </div>
-      <p style="color: var(--text-secondary); font-size: 0.88rem;">
-        Choose your desired subject or set below to launch a focused 1-by-1 question session with instant explanations.
-      </p>
-
-      <!-- 4 Core Topic Cards Grid -->
-      <div class="study-topic-grid">
-        <div class="study-topic-card active" data-cat="all" onclick="selectTopicCard('all')">
-          <div class="topic-icon-wrap" style="background: rgba(99, 102, 241, 0.15); color: var(--accent-primary);">
-            <i class="fas fa-globe"></i>
-          </div>
-          <div>
-            <div style="font-weight: 700; font-size: 0.95rem;">All Topics / সকল বিষয়</div>
-            <div style="font-size: 0.78rem; color: var(--text-muted);">500 Questions (Mixed Sets)</div>
-          </div>
-        </div>
-
-        <div class="study-topic-card" data-cat="quant" onclick="selectTopicCard('quant')">
-          <div class="topic-icon-wrap" style="background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan);">
-            <i class="fas fa-calculator"></i>
-          </div>
-          <div>
-            <div style="font-weight: 700; font-size: 0.95rem;">Quantitative Aptitude (গণিত)</div>
-            <div style="font-size: 0.78rem; color: var(--text-muted);">Arithmetic, Algebra, Speed & Work</div>
-          </div>
-        </div>
-
-        <div class="study-topic-card" data-cat="logical" onclick="selectTopicCard('logical')">
-          <div class="topic-icon-wrap" style="background: rgba(245, 158, 11, 0.15); color: var(--accent-amber);">
-            <i class="fas fa-brain"></i>
-          </div>
-          <div>
-            <div style="font-weight: 700; font-size: 0.95rem;">Logical Reasoning (রিজনিং)</div>
-            <div style="font-size: 0.78rem; color: var(--text-muted);">Puzzles, Series, Blood Relations</div>
-          </div>
-        </div>
-
-        <div class="study-topic-card" data-cat="verbal" onclick="selectTopicCard('verbal')">
-          <div class="topic-icon-wrap" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald);">
-            <i class="fas fa-book-open"></i>
-          </div>
-          <div>
-            <div style="font-weight: 700; font-size: 0.95rem;">Verbal Ability (ইংরেজি ও ভাষা)</div>
-            <div style="font-size: 0.78rem; color: var(--text-muted);">Vocabulary, Grammar & Comprehension</div>
-          </div>
-        </div>
-
-        <div class="study-topic-card" data-cat="di" onclick="selectTopicCard('di')">
-          <div class="topic-icon-wrap" style="background: rgba(168, 85, 247, 0.15); color: var(--accent-purple);">
-            <i class="fas fa-chart-pie"></i>
-          </div>
-          <div>
-            <div style="font-weight: 700; font-size: 0.95rem;">Data Interpretation (তথ্য বিশ্লেষণ)</div>
-            <div style="font-size: 0.78rem; color: var(--text-muted);">Tables, Graphs & Sufficiency</div>
-          </div>
-        </div>
-      </div>
-
-      <div style="display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap;">
-        <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
-          <span style="font-size: 0.88rem; font-weight: 700; color: var(--text-secondary);"><i class="fas fa-layer-group"></i> Quick Launch Set:</span>
-          <select id="hubSetSelect" onchange="syncHubSet(this.value)" style="padding: 9px 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-accent); background: var(--bg-primary); color: var(--text-primary); font-weight: 600; font-size: 0.88rem;">
-            <option value="all">📚 All Sets (500 Questions)</option>
-            <option value="1">Set 1: Quant Foundations (Q1–50)</option>
-            <option value="2">Set 2: Logical Reasoning I (Q51–100)</option>
-            <option value="3">Set 3: Quant - Commercial (Q101–150)</option>
-            <option value="4">Set 4: Logical Reasoning II (Q151–200)</option>
-            <option value="5">Set 5: Verbal Ability (Q201–250)</option>
-            <option value="6">Set 6: Advanced Quant (Q251–300)</option>
-            <option value="7">Set 7: Data Interpretation (Q301–350)</option>
-            <option value="8">Set 8: Full Mock Set 1 (Q351–400)</option>
-            <option value="9">Set 9: Full Mock Set 2 (Q401–450)</option>
-            <option value="10">Set 10: Full Mock Set 3 (Q451–500)</option>
-          </select>
-        </div>
-
-        <button class="btn-primary" style="padding: 12px 24px; font-size: 1rem; font-weight: 800; background: linear-gradient(135deg, var(--accent-primary), var(--accent-cyan)); box-shadow: 0 4px 18px rgba(99, 102, 241, 0.45);" onclick="launchFocusSession()">
-          <i class="fas fa-play"></i> Start 1-by-1 Questions <i class="fas fa-arrow-right"></i>
-        </button>
-      </div>
-    </section>
-
-    <!-- Mode Selector Tabs -->
+    <!-- Unified Mode Navigation Tabs -->
     <nav class="mode-tabs">
       <button class="mode-tab active" data-mode="practice">
         <i class="fas fa-book-reader"></i> Practice Mode / অনুশীলন মোড
@@ -2841,7 +2697,7 @@ input, select {
       </button>
     </nav>
 
-    <!-- Test Mode Live HUD & Timer Panel -->
+    <!-- Test Mode Live HUD & Countdown Panel -->
     <div class="test-hud-panel" id="testHud">
       <div class="timer-box" id="testTimerDisplay">
         <i class="fas fa-stopwatch"></i> 45:00
@@ -2867,68 +2723,67 @@ input, select {
       <!-- Generated dynamically in app.js -->
     </div>
 
-    <!-- 10 Sets Quick Selector Navigation Bar -->
-    <div class="set-pills-scroll-container" id="setPillsContainer">
-      <div class="set-pills-label"><i class="fas fa-layer-group"></i> Quick Sets:</div>
-      <div class="set-pills-list" id="setPillsList">
-        <button class="set-pill active" data-set="all">All Sets (500)</button>
-        <button class="set-pill" data-set="1">Set 1 (50 Qs)</button>
-        <button class="set-pill" data-set="2">Set 2 (50 Qs)</button>
-        <button class="set-pill" data-set="3">Set 3 (50 Qs)</button>
-        <button class="set-pill" data-set="4">Set 4 (50 Qs)</button>
-        <button class="set-pill" data-set="5">Set 5 (50 Qs)</button>
-        <button class="set-pill" data-set="6">Set 6 (50 Qs)</button>
-        <button class="set-pill" data-set="7">Set 7 (50 Qs)</button>
-        <button class="set-pill" data-set="8">Set 8 (50 Qs)</button>
-        <button class="set-pill" data-set="9">Set 9 (50 Qs)</button>
-        <button class="set-pill" data-set="10">Set 10 (50 Qs)</button>
+    <!-- Unified Study Control Strip (Sets, Topics, Search & Controls) -->
+    <div class="study-control-strip" id="studyControlStrip">
+      <!-- 1. Quick Set Pills (Scrollable) -->
+      <div class="set-pills-scroll-container" id="setPillsContainer">
+        <div class="set-pills-label"><i class="fas fa-layer-group"></i> Sets:</div>
+        <div class="set-pills-list" id="setPillsList">
+          <button class="set-pill active" data-set="all">All Sets (500)</button>
+          <button class="set-pill" data-set="1">Set 1 (50 Qs)</button>
+          <button class="set-pill" data-set="2">Set 2 (50 Qs)</button>
+          <button class="set-pill" data-set="3">Set 3 (50 Qs)</button>
+          <button class="set-pill" data-set="4">Set 4 (50 Qs)</button>
+          <button class="set-pill" data-set="5">Set 5 (50 Qs)</button>
+          <button class="set-pill" data-set="6">Set 6 (50 Qs)</button>
+          <button class="set-pill" data-set="7">Set 7 (50 Qs)</button>
+          <button class="set-pill" data-set="8">Set 8 (50 Qs)</button>
+          <button class="set-pill" data-set="9">Set 9 (50 Qs)</button>
+          <button class="set-pill" data-set="10">Set 10 (50 Qs)</button>
+        </div>
       </div>
+
+      <!-- 2. Topic Filter Pills & Toolbar -->
+      <section class="toolbar" id="mainToolbar">
+        <div class="topic-pills-group" id="topicPillsGroup">
+          <button class="topic-pill active" data-topic="all" onclick="selectTopicCard('all')">
+            <i class="fas fa-globe"></i> All Topics
+          </button>
+          <button class="topic-pill" data-topic="quant" onclick="selectTopicCard('quant')">
+            <i class="fas fa-calculator"></i> Quantitative (গণিত)
+          </button>
+          <button class="topic-pill" data-topic="logical" onclick="selectTopicCard('logical')">
+            <i class="fas fa-brain"></i> Reasoning (যৌক্তিক)
+          </button>
+          <button class="topic-pill" data-topic="verbal" onclick="selectTopicCard('verbal')">
+            <i class="fas fa-book-open"></i> Verbal (ইংরেজি)
+          </button>
+          <button class="topic-pill" data-topic="di" onclick="selectTopicCard('di')">
+            <i class="fas fa-chart-pie"></i> DI (তথ্য বিশ্লেষণ)
+          </button>
+        </div>
+
+        <div class="search-filter-row">
+          <div class="search-box">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" id="searchInput" placeholder="Search questions, formulas or topics...">
+          </div>
+
+          <div class="filter-group">
+            <select class="custom-select" id="difficultyFilter" style="max-width: 140px;">
+              <option value="all">All Difficulties</option>
+              <option value="easy">Easy / সহজ</option>
+              <option value="medium">Medium / মাঝারি</option>
+              <option value="hard">Hard / কঠিন</option>
+            </select>
+
+            <button class="btn-secondary" id="btnViewToggle" title="Toggle 1-by-1 Focus vs Full List" style="font-weight: 700; white-space: nowrap;">
+              <i class="fas fa-clone"></i> <span id="viewToggleText">1-by-1 View</span>
+            </button>
+          </div>
+        </div>
+      </section>
     </div>
-
-    <!-- Search & Filter Controls Toolbar -->
-    <section class="toolbar" id="mainToolbar">
-      <div class="search-box">
-        <i class="fas fa-search search-icon"></i>
-        <input type="text" id="searchInput" placeholder="Search question or topic (e.g. 'work', 'train', 'percentage', 'series')...">
-      </div>
-
-      <div class="filter-group">
-        <!-- Set Filter (10 Sets of 50 Q&A) -->
-        <select class="custom-select" id="setFilter" style="font-weight: 600; border-color: var(--accent-primary);">
-          <option value="all">📚 All Sets (500 Questions)</option>
-          <option value="1">Set 1: Quant Foundations (Q1–50)</option>
-          <option value="2">Set 2: Logical Reasoning I (Q51–100)</option>
-          <option value="3">Set 3: Quant - Numbers & Commercial (Q101–150)</option>
-          <option value="4">Set 4: Logical Reasoning II & Puzzles (Q151–200)</option>
-          <option value="5">Set 5: Verbal Ability & English (Q201–250)</option>
-          <option value="6">Set 6: Advanced Quant & Mensuration (Q251–300)</option>
-          <option value="7">Set 7: Data Interpretation & Sufficiency (Q301–350)</option>
-          <option value="8">Set 8: Full Mock Practice Set 1 (Q351–400)</option>
-          <option value="9">Set 9: Full Mock Practice Set 2 (Q401–450)</option>
-          <option value="10">Set 10: Full Mock Practice Set 3 (Q451–500)</option>
-        </select>
-
-        <select class="custom-select" id="categoryFilter">
-          <option value="all">All Topics / সকল বিষয়</option>
-          <option value="quant">Quantitative Aptitude (গণিত)</option>
-          <option value="logical">Logical Reasoning (রিজনিং)</option>
-          <option value="verbal">Verbal Ability (ভাষাগত দক্ষতা)</option>
-          <option value="di">Data Interpretation (তথ্য বিশ্লেষণ)</option>
-        </select>
-
-        <select class="custom-select" id="difficultyFilter">
-          <option value="all">All Levels / সকল স্তর</option>
-          <option value="easy">Easy / সহজ</option>
-          <option value="medium">Medium / মাঝারি</option>
-          <option value="hard">Hard / কঠিন</option>
-        </select>
-
-        <!-- View Mode Toggle (1-by-1 Focus View vs List View) -->
-        <button class="btn-secondary" id="btnViewToggle" title="Toggle between 1-by-1 Focus View and Scrolling List View" style="font-weight: 600; white-space: nowrap;">
-          <i class="fas fa-clone"></i> <span id="viewToggleText">1-by-1 View</span>
-        </button>
-      </div>
-    </section>
 
     <!-- Analytics Dashboard View Container -->
     <section class="analytics-dashboard" id="analyticsDashboard" style="display: none;">
@@ -3155,6 +3010,8 @@ input, select {
         </div>
       </div>
     </div>
+  </div>
+
   <!-- 4. Theme & Appearance Settings Modal -->
   <div class="modal-backdrop" id="themeModal">
     <div class="modal-content" style="max-width: 480px;">
