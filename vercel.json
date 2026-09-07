@@ -1,11 +1,6 @@
 {
   "version": 2,
   "cleanUrls": true,
-  "functions": {
-    "api/**/*.js": {
-      "runtime": "nodejs20.x"
-    }
-  },
   "headers": [
     {
       "source": "/api/(.*)",
@@ -24,15 +19,5 @@
         { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
       ]
     }
-  ],
-  "rewrites": [
-    { "source": "/api/auth/signup", "destination": "/api/auth/signup" },
-    { "source": "/api/auth/signin", "destination": "/api/auth/signin" },
-    { "source": "/api/auth/me", "destination": "/api/auth/me" },
-    { "source": "/api/auth/change-password", "destination": "/api/auth/change-password" },
-    { "source": "/api/progress", "destination": "/api/progress" },
-    { "source": "/api/tests", "destination": "/api/tests" },
-    { "source": "/api/leaderboard", "destination": "/api/leaderboard" },
-    { "source": "/api/admin", "destination": "/api/admin" }
   ]
 }
