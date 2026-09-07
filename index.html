@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Comprehensive Bilingual (Bengali & English) General Aptitude Test & Practice Platform. Quantitative Aptitude, Logical Reasoning, Verbal Ability & Data Interpretation with instant step-by-step solutions and shortcut tricks.">
+  <title>Bilingual General Aptitude Test | সাধারণ বুদ্ধিমত্তা ও গণিত প্রস্তুতি</title>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient background glow effect -->
+  <div class="ambient-glow"></div>
+
+  <div class="app-wrapper">
+    <!-- Top Navigation Bar -->
+    <header class="navbar">
+      <a href="#" class="brand-logo">
+        <div class="brand-icon">
+          <i class="fas fa-brain"></i>
+        </div>
+        <div>
+          <div class="brand-title">AptitudeMaster <span style="font-size: 0.8rem; font-weight: normal; opacity: 0.8;">2.0</span></div>
+          <div class="brand-subtitle">সাধারণ বুদ্ধিমত্তা ও গণিত মূল্যায়ন (Bilingual)</div>
+        </div>
+      </a>
+
+      <!-- Navigation & Action Controls -->
+      <div class="nav-actions">
+        <!-- Language Switcher (No Flags, Clean Typography & Icons) -->
+        <div class="lang-selector-group">
+          <button class="lang-btn active" data-lang="both" title="Show both English & Bengali side-by-side">
+            <i class="fas fa-globe"></i> Both / উভয়
+          </button>
+          <button class="lang-btn" data-lang="en" title="English only">
+            <i class="fas fa-font"></i> English
+          </button>
+          <button class="lang-btn" data-lang="bn" title="বাংলা শুধুমাত্র">
+            <i class="fas fa-language"></i> বাংলা
+          </button>
+        </div>
+
+        <!-- Quick Utility Tools -->
+        <!-- Practice Stopwatch / Live Timer Widget -->
+        <div class="practice-timer-widget" id="practiceTimerWidget" title="Practice Stopwatch">
+          <i class="fas fa-stopwatch"></i>
+          <span id="practiceStopwatchDisplay">00:00</span>
+          <button class="timer-control-btn" id="btnToggleStopwatch" title="Start / Pause Stopwatch"><i class="fas fa-play"></i></button>
+          <button class="timer-control-btn" id="btnResetStopwatch" title="Reset Stopwatch"><i class="fas fa-redo"></i></button>
+        </div>
+
+        <button class="btn-secondary" id="btnOpenFormulas" title="Aptitude Formula Cheat Sheet">
+          <i class="fas fa-square-root-alt"></i> Formulas / সূত্র
+        </button>
+
+        <button class="btn-secondary" id="btnOpenScratchpad" title="Rough Calculation Board">
+          <i class="fas fa-pencil-alt"></i> Scratchpad
+        </button>
+
+        <button class="icon-btn" id="soundToggleBtn" title="Toggle Sound Feedback">
+          <i class="fas fa-volume-up"></i>
+        </button>
+
+        <button class="icon-btn" id="themeToggleBtn" title="Toggle Light/Dark Theme">
+          <i class="fas fa-sun"></i>
+        </button>
+
+        <button class="icon-btn" id="btnPrintPage" title="Print / Save PDF">
+          <i class="fas fa-print"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Hero Section with Summary Stats -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>General Aptitude & Reasoning Master</h1>
+          <p>
+            Comprehensive English & Bengali bilingual preparation with 10 full sets (50 questions each) covering Quantitative Aptitude, Logical Reasoning, Verbal Ability & Data Interpretation with descriptive step-by-step solutions.
+          </p>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-chip">
+            <div class="stat-number" id="practiceCount">500</div>
+            <div class="stat-label">Total Questions</div>
+          </div>
+          <div class="stat-chip">
+            <div class="stat-number" style="color: var(--accent-cyan);">10</div>
+            <div class="stat-label">Full Sets</div>
+          </div>
+          <div class="stat-chip">
+            <div class="stat-number" id="bookmarkCount">0</div>
+            <div class="stat-label">Saved ⭐</div>
+          </div>
+          <div class="stat-chip">
+            <div class="stat-number" style="color: var(--accent-emerald);">100%</div>
+            <div class="stat-label">Bilingual</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mode Selector Tabs -->
+    <nav class="mode-tabs">
+      <button class="mode-tab active" data-mode="practice">
+        <i class="fas fa-book-reader"></i> Practice Mode / অনুশীলন মোড
+      </button>
+      <button class="mode-tab" data-mode="test">
+        <i class="fas fa-stopwatch"></i> Timed Mock Test / মক টেস্ট মোড
+      </button>
+      <button class="mode-tab" data-mode="bookmarks">
+        <i class="fas fa-star"></i> Saved Questions / বুকমার্ক
+      </button>
+    </nav>
+
+    <!-- Test Mode Live HUD & Timer Panel -->
+    <div class="test-hud-panel" id="testHud">
+      <div class="timer-box" id="testTimerDisplay">
+        <i class="fas fa-stopwatch"></i> 45:00
+      </div>
+
+      <div class="test-progress-bar-container">
+        <div class="test-progress-info">
+          <span id="testProgressText">Answered: 0 / 50</span>
+          <span>Target: 45 Mins</span>
+        </div>
+        <div class="progress-track">
+          <div class="progress-fill" id="testProgressBar"></div>
+        </div>
+      </div>
+
+      <button class="btn-primary" id="btnSubmitTest" style="background: linear-gradient(135deg, #10b981, #059669);">
+        <i class="fas fa-paper-plane"></i> Submit Test / জমা দিন
+      </button>
+    </div>
+
+    <!-- Test Mode Question Number Palette -->
+    <div class="test-palette" id="testPalette">
+      <!-- Generated dynamically in app.js -->
+    </div>
+
+    <!-- 10 Sets Quick Selector Navigation Bar -->
+    <div class="set-pills-scroll-container">
+      <div class="set-pills-label"><i class="fas fa-layer-group"></i> Quick Sets:</div>
+      <div class="set-pills-list" id="setPillsList">
+        <button class="set-pill active" data-set="all">All Sets (500)</button>
+        <button class="set-pill" data-set="1">Set 1 (50 Qs)</button>
+        <button class="set-pill" data-set="2">Set 2 (50 Qs)</button>
+        <button class="set-pill" data-set="3">Set 3 (50 Qs)</button>
+        <button class="set-pill" data-set="4">Set 4 (50 Qs)</button>
+        <button class="set-pill" data-set="5">Set 5 (50 Qs)</button>
+        <button class="set-pill" data-set="6">Set 6 (50 Qs)</button>
+        <button class="set-pill" data-set="7">Set 7 (50 Qs)</button>
+        <button class="set-pill" data-set="8">Set 8 (50 Qs)</button>
+        <button class="set-pill" data-set="9">Set 9 (50 Qs)</button>
+        <button class="set-pill" data-set="10">Set 10 (50 Qs)</button>
+      </div>
+    </div>
+
+    <!-- Search & Filter Controls Toolbar -->
+    <section class="toolbar">
+      <div class="search-box">
+        <i class="fas fa-search search-icon"></i>
+        <input type="text" id="searchInput" placeholder="Search question or topic (e.g. 'work', 'train', 'percentage', 'series')...">
+      </div>
+
+      <div class="filter-group">
+        <!-- Set Filter (10 Sets of 50 Q&A) -->
+        <select class="custom-select" id="setFilter" style="font-weight: 600; border-color: var(--accent-primary);">
+          <option value="all">📚 All Sets (500 Questions)</option>
+          <option value="1">Set 1: Quant Foundations (Q1–50)</option>
+          <option value="2">Set 2: Logical Reasoning I (Q51–100)</option>
+          <option value="3">Set 3: Quant - Numbers & Commercial (Q101–150)</option>
+          <option value="4">Set 4: Logical Reasoning II & Puzzles (Q151–200)</option>
+          <option value="5">Set 5: Verbal Ability & English (Q201–250)</option>
+          <option value="6">Set 6: Advanced Quant & Mensuration (Q251–300)</option>
+          <option value="7">Set 7: Data Interpretation & Sufficiency (Q301–350)</option>
+          <option value="8">Set 8: Full Mock Practice Set 1 (Q351–400)</option>
+          <option value="9">Set 9: Full Mock Practice Set 2 (Q401–450)</option>
+          <option value="10">Set 10: Full Mock Practice Set 3 (Q451–500)</option>
+        </select>
+
+        <select class="custom-select" id="categoryFilter">
+          <option value="all">All Topics / সকল বিষয়</option>
+          <option value="quant">Quantitative Aptitude (গণিত)</option>
+          <option value="logical">Logical Reasoning (রিজনিং)</option>
+          <option value="verbal">Verbal Ability (ভাষাগত দক্ষতা)</option>
+          <option value="di">Data Interpretation (তথ্য বিশ্লেষণ)</option>
+        </select>
+
+        <select class="custom-select" id="difficultyFilter">
+          <option value="all">All Levels / সকল স্তর</option>
+          <option value="easy">Easy / সহজ</option>
+          <option value="medium">Medium / মাঝারি</option>
+          <option value="hard">Hard / কঠিন</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Main Questions List Container -->
+    <main id="questionsContainer">
+      <!-- Dynamic Question Cards will render here -->
+    </main>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+      <p>
+        Bilingual General Aptitude & Logical Reasoning Platform &bull; Bengali & English &bull; 
+        <span style="color: var(--accent-cyan);">Total Available Questions: <span id="totalQuestionsCount">20</span></span>
+      </p>
+      <p style="margin-top: 0.5rem; font-size: 0.8rem;">
+        Designed for WBCS, SSC CGL, CHSL, IBPS Bank PO/Clerk, RRB NTPC, Campus Placement & Competitive Exams.
+      </p>
+    </footer>
+  </div>
+
+  <!-- ==================== MODALS ==================== -->
+
+  <!-- 1. Formula Sheet Modal -->
+  <div class="modal-backdrop" id="formulaModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">
+          <i class="fas fa-square-root-alt" style="color: var(--accent-cyan);"></i>
+          <span>Aptitude Formula Cheat Sheet (সূত্র সংক্ষেপ)</span>
+        </div>
+        <button class="icon-btn" id="btnCloseFormulas">&times;</button>
+      </div>
+      <div class="modal-body" id="formulaContainer">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Interactive Scratchpad / Rough Canvas Modal -->
+  <div class="modal-backdrop" id="scratchpadModal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title">
+          <i class="fas fa-pencil-alt" style="color: var(--accent-primary);"></i>
+          <span>Rough Work Scratchpad (রাফ কাজের খাতা)</span>
+        </div>
+        <button class="icon-btn" id="btnCloseScratchpad">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="scratchpad-toolbar">
+          <button class="btn-secondary" id="colorCyan" style="color: #38bdf8;"><i class="fas fa-pen"></i> Cyan</button>
+          <button class="btn-secondary" id="colorYellow" style="color: #facc15;"><i class="fas fa-pen"></i> Yellow</button>
+          <button class="btn-secondary" id="colorWhite" style="color: #fff;"><i class="fas fa-pen"></i> White</button>
+          <button class="btn-secondary" id="colorEraser"><i class="fas fa-eraser"></i> Eraser</button>
+          <button class="btn-secondary" id="btnClearScratch" style="margin-left: auto; color: var(--accent-rose);"><i class="fas fa-trash-alt"></i> Clear Board</button>
+        </div>
+        <canvas id="scratchpadCanvas" class="scratchpad-canvas"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Test Results & Scorecard Modal -->
+  <div class="modal-backdrop" id="resultsModal">
+    <div class="modal-content" style="max-width: 580px;">
+      <div class="modal-header">
+        <div class="modal-title">
+          <i class="fas fa-trophy" style="color: var(--accent-amber);"></i>
+          <span>Test Performance Report / ফলাফল</span>
+        </div>
+        <button class="icon-btn" id="btnCloseResults">&times;</button>
+      </div>
+      <div class="modal-body results-card">
+        <div class="score-badge-circle" id="resultScoreCircle">
+          <div class="score-badge-inner">
+            <div class="score-big" id="resultScorePercent">0%</div>
+            <div class="score-sub">Accuracy</div>
+          </div>
+        </div>
+
+        <h3>Test Summary</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 1rem;">Here is your performance breakdown:</p>
+
+        <div class="results-stats-grid">
+          <div class="result-stat-box">
+            <div style="font-size: 1.4rem; font-weight: 700; color: var(--accent-cyan);" id="resultTotalQuestions">0</div>
+            <div style="font-size: 0.78rem; color: var(--text-muted);">Total Questions</div>
+          </div>
+          <div class="result-stat-box">
+            <div style="font-size: 1.4rem; font-weight: 700; color: var(--accent-emerald);" id="resultCorrect">0</div>
+            <div style="font-size: 0.78rem; color: var(--text-muted);">Correct / সঠিক</div>
+          </div>
+          <div class="result-stat-box">
+            <div style="font-size: 1.4rem; font-weight: 700; color: var(--accent-rose);" id="resultWrong">0</div>
+            <div style="font-size: 0.78rem; color: var(--text-muted);">Wrong / ভুল</div>
+          </div>
+        </div>
+
+        <div style="margin-top: 1rem; color: var(--text-secondary); font-size: 0.9rem;">
+          Unattempted: <span id="resultUnattempted" style="font-weight: 700; color: var(--accent-amber);">0</span>
+        </div>
+
+        <div style="margin-top: 1.5rem; display: flex; gap: 10px; justify-content: center;">
+          <button class="btn-primary" id="btnRetakeTest">
+            <i class="fas fa-redo"></i> Retake Test
+          </button>
+          <button class="btn-secondary" onclick="closeModal(document.getElementById('resultsModal'))">
+            <i class="fas fa-search"></i> Review Solutions
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

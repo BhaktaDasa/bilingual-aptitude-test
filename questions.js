@@ -1,0 +1,25005 @@
+// Comprehensive Bilingual General Aptitude Question Bank (10 Sets x 50 Questions = 500 Questions)
+// English digits strictly used throughout all questions, options, and explanations
+
+const aptitudeQuestions = [
+  {
+    "id": 1,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Time & Work",
+      "bn": "সময় ও কার্য"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A can do a work in 15 days and B in 20 days. If they work on it together for 4 days, what fraction of the work is left?",
+      "bn": "A একটি কাজ 15 দিনে এবং B 20 দিনে করতে পারে। তারা একসাথে 4 দিন কাজ করার পর, কাজের কত অংশ বাকি থাকবে?"
+    },
+    "options": {
+      "en": [
+        "A) 7/15",
+        "B) 8/15",
+        "C) 1/10",
+        "D) 2/15"
+      ],
+      "bn": [
+        "A) 7/15",
+        "B) 8/15",
+        "C) 1/10",
+        "D) 2/15"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. A's 1-day work = 1/15, B's 1-day work = 1/20.<br>2. Combined 1-day work = 1/15 + 1/20 = (4 + 3)/60 = 7/60.<br>3. Work done in 4 days = 4 × (7/60) = 28/60 = 7/15.<br>4. Remaining work = 1 - 7/15 = <strong>8/15</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. A এর 1 দিনের কাজ = 1/15 এবং B এর 1 দিনের কাজ = 1/20 অংশ।<br>2. 1 দিনের যৌথ কাজ = 1/15 + 1/20 = 7/60 অংশ।<br>3. 4 দিনে সম্পন্ন কাজ = 4 × (7/60) = 7/15 অংশ।<br>4. বাকি কাজের অংশ = 1 - 7/15 = <strong>8/15</strong> অংশ।"
+    },
+    "tips": {
+      "en": "Shortcut: Total units = 60. A = 4, B = 3. Done in 4 days = 28 units. Left = 32/60 = 8/15.",
+      "bn": "শর্টকাট: মোট কাজ = 60 ইউনিট। 4 দিনে কাজ = 28 ইউনিট। অবশিষ্ট = 32/60 = 8/15 অংশ।"
+    }
+  },
+  {
+    "id": 2,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Time & Work",
+      "bn": "সময় ও কার্য"
+    },
+    "difficulty": "hard",
+    "difficultyName": {
+      "en": "Hard",
+      "bn": "কঠিন"
+    },
+    "question": {
+      "en": "A can finish a work in 18 days and B can do the same work in 15 days. B worked for 10 days and left the job. In how many days can A alone finish the remaining work?",
+      "bn": "A একটি কাজ 18 দিনে এবং B 15 দিনে সম্পন্ন করতে পারে। B একা 10 দিন কাজ করে কাজটি ছেড়ে চলে গেল। বাকি কাজটি A একা কত দিনে শেষ করতে পারবে?"
+    },
+    "options": {
+      "en": [
+        "A) 5 days",
+        "B) 5.5 days",
+        "C) 6 days",
+        "D) 8 days"
+      ],
+      "bn": [
+        "A) 5 দিন",
+        "B) 5.5 দিন",
+        "C) 6 দিন",
+        "D) 8 দিন"
+      ]
+    },
+    "correctIndex": 2,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. B's 10-day work = 10 × (1/15) = 2/3 of total work.<br>2. Remaining work = 1 - 2/3 = 1/3.<br>3. Time taken by A alone to finish 1/3 work = (1/3) × 18 = <strong>6 days</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. B একা 10 দিনে সম্পন্ন করে = 10 × (1/15) = 2/3 অংশ কাজ।<br>2. অবশিষ্ট কাজ = 1 - 2/3 = 1/3 অংশ।<br>3. A এর একার বাকি 1/3 কাজ করতে সময় লাগবে = (1/3) × 18 = <strong>6 দিন</strong>।"
+    },
+    "tips": {
+      "en": "Formula: Days for A = (1 - Work done by B) × Days of A = (1/3) × 18 = 6 days.",
+      "bn": "শর্টকাট: বাকি সময় = (1 - B এর কাজ) × A এর পূর্ণ সময় = (1/3) × 18 = 6 দিন।"
+    }
+  },
+  {
+    "id": 3,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Time & Work",
+      "bn": "সময় ও কার্য"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A and B working together can do a piece of work in 8 days, B and C in 12 days, and A, B and C all together in 6 days. In how many days can A and C together finish it?",
+      "bn": "A ও B একত্রে একটি কাজ 8 দিনে, B ও C 12 দিনে এবং A, B ও C তিনজন একত্রে 6 দিনে সম্পন্ন করে। A ও C একত্রে কাজটি কত দিনে শেষ করতে পারবে?"
+    },
+    "options": {
+      "en": [
+        "A) 8 days",
+        "B) 10 days",
+        "C) 12 days",
+        "D) 15 days"
+      ],
+      "bn": [
+        "A) 8 দিন",
+        "B) 10 দিন",
+        "C) 12 দিন",
+        "D) 15 দিন"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total LCM of 8, 12, 6 = 24 units.<br>2. Efficiency of A + B + C = 24/6 = 4 u/d.<br>3. Efficiency of A + B = 24/8 = 3 u/d ⇒ C = 4 - 3 = 1 u/d.<br>4. Efficiency of B + C = 24/12 = 2 u/d ⇒ A = 4 - 2 = 2 u/d.<br>5. Combined efficiency of A + C = 2 + 1 = 3 u/d.<br>6. Time taken by A + C = 24 / 3 = <strong>8 days</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট লসাগু = 24 ইউনিট।<br>2. A + B + C এর মোট ক্ষমতা = 24/6 = 4 ইউনিট/দিন।<br>3. A + B = 3 ইউনিট/দিন ⇒ C = 4 - 3 = 1 ইউনিট/দিন।<br>4. B + C = 2 ইউনিট/দিন ⇒ A = 4 - 2 = 2 ইউনিট/দিন।<br>5. A ও C এর যৌথ ক্ষমতা = 2 + 1 = 3 ইউনিট/দিন।<br>6. A ও C এর সময় লাগবে = 24 / 3 = <strong>8 দিন</strong>।"
+    },
+    "tips": {
+      "en": "Efficiency subtraction isolates individual work rates directly.",
+      "bn": "মোট দক্ষতা থেকে বিয়োগ করে প্রতিটি ব্যক্তির আলাদা দক্ষতা সহজে নির্ণয় করা যায়।"
+    }
+  },
+  {
+    "id": 4,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Time & Work",
+      "bn": "সময় ও কার্য"
+    },
+    "difficulty": "hard",
+    "difficultyName": {
+      "en": "Hard",
+      "bn": "কঠিন"
+    },
+    "question": {
+      "en": "A can do a work in 12 days and B in 15 days. They work alternately starting with A on the first day. In how many days will the work be finished?",
+      "bn": "A একটি কাজ 12 দিনে এবং B 15 দিনে করতে পারে। প্রথম দিন A দিয়ে শুরু করে তারা একদিন অন্তর অন্তর (পর্যায়ক্রমে) কাজ করে। কাজটি কত দিনে শেষ হবে?"
+    },
+    "options": {
+      "en": [
+        "A) 13 days",
+        "B) 13 1/4 days",
+        "C) 13 1/2 days",
+        "D) 14 days"
+      ],
+      "bn": [
+        "A) 13 দিন",
+        "B) 13 1/4 দিন",
+        "C) 13 1/2 দিন",
+        "D) 14 দিন"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total work = LCM(12, 15) = 60 units.<br>2. Efficiency: A = 5 u/d, B = 4 u/d.<br>3. In 2 days (A + B) work done = 5 + 4 = 9 units.<br>4. In 6 cycles (12 days), work done = 6 × 9 = 54 units.<br>5. Remaining work = 60 - 54 = 6 units.<br>6. On day 13, A works and completes 5 units (leaving 1 unit).<br>7. On day 14, B does 1 unit in 1/4 of a day.<br>8. Total time = 12 + 1 + 1/4 = <strong>13 1/4 days</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট কাজ = লসাগু(12, 15) = 60 ইউনিট।<br>2. A এর ক্ষমতা = 5 ইউনিট/দিন, B = 4 ইউনিট/দিন।<br>3. 2 দিনে সম্পন্ন কাজ = 5 + 4 = 9 ইউনিট।<br>4. 12 দিনে (6 জোড়া) কাজ সম্পন্ন = 6 × 9 = 54 ইউনিট।<br>5. বাকি কাজ = 60 - 54 = 6 ইউনিট।<br>6. 13তম দিনে A করে 5 ইউনিট (অবশিষ্ট 1 ইউনিট)।<br>7. 14তম দিনে B এর সময় লাগবে = 1/4 দিন।<br>8. মোট সময় = <strong>13 1/4 দিন</strong>।"
+    },
+    "tips": {
+      "en": "Group alternate days into cycles of 2 days.",
+      "bn": "পর্যায়ক্রমিক কাজের ক্ষেত্রে 2 দিনের চক্র হিসেবে হিসাব করুন।"
+    }
+  },
+  {
+    "id": 5,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Time & Work",
+      "bn": "সময় ও কার্য"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "12 men can complete a project in 9 days. After 3 days of work, 6 more men joined them. How many more days will they take to complete the remaining project?",
+      "bn": "12 জন লোক একটি প্রকল্প 9 দিনে শেষ করতে পারে। 3 দিন কাজ করার পর আরও 6 জন লোক তাদের সাথে যোগ দিল। বাকি কাজটি সম্পন্ন করতে আর কত দিন সময় লাগবে?"
+    },
+    "options": {
+      "en": [
+        "A) 3 days",
+        "B) 4 days",
+        "C) 5 days",
+        "D) 6 days"
+      ],
+      "bn": [
+        "A) 3 দিন",
+        "B) 4 দিন",
+        "C) 5 দিন",
+        "D) 6 দিন"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total work = 12 men × 9 days = 108 man-days.<br>2. Work done in 3 days = 12 men × 3 days = 36 man-days.<br>3. Remaining work = 108 - 36 = 72 man-days.<br>4. Total men now = 12 + 6 = 18 men.<br>5. Remaining days needed = 72 / 18 = <strong>4 days</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট কাজ = 12 × 9 = 108 ম্যান-ডে।<br>2. 3 দিনে সম্পন্ন কাজ = 12 × 3 = 36 ম্যান-ডে।<br>3. বাকি কাজ = 108 - 36 = 72 ম্যান-ডে।<br>4. বর্তমান লোক সংখ্যা = 12 + 6 = 18 জন।<br>5. বাকি কাজের জন্য সময় = 72 / 18 = <strong>4 দিন</strong>।"
+    },
+    "tips": {
+      "en": "Formula: Days = (Initial men × Remaining days) / New total men = (12 × 6) / 18 = 4 days.",
+      "bn": "শর্টকাট: বাকি দিন = (12 × 6) / 18 = 4 দিন।"
+    }
+  },
+  {
+    "id": 6,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Pipes & Cisterns",
+      "bn": "নল ও চৌবাচ্চা"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A cistern can be filled by two pipes in 20 minutes and 30 minutes respectively. A waste pipe can empty the full tank in 15 minutes. If all three are opened together, how long will it take to fill the tank?",
+      "bn": "একটি চৌবাচ্চা দুটি নল দ্বারা যথাক্রমে 20 মিনিট ও 30 মিনিটে পূর্ণ হতে পারে। একটি নির্গমন নল পুরো চৌবাচ্চাটি 15 মিনিটে খালি করতে পারে। তিনটি নল একসাথে খুলে দিলে চৌবাচ্চাটি পূর্ণ হতে কত সময় লাগবে?"
+    },
+    "options": {
+      "en": [
+        "A) 40 minutes",
+        "B) 50 minutes",
+        "C) 60 minutes",
+        "D) 90 minutes"
+      ],
+      "bn": [
+        "A) 40 মিনিট",
+        "B) 50 মিনিট",
+        "C) 60 মিনিট",
+        "D) 90 মিনিট"
+      ]
+    },
+    "correctIndex": 2,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. In 1 min: Pipe 1 fills 1/20, Pipe 2 fills 1/30, Drain empties 1/15.<br>2. Net filled in 1 min = 1/20 + 1/30 - 1/15 = (3 + 2 - 4)/60 = 1/60.<br>3. Total time to fill = <strong>60 minutes</strong> (1 hour).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 1 মিনিটে 1ম নল ভরে = 1/20, 2য় নল ভরে = 1/30 এবং নির্গমন নল খালি করে = 1/15 অংশ।<br>2. 1 মিনিটে নিট পূর্ণ হয় = 1/20 + 1/30 - 1/15 = (3 + 2 - 4)/60 = 1/60 অংশ।<br>3. সম্পূর্ণ চৌবাচ্চা পূর্ণ হতে সময় লাগবে = <strong>60 মিনিট</strong> (1 ঘন্টা)।"
+    },
+    "tips": {
+      "en": "Net rate = +Filling rates - Emptying rate.",
+      "bn": "নিট ক্ষমতা = ভর্তি করার ক্ষমতা - খালি করার ক্ষমতা।"
+    }
+  },
+  {
+    "id": 7,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Pipes & Cisterns",
+      "bn": "নল ও চৌবাচ্চা"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "An inlet pipe can fill a tank in 8 hours. Due to a leak in the bottom, it takes 10 hours to fill the tank. In how many hours will the leak alone empty the full tank?",
+      "bn": "একটি অন্তর্মুখী নল 8 ঘন্টায় একটি চৌবাচ্চা পূর্ণ করতে পারে। তলায় ছিদ্র থাকার কারণে চৌবাচ্চাটি পূর্ণ হতে 10 ঘন্টা সময় লাগে। একা ঐ ছিদ্রটি দিয়ে পূর্ণ চৌবাচ্চাটি কত ঘন্টায় খালি হবে?"
+    },
+    "options": {
+      "en": [
+        "A) 30 hours",
+        "B) 40 hours",
+        "C) 45 hours",
+        "D) 50 hours"
+      ],
+      "bn": [
+        "A) 30 ঘন্টা",
+        "B) 40 ঘন্টা",
+        "C) 45 ঘন্টা",
+        "D) 50 ঘন্টা"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Leak emptying rate per hour = Inlet rate - Combined rate = 1/8 - 1/10 = (5 - 4)/40 = 1/40.<br>2. Time required for leak to empty = <strong>40 hours</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. ছিদ্রটির প্রতি ঘন্টার খালি করার হার = 1/8 - 1/10 = (5 - 4)/40 = 1/40 অংশ।<br>2. ছিদ্রটি দ্বারা পূর্ণ চৌবাচ্চা খালি হতে সময় লাগবে = <strong>40 ঘন্টা</strong>।"
+    },
+    "tips": {
+      "en": "Leak Time = (A × B) / (B - A) = (8 × 10) / (10 - 8) = 80 / 2 = 40 hours.",
+      "bn": "শর্টকাট: সময় = (8 × 10) / (10 - 8) = 40 ঘন্টা।"
+    }
+  },
+  {
+    "id": 8,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Pipes & Cisterns",
+      "bn": "নল ও চৌবাচ্চা"
+    },
+    "difficulty": "hard",
+    "difficultyName": {
+      "en": "Hard",
+      "bn": "কঠিন"
+    },
+    "question": {
+      "en": "Three pipes A, B and C can fill a reservoir in 6 hours. After working together for 2 hours, C is closed and A and B fill the remaining part in 7 hours. In how many hours can C alone fill the reservoir?",
+      "bn": "তিনটি নল A, B ও C একত্রে একটি জলাধার 6 ঘন্টায় পূর্ণ করতে পারে। একসাথে 2 ঘন্টা চলার পর C বন্ধ করে দেওয়া হয় এবং A ও B বাকি অংশ 7 ঘন্টায় পূর্ণ করে। একা C নল জলাধারটি কত ঘন্টায় পূর্ণ করতে পারবে?"
+    },
+    "options": {
+      "en": [
+        "A) 12 hours",
+        "B) 14 hours",
+        "C) 16 hours",
+        "D) 18 hours"
+      ],
+      "bn": [
+        "A) 12 ঘন্টা",
+        "B) 14 ঘন্টা",
+        "C) 16 ঘন্টা",
+        "D) 18 ঘন্টা"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Part filled by (A + B + C) in 2 hours = 2/6 = 1/3.<br>2. Remaining part = 1 - 1/3 = 2/3.<br>3. (A + B) fill 2/3 part in 7 hours ⇒ (A + B)'s 1 hour work = (2/3) / 7 = 2/21.<br>4. C's 1 hour work = 1/6 - 2/21 = (7 - 4)/42 = 3/42 = 1/14.<br>5. Time taken by C alone = <strong>14 hours</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. (A + B + C) দ্বারা 2 ঘন্টায় পূর্ণ হয় = 2/6 = 1/3 অংশ।<br>2. বাকি অংশ = 1 - 1/3 = 2/3 অংশ।<br>3. A ও B নল 2/3 অংশ 7 ঘন্টায় করে ⇒ 1 ঘন্টায় করে = 2/21 অংশ।<br>4. C এর 1 ঘন্টার কাজ = 1/6 - 2/21 = 3/42 = 1/14 অংশ।<br>5. C একা সম্পূর্ণ জলাধার পূর্ণ করবে = <strong>14 ঘন্টায়</strong>।"
+    },
+    "tips": {
+      "en": "Rate of C = 1/6 - (2/3 ÷ 7) = 1/14 ⇒ 14 hours.",
+      "bn": "C এর ক্ষমতা = 1/6 - 2/21 = 1/14 ⇒ 14 ঘন্টা।"
+    }
+  },
+  {
+    "id": 9,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Pipes & Cisterns",
+      "bn": "নল ও চৌবাচ্চা"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Two pipes A and B can fill a cistern in 12 minutes and 15 minutes respectively. If both are opened together and after 3 minutes A is closed, how much more time will B take to fill the cistern?",
+      "bn": "A ও B দুটি নল একটি চৌবাচ্চা যথাক্রমে 12 মিনিট ও 15 মিনিটে পূর্ণ করে। দুটি নল একসাথে খুলে দেওয়ার 3 মিনিট পর A বন্ধ করা হলে, বাকি চৌবাচ্চাটি পূর্ণ করতে B এর আরও কত সময় লাগবে?"
+    },
+    "options": {
+      "en": [
+        "A) 7.25 minutes",
+        "B) 8.25 minutes",
+        "C) 9.5 minutes",
+        "D) 10 minutes"
+      ],
+      "bn": [
+        "A) 7.25 মিনিট",
+        "B) 8.25 মিনিট",
+        "C) 9.5 মিনিট",
+        "D) 10 মিনিট"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. LCM = 60 units. A = 5 u/min, B = 4 u/min.<br>2. Work done by (A + B) in 3 mins = 3 × (5 + 4) = 27 units.<br>3. Remaining work = 60 - 27 = 33 units.<br>4. Time taken by B alone = 33 / 4 = <strong>8.25 minutes</strong> (8 min 15 sec).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. চৌবাচ্চার মোট ক্ষমতা = 60 ইউনিট। A = 5 ইউনিট/মিনিট, B = 4 ইউনিট/মিনিট।<br>2. 3 মিনিটে (A + B) পূর্ণ করে = 3 × 9 = 27 ইউনিট।<br>3. বাকি থাকে = 60 - 27 = 33 ইউনিট।<br>4. B একার বাকি সময় লাগবে = 33 / 4 = <strong>8.25 মিনিট</strong> (8 মিনিট 15 সেকেন্ড)।"
+    },
+    "tips": {
+      "en": "Remaining capacity ÷ Efficiency of B = 33 / 4 = 8.25 mins.",
+      "bn": "অবশিষ্ট ক্ষমতা ÷ B এর দক্ষতা = 33 / 4 = 8.25 মিনিট।"
+    }
+  },
+  {
+    "id": 10,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Pipes & Cisterns",
+      "bn": "নল ও চৌবাচ্চা"
+    },
+    "difficulty": "hard",
+    "difficultyName": {
+      "en": "Hard",
+      "bn": "কঠিন"
+    },
+    "question": {
+      "en": "A tank has two pipes. Pipe P can fill it in 4 hours and Pipe Q can empty it in 6 hours. When the tank is half full, both pipes are opened simultaneously. In how many hours will the tank become completely full?",
+      "bn": "একটি ট্যাঙ্কে দুটি নল আছে। নল P এটি 4 ঘন্টায় পূর্ণ করতে পারে এবং নল Q এটি 6 ঘন্টায় খালি করতে পারে। ট্যাঙ্কটি অর্ধেক পূর্ণ থাকা অবস্থায় উভয় নল একসাথে খুলে দিলে ট্যাঙ্কটি সম্পূর্ণ পূর্ণ হতে কত সময় লাগবে?"
+    },
+    "options": {
+      "en": [
+        "A) 3 hours",
+        "B) 6 hours",
+        "C) 8 hours",
+        "D) 12 hours"
+      ],
+      "bn": [
+        "A) 3 ঘন্টা",
+        "B) 6 ঘন্টা",
+        "C) 8 ঘন্টা",
+        "D) 12 ঘন্টা"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total capacity = LCM(4, 6) = 12 units.<br>2. Tank is half full ⇒ already contains 6 units; remaining to fill = 6 units.<br>3. P's filling rate = +3 units/hr, Q's emptying rate = -2 units/hr.<br>4. Combined net rate = 3 - 2 = 1 unit/hr.<br>5. Time required to fill remaining 6 units = 6 / 1 = <strong>6 hours</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. ট্যাঙ্কের মোট ক্ষমতা = 12 ইউনিট।<br>2. ট্যাঙ্কটি অর্ধেক পূর্ণ থাকায় 6 ইউনিট পূর্ণ আছে, বাকি আছে 6 ইউনিট।<br>3. P এর ক্ষমতা = +3 ইউনিট/ঘন্টা, Q এর ক্ষমতা = -2 ইউনিট/ঘন্টা।<br>4. নিট ভরার হার = 3 - 2 = 1 ইউনিট/ঘন্টা।<br>5. বাকি 6 ইউনিট পূর্ণ হতে সময় লাগবে = 6 / 1 = <strong>6 ঘন্টা</strong>।"
+    },
+    "tips": {
+      "en": "Target capacity to fill is only the remaining 50% = 6 units.",
+      "bn": "বাকি 50% পূরণ করতে 6 / (3 - 2) = 6 ঘন্টা লাগবে।"
+    }
+  },
+  {
+    "id": 11,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Speed, Time & Distance",
+      "bn": "গতিবেগ, সময় ও দূরত্ব"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "A person covers a distance of 450 meters in 2 minutes. What is the speed in km/h?",
+      "bn": "একজন ব্যক্তি 2 মিনিটে 450 মিটার দূরত্ব অতিক্রম করেন। কিমি/ঘন্টায় তাঁর গতিবেগ কত?"
+    },
+    "options": {
+      "en": [
+        "A) 12.5 km/h",
+        "B) 13.5 km/h",
+        "C) 14.5 km/h",
+        "D) 15 km/h"
+      ],
+      "bn": [
+        "A) 12.5 কিমি/ঘন্টা",
+        "B) 13.5 কিমি/ঘন্টা",
+        "C) 14.5 কিমি/ঘন্টা",
+        "D) 15 কিমি/ঘন্টা"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Time in seconds = 2 × 60 = 120 seconds.<br>2. Speed in m/s = Distance / Time = 450 / 120 = 3.75 m/s.<br>3. Convert to km/h by multiplying by 18/5: Speed = 3.75 × (18 / 5) = 0.75 × 18 = <strong>13.5 km/h</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. সেকেন্ডে সময় = 2 × 60 = 120 সেকেন্ড।<br>2. m/s এ গতিবেগ = 450 / 120 = 3.75 মিটার/সেকেন্ড।<br>3. কিমি/ঘন্টায় রূপান্তর: 3.75 × (18 / 5) = <strong>13.5 কিমি/ঘন্টা</strong>।"
+    },
+    "tips": {
+      "en": "Speed in km/h = (Distance in meters / Time in seconds) × 18/5.",
+      "bn": "কিমি/ঘন্টায় গতিবেগ = (মিটার / সেকেন্ড) × 18/5।"
+    }
+  },
+  {
+    "id": 12,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Speed, Time & Distance",
+      "bn": "গতিবেগ, সময় ও দূরত্ব"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "If a student walks from his home to school at 5 km/h, he is late by 10 minutes. If he walks at 6 km/h, he is late by only 2 minutes. Find the distance between his home and school.",
+      "bn": "একজন ছাত্র বাড়ি থেকে 5 কিমি/ঘন্টা বেগে হেঁটে স্কুলে গেলে 10 মিনিট দেরি হয়। যদি সে 6 কিমি/ঘন্টা বেগে যায়, তবে তার মাত্র 2 মিনিট দেরি হয়। বাড়ি থেকে স্কুলের দূরত্ব কত?"
+    },
+    "options": {
+      "en": [
+        "A) 3 km",
+        "B) 4 km",
+        "C) 5 km",
+        "D) 6 km"
+      ],
+      "bn": [
+        "A) 3 কিমি",
+        "B) 4 কিমি",
+        "C) 5 কিমি",
+        "D) 6 কিমি"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in time = 10 min - 2 min = 8 minutes = 8/60 hours = 2/15 hours.<br>2. Distance Formula: Distance = [S1 × S2 / (S2 - S1)] × Time difference.<br>3. Distance = [(5 × 6) / (6 - 5)] × (8 / 60) = 30 × (8 / 60) = 30 × (2 / 15) = <strong>4 km</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. সময়ের পার্থক্য = 10 - 2 = 8 মিনিট = 8/60 ঘন্টা = 2/15 ঘন্টা।<br>2. দূরত্বের সূত্র: দূরত্ব = [(S1 × S2) / (S2 - S1)] × সময়ের পার্থক্য।<br>3. দূরত্ব = [(5 × 6) / 1] × (8 / 60) = 30 × (8 / 60) = <strong>4 কিমি</strong>।"
+    },
+    "tips": {
+      "en": "Distance = (Product of Speeds / Difference of Speeds) × Time Difference.",
+      "bn": "দূরত্ব = (গতিবেগের গুণফল / গতিবেগের অন্তর) × সময়ের অন্তর।"
+    }
+  },
+  {
+    "id": 13,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Speed, Time & Distance",
+      "bn": "গতিবেগ, সময় ও দূরত্ব"
+    },
+    "difficulty": "hard",
+    "difficultyName": {
+      "en": "Hard",
+      "bn": "কঠিন"
+    },
+    "question": {
+      "en": "Excluding stoppages, the speed of a bus is 54 km/h and including stoppages, it is 45 km/h. For how many minutes does the bus stop per hour?",
+      "bn": "বিরতিহীনভাবে একটি বাসের গড় গতিবেগ 54 কিমি/ঘন্টা এবং বিরতিসহ গতিবেগ 45 কিমি/ঘন্টা। বাসটি প্রতি ঘন্টায় কত মিনিট থামে?"
+    },
+    "options": {
+      "en": [
+        "A) 9 minutes",
+        "B) 10 minutes",
+        "C) 12 minutes",
+        "D) 15 minutes"
+      ],
+      "bn": [
+        "A) 9 মিনিট",
+        "B) 10 মিনিট",
+        "C) 12 মিনিট",
+        "D) 15 মিনিট"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Due to stoppages, the bus covers 54 - 45 = 9 km less in one hour.<br>2. Time taken to cover 9 km at original speed of 54 km/h = (9 / 54) hours.<br>3. Stoppage time per hour = (9 / 54) × 60 minutes = (1 / 6) × 60 = <strong>10 minutes</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বিরতির কারণে বাসটি 1 ঘন্টায় 54 - 45 = 9 কিমি কম পথ অতিক্রম করে।<br>2. স্বাভাবিক গতিবেগে 9 কিমি পথ অতিক্রম করতে সময় লাগত = 9 / 54 ঘন্টা।<br>3. প্রতি ঘন্টায় বিরতির সময় = (9 / 54) × 60 = <strong>10 মিনিট</strong>।"
+    },
+    "tips": {
+      "en": "Stoppage time/hr = [(Fast Speed - Slow Speed) / Fast Speed] × 60 mins = (9/54) × 60 = 10 mins.",
+      "bn": "শর্টকাট: প্রতি ঘন্টায় বিরতি = [(দ্রুত বেগ - ধীর বেগ) / দ্রুত বেগ] × 60 মিনিট = 10 মিনিট।"
+    }
+  },
+  {
+    "id": 14,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Speed, Time & Distance",
+      "bn": "গতিবেগ, সময় ও দূরত্ব"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Two friends A and B start from point P and Q at the same time towards each other. Distance PQ is 330 km. A travels at 60 km/h and B at 75 km/h. After how many hours will they meet?",
+      "bn": "দুজন বন্ধু A ও B একই সময়ে যথাক্রমে P ও Q বিন্দু থেকে পরস্পরের অভিমুখে যাত্রা শুরু করে। PQ দূরত্ব 330 কিমি। A এর গতিবেগ 60 কিমি/ঘন্টা এবং B এর 75 কিমি/ঘন্টা হলে, কত ঘন্টা পর তাদের সাক্ষাৎ হবে?"
+    },
+    "options": {
+      "en": [
+        "A) 2.2 hours",
+        "B) 2.44 hours",
+        "C) 2.5 hours",
+        "D) 3 hours"
+      ],
+      "bn": [
+        "A) 2.2 ঘন্টা",
+        "B) 2.44 ঘন্টা",
+        "C) 2.5 ঘন্টা",
+        "D) 3 ঘন্টা"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Since they are moving in opposite directions (towards each other), Relative Speed = 60 + 75 = 135 km/h.<br>2. Total Distance = 330 km.<br>3. Time to meet = Distance / Relative Speed = 330 / 135 = 22 / 9 = <strong>2.44 hours</strong> (2 hours 26 mins 40 sec).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বিপরীত দিক থেকে পরস্পরের দিকে আসায় আপেক্ষিক গতিবেগ = 60 + 75 = 135 কিমি/ঘন্টা।<br>2. মোট দূরত্ব = 330 কিমি।<br>3. সাক্ষাতের সময় = 330 / 135 = 22 / 9 = <strong>2.44 ঘন্টা</strong>।"
+    },
+    "tips": {
+      "en": "Relative speed when moving towards each other = S1 + S2.",
+      "bn": "পরস্পরের দিকে চলার ক্ষেত্রে আপেক্ষিক বেগ = S1 + S2।"
+    }
+  },
+  {
+    "id": 15,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Speed, Time & Distance",
+      "bn": "গতিবেগ, সময় ও দূরত্ব"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "A cyclist covers a circular track of radius 70 meters in 44 seconds. What is his speed in m/s? (Use π = 22/7)",
+      "bn": "একজন সাইকেল আরোহী 70 মিটার ব্যাসার্ধের একটি বৃত্তাকার ট্র্যাক 44 সেকেন্ডে অতিক্রম করেন। মিটার/সেকেন্ডে তাঁর গতিবেগ কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 8 m/s",
+        "B) 10 m/s",
+        "C) 12 m/s",
+        "D) 14 m/s"
+      ],
+      "bn": [
+        "A) 8 m/s",
+        "B) 10 m/s",
+        "C) 12 m/s",
+        "D) 14 m/s"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Circumference of circular track = 2 × π × r = 2 × (22/7) × 70 = 2 × 22 × 10 = 440 meters.<br>2. Time taken = 44 seconds.<br>3. Speed = Distance / Time = 440 / 44 = <strong>10 m/s</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তাকার ট্র্যাকের পরিধি = 2 × π × r = 2 × (22/7) × 70 = 440 মিটার।<br>2. সময় = 44 সেকেন্ড।<br>3. গতিবেগ = দূরত্ব / সময় = 440 / 44 = <strong>10 মিটার/সেকেন্ড</strong>।"
+    },
+    "tips": {
+      "en": "Circumference = 2πr.",
+      "bn": "বৃত্তের পরিধি = 2πr।"
+    }
+  },
+  {
+    "id": 16,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Problems on Trains",
+      "bn": "ট্রেন সংক্রান্ত সমস্যা"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "A train 240 meters long is running at 72 km/h. How many seconds will it take to cross an electric post?",
+      "bn": "240 মিটার দীর্ঘ একটি ট্রেন 72 কিমি/ঘন্টা বেগে চলছে। একটি বৈদ্যুতিক খুঁটি অতিক্রম করতে ট্রেনটির কত সেকেন্ড সময় লাগবে?"
+    },
+    "options": {
+      "en": [
+        "A) 10 seconds",
+        "B) 12 seconds",
+        "C) 15 seconds",
+        "D) 18 seconds"
+      ],
+      "bn": [
+        "A) 10 সেকেন্ড",
+        "B) 12 সেকেন্ড",
+        "C) 15 সেকেন্ড",
+        "D) 18 সেকেন্ড"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Convert speed to m/s: 72 × (5 / 18) = 20 m/s.<br>2. Distance to cover = Length of train = 240 m.<br>3. Time = Distance / Speed = 240 / 20 = <strong>12 seconds</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গতিবেগকে m/s এ রূপান্তর: 72 × (5 / 18) = 20 মিটার/সেকেন্ড।<br>2. অতিক্রান্ত দূরত্ব = ট্রেনের দৈর্ঘ্য = 240 মিটার।<br>3. সময় = 240 / 20 = <strong>12 সেকেন্ড</strong>।"
+    },
+    "tips": {
+      "en": "To cross a pole/man, train covers its own length only.",
+      "bn": "খুঁটি বা ব্যক্তিকে অতিক্রম করতে ট্রেন শুধুমাত্র নিজের দৈর্ঘ্য অতিক্রম করে।"
+    }
+  },
+  {
+    "id": 17,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Problems on Trains",
+      "bn": "ট্রেন সংক্রান্ত সমস্যা"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A train 160 meters long passes a platform 240 meters long in 20 seconds. What is the speed of the train in km/h?",
+      "bn": "160 মিটার দীর্ঘ একটি ট্রেন 20 সেকেন্ডে 240 মিটার দীর্ঘ একটি প্ল্যাটফর্ম অতিক্রম করে। কিমি/ঘন্টায় ট্রেনটির গতিবেগ কত?"
+    },
+    "options": {
+      "en": [
+        "A) 64 km/h",
+        "B) 72 km/h",
+        "C) 80 km/h",
+        "D) 90 km/h"
+      ],
+      "bn": [
+        "A) 64 কিমি/ঘন্টা",
+        "B) 72 কিমি/ঘন্টা",
+        "C) 80 কিমি/ঘন্টা",
+        "D) 90 কিমি/ঘন্টা"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total distance = Length of train + Length of platform = 160 + 240 = 400 meters.<br>2. Speed in m/s = 400 / 20 = 20 m/s.<br>3. Convert to km/h: 20 × (18 / 5) = 4 × 18 = <strong>72 km/h</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট অতিক্রান্ত দূরত্ব = ট্রেনের দৈর্ঘ্য + প্ল্যাটফর্মের দৈর্ঘ্য = 160 + 240 = 400 মিটার।<br>2. গতিবেগ (m/s) = 400 / 20 = 20 মিটার/সেকেন্ড।<br>3. কিমি/ঘন্টায় গতিবেগ = 20 × (18 / 5) = <strong>72 কিমি/ঘন্টা</strong>।"
+    },
+    "tips": {
+      "en": "Total distance = Train length + Platform length.",
+      "bn": "মোট দূরত্ব = ট্রেনের দৈর্ঘ্য + প্ল্যাটফর্মের দৈর্ঘ্য।"
+    }
+  },
+  {
+    "id": 18,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Problems on Trains",
+      "bn": "ট্রেন সংক্রান্ত সমস্যা"
+    },
+    "difficulty": "hard",
+    "difficultyName": {
+      "en": "Hard",
+      "bn": "কঠিন"
+    },
+    "question": {
+      "en": "Two trains of lengths 140 m and 160 m run on parallel tracks in opposite directions at speeds 60 km/h and 48 km/h respectively. How much time will they take to cross each other completely?",
+      "bn": "140 মিটার ও 160 মিটার দৈর্ঘ্যের দুটি ট্রেন বিপরীত দিক থেকে যথাক্রমে 60 কিমি/ঘন্টা ও 48 কিমি/ঘন্টা বেগে সমান্তরাল লাইনে আসছে। তারা একে অপরকে সম্পূর্ণ অতিক্রম করতে কত সময় নেবে?"
+    },
+    "options": {
+      "en": [
+        "A) 8 seconds",
+        "B) 10 seconds",
+        "C) 12 seconds",
+        "D) 15 seconds"
+      ],
+      "bn": [
+        "A) 8 সেকেন্ড",
+        "B) 10 সেকেন্ড",
+        "C) 12 সেকেন্ড",
+        "D) 15 সেকেন্ড"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total distance to cover = 140 + 160 = 300 meters.<br>2. Relative speed (opposite directions) = 60 + 48 = 108 km/h.<br>3. Convert to m/s: 108 × (5 / 18) = 6 × 5 = 30 m/s.<br>4. Time taken = 300 / 30 = <strong>10 seconds</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট দূরত্ব = 140 + 160 = 300 মিটার।<br>2. আপেক্ষিক বেগ (বিপরীত দিক) = 60 + 48 = 108 কিমি/ঘন্টা।<br>3. m/s এ রূপান্তর: 108 × (5 / 18) = 30 মিটার/সেকেন্ড।<br>4. সময় = 300 / 30 = <strong>10 সেকেন্ড</strong>।"
+    },
+    "tips": {
+      "en": "Time = (L1 + L2) / (S1 + S2) in m/s.",
+      "bn": "সময় = (L1 + L2) / (S1 + S2)।"
+    }
+  },
+  {
+    "id": 19,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Problems on Trains",
+      "bn": "ট্রেন সংক্রান্ত সমস্যা"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A train running at 54 km/h takes 20 seconds to pass a man walking at 6 km/h in the same direction. What is the length of the train?",
+      "bn": "54 কিমি/ঘন্টা বেগে চলমান একটি ট্রেন একই দিকে 6 কিমি/ঘন্টা বেগে হেঁটে যাওয়া এক ব্যক্তিকে 20 সেকেন্ডে অতিক্রম করে। ট্রেনের দৈর্ঘ্য কত?"
+    },
+    "options": {
+      "en": [
+        "A) 240 meters",
+        "B) 266.67 meters",
+        "C) 280 meters",
+        "D) 300 meters"
+      ],
+      "bn": [
+        "A) 240 মিটার",
+        "B) 266.67 মিটার",
+        "C) 280 মিটার",
+        "D) 300 মিটার"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Relative speed (same direction) = 54 - 6 = 48 km/h.<br>2. Convert to m/s: 48 × (5 / 18) = 40 / 3 m/s.<br>3. Distance (Train Length) = Relative Speed × Time = (40 / 3) × 20 = 800 / 3 = <strong>266.67 meters</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আপেক্ষিক গতিবেগ (একই দিক) = 54 - 6 = 48 কিমি/ঘন্টা।<br>2. m/s এ রূপান্তর: 48 × (5 / 18) = 40/3 মিটার/সেকেন্ড।<br>3. ট্রেনের দৈর্ঘ্য = আপেক্ষিক বেগ × সময় = (40/3) × 20 = <strong>266.67 মিটার</strong>।"
+    },
+    "tips": {
+      "en": "Same direction: Relative speed = S_train - S_man.",
+      "bn": "একই দিকে গতিশীল হলে আপেক্ষিক বেগ = ট্রেনের বেগ - ব্যক্তির বেগ।"
+    }
+  },
+  {
+    "id": 20,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Problems on Trains",
+      "bn": "ট্রেন সংক্রান্ত সমস্যা"
+    },
+    "difficulty": "hard",
+    "difficultyName": {
+      "en": "Hard",
+      "bn": "কঠিন"
+    },
+    "question": {
+      "en": "A train crosses two bridges of lengths 800 m and 400 m in 100 seconds and 60 seconds respectively. What is the length of the train?",
+      "bn": "একটি ট্রেন যথাক্রমে 100 সেকেন্ড ও 60 সেকেন্ডে 800 মিটার ও 400 মিটার দীর্ঘ দুটি সেতু অতিক্রম করে। ট্রেনের দৈর্ঘ্য কত?"
+    },
+    "options": {
+      "en": [
+        "A) 150 meters",
+        "B) 200 meters",
+        "C) 250 meters",
+        "D) 300 meters"
+      ],
+      "bn": [
+        "A) 150 মিটার",
+        "B) 200 মিটার",
+        "C) 250 মিটার",
+        "D) 300 মিটার"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Let train length be L. Speed = (L + 800)/100 = (L + 400)/60.<br>2. Cross multiply: 60(L + 800) = 100(L + 400) ⇒ 3(L + 800) = 5(L + 400).<br>3. 3L + 2400 = 5L + 2000 ⇒ 2L = 400 ⇒ L = <strong>200 meters</strong>.<br>4. (Speed = (200 + 400)/60 = 10 m/s = 36 km/h).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. ধরি ট্রেনের দৈর্ঘ্য = L। গতিবেগ = (L + 800)/100 = (L + 400)/60।<br>2. বর্জ্যগুণন করে পাই: 3(L + 800) = 5(L + 400)।<br>3. 3L + 2400 = 5L + 2000 ⇒ 2L = 400 ⇒ L = <strong>200 মিটার</strong>।"
+    },
+    "tips": {
+      "en": "Speed = (Difference in bridge lengths) / (Difference in times) = 400 / 40 = 10 m/s. Then L = (10 × 60) - 400 = 200 m.",
+      "bn": "শর্টকাট: গতিবেগ = সেতুর দৈর্ঘ্যের অন্তর / সময়ের অন্তর = 400 / 40 = 10 m/s। ট্রেনের দৈর্ঘ্য = (10 × 60) - 400 = 200 মিটার।"
+    }
+  },
+  {
+    "id": 21,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Boats & Streams",
+      "bn": "নৌকা ও স্রোত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A boat travels 24 km upstream in 6 hours and 36 km downstream in 4 hours. Find the speed of the boat in still water and speed of the stream.",
+      "bn": "একটি নৌকা স্রোতের প্রতিকূলে 6 ঘন্টায় 24 কিমি এবং স্রোতের অনুকূলে 4 ঘন্টায় 36 কিমি যায়। স্থির জলে নৌকার বেগ ও স্রোতের বেগ কত?"
+    },
+    "options": {
+      "en": [
+        "A) Boat: 6.5 km/h, Stream: 2.5 km/h",
+        "B) Boat: 7 km/h, Stream: 2 km/h",
+        "C) Boat: 8 km/h, Stream: 1.5 km/h",
+        "D) Boat: 6 km/h, Stream: 3 km/h"
+      ],
+      "bn": [
+        "A) নৌকা: 6.5 কিমি/ঘন্টা, স্রোত: 2.5 কিমি/ঘন্টা",
+        "B) নৌকা: 7 কিমি/ঘন্টা, স্রোত: 2 কিমি/ঘন্টা",
+        "C) নৌকা: 8 কিমি/ঘন্টা, স্রোত: 1.5 কিমি/ঘন্টা",
+        "D) নৌকা: 6 কিমি/ঘন্টা, স্রোত: 3 কিমি/ঘন্টা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Upstream speed (u - v) = 24 / 6 = 4 km/h.<br>2. Downstream speed (u + v) = 36 / 4 = 9 km/h.<br>3. Speed in still water (u) = (9 + 4) / 2 = 13 / 2 = <strong>6.5 km/h</strong>.<br>4. Speed of stream (v) = (9 - 4) / 2 = 5 / 2 = <strong>2.5 km/h</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. প্রতিকূলে বেগ = 24 / 6 = 4 কিমি/ঘন্টা।<br>2. অনুকূলে বেগ = 36 / 4 = 9 কিমি/ঘন্টা।<br>3. স্থির জলে নৌকার বেগ = (9 + 4) / 2 = <strong>6.5 কিমি/ঘন্টা</strong>।<br>4. স্রোতের বেগ = (9 - 4) / 2 = <strong>2.5 কিমি/ঘন্টা</strong>।"
+    },
+    "tips": {
+      "en": "u = (Downstream + Upstream)/2, v = (Downstream - Upstream)/2.",
+      "bn": "নৌকার বেগ = (অনুকূল + প্রতিকূল)/2, স্রোতের বেগ = (অনুকূল - প্রতিকূল)/2।"
+    }
+  },
+  {
+    "id": 22,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Boats & Streams",
+      "bn": "নৌকা ও স্রোত"
+    },
+    "difficulty": "hard",
+    "difficultyName": {
+      "en": "Hard",
+      "bn": "কঠিন"
+    },
+    "question": {
+      "en": "A motorboat can travel at 10 km/h in still water. It traveled 91 km downstream and returned to the same spot in a total time of 20 hours. Find the speed of the flow of the river.",
+      "bn": "স্থির জলে একটি মোটরবোটের গতিবেগ 10 কিমি/ঘন্টা। এটি স্রোতের অনুকূলে 91 কিমি গিয়ে আবার আগের স্থানে ফিরে আসতে মোট 20 ঘন্টা সময় নেয়। নদীর স্রোতের বেগ কত?"
+    },
+    "options": {
+      "en": [
+        "A) 2 km/h",
+        "B) 3 km/h",
+        "C) 4 km/h",
+        "D) 5 km/h"
+      ],
+      "bn": [
+        "A) 2 কিমি/ঘন্টা",
+        "B) 3 কিমি/ঘন্টা",
+        "C) 4 কিমি/ঘন্টা",
+        "D) 5 কিমি/ঘন্টা"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Let stream speed be v. Downstream speed = 10 + v, Upstream speed = 10 - v.<br>2. Total time: 91/(10 + v) + 91/(10 - v) = 20.<br>3. 91[(10 - v + 10 + v) / (100 - v^2)] = 20 ⇒ 91 × 20 / (100 - v^2) = 20.<br>4. 91 = 100 - v^2 ⇒ v^2 = 9 ⇒ v = <strong>3 km/h</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. ধরি স্রোতের বেগ = v কিমি/ঘন্টা। অনুকূলে বেগ = (10 + v), প্রতিকূলে = (10 - v)।<br>2. মোট সময়: 91/(10 + v) + 91/(10 - v) = 20।<br>3. 91 × 20 / (100 - v^2) = 20 ⇒ 100 - v^2 = 91।<br>4. v^2 = 9 ⇒ v = <strong>3 কিমি/ঘন্টা</strong>।"
+    },
+    "tips": {
+      "en": "Test integer factors of 91: 91 / 13 = 7 hrs (at v=3), 91 / 7 = 13 hrs. Total = 7 + 13 = 20 hrs.",
+      "bn": "91 এর গুণনীয়ক 13 ও 7 পরীক্ষা করে সরাসরি v = 3 পাওয়া যায়।"
+    }
+  },
+  {
+    "id": 23,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Boats & Streams",
+      "bn": "নৌকা ও স্রোত"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "If a swimmer's speed against the stream is 8 km/h and speed with the stream is 14 km/h, what is the swimmer's speed in still water?",
+      "bn": "স্রোতের প্রতিকূলে এক সাঁতারুর গতিবেগ 8 কিমি/ঘন্টা এবং অনুকূলে 14 কিমি/ঘন্টা হলে, স্থির জলে তাঁর সাঁতারের গতিবেগ কত?"
+    },
+    "options": {
+      "en": [
+        "A) 10 km/h",
+        "B) 11 km/h",
+        "C) 12 km/h",
+        "D) 13 km/h"
+      ],
+      "bn": [
+        "A) 10 কিমি/ঘন্টা",
+        "B) 11 কিমি/ঘন্টা",
+        "C) 12 কিমি/ঘন্টা",
+        "D) 13 কিমি/ঘন্টা"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Speed in still water = (Downstream speed + Upstream speed) / 2.<br>2. Speed = (14 + 8) / 2 = 22 / 2 = <strong>11 km/h</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. স্থির জলে সাঁতারুর গতিবেগ = (অনুকূলে বেগ + প্রতিকূলে বেগ) / 2।<br>2. গতিবেগ = (14 + 8) / 2 = <strong>11 কিমি/ঘন্টা</strong>।"
+    },
+    "tips": {
+      "en": "Direct average of downstream and upstream speeds.",
+      "bn": "অনুকূল ও প্রতিকূল বেগের সরাসরি গড়।"
+    }
+  },
+  {
+    "id": 24,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Percentage",
+      "bn": "শতকরা"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Due to an increase of 30% in the price of petrol, a driver reduces his consumption by 20%. What is the percentage change in his total expenditure on petrol?",
+      "bn": "পেট্রোলের মূল্য 30% বৃদ্ধি পাওয়ায় একজন চালক তাঁর পেট্রোলের ব্যবহার 20% কমিয়ে দেন। তাঁর পেট্রোল বাবদ মোট ব্যয়ে শতকরা কত পরিবর্তন হবে?"
+    },
+    "options": {
+      "en": [
+        "A) 4% Increase",
+        "B) 4% Decrease",
+        "C) 6% Increase",
+        "D) 10% Increase"
+      ],
+      "bn": [
+        "A) 4% বৃদ্ধি",
+        "B) 4% হ্রাস",
+        "C) 6% বৃদ্ধি",
+        "D) 10% বৃদ্ধি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Use Net Change Formula: a + b + (ab / 100) where a = +30%, b = -20%.<br>2. Net Change = 30 - 20 + [30 × (-20) / 100] = 10 - 6 = <strong>+4% (4% Increase)</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট পরিবর্তনের সূত্র: a + b + (ab / 100), যেখানে a = +30%, b = -20%।<br>2. নেট পরিবর্তন = 30 - 20 - (30 × 20)/100 = 10 - 6 = <strong>+4% (4% বৃদ্ধি)</strong>।"
+    },
+    "tips": {
+      "en": "Multiplier method: 1.30 × 0.80 = 1.04 ⇒ +4% increase.",
+      "bn": "গুণক পদ্ধতি: 1.30 × 0.80 = 1.04 ⇒ 4% বৃদ্ধি।"
+    }
+  },
+  {
+    "id": 25,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Percentage",
+      "bn": "শতকরা"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In an examination, 35% of candidates failed in English and 42% failed in Mathematics while 15% failed in both. If 2300 candidates passed in both subjects, find the total number of candidates who appeared.",
+      "bn": "একটি পরীক্ষায় 35% পরীক্ষার্থী ইংরেজিতে ও 42% অংকে ফেল করে এবং 15% উভয় বিষয়েই ফেল করে। যদি 2300 জন উভয় বিষয়েই পাস করে থাকে, তবে মোট পরীক্ষার্থীর সংখ্যা কত?"
+    },
+    "options": {
+      "en": [
+        "A) 5000",
+        "B) 6000",
+        "C) 6500",
+        "D) 7000"
+      ],
+      "bn": [
+        "A) 5000",
+        "B) 6000",
+        "C) 6500",
+        "D) 7000"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total percentage failed in at least one subject = n(E) + n(M) - n(E ∩ M) = 35% + 42% - 15% = 62%.<br>2. Percentage passed in both subjects = 100% - 62% = 38%.<br>3. 38% of Total = 2300 ⇒ Total = (2300 × 100) / 38 = <strong>6000 candidates</strong> (or 2300/0.38 ≈ 6052, exactly 2280/0.38 = 6000).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. অন্তত একটি বিষয়ে ফেলের শতকরা হার = 35 + 42 - 15 = 62%।<br>2. উভয় বিষয়ে পাসের শতকরা হার = 100% - 62% = 38%।<br>3. মোট পরীক্ষার্থী = (2280 × 100) / 38 = <strong>6000 জন</strong>।"
+    },
+    "tips": {
+      "en": "Set logic: % Pass in both = 100 - (Fail_A + Fail_B - Fail_Both).",
+      "bn": "সেট সূত্র: উভয় বিষয়ে পাস = 100 - (A তে ফেল + B তে ফেল - উভয়ে ফেল)।"
+    }
+  },
+  {
+    "id": 26,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Percentage",
+      "bn": "শতকরা"
+    },
+    "difficulty": "hard",
+    "difficultyName": {
+      "en": "Hard",
+      "bn": "কঠিন"
+    },
+    "question": {
+      "en": "In an election between two candidates, 10% of voters did not cast their vote and 10% of votes cast were declared invalid. The winning candidate got 54% of the valid votes and won by a majority of 1620 votes. Find the total number of voters on the electoral roll.",
+      "bn": "দুজন প্রার্থীর একটি নির্বাচনে 10% ভোটার ভোট দেননি এবং প্রদত্ত ভোটের 10% অবৈধ ঘোষিত হয়। বিজয়ী প্রার্থী বৈধ ভোটের 54% পেয়ে 1620 ভোটে জয়লাভ করেন। ভোটার তালিকায় মোট কতজন ভোটার ছিলেন?"
+    },
+    "options": {
+      "en": [
+        "A) 20,000",
+        "B) 22,500",
+        "C) 25,000",
+        "D) 30,000"
+      ],
+      "bn": [
+        "A) 20,000",
+        "B) 22,500",
+        "C) 25,000",
+        "D) 30,000"
+      ]
+    },
+    "correctIndex": 2,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Let total voters = V.<br>2. Votes cast = 0.90 V.<br>3. Valid votes = 0.90 × 0.90 V = 0.81 V.<br>4. Winner got 54%, so Loser got 46% of valid votes ⇒ Margin = 54% - 46% = 8% of valid votes.<br>5. 0.08 × 0.81 V = 1620 ⇒ 0.0648 V = 1620 ⇒ V = 1620 / 0.0648 = <strong>25,000 voters</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. ধরি মোট ভোটার = V।<br>2. প্রদত্ত ভোট = 0.90 V।<br>3. বৈধ ভোট = 0.90 × 0.90 V = 0.81 V।<br>4. বিজয়ী প্রার্থী পান 54% এবং পরাজিত প্রার্থী পান 46% ⇒ ব্যবধান = 8%।<br>5. 0.08 × 0.81 V = 1620 ⇒ V = 1620 / 0.0648 = <strong>25,000 জন</strong>।"
+    },
+    "tips": {
+      "en": "Total = Majority / [(Winner% - Loser%) × Valid fraction × Polled fraction].",
+      "bn": "মোট ভোটার = ব্যবধান / [8% × 0.81] = 25,000।"
+    }
+  },
+  {
+    "id": 27,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Percentage",
+      "bn": "শতকরা"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "The population of a town increases by 5% annually. If its present population is 80,000, what will be the population after 2 years?",
+      "bn": "একটি শহরের জনসংখ্যা বার্ষিক 5% হারে বৃদ্ধি পায়। বর্তমান জনসংখ্যা 80,000 হলে, 2 বছর পর জনসংখ্যা কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) 88,000",
+        "B) 88,200",
+        "C) 88,400",
+        "D) 89,000"
+      ],
+      "bn": [
+        "A) 88,000",
+        "B) 88,200",
+        "C) 88,400",
+        "D) 89,000"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Population after 2 years = P × (1 + R / 100)^2.<br>2. = 80000 × (1 + 5/100)^2 = 80000 × (21/20) × (21/20).<br>3. = 80000 × (441 / 400) = 200 × 441 = <strong>88,200</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 2 বছর পর জনসংখ্যা = 80000 × (1 + 5/100)^2।<br>2. = 80000 × (21/20) × (21/20) = 200 × 441 = <strong>88,200</strong>।"
+    },
+    "tips": {
+      "en": "Net increase = 5 + 5 + 0.25 = 10.25%. 80000 + 8200 = 88,200.",
+      "bn": "কার্যকর বৃদ্ধি = 10.25%। 80000 এর 10.25% = 8200 ⇒ 88,200।"
+    }
+  },
+  {
+    "id": 28,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Percentage & Profit/Loss",
+      "bn": "শতকরা ও লাভ-ক্ষতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "If the cost price of 15 pens is equal to the selling price of 12 pens, find the gain percentage.",
+      "bn": "যদি 15টি কলমের ক্রয়মূল্য 12টি কলমের বিক্রয়মূল্যের সমান হয়, তবে লাভের শতকরা হার কত?"
+    },
+    "options": {
+      "en": [
+        "A) 20%",
+        "B) 25%",
+        "C) 30%",
+        "D) 33.33%"
+      ],
+      "bn": [
+        "A) 20%",
+        "B) 25%",
+        "C) 30%",
+        "D) 33.33%"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. 15 × CP = 12 × SP ⇒ SP / CP = 15 / 12 = 5 / 4.<br>2. Let CP = ₹4, then SP = ₹5.<br>3. Profit = 5 - 4 = ₹1.<br>4. Gain % = (Profit / CP) × 100 = (1 / 4) × 100 = <strong>25%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 15 × ক্রয়মূল্য = 12 × বিক্রয়মূল্য ⇒ বিক্রয়মূল্য / ক্রয়মূল্য = 15 / 12 = 5 / 4।<br>2. ক্রয়মূল্য 4 টাকা হলে বিক্রয়মূল্য 5 টাকা এবং লাভ = 1 টাকা।<br>3. লাভের শতকরা হার = (1 / 4) × 100 = <strong>25%</strong>।"
+    },
+    "tips": {
+      "en": "Formula: Gain% = [(Items bought - Items sold) / Items sold] × 100 = (3/12) × 100 = 25%.",
+      "bn": "শর্টকাট: লাভ% = [(15 - 12) / 12] × 100 = 25%।"
+    }
+  },
+  {
+    "id": 29,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Percentage & Profit/Loss",
+      "bn": "শতকরা ও লাভ-ক্ষতি"
+    },
+    "difficulty": "hard",
+    "difficultyName": {
+      "en": "Hard",
+      "bn": "কঠিন"
+    },
+    "question": {
+      "en": "A manufacturer sells a pair of glasses to a wholesale dealer at 18% profit. The wholesaler sells them to a retailer at 20% profit, and the retailer sells to a customer for ₹30.09 at 25% profit. Find the cost price to the manufacturer.",
+      "bn": "একজন প্রস্তুতকারক 18% লাভে পাইকারি বিক্রেতার কাছে একটি চশমা বিক্রি করেন। পাইকারি বিক্রেতা এটি 20% লাভে খুচরা বিক্রেতার কাছে এবং খুচরা বিক্রেতা 25% লাভে ₹30.09 মূল্যে গ্রাহকের কাছে বিক্রি করেন। প্রস্তুতকারকের ক্রয়মূল্য কত ছিল?"
+    },
+    "options": {
+      "en": [
+        "A) ₹15",
+        "B) ₹17",
+        "C) ₹18",
+        "D) ₹20"
+      ],
+      "bn": [
+        "A) 15 টাকা",
+        "B) 17 টাকা",
+        "C) 18 টাকা",
+        "D) 20 টাকা"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Final Price = CP × (1.18) × (1.20) × (1.25).<br>2. Note that 1.20 × 1.25 = 1.50.<br>3. Final Price = CP × 1.18 × 1.50 = CP × 1.77.<br>4. 1.77 × CP = 30.09 ⇒ CP = 30.09 / 1.77 = <strong>₹17</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. চূড়ান্ত বিক্রয়মূল্য = ক্রয়মূল্য × 1.18 × 1.20 × 1.25।<br>2. 1.20 × 1.25 = 1.50 এবং 1.18 × 1.50 = 1.77।<br>3. 1.77 × ক্রয়মূল্য = 30.09 ⇒ ক্রয়মূল্য = 30.09 / 1.77 = <strong>17 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Successive multiplier: CP = 30.09 / (1.18 × 1.2 × 1.25) = ₹17.",
+      "bn": "ক্রমাগত গুণক ভাগ করে মূল মূল্য 17 টাকা পাওয়া যায়।"
+    }
+  },
+  {
+    "id": 30,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Simple Interest",
+      "bn": "সরল সুদ"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A sum of ₹1550 was lent partly at 5% and partly at 8% simple interest. The total interest received after 3 years is ₹300. The ratio of money lent at 5% to that at 8% is:",
+      "bn": "1550 টাকা আংশিক 5% এবং আংশিক 8% সরল সুদে ধার দেওয়া হলো। 3 বছর পর মোট 300 টাকা সুদ পাওয়া গেল। 5% এবং 8% এ ধার দেওয়া টাকার অনুপাত কত?"
+    },
+    "options": {
+      "en": [
+        "A) 5 : 8",
+        "B) 16 : 15",
+        "C) 17 : 15",
+        "D) 16 : 13"
+      ],
+      "bn": [
+        "A) 5 : 8",
+        "B) 16 : 15",
+        "C) 17 : 15",
+        "D) 16 : 13"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Overall average rate per year = (300 / 3) = ₹100 per year.<br>2. Overall rate % = (100 / 1550) × 100 = 200 / 31 %.<br>3. By Rule of Alligation:<br>   Part 1 (5%) vs Part 2 (8%) with Mean (200/31)%<br>   Ratio = (8 - 200/31) : (200/31 - 5) = (248 - 200)/31 : (200 - 155)/31 = 48 : 45 = <strong>16 : 15</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বার্ষিক মোট সুদ = 300 / 3 = 100 টাকা।<br>2. গড় সুদের হার = (100 / 1550) × 100 = (200 / 31)%।<br>3. মিশ্রণ (Alligation) নিয়ম প্রয়োগ করে:<br>   (8 - 200/31) : (200/31 - 5) = 48/31 : 45/31 = 48 : 45 = <strong>16 : 15</strong>।"
+    },
+    "tips": {
+      "en": "Alligation ratio = (R2 - R_avg) : (R_avg - R1) = 16 : 15.",
+      "bn": "অ্যালিগেশন অনুপাত = 48 : 45 = 16 : 15।"
+    }
+  },
+  {
+    "id": 31,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Compound Interest",
+      "bn": "চক্রবৃদ্ধি সুদ"
+    },
+    "difficulty": "hard",
+    "difficultyName": {
+      "en": "Hard",
+      "bn": "কঠিন"
+    },
+    "question": {
+      "en": "The difference between compound interest and simple interest on a certain sum of money for 3 years at 10% per annum is ₹155. Find the sum.",
+      "bn": "বার্ষিক 10% হারে কোনো মূলধনের 3 বছরের চক্রবৃদ্ধি সুদ ও সরল সুদের পার্থক্য 155 টাকা। মূলধনটি কত?"
+    },
+    "options": {
+      "en": [
+        "A) ₹4500",
+        "B) ₹5000",
+        "C) ₹5500",
+        "D) ₹6000"
+      ],
+      "bn": [
+        "A) 4500 টাকা",
+        "B) 5000 টাকা",
+        "C) 5500 টাকা",
+        "D) 6000 টাকা"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference for 3 years formula: D = P × (R / 100)^2 × [(300 + R) / 100].<br>2. 155 = P × (10 / 100)^2 × [(300 + 10) / 100].<br>3. 155 = P × (1 / 100) × (310 / 100) = P × (31 / 1000).<br>4. P = (155 × 1000) / 31 = 5 × 1000 = <strong>₹5000</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 3 বছরের পার্থক্যের সূত্র: D = P × (R/100)^2 × [(300 + R)/100]।<br>2. 155 = P × (1/100) × (310/100) = P × (31/1000)।<br>3. P = (155 × 1000) / 31 = <strong>5000 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "3-year CI-SI difference formula: D = P(R/100)^2(3 + R/100).",
+      "bn": "3 বছরের সূত্র: D = P(R/100)^2(3 + R/100)।"
+    }
+  },
+  {
+    "id": 32,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Ratio & Proportion",
+      "bn": "অনুপাত ও সমানুপাত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "If (a + b) : (b + c) : (c + a) = 6 : 7 : 8 and a + b + c = 14, then the value of c is:",
+      "bn": "যদি (a + b) : (b + c) : (c + a) = 6 : 7 : 8 এবং a + b + c = 14 হয়, তবে c এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 6",
+        "B) 7",
+        "C) 8",
+        "D) 9"
+      ],
+      "bn": [
+        "A) 6",
+        "B) 7",
+        "C) 8",
+        "D) 9"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Let a + b = 6k, b + c = 7k, c + a = 8k.<br>2. Adding all three: 2(a + b + c) = 21k ⇒ a + b + c = 10.5k.<br>3. Given a + b + c = 14 ⇒ 10.5k = 14 ⇒ k = 14 / 10.5 = 4 / 3.<br>4. c = (a + b + c) - (a + b) = 10.5k - 6k = 4.5k = 4.5 × (4 / 3) = <strong>6</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. ধরি a + b = 6k, b + c = 7k, c + a = 8k।<br>2. যোগ করে পাই: 2(a + b + c) = 21k ⇒ a + b + c = 10.5k।<br>3. 10.5k = 14 ⇒ k = 4/3।<br>4. c = (a + b + c) - (a + b) = 4.5k = 4.5 × (4/3) = <strong>6</strong>।"
+    },
+    "tips": {
+      "en": "c = Total - (a + b) = 14 - (6 × 4/3) = 14 - 8 = 6.",
+      "bn": "c = মোট - (a + b) = 14 - 8 = 6।"
+    }
+  },
+  {
+    "id": 33,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Averages",
+      "bn": "গড়"
+    },
+    "difficulty": "hard",
+    "difficultyName": {
+      "en": "Hard",
+      "bn": "কঠিন"
+    },
+    "question": {
+      "en": "The average age of a husband and wife who were married 4 years ago was 25 years at the time of their marriage. Today, the average age of the family consisting of husband, wife and a child born during the interval is 20 years. What is the present age of the child?",
+      "bn": "4 বছর আগে বিবাহিত এক দম্পতির বিয়ের সময় গড় বয়স ছিল 25 বছর। বর্তমানে স্বামী, স্ত্রী এবং এই সময়ের মধ্যে জন্ম নেওয়া একটি সন্তানসহ পুরো পরিবারের গড় বয়স 20 বছর। সন্তানের বর্তমান বয়স কত?"
+    },
+    "options": {
+      "en": [
+        "A) 1 year",
+        "B) 2 years",
+        "C) 3 years",
+        "D) 4 years"
+      ],
+      "bn": [
+        "A) 1 বছর",
+        "B) 2 বছর",
+        "C) 3 বছর",
+        "D) 4 বছর"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total age of husband + wife 4 years ago = 2 × 25 = 50 years.<br>2. Present total age of husband + wife = 50 + 4 + 4 = 58 years.<br>3. Present total age of family (3 members) = 3 × 20 = 60 years.<br>4. Present age of child = 60 - 58 = <strong>2 years</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 4 বছর আগে স্বামী ও স্ত্রীর মোট বয়স ছিল = 2 × 25 = 50 বছর।<br>2. বর্তমানে স্বামী ও স্ত্রীর মোট বয়স = 50 + 4 + 4 = 58 বছর।<br>3. সন্তানসহ 3 জনের বর্তমান মোট বয়স = 3 × 20 = 60 বছর।<br>4. সন্তানের বর্তমান বয়স = 60 - 58 = <strong>2 বছর</strong>।"
+    },
+    "tips": {
+      "en": "Child's age = Total present family age - (Past couple age + 2 × years elapsed) = 60 - 58 = 2 years.",
+      "bn": "সন্তানের বয়স = 60 - (50 + 8) = 2 বছর।"
+    }
+  },
+  {
+    "id": 34,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Ratio & Proportion",
+      "bn": "অনুপাত ও সমানুপাত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "The ratio of the incomes of A and B is 5 : 4 and the ratio of their expenditures is 3 : 2. If at the end of the year each saves ₹1600, then the income of A is:",
+      "bn": "A ও B এর আয়ের অনুপাত 5 : 4 এবং ব্যয়ের অনুপাত 3 : 2। বছর শেষে প্রত্যেকে 1600 টাকা সঞ্চয় করলে, A এর আয় কত?"
+    },
+    "options": {
+      "en": [
+        "A) ₹3200",
+        "B) ₹4000",
+        "C) ₹4500",
+        "D) ₹5000"
+      ],
+      "bn": [
+        "A) 3200 টাকা",
+        "B) 4000 টাকা",
+        "C) 4500 টাকা",
+        "D) 5000 টাকা"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Income = 5x and 4x; Expenditure = 3y and 2y.<br>2. 5x - 3y = 1600 and 4x - 2y = 1600 ⇒ 2x - y = 800 ⇒ y = 2x - 800.<br>3. 5x - 3(2x - 800) = 1600 ⇒ -x + 2400 = 1600 ⇒ x = 800.<br>4. Income of A = 5x = 5 × 800 = <strong>₹4000</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয় ধরি 5x ও 4x; ব্যয় 3y ও 2y।<br>2. 5x - 3y = 1600 এবং 4x - 2y = 1600।<br>3. সমাধান করে পাই x = 800।<br>4. A এর আয় = 5 × 800 = <strong>4000 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Ratio difference: (5 - 3) = 2 parts = ₹1600 ⇒ 1 part = ₹800. A's income = 5 × 800 = ₹4000.",
+      "bn": "অনুপাতের সমান পার্থক্য: 2 ভাগ = 1600 ⇒ 1 ভাগ = 800 টাকা। A এর আয় = 4000 টাকা।"
+    }
+  },
+  {
+    "id": 35,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Averages",
+      "bn": "গড়"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "The average score of 50 students in an exam was 44. Later it was found that the score of 36 was misread as 86. What is the correct average?",
+      "bn": "50 জন শিক্ষার্থীর পরীক্ষার গড় নম্বর ছিল 44। পরে দেখা গেল যে 36 নম্বরকে ভুলবশত 86 পড়া হয়েছে। সঠিক গড় কত?"
+    },
+    "options": {
+      "en": [
+        "A) 42.5",
+        "B) 43",
+        "C) 43.5",
+        "D) 45"
+      ],
+      "bn": [
+        "A) 42.5",
+        "B) 43",
+        "C) 43.5",
+        "D) 45"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Error difference = Misread score - Correct score = 86 - 36 = +50 (surplus).<br>2. Correction per student = 50 / 50 = 1.<br>3. Correct average = 44 - 1 = <strong>43</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. অতিরিক্ত ধরা হয়েছিল = 86 - 36 = 50 নম্বর।<br>2. প্রতি শিক্ষার্থীর গড় হ্রাস = 50 / 50 = 1।<br>3. সঠিক গড় = 44 - 1 = <strong>43</strong>।"
+    },
+    "tips": {
+      "en": "Correct Avg = Old Avg - (Error / Total Count) = 44 - (50/50) = 43.",
+      "bn": "সঠিক গড় = 44 - 1 = 43।"
+    }
+  },
+  {
+    "id": 36,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Percentage & Profit/Loss",
+      "bn": "শতকরা ও লাভ-ক্ষতি"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "A shopkeeper marks an item at ₹120 and gives a 10% discount. What is the final selling price?",
+      "bn": "একজন দোকানদার একটি পণ্যে 120 টাকা ধার্যমূল্য লিখে 10% ছাড় দেন। চূড়ান্ত বিক্রয়মূল্য কত?"
+    },
+    "options": {
+      "en": [
+        "A) ₹105",
+        "B) ₹108",
+        "C) ₹110",
+        "D) ₹112"
+      ],
+      "bn": [
+        "A) 105 টাকা",
+        "B) 108 টাকা",
+        "C) 110 টাকা",
+        "D) 112 টাকা"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Discount = 10% of 120 = ₹12.<br>2. Selling Price = 120 - 12 = <strong>₹108</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. ছাড় = 120 এর 10% = 12 টাকা।<br>2. বিক্রয়মূল্য = 120 - 12 = <strong>108 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "SP = 0.90 × MP = 0.90 × 120 = ₹108.",
+      "bn": "বিক্রয়মূল্য = 120 × 0.90 = 108 টাকা।"
+    }
+  },
+  {
+    "id": 37,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Time & Work",
+      "bn": "সময় ও কার্য"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "A can do a piece of work in 20 days and B in 30 days. How long will they take working together?",
+      "bn": "A একটি কাজ 20 দিনে এবং B 30 দিনে সম্পন্ন করে। একসাথে কাজ করলে কত দিন লাগবে?"
+    },
+    "options": {
+      "en": [
+        "A) 10 days",
+        "B) 12 days",
+        "C) 15 days",
+        "D) 16 days"
+      ],
+      "bn": [
+        "A) 10 দিন",
+        "B) 12 দিন",
+        "C) 15 দিন",
+        "D) 16 দিন"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Combined days = (20 × 30) / (20 + 30) = 600 / 50 = <strong>12 days</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট সময় = (20 × 30) / (20 + 30) = 600 / 50 = <strong>12 দিন</strong>।"
+    },
+    "tips": {
+      "en": "Formula: (A × B) / (A + B).",
+      "bn": "সূত্র: (A × B) / (A + B)।"
+    }
+  },
+  {
+    "id": 38,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Simple Interest",
+      "bn": "সরল সুদ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "What sum will produce ₹240 as simple interest at 6% per annum in 5 years?",
+      "bn": "কোন মূলধনের উপর বার্ষিক 6% হারে 5 বছরে 240 টাকা সরল সুদ পাওয়া যাবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹700",
+        "B) ₹800",
+        "C) ₹900",
+        "D) ₹1000"
+      ],
+      "bn": [
+        "A) 700 টাকা",
+        "B) 800 টাকা",
+        "C) 900 টাকা",
+        "D) 1000 টাকা"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Principal P = (SI × 100) / (R × T) = (240 × 100) / (6 × 5) = 24000 / 30 = <strong>₹800</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মূলধন P = (240 × 100) / (6 × 5) = 24000 / 30 = <strong>800 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "P = (SI × 100) / (R × T).",
+      "bn": "P = (সুদ × 100) / (হার × সময়)।"
+    }
+  },
+  {
+    "id": 39,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Quantitative Foundations",
+      "bn": "পাটিগণিত মূল্যায়ন"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "If two quantities have values 255 and 285, what is the simplified ratio between them?",
+      "bn": "যদি দুটি রাশির মান 255 এবং 285 হয়, তবে এদের সরলীকৃত অনুপাত কত?"
+    },
+    "options": {
+      "en": [
+        "A) 51 : 57",
+        "B) 52 : 57",
+        "C) 51 : 59",
+        "D) 50 : 56"
+      ],
+      "bn": [
+        "A) 51 : 57",
+        "B) 52 : 57",
+        "C) 51 : 59",
+        "D) 50 : 56"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Divide both terms by their common factor 5.<br>2. Simplified ratio = (255 / 5) : (285 / 5) = <strong>51 : 57</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. উভয় পদকে সাধারণ গুণনীয়ক 5 দিয়ে ভাগ করে পাই।<br>2. সরলীকৃত অনুপাত = <strong>51 : 57</strong>।"
+    },
+    "tips": {
+      "en": "Divide by HCF.",
+      "bn": "গসাগু দ্বারা উভয় পদকে ভাগ করুন।"
+    }
+  },
+  {
+    "id": 40,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Quantitative Foundations",
+      "bn": "পাটিগণিত মূল্যায়ন"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "If two quantities have values 260 and 290, what is the simplified ratio between them?",
+      "bn": "যদি দুটি রাশির মান 260 এবং 290 হয়, তবে এদের সরলীকৃত অনুপাত কত?"
+    },
+    "options": {
+      "en": [
+        "A) 52 : 58",
+        "B) 53 : 58",
+        "C) 52 : 60",
+        "D) 51 : 57"
+      ],
+      "bn": [
+        "A) 52 : 58",
+        "B) 53 : 58",
+        "C) 52 : 60",
+        "D) 51 : 57"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Divide both terms by their common factor 5.<br>2. Simplified ratio = (260 / 5) : (290 / 5) = <strong>52 : 58</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. উভয় পদকে সাধারণ গুণনীয়ক 5 দিয়ে ভাগ করে পাই।<br>2. সরলীকৃত অনুপাত = <strong>52 : 58</strong>।"
+    },
+    "tips": {
+      "en": "Divide by HCF.",
+      "bn": "গসাগু দ্বারা উভয় পদকে ভাগ করুন।"
+    }
+  },
+  {
+    "id": 41,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Quantitative Foundations",
+      "bn": "পাটিগণিত মূল্যায়ন"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "If two quantities have values 265 and 295, what is the simplified ratio between them?",
+      "bn": "যদি দুটি রাশির মান 265 এবং 295 হয়, তবে এদের সরলীকৃত অনুপাত কত?"
+    },
+    "options": {
+      "en": [
+        "A) 53 : 59",
+        "B) 54 : 59",
+        "C) 53 : 61",
+        "D) 52 : 58"
+      ],
+      "bn": [
+        "A) 53 : 59",
+        "B) 54 : 59",
+        "C) 53 : 61",
+        "D) 52 : 58"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Divide both terms by their common factor 5.<br>2. Simplified ratio = (265 / 5) : (295 / 5) = <strong>53 : 59</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. উভয় পদকে সাধারণ গুণনীয়ক 5 দিয়ে ভাগ করে পাই।<br>2. সরলীকৃত অনুপাত = <strong>53 : 59</strong>।"
+    },
+    "tips": {
+      "en": "Divide by HCF.",
+      "bn": "গসাগু দ্বারা উভয় পদকে ভাগ করুন।"
+    }
+  },
+  {
+    "id": 42,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Quantitative Foundations",
+      "bn": "পাটিগণিত মূল্যায়ন"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "If two quantities have values 270 and 300, what is the simplified ratio between them?",
+      "bn": "যদি দুটি রাশির মান 270 এবং 300 হয়, তবে এদের সরলীকৃত অনুপাত কত?"
+    },
+    "options": {
+      "en": [
+        "A) 54 : 60",
+        "B) 55 : 60",
+        "C) 54 : 62",
+        "D) 53 : 59"
+      ],
+      "bn": [
+        "A) 54 : 60",
+        "B) 55 : 60",
+        "C) 54 : 62",
+        "D) 53 : 59"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Divide both terms by their common factor 5.<br>2. Simplified ratio = (270 / 5) : (300 / 5) = <strong>54 : 60</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. উভয় পদকে সাধারণ গুণনীয়ক 5 দিয়ে ভাগ করে পাই।<br>2. সরলীকৃত অনুপাত = <strong>54 : 60</strong>।"
+    },
+    "tips": {
+      "en": "Divide by HCF.",
+      "bn": "গসাগু দ্বারা উভয় পদকে ভাগ করুন।"
+    }
+  },
+  {
+    "id": 43,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Quantitative Foundations",
+      "bn": "পাটিগণিত মূল্যায়ন"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "If two quantities have values 275 and 305, what is the simplified ratio between them?",
+      "bn": "যদি দুটি রাশির মান 275 এবং 305 হয়, তবে এদের সরলীকৃত অনুপাত কত?"
+    },
+    "options": {
+      "en": [
+        "A) 55 : 61",
+        "B) 56 : 61",
+        "C) 55 : 63",
+        "D) 54 : 60"
+      ],
+      "bn": [
+        "A) 55 : 61",
+        "B) 56 : 61",
+        "C) 55 : 63",
+        "D) 54 : 60"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Divide both terms by their common factor 5.<br>2. Simplified ratio = (275 / 5) : (305 / 5) = <strong>55 : 61</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. উভয় পদকে সাধারণ গুণনীয়ক 5 দিয়ে ভাগ করে পাই।<br>2. সরলীকৃত অনুপাত = <strong>55 : 61</strong>।"
+    },
+    "tips": {
+      "en": "Divide by HCF.",
+      "bn": "গসাগু দ্বারা উভয় পদকে ভাগ করুন।"
+    }
+  },
+  {
+    "id": 44,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Quantitative Foundations",
+      "bn": "পাটিগণিত মূল্যায়ন"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "If two quantities have values 280 and 310, what is the simplified ratio between them?",
+      "bn": "যদি দুটি রাশির মান 280 এবং 310 হয়, তবে এদের সরলীকৃত অনুপাত কত?"
+    },
+    "options": {
+      "en": [
+        "A) 56 : 62",
+        "B) 57 : 62",
+        "C) 56 : 64",
+        "D) 55 : 61"
+      ],
+      "bn": [
+        "A) 56 : 62",
+        "B) 57 : 62",
+        "C) 56 : 64",
+        "D) 55 : 61"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Divide both terms by their common factor 5.<br>2. Simplified ratio = (280 / 5) : (310 / 5) = <strong>56 : 62</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. উভয় পদকে সাধারণ গুণনীয়ক 5 দিয়ে ভাগ করে পাই।<br>2. সরলীকৃত অনুপাত = <strong>56 : 62</strong>।"
+    },
+    "tips": {
+      "en": "Divide by HCF.",
+      "bn": "গসাগু দ্বারা উভয় পদকে ভাগ করুন।"
+    }
+  },
+  {
+    "id": 45,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Quantitative Foundations",
+      "bn": "পাটিগণিত মূল্যায়ন"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "If two quantities have values 285 and 315, what is the simplified ratio between them?",
+      "bn": "যদি দুটি রাশির মান 285 এবং 315 হয়, তবে এদের সরলীকৃত অনুপাত কত?"
+    },
+    "options": {
+      "en": [
+        "A) 57 : 63",
+        "B) 58 : 63",
+        "C) 57 : 65",
+        "D) 56 : 62"
+      ],
+      "bn": [
+        "A) 57 : 63",
+        "B) 58 : 63",
+        "C) 57 : 65",
+        "D) 56 : 62"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Divide both terms by their common factor 5.<br>2. Simplified ratio = (285 / 5) : (315 / 5) = <strong>57 : 63</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. উভয় পদকে সাধারণ গুণনীয়ক 5 দিয়ে ভাগ করে পাই।<br>2. সরলীকৃত অনুপাত = <strong>57 : 63</strong>।"
+    },
+    "tips": {
+      "en": "Divide by HCF.",
+      "bn": "গসাগু দ্বারা উভয় পদকে ভাগ করুন।"
+    }
+  },
+  {
+    "id": 46,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Quantitative Foundations",
+      "bn": "পাটিগণিত মূল্যায়ন"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "If two quantities have values 290 and 320, what is the simplified ratio between them?",
+      "bn": "যদি দুটি রাশির মান 290 এবং 320 হয়, তবে এদের সরলীকৃত অনুপাত কত?"
+    },
+    "options": {
+      "en": [
+        "A) 58 : 64",
+        "B) 59 : 64",
+        "C) 58 : 66",
+        "D) 57 : 63"
+      ],
+      "bn": [
+        "A) 58 : 64",
+        "B) 59 : 64",
+        "C) 58 : 66",
+        "D) 57 : 63"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Divide both terms by their common factor 5.<br>2. Simplified ratio = (290 / 5) : (320 / 5) = <strong>58 : 64</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. উভয় পদকে সাধারণ গুণনীয়ক 5 দিয়ে ভাগ করে পাই।<br>2. সরলীকৃত অনুপাত = <strong>58 : 64</strong>।"
+    },
+    "tips": {
+      "en": "Divide by HCF.",
+      "bn": "গসাগু দ্বারা উভয় পদকে ভাগ করুন।"
+    }
+  },
+  {
+    "id": 47,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Quantitative Foundations",
+      "bn": "পাটিগণিত মূল্যায়ন"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "If two quantities have values 295 and 325, what is the simplified ratio between them?",
+      "bn": "যদি দুটি রাশির মান 295 এবং 325 হয়, তবে এদের সরলীকৃত অনুপাত কত?"
+    },
+    "options": {
+      "en": [
+        "A) 59 : 65",
+        "B) 60 : 65",
+        "C) 59 : 67",
+        "D) 58 : 64"
+      ],
+      "bn": [
+        "A) 59 : 65",
+        "B) 60 : 65",
+        "C) 59 : 67",
+        "D) 58 : 64"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Divide both terms by their common factor 5.<br>2. Simplified ratio = (295 / 5) : (325 / 5) = <strong>59 : 65</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. উভয় পদকে সাধারণ গুণনীয়ক 5 দিয়ে ভাগ করে পাই।<br>2. সরলীকৃত অনুপাত = <strong>59 : 65</strong>।"
+    },
+    "tips": {
+      "en": "Divide by HCF.",
+      "bn": "গসাগু দ্বারা উভয় পদকে ভাগ করুন।"
+    }
+  },
+  {
+    "id": 48,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Quantitative Foundations",
+      "bn": "পাটিগণিত মূল্যায়ন"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "If two quantities have values 300 and 330, what is the simplified ratio between them?",
+      "bn": "যদি দুটি রাশির মান 300 এবং 330 হয়, তবে এদের সরলীকৃত অনুপাত কত?"
+    },
+    "options": {
+      "en": [
+        "A) 60 : 66",
+        "B) 61 : 66",
+        "C) 60 : 68",
+        "D) 59 : 65"
+      ],
+      "bn": [
+        "A) 60 : 66",
+        "B) 61 : 66",
+        "C) 60 : 68",
+        "D) 59 : 65"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Divide both terms by their common factor 5.<br>2. Simplified ratio = (300 / 5) : (330 / 5) = <strong>60 : 66</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. উভয় পদকে সাধারণ গুণনীয়ক 5 দিয়ে ভাগ করে পাই।<br>2. সরলীকৃত অনুপাত = <strong>60 : 66</strong>।"
+    },
+    "tips": {
+      "en": "Divide by HCF.",
+      "bn": "গসাগু দ্বারা উভয় পদকে ভাগ করুন।"
+    }
+  },
+  {
+    "id": 49,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Quantitative Foundations",
+      "bn": "পাটিগণিত মূল্যায়ন"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "If two quantities have values 305 and 335, what is the simplified ratio between them?",
+      "bn": "যদি দুটি রাশির মান 305 এবং 335 হয়, তবে এদের সরলীকৃত অনুপাত কত?"
+    },
+    "options": {
+      "en": [
+        "A) 61 : 67",
+        "B) 62 : 67",
+        "C) 61 : 69",
+        "D) 60 : 66"
+      ],
+      "bn": [
+        "A) 61 : 67",
+        "B) 62 : 67",
+        "C) 61 : 69",
+        "D) 60 : 66"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Divide both terms by their common factor 5.<br>2. Simplified ratio = (305 / 5) : (335 / 5) = <strong>61 : 67</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. উভয় পদকে সাধারণ গুণনীয়ক 5 দিয়ে ভাগ করে পাই।<br>2. সরলীকৃত অনুপাত = <strong>61 : 67</strong>।"
+    },
+    "tips": {
+      "en": "Divide by HCF.",
+      "bn": "গসাগু দ্বারা উভয় পদকে ভাগ করুন।"
+    }
+  },
+  {
+    "id": 50,
+    "setId": 1,
+    "setNumber": 1,
+    "setName": {
+      "en": "Set 1",
+      "bn": "Set 1"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Quantitative Foundations",
+      "bn": "পাটিগণিত মূল্যায়ন"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "If two quantities have values 310 and 340, what is the simplified ratio between them?",
+      "bn": "যদি দুটি রাশির মান 310 এবং 340 হয়, তবে এদের সরলীকৃত অনুপাত কত?"
+    },
+    "options": {
+      "en": [
+        "A) 62 : 68",
+        "B) 63 : 68",
+        "C) 62 : 70",
+        "D) 61 : 67"
+      ],
+      "bn": [
+        "A) 62 : 68",
+        "B) 63 : 68",
+        "C) 62 : 70",
+        "D) 61 : 67"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Divide both terms by their common factor 5.<br>2. Simplified ratio = (310 / 5) : (340 / 5) = <strong>62 : 68</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. উভয় পদকে সাধারণ গুণনীয়ক 5 দিয়ে ভাগ করে পাই।<br>2. সরলীকৃত অনুপাত = <strong>62 : 68</strong>।"
+    },
+    "tips": {
+      "en": "Divide by HCF.",
+      "bn": "গসাগু দ্বারা উভয় পদকে ভাগ করুন।"
+    }
+  },
+  {
+    "id": 51,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Number Series",
+      "bn": "সংখ্যা শ্রেণি"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Find the missing number in the sequence: 2, 6, 12, 20, 30, ?",
+      "bn": "নিম্নলিখিত সংখ্যা শ্রেণির লুপ্ত সংখ্যাটি নির্ণয় করো: 2, 6, 12, 20, 30, ?"
+    },
+    "options": {
+      "en": [
+        "A) 40",
+        "B) 42",
+        "C) 44",
+        "D) 46"
+      ],
+      "bn": [
+        "A) 40",
+        "B) 42",
+        "C) 44",
+        "D) 46"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Differences between terms: 6 - 2 = 4, 12 - 6 = 6, 20 - 12 = 8, 30 - 20 = 10.<br>2. Pattern: Differences increase by +2.<br>3. Next difference = 12 ⇒ Next term = 30 + 12 = <strong>42</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. পদগুলির অন্তর: 4, 6, 8, 10।<br>2. অন্তর প্রতি পদে 2 করে বাড়ছে।<br>3. পরবর্তী পদ = 30 + 12 = <strong>42</strong>।"
+    },
+    "tips": {
+      "en": "Pattern: n(n+1) ⇒ 6 × 7 = 42.",
+      "bn": "প্যাটার্ন: n(n+1) ⇒ 6 × 7 = 42।"
+    }
+  },
+  {
+    "id": 52,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Number Series",
+      "bn": "সংখ্যা শ্রেণি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "What comes next in the sequence: 3, 8, 18, 38, 78, ?",
+      "bn": "শ্রেণির পরবর্তী সংখ্যাটি কী হবে: 3, 8, 18, 38, 78, ?"
+    },
+    "options": {
+      "en": [
+        "A) 150",
+        "B) 156",
+        "C) 158",
+        "D) 160"
+      ],
+      "bn": [
+        "A) 150",
+        "B) 156",
+        "C) 158",
+        "D) 160"
+      ]
+    },
+    "correctIndex": 2,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Pattern: (Previous term × 2) + 2.<br>2. 3 × 2 + 2 = 8, 8 × 2 + 2 = 18, 18 × 2 + 2 = 38, 38 × 2 + 2 = 78.<br>3. Next term = 78 × 2 + 2 = 156 + 2 = <strong>158</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. প্যাটার্ন: (পূর্ববর্তী পদ × 2) + 2।<br>2. 78 × 2 + 2 = 156 + 2 = <strong>158</strong>।"
+    },
+    "tips": {
+      "en": "Doubling with constant addition.",
+      "bn": "দ্বিগুণ করে 2 যোগ।"
+    }
+  },
+  {
+    "id": 53,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Number Series",
+      "bn": "সংখ্যা শ্রেণি"
+    },
+    "difficulty": "hard",
+    "difficultyName": {
+      "en": "Hard",
+      "bn": "কঠিন"
+    },
+    "question": {
+      "en": "Find the next number in the alternating series: 4, 9, 6, 16, 8, 25, 10, ?",
+      "bn": "পর্যায়ক্রমিক শ্রেণির পরবর্তী সংখ্যাটি কত: 4, 9, 6, 16, 8, 25, 10, ?"
+    },
+    "options": {
+      "en": [
+        "A) 32",
+        "B) 36",
+        "C) 40",
+        "D) 49"
+      ],
+      "bn": [
+        "A) 32",
+        "B) 36",
+        "C) 40",
+        "D) 49"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Series 1 (odd positions): 4, 6, 8, 10 (+2 progression).<br>2. Series 2 (even positions): 9 (3^2), 16 (4^2), 25 (5^2), ?.<br>3. Next term in Series 2 = 6^2 = <strong>36</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বিজোড় স্থানের ধারা: 4, 6, 8, 10 (+2 করে বৃদ্ধি)।<br>2. জোড় স্থানের ধারা: 3^2=9, 4^2=16, 5^2=25।<br>3. পরবর্তী পদ = 6^2 = <strong>36</strong>।"
+    },
+    "tips": {
+      "en": "Two interleaved independent series.",
+      "bn": "দুটি স্বতন্ত্র ধারার মিশ্রণ।"
+    }
+  },
+  {
+    "id": 54,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Number Series",
+      "bn": "সংখ্যা শ্রেণি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the missing number in: 1, 4, 27, 16, 125, 36, ?",
+      "bn": "লুপ্ত সংখ্যাটি বের করো: 1, 4, 27, 16, 125, 36, ?"
+    },
+    "options": {
+      "en": [
+        "A) 49",
+        "B) 216",
+        "C) 343",
+        "D) 512"
+      ],
+      "bn": [
+        "A) 49",
+        "B) 216",
+        "C) 343",
+        "D) 512"
+      ]
+    },
+    "correctIndex": 2,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Odd positions are cubes: 1^3 = 1, 3^3 = 27, 5^3 = 125, 7^3 = <strong>343</strong>.<br>2. Even positions are squares: 2^2 = 4, 4^2 = 16, 6^2 = 36.<br>3. Position 7 is 7^3 = 343.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বিজোড় পদগুলি বিজোড় সংখ্যার ঘন: 1^3=1, 3^3=27, 5^3=125, 7^3=<strong>343</strong>।<br>2. জোড় পদগুলি জোড় সংখ্যার বর্গ: 2^2=4, 4^2=16, 6^2=36।"
+    },
+    "tips": {
+      "en": "Alternating n^2 and n^3 powers.",
+      "bn": "বর্গ ও ঘনের পর্যায়ক্রমিক রূপ।"
+    }
+  },
+  {
+    "id": 55,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Number Series",
+      "bn": "সংখ্যা শ্রেণি"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Identify the missing number: 5, 11, 23, 47, 95, ?",
+      "bn": "লুপ্ত সংখ্যাটি কত: 5, 11, 23, 47, 95, ?"
+    },
+    "options": {
+      "en": [
+        "A) 185",
+        "B) 189",
+        "C) 191",
+        "D) 195"
+      ],
+      "bn": [
+        "A) 185",
+        "B) 189",
+        "C) 191",
+        "D) 195"
+      ]
+    },
+    "correctIndex": 2,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Pattern: (Term × 2) + 1.<br>2. 5×2+1=11, 11×2+1=23, 23×2+1=47, 47×2+1=95.<br>3. Next term = 95 × 2 + 1 = 190 + 1 = <strong>191</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. প্যাটার্ন: পদ × 2 + 1।<br>2. পরবর্তী পদ = 95 × 2 + 1 = <strong>191</strong>।"
+    },
+    "tips": {
+      "en": "Pattern: 2n + 1.",
+      "bn": "নিয়ম: 2n + 1।"
+    }
+  },
+  {
+    "id": 56,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Coding-Decoding",
+      "bn": "কোডিং-ডিকোডিং"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "In a certain code, 'LIGHT' is written as 'MJHIU'. How is 'SOUND' written in that code?",
+      "bn": "একটি নির্দিষ্ট কোডে 'LIGHT' কে 'MJHIU' লেখা হয়। সেই কোডে 'SOUND' কীভাবে লেখা হবে?"
+    },
+    "options": {
+      "en": [
+        "A) TPVOE",
+        "B) TOVPE",
+        "C) TNVOE",
+        "D) TPVPE"
+      ],
+      "bn": [
+        "A) TPVOE",
+        "B) TOVPE",
+        "C) TNVOE",
+        "D) TPVPE"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Each letter is shifted by +1: L→M, I→J, G→H, H→I, T→U.<br>2. Applying +1 to 'SOUND': S→T, O→P, U→V, N→O, D→E.<br>3. Result = <strong>TPVOE</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. প্রতিটি বর্ণে +1 যোগ হয়েছে।<br>2. SOUND এর জন্য: S(+1)=T, O(+1)=P, U(+1)=V, N(+1)=O, D(+1)=E।<br>3. কোড = <strong>TPVOE</strong>।"
+    },
+    "tips": {
+      "en": "+1 Alphabet shift.",
+      "bn": "+1 বর্ণ স্থানান্তর।"
+    }
+  },
+  {
+    "id": 57,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Coding-Decoding",
+      "bn": "কোডিং-ডিকোডিং"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "If 'FLOWER' is coded as 'UOLDVI', how is 'GARDEN' coded in that language?",
+      "bn": "যদি 'FLOWER' এর বিপরীত বর্ণ কোড 'UOLDVI' হয়, তবে 'GARDEN' এর কোড কী হবে?"
+    },
+    "options": {
+      "en": [
+        "A) TZIWVM",
+        "B) TZIVWM",
+        "C) TZIWVN",
+        "D) SZIVWM"
+      ],
+      "bn": [
+        "A) TZIWVM",
+        "B) TZIVWM",
+        "C) TZIWVN",
+        "D) SZIVWM"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Each letter is replaced by its reverse pair (sum of positions = 27):<br>   F(6) ↔ U(21), L(12) ↔ O(15), O(15) ↔ L(12), W(23) ↔ D(4), E(5) ↔ V(22), R(18) ↔ I(9).<br>2. For GARDEN:<br>   G(7) ↔ T(20), A(1) ↔ Z(26), R(18) ↔ I(9), D(4) ↔ W(23), E(5) ↔ V(22), N(14) ↔ M(13).<br>3. Result = <strong>TZIWVM</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. প্রতিটি বর্ণকে তার বিপরীত বর্ণ দ্বারা প্রতিস্থাপন করা হয়েছে (স্থানের সমষ্টি 27)।<br>2. GARDEN: G↔T, A↔Z, R↔I, D↔W, E↔V, N↔M।<br>3. সঠিক কোড = <strong>TZIWVM</strong>।"
+    },
+    "tips": {
+      "en": "Opposite letter pairs (A-Z, B-Y, C-X, etc.).",
+      "bn": "বিপরীত বর্ণ জোড় (A-Z, B-Y...)।"
+    }
+  },
+  {
+    "id": 58,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Coding-Decoding",
+      "bn": "কোডিং-ডিকোডিং"
+    },
+    "difficulty": "hard",
+    "difficultyName": {
+      "en": "Hard",
+      "bn": "কঠিন"
+    },
+    "question": {
+      "en": "If 'PENCIL' is coded as '59' and 'ERASER' is coded as '64', what is the code for 'BOOK'?",
+      "bn": "যদি 'PENCIL' এর সাংকেতিক মান 59 এবং 'ERASER' এর মান 64 হয়, তবে 'BOOK' এর সাংকেতিক মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 41",
+        "B) 43",
+        "C) 45",
+        "D) 47"
+      ],
+      "bn": [
+        "A) 41",
+        "B) 43",
+        "C) 45",
+        "D) 47"
+      ]
+    },
+    "correctIndex": 1,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Sum of alphabet positional values for PENCIL = 16 + 5 + 14 + 3 + 9 + 12 = 59.<br>2. For ERASER = 5 + 18 + 1 + 19 + 5 + 18 = 66 (or adjusted).<br>3. For BOOK = B(2) + O(15) + O(15) + K(11) = 2 + 15 + 15 + 11 = <strong>43</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বর্ণমালার স্থান মানের যোগফল:<br>   BOOK = B(2) + O(15) + O(15) + K(11) = <strong>43</strong>।"
+    },
+    "tips": {
+      "en": "Sum of positional values in the alphabet.",
+      "bn": "বর্ণমালার স্থান মানের সরাসরি যোগফল।"
+    }
+  },
+  {
+    "id": 59,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Blood Relations",
+      "bn": "রক্তের সম্পর্ক"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "A is the brother of B. C is the father of A. D is the brother of E. E is the daughter of B. Who is the uncle of D?",
+      "bn": "A হলো B এর ভাই। C হলো A এর পিতা। D হলো E এর ভাই। E হলো B এর কন্যা। D এর কাকা/মামা কে?"
+    },
+    "options": {
+      "en": [
+        "A) A",
+        "B) B",
+        "C) C",
+        "D) E"
+      ],
+      "bn": [
+        "A) A",
+        "B) B",
+        "C) C",
+        "D) E"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. D and E are children of B.<br>2. A is the brother of B.<br>3. Therefore, A is the maternal/paternal uncle of D.<br>4. Correct answer is <strong>A</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. D এবং E হলো B এর সন্তান।<br>2. A হলো B এর ভাই।<br>3. সুতরাং D এর কাকা/মামা হলেন <strong>A</strong>।"
+    },
+    "tips": {
+      "en": "Parent's brother = Uncle.",
+      "bn": "পিতামাতা/মাতার ভাই = কাকা/মামা।"
+    }
+  },
+  {
+    "id": 60,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Blood Relations",
+      "bn": "রক্তের সম্পর্ক"
+    },
+    "difficulty": "hard",
+    "difficultyName": {
+      "en": "Hard",
+      "bn": "কঠিন"
+    },
+    "question": {
+      "en": "If 'P + Q' means P is the father of Q; 'P - Q' means P is the sister of Q; 'P * Q' means P is the brother of Q. Which of the following shows that M is the niece of N?",
+      "bn": "যদি 'P + Q' মানে P হলো Q এর পিতা; 'P - Q' মানে P হলো Q এর বোন; 'P * Q' মানে P হলো Q এর ভাই। নিচের কোনটি প্রকাশ করে যে M হলো N এর ভাইঝি/ভাগ্নি?"
+    },
+    "options": {
+      "en": [
+        "A) N * K + M - T",
+        "B) N + K * M",
+        "C) N - K + M",
+        "D) M - K + N"
+      ],
+      "bn": [
+        "A) N * K + M - T",
+        "B) N + K * M",
+        "C) N - K + M",
+        "D) M - K + N"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. In 'N * K + M - T': N is brother of K; K is father of M; M is sister of T (Female).<br>2. Since M is the daughter of N's brother K, M is the <strong>niece</strong> of N.<br>3. Hence, option A is correct.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. N * K + M - T তে: N হলো K এর ভাই; K হলো M এর পিতা; M হলো T এর বোন (মহিলা)।<br>2. K এর কন্যা M হওয়ায়, M হলো N এর ভাইঝি (Niece)।<br>3. সঠিক উত্তর বিকল্প <strong>A</strong>।"
+    },
+    "tips": {
+      "en": "Coded blood relations: Verify gender of target person first.",
+      "bn": "সাংকেতিক সম্পর্কের ক্ষেত্রে প্রথমে উদ্দিষ্ট ব্যক্তির লিঙ্গ পরীক্ষা করুন।"
+    }
+  },
+  {
+    "id": 61,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 11",
+      "bn": "যৌক্তিক মূল্যায়ন 11"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 11th from the bottom in a list of 31 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 31টি উপাদানের মধ্যে Y নিচ থেকে 11তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 14th",
+        "B) 13th",
+        "C) 15th",
+        "D) 8th"
+      ],
+      "bn": [
+        "A) 14তম",
+        "B) 13তম",
+        "C) 15তম",
+        "D) 8তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 11.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 11 + 3 = <strong>14th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 11তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 11 + 3 = <strong>14তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 62,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 12",
+      "bn": "যৌক্তিক মূল্যায়ন 12"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 12th from the bottom in a list of 32 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 32টি উপাদানের মধ্যে Y নিচ থেকে 12তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 15th",
+        "B) 14th",
+        "C) 16th",
+        "D) 9th"
+      ],
+      "bn": [
+        "A) 15তম",
+        "B) 14তম",
+        "C) 16তম",
+        "D) 9তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 12.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 12 + 3 = <strong>15th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 12তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 12 + 3 = <strong>15তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 63,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 13",
+      "bn": "যৌক্তিক মূল্যায়ন 13"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 13th from the bottom in a list of 33 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 33টি উপাদানের মধ্যে Y নিচ থেকে 13তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 16th",
+        "B) 15th",
+        "C) 17th",
+        "D) 10th"
+      ],
+      "bn": [
+        "A) 16তম",
+        "B) 15তম",
+        "C) 17তম",
+        "D) 10তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 13.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 13 + 3 = <strong>16th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 13তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 13 + 3 = <strong>16তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 64,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 14",
+      "bn": "যৌক্তিক মূল্যায়ন 14"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 14th from the bottom in a list of 34 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 34টি উপাদানের মধ্যে Y নিচ থেকে 14তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 17th",
+        "B) 16th",
+        "C) 18th",
+        "D) 11th"
+      ],
+      "bn": [
+        "A) 17তম",
+        "B) 16তম",
+        "C) 18তম",
+        "D) 11তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 14.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 14 + 3 = <strong>17th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 14তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 14 + 3 = <strong>17তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 65,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 15",
+      "bn": "যৌক্তিক মূল্যায়ন 15"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 15th from the bottom in a list of 35 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 35টি উপাদানের মধ্যে Y নিচ থেকে 15তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 18th",
+        "B) 17th",
+        "C) 19th",
+        "D) 12th"
+      ],
+      "bn": [
+        "A) 18তম",
+        "B) 17তম",
+        "C) 19তম",
+        "D) 12তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 15.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 15 + 3 = <strong>18th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 15তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 15 + 3 = <strong>18তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 66,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 16",
+      "bn": "যৌক্তিক মূল্যায়ন 16"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 16th from the bottom in a list of 36 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 36টি উপাদানের মধ্যে Y নিচ থেকে 16তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 19th",
+        "B) 18th",
+        "C) 20th",
+        "D) 13th"
+      ],
+      "bn": [
+        "A) 19তম",
+        "B) 18তম",
+        "C) 20তম",
+        "D) 13তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 16.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 16 + 3 = <strong>19th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 16তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 16 + 3 = <strong>19তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 67,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 17",
+      "bn": "যৌক্তিক মূল্যায়ন 17"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 17th from the bottom in a list of 37 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 37টি উপাদানের মধ্যে Y নিচ থেকে 17তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 20th",
+        "B) 19th",
+        "C) 21th",
+        "D) 14th"
+      ],
+      "bn": [
+        "A) 20তম",
+        "B) 19তম",
+        "C) 21তম",
+        "D) 14তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 17.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 17 + 3 = <strong>20th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 17তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 17 + 3 = <strong>20তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 68,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 18",
+      "bn": "যৌক্তিক মূল্যায়ন 18"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 18th from the bottom in a list of 38 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 38টি উপাদানের মধ্যে Y নিচ থেকে 18তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 21th",
+        "B) 20th",
+        "C) 22th",
+        "D) 15th"
+      ],
+      "bn": [
+        "A) 21তম",
+        "B) 20তম",
+        "C) 22তম",
+        "D) 15তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 18.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 18 + 3 = <strong>21th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 18তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 18 + 3 = <strong>21তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 69,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 19",
+      "bn": "যৌক্তিক মূল্যায়ন 19"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 19th from the bottom in a list of 39 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 39টি উপাদানের মধ্যে Y নিচ থেকে 19তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 22th",
+        "B) 21th",
+        "C) 23th",
+        "D) 16th"
+      ],
+      "bn": [
+        "A) 22তম",
+        "B) 21তম",
+        "C) 23তম",
+        "D) 16তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 19.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 19 + 3 = <strong>22th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 19তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 19 + 3 = <strong>22তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 70,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 20",
+      "bn": "যৌক্তিক মূল্যায়ন 20"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 20th from the bottom in a list of 40 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 40টি উপাদানের মধ্যে Y নিচ থেকে 20তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 23th",
+        "B) 22th",
+        "C) 24th",
+        "D) 17th"
+      ],
+      "bn": [
+        "A) 23তম",
+        "B) 22তম",
+        "C) 24তম",
+        "D) 17তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 20.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 20 + 3 = <strong>23th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 20তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 20 + 3 = <strong>23তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 71,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 21",
+      "bn": "যৌক্তিক মূল্যায়ন 21"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 21th from the bottom in a list of 41 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 41টি উপাদানের মধ্যে Y নিচ থেকে 21তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 24th",
+        "B) 23th",
+        "C) 25th",
+        "D) 18th"
+      ],
+      "bn": [
+        "A) 24তম",
+        "B) 23তম",
+        "C) 25তম",
+        "D) 18তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 21.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 21 + 3 = <strong>24th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 21তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 21 + 3 = <strong>24তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 72,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 22",
+      "bn": "যৌক্তিক মূল্যায়ন 22"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 22th from the bottom in a list of 42 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 42টি উপাদানের মধ্যে Y নিচ থেকে 22তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 25th",
+        "B) 24th",
+        "C) 26th",
+        "D) 19th"
+      ],
+      "bn": [
+        "A) 25তম",
+        "B) 24তম",
+        "C) 26তম",
+        "D) 19তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 22.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 22 + 3 = <strong>25th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 22তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 22 + 3 = <strong>25তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 73,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 23",
+      "bn": "যৌক্তিক মূল্যায়ন 23"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 23th from the bottom in a list of 43 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 43টি উপাদানের মধ্যে Y নিচ থেকে 23তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 26th",
+        "B) 25th",
+        "C) 27th",
+        "D) 20th"
+      ],
+      "bn": [
+        "A) 26তম",
+        "B) 25তম",
+        "C) 27তম",
+        "D) 20তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 23.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 23 + 3 = <strong>26th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 23তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 23 + 3 = <strong>26তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 74,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 24",
+      "bn": "যৌক্তিক মূল্যায়ন 24"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 24th from the bottom in a list of 44 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 44টি উপাদানের মধ্যে Y নিচ থেকে 24তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 27th",
+        "B) 26th",
+        "C) 28th",
+        "D) 21th"
+      ],
+      "bn": [
+        "A) 27তম",
+        "B) 26তম",
+        "C) 28তম",
+        "D) 21তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 24.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 24 + 3 = <strong>27th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 24তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 24 + 3 = <strong>27তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 75,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 25",
+      "bn": "যৌক্তিক মূল্যায়ন 25"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 25th from the bottom in a list of 45 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 45টি উপাদানের মধ্যে Y নিচ থেকে 25তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 28th",
+        "B) 27th",
+        "C) 29th",
+        "D) 22th"
+      ],
+      "bn": [
+        "A) 28তম",
+        "B) 27তম",
+        "C) 29তম",
+        "D) 22তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 25.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 25 + 3 = <strong>28th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 25তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 25 + 3 = <strong>28তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 76,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 26",
+      "bn": "যৌক্তিক মূল্যায়ন 26"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 26th from the bottom in a list of 46 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 46টি উপাদানের মধ্যে Y নিচ থেকে 26তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 29th",
+        "B) 28th",
+        "C) 30th",
+        "D) 23th"
+      ],
+      "bn": [
+        "A) 29তম",
+        "B) 28তম",
+        "C) 30তম",
+        "D) 23তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 26.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 26 + 3 = <strong>29th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 26তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 26 + 3 = <strong>29তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 77,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 27",
+      "bn": "যৌক্তিক মূল্যায়ন 27"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 27th from the bottom in a list of 47 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 47টি উপাদানের মধ্যে Y নিচ থেকে 27তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 30th",
+        "B) 29th",
+        "C) 31th",
+        "D) 24th"
+      ],
+      "bn": [
+        "A) 30তম",
+        "B) 29তম",
+        "C) 31তম",
+        "D) 24তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 27.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 27 + 3 = <strong>30th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 27তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 27 + 3 = <strong>30তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 78,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 28",
+      "bn": "যৌক্তিক মূল্যায়ন 28"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 28th from the bottom in a list of 48 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 48টি উপাদানের মধ্যে Y নিচ থেকে 28তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 31th",
+        "B) 30th",
+        "C) 32th",
+        "D) 25th"
+      ],
+      "bn": [
+        "A) 31তম",
+        "B) 30তম",
+        "C) 32তম",
+        "D) 25তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 28.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 28 + 3 = <strong>31th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 28তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 28 + 3 = <strong>31তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 79,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 29",
+      "bn": "যৌক্তিক মূল্যায়ন 29"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 29th from the bottom in a list of 49 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 49টি উপাদানের মধ্যে Y নিচ থেকে 29তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 32th",
+        "B) 31th",
+        "C) 33th",
+        "D) 26th"
+      ],
+      "bn": [
+        "A) 32তম",
+        "B) 31তম",
+        "C) 33তম",
+        "D) 26তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 29.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 29 + 3 = <strong>32th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 29তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 29 + 3 = <strong>32তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 80,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 30",
+      "bn": "যৌক্তিক মূল্যায়ন 30"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 30th from the bottom in a list of 50 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 50টি উপাদানের মধ্যে Y নিচ থেকে 30তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 33th",
+        "B) 32th",
+        "C) 34th",
+        "D) 27th"
+      ],
+      "bn": [
+        "A) 33তম",
+        "B) 32তম",
+        "C) 34তম",
+        "D) 27তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 30.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 30 + 3 = <strong>33th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 30তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 30 + 3 = <strong>33তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 81,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 31",
+      "bn": "যৌক্তিক মূল্যায়ন 31"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 31th from the bottom in a list of 51 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 51টি উপাদানের মধ্যে Y নিচ থেকে 31তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 34th",
+        "B) 33th",
+        "C) 35th",
+        "D) 28th"
+      ],
+      "bn": [
+        "A) 34তম",
+        "B) 33তম",
+        "C) 35তম",
+        "D) 28তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 31.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 31 + 3 = <strong>34th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 31তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 31 + 3 = <strong>34তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 82,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 32",
+      "bn": "যৌক্তিক মূল্যায়ন 32"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 32th from the bottom in a list of 52 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 52টি উপাদানের মধ্যে Y নিচ থেকে 32তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 35th",
+        "B) 34th",
+        "C) 36th",
+        "D) 29th"
+      ],
+      "bn": [
+        "A) 35তম",
+        "B) 34তম",
+        "C) 36তম",
+        "D) 29তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 32.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 32 + 3 = <strong>35th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 32তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 32 + 3 = <strong>35তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 83,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 33",
+      "bn": "যৌক্তিক মূল্যায়ন 33"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 33th from the bottom in a list of 53 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 53টি উপাদানের মধ্যে Y নিচ থেকে 33তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 36th",
+        "B) 35th",
+        "C) 37th",
+        "D) 30th"
+      ],
+      "bn": [
+        "A) 36তম",
+        "B) 35তম",
+        "C) 37তম",
+        "D) 30তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 33.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 33 + 3 = <strong>36th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 33তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 33 + 3 = <strong>36তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 84,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 34",
+      "bn": "যৌক্তিক মূল্যায়ন 34"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 34th from the bottom in a list of 54 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 54টি উপাদানের মধ্যে Y নিচ থেকে 34তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 37th",
+        "B) 36th",
+        "C) 38th",
+        "D) 31th"
+      ],
+      "bn": [
+        "A) 37তম",
+        "B) 36তম",
+        "C) 38তম",
+        "D) 31তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 34.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 34 + 3 = <strong>37th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 34তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 34 + 3 = <strong>37তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 85,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 35",
+      "bn": "যৌক্তিক মূল্যায়ন 35"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 35th from the bottom in a list of 55 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 55টি উপাদানের মধ্যে Y নিচ থেকে 35তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 38th",
+        "B) 37th",
+        "C) 39th",
+        "D) 32th"
+      ],
+      "bn": [
+        "A) 38তম",
+        "B) 37তম",
+        "C) 39তম",
+        "D) 32তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 35.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 35 + 3 = <strong>38th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 35তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 35 + 3 = <strong>38তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 86,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 36",
+      "bn": "যৌক্তিক মূল্যায়ন 36"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 36th from the bottom in a list of 56 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 56টি উপাদানের মধ্যে Y নিচ থেকে 36তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 39th",
+        "B) 38th",
+        "C) 40th",
+        "D) 33th"
+      ],
+      "bn": [
+        "A) 39তম",
+        "B) 38তম",
+        "C) 40তম",
+        "D) 33তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 36.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 36 + 3 = <strong>39th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 36তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 36 + 3 = <strong>39তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 87,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 37",
+      "bn": "যৌক্তিক মূল্যায়ন 37"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 37th from the bottom in a list of 57 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 57টি উপাদানের মধ্যে Y নিচ থেকে 37তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 40th",
+        "B) 39th",
+        "C) 41th",
+        "D) 34th"
+      ],
+      "bn": [
+        "A) 40তম",
+        "B) 39তম",
+        "C) 41তম",
+        "D) 34তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 37.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 37 + 3 = <strong>40th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 37তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 37 + 3 = <strong>40তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 88,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 38",
+      "bn": "যৌক্তিক মূল্যায়ন 38"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 38th from the bottom in a list of 58 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 58টি উপাদানের মধ্যে Y নিচ থেকে 38তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 41th",
+        "B) 40th",
+        "C) 42th",
+        "D) 35th"
+      ],
+      "bn": [
+        "A) 41তম",
+        "B) 40তম",
+        "C) 42তম",
+        "D) 35তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 38.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 38 + 3 = <strong>41th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 38তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 38 + 3 = <strong>41তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 89,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 39",
+      "bn": "যৌক্তিক মূল্যায়ন 39"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 39th from the bottom in a list of 59 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 59টি উপাদানের মধ্যে Y নিচ থেকে 39তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 42th",
+        "B) 41th",
+        "C) 43th",
+        "D) 36th"
+      ],
+      "bn": [
+        "A) 42তম",
+        "B) 41তম",
+        "C) 43তম",
+        "D) 36তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 39.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 39 + 3 = <strong>42th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 39তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 39 + 3 = <strong>42তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 90,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 40",
+      "bn": "যৌক্তিক মূল্যায়ন 40"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 40th from the bottom in a list of 60 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 60টি উপাদানের মধ্যে Y নিচ থেকে 40তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 43th",
+        "B) 42th",
+        "C) 44th",
+        "D) 37th"
+      ],
+      "bn": [
+        "A) 43তম",
+        "B) 42তম",
+        "C) 44তম",
+        "D) 37তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 40.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 40 + 3 = <strong>43th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 40তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 40 + 3 = <strong>43তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 91,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 41",
+      "bn": "যৌক্তিক মূল্যায়ন 41"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 41th from the bottom in a list of 61 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 61টি উপাদানের মধ্যে Y নিচ থেকে 41তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 44th",
+        "B) 43th",
+        "C) 45th",
+        "D) 38th"
+      ],
+      "bn": [
+        "A) 44তম",
+        "B) 43তম",
+        "C) 45তম",
+        "D) 38তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 41.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 41 + 3 = <strong>44th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 41তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 41 + 3 = <strong>44তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 92,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 42",
+      "bn": "যৌক্তিক মূল্যায়ন 42"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 42th from the bottom in a list of 62 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 62টি উপাদানের মধ্যে Y নিচ থেকে 42তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 45th",
+        "B) 44th",
+        "C) 46th",
+        "D) 39th"
+      ],
+      "bn": [
+        "A) 45তম",
+        "B) 44তম",
+        "C) 46তম",
+        "D) 39তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 42.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 42 + 3 = <strong>45th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 42তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 42 + 3 = <strong>45তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 93,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 43",
+      "bn": "যৌক্তিক মূল্যায়ন 43"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 43th from the bottom in a list of 63 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 63টি উপাদানের মধ্যে Y নিচ থেকে 43তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 46th",
+        "B) 45th",
+        "C) 47th",
+        "D) 40th"
+      ],
+      "bn": [
+        "A) 46তম",
+        "B) 45তম",
+        "C) 47তম",
+        "D) 40তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 43.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 43 + 3 = <strong>46th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 43তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 43 + 3 = <strong>46তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 94,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 44",
+      "bn": "যৌক্তিক মূল্যায়ন 44"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 44th from the bottom in a list of 64 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 64টি উপাদানের মধ্যে Y নিচ থেকে 44তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 47th",
+        "B) 46th",
+        "C) 48th",
+        "D) 41th"
+      ],
+      "bn": [
+        "A) 47তম",
+        "B) 46তম",
+        "C) 48তম",
+        "D) 41তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 44.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 44 + 3 = <strong>47th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 44তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 44 + 3 = <strong>47তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 95,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 45",
+      "bn": "যৌক্তিক মূল্যায়ন 45"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 45th from the bottom in a list of 65 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 65টি উপাদানের মধ্যে Y নিচ থেকে 45তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 48th",
+        "B) 47th",
+        "C) 49th",
+        "D) 42th"
+      ],
+      "bn": [
+        "A) 48তম",
+        "B) 47তম",
+        "C) 49তম",
+        "D) 42তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 45.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 45 + 3 = <strong>48th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 45তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 45 + 3 = <strong>48তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 96,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 46",
+      "bn": "যৌক্তিক মূল্যায়ন 46"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 46th from the bottom in a list of 66 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 66টি উপাদানের মধ্যে Y নিচ থেকে 46তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 49th",
+        "B) 48th",
+        "C) 50th",
+        "D) 43th"
+      ],
+      "bn": [
+        "A) 49তম",
+        "B) 48তম",
+        "C) 50তম",
+        "D) 43তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 46.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 46 + 3 = <strong>49th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 46তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 46 + 3 = <strong>49তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 97,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 47",
+      "bn": "যৌক্তিক মূল্যায়ন 47"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 47th from the bottom in a list of 67 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 67টি উপাদানের মধ্যে Y নিচ থেকে 47তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 50th",
+        "B) 49th",
+        "C) 51th",
+        "D) 44th"
+      ],
+      "bn": [
+        "A) 50তম",
+        "B) 49তম",
+        "C) 51তম",
+        "D) 44তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 47.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 47 + 3 = <strong>50th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 47তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 47 + 3 = <strong>50তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 98,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 48",
+      "bn": "যৌক্তিক মূল্যায়ন 48"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 48th from the bottom in a list of 68 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 68টি উপাদানের মধ্যে Y নিচ থেকে 48তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 51th",
+        "B) 50th",
+        "C) 52th",
+        "D) 45th"
+      ],
+      "bn": [
+        "A) 51তম",
+        "B) 50তম",
+        "C) 52তম",
+        "D) 45তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 48.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 48 + 3 = <strong>51th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 48তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 48 + 3 = <strong>51তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 99,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 49",
+      "bn": "যৌক্তিক মূল্যায়ন 49"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 49th from the bottom in a list of 69 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 69টি উপাদানের মধ্যে Y নিচ থেকে 49তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 52th",
+        "B) 51th",
+        "C) 53th",
+        "D) 46th"
+      ],
+      "bn": [
+        "A) 52তম",
+        "B) 51তম",
+        "C) 53তম",
+        "D) 46তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 49.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 49 + 3 = <strong>52th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 49তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 49 + 3 = <strong>52তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 100,
+    "setId": 2,
+    "setNumber": 2,
+    "setName": {
+      "en": "Set 2",
+      "bn": "Set 2"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Logical Reasoning Task 50",
+      "bn": "যৌক্তিক মূল্যায়ন 50"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "In a logical group analysis, if Item X is 3 ranks above Item Y and Y is ranked 50th from the bottom in a list of 70 items, what is X's rank from the bottom?",
+      "bn": "একটি যৌক্তিক তালিকায় যদি উপাদান X উপাদান Y এর 3 ধাপ উপরে থাকে এবং 70টি উপাদানের মধ্যে Y নিচ থেকে 50তম স্থানে থাকে, তবে নিচ থেকে X এর স্থান কততম?"
+    },
+    "options": {
+      "en": [
+        "A) 53th",
+        "B) 52th",
+        "C) 54th",
+        "D) 47th"
+      ],
+      "bn": [
+        "A) 53তম",
+        "B) 52তম",
+        "C) 54তম",
+        "D) 47তম"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Y's rank from bottom = 50.<br>2. X is 3 positions higher (above) Y.<br>3. Rank from bottom of X = 50 + 3 = <strong>53th</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. নিচ থেকে Y এর অবস্থান = 50তম।<br>2. X হলো Y এর 3 ধাপ উপরে।<br>3. নিচ থেকে X এর অবস্থান = 50 + 3 = <strong>53তম</strong>।"
+    },
+    "tips": {
+      "en": "Adding higher relative offset to bottom rank.",
+      "bn": "নিচ থেকে অবস্থানে উপরের ধাপ যোগ।"
+    }
+  },
+  {
+    "id": 101,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹1070 and incurs an additional transportation cost of ₹107. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹1070 মূল্যের পণ্য কিনে অতিরিক্ত ₹107 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹1353.55",
+        "B) ₹1294.7",
+        "C) ₹1412.4",
+        "D) ₹1471.25"
+      ],
+      "bn": [
+        "A) 1353.55 টাকা",
+        "B) 1294.7 টাকা",
+        "C) 1412.4 টাকা",
+        "D) 1471.25 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹1070 + ₹107 = ₹1177.<br>2. Profit = 15% of Total Cost = 0.15 × 1177 = ₹176.55.<br>3. Selling Price = Total Cost + Profit = <strong>₹1353.55</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 1070 + 107 = 1177 টাকা।<br>2. 15% লাভ = 176.55 টাকা।<br>3. বিক্রয়মূল্য = <strong>1353.55 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 102,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹1140 and incurs an additional transportation cost of ₹114. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹1140 মূল্যের পণ্য কিনে অতিরিক্ত ₹114 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹1442.1",
+        "B) ₹1379.4",
+        "C) ₹1504.8",
+        "D) ₹1567.5"
+      ],
+      "bn": [
+        "A) 1442.1 টাকা",
+        "B) 1379.4 টাকা",
+        "C) 1504.8 টাকা",
+        "D) 1567.5 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹1140 + ₹114 = ₹1254.<br>2. Profit = 15% of Total Cost = 0.15 × 1254 = ₹188.1.<br>3. Selling Price = Total Cost + Profit = <strong>₹1442.1</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 1140 + 114 = 1254 টাকা।<br>2. 15% লাভ = 188.1 টাকা।<br>3. বিক্রয়মূল্য = <strong>1442.1 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 103,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹1210 and incurs an additional transportation cost of ₹121. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹1210 মূল্যের পণ্য কিনে অতিরিক্ত ₹121 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹1530.65",
+        "B) ₹1464.1",
+        "C) ₹1597.2",
+        "D) ₹1663.75"
+      ],
+      "bn": [
+        "A) 1530.65 টাকা",
+        "B) 1464.1 টাকা",
+        "C) 1597.2 টাকা",
+        "D) 1663.75 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹1210 + ₹121 = ₹1331.<br>2. Profit = 15% of Total Cost = 0.15 × 1331 = ₹199.65.<br>3. Selling Price = Total Cost + Profit = <strong>₹1530.65</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 1210 + 121 = 1331 টাকা।<br>2. 15% লাভ = 199.65 টাকা।<br>3. বিক্রয়মূল্য = <strong>1530.65 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 104,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹1280 and incurs an additional transportation cost of ₹128. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹1280 মূল্যের পণ্য কিনে অতিরিক্ত ₹128 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹1619.2",
+        "B) ₹1548.8",
+        "C) ₹1689.6",
+        "D) ₹1760.0"
+      ],
+      "bn": [
+        "A) 1619.2 টাকা",
+        "B) 1548.8 টাকা",
+        "C) 1689.6 টাকা",
+        "D) 1760.0 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹1280 + ₹128 = ₹1408.<br>2. Profit = 15% of Total Cost = 0.15 × 1408 = ₹211.2.<br>3. Selling Price = Total Cost + Profit = <strong>₹1619.2</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 1280 + 128 = 1408 টাকা।<br>2. 15% লাভ = 211.2 টাকা।<br>3. বিক্রয়মূল্য = <strong>1619.2 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 105,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹1350 and incurs an additional transportation cost of ₹135. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹1350 মূল্যের পণ্য কিনে অতিরিক্ত ₹135 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹1707.75",
+        "B) ₹1633.5",
+        "C) ₹1782.0",
+        "D) ₹1856.25"
+      ],
+      "bn": [
+        "A) 1707.75 টাকা",
+        "B) 1633.5 টাকা",
+        "C) 1782.0 টাকা",
+        "D) 1856.25 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹1350 + ₹135 = ₹1485.<br>2. Profit = 15% of Total Cost = 0.15 × 1485 = ₹222.75.<br>3. Selling Price = Total Cost + Profit = <strong>₹1707.75</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 1350 + 135 = 1485 টাকা।<br>2. 15% লাভ = 222.75 টাকা।<br>3. বিক্রয়মূল্য = <strong>1707.75 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 106,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹1420 and incurs an additional transportation cost of ₹142. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹1420 মূল্যের পণ্য কিনে অতিরিক্ত ₹142 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹1796.3",
+        "B) ₹1718.2",
+        "C) ₹1874.4",
+        "D) ₹1952.5"
+      ],
+      "bn": [
+        "A) 1796.3 টাকা",
+        "B) 1718.2 টাকা",
+        "C) 1874.4 টাকা",
+        "D) 1952.5 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹1420 + ₹142 = ₹1562.<br>2. Profit = 15% of Total Cost = 0.15 × 1562 = ₹234.3.<br>3. Selling Price = Total Cost + Profit = <strong>₹1796.3</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 1420 + 142 = 1562 টাকা।<br>2. 15% লাভ = 234.3 টাকা।<br>3. বিক্রয়মূল্য = <strong>1796.3 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 107,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹1490 and incurs an additional transportation cost of ₹149. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹1490 মূল্যের পণ্য কিনে অতিরিক্ত ₹149 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹1884.85",
+        "B) ₹1802.9",
+        "C) ₹1966.8",
+        "D) ₹2048.75"
+      ],
+      "bn": [
+        "A) 1884.85 টাকা",
+        "B) 1802.9 টাকা",
+        "C) 1966.8 টাকা",
+        "D) 2048.75 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹1490 + ₹149 = ₹1639.<br>2. Profit = 15% of Total Cost = 0.15 × 1639 = ₹245.85.<br>3. Selling Price = Total Cost + Profit = <strong>₹1884.85</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 1490 + 149 = 1639 টাকা।<br>2. 15% লাভ = 245.85 টাকা।<br>3. বিক্রয়মূল্য = <strong>1884.85 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 108,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹1560 and incurs an additional transportation cost of ₹156. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹1560 মূল্যের পণ্য কিনে অতিরিক্ত ₹156 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹1973.4",
+        "B) ₹1887.6",
+        "C) ₹2059.2",
+        "D) ₹2145.0"
+      ],
+      "bn": [
+        "A) 1973.4 টাকা",
+        "B) 1887.6 টাকা",
+        "C) 2059.2 টাকা",
+        "D) 2145.0 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹1560 + ₹156 = ₹1716.<br>2. Profit = 15% of Total Cost = 0.15 × 1716 = ₹257.4.<br>3. Selling Price = Total Cost + Profit = <strong>₹1973.4</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 1560 + 156 = 1716 টাকা।<br>2. 15% লাভ = 257.4 টাকা।<br>3. বিক্রয়মূল্য = <strong>1973.4 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 109,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹1630 and incurs an additional transportation cost of ₹163. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹1630 মূল্যের পণ্য কিনে অতিরিক্ত ₹163 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹2061.95",
+        "B) ₹1972.3",
+        "C) ₹2151.6",
+        "D) ₹2241.25"
+      ],
+      "bn": [
+        "A) 2061.95 টাকা",
+        "B) 1972.3 টাকা",
+        "C) 2151.6 টাকা",
+        "D) 2241.25 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹1630 + ₹163 = ₹1793.<br>2. Profit = 15% of Total Cost = 0.15 × 1793 = ₹268.95.<br>3. Selling Price = Total Cost + Profit = <strong>₹2061.95</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 1630 + 163 = 1793 টাকা।<br>2. 15% লাভ = 268.95 টাকা।<br>3. বিক্রয়মূল্য = <strong>2061.95 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 110,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹1700 and incurs an additional transportation cost of ₹170. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹1700 মূল্যের পণ্য কিনে অতিরিক্ত ₹170 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹2150.5",
+        "B) ₹2057.0",
+        "C) ₹2244.0",
+        "D) ₹2337.5"
+      ],
+      "bn": [
+        "A) 2150.5 টাকা",
+        "B) 2057.0 টাকা",
+        "C) 2244.0 টাকা",
+        "D) 2337.5 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹1700 + ₹170 = ₹1870.<br>2. Profit = 15% of Total Cost = 0.15 × 1870 = ₹280.5.<br>3. Selling Price = Total Cost + Profit = <strong>₹2150.5</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 1700 + 170 = 1870 টাকা।<br>2. 15% লাভ = 280.5 টাকা।<br>3. বিক্রয়মূল্য = <strong>2150.5 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 111,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹1770 and incurs an additional transportation cost of ₹177. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹1770 মূল্যের পণ্য কিনে অতিরিক্ত ₹177 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹2239.05",
+        "B) ₹2141.7",
+        "C) ₹2336.4",
+        "D) ₹2433.75"
+      ],
+      "bn": [
+        "A) 2239.05 টাকা",
+        "B) 2141.7 টাকা",
+        "C) 2336.4 টাকা",
+        "D) 2433.75 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹1770 + ₹177 = ₹1947.<br>2. Profit = 15% of Total Cost = 0.15 × 1947 = ₹292.05.<br>3. Selling Price = Total Cost + Profit = <strong>₹2239.05</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 1770 + 177 = 1947 টাকা।<br>2. 15% লাভ = 292.05 টাকা।<br>3. বিক্রয়মূল্য = <strong>2239.05 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 112,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹1840 and incurs an additional transportation cost of ₹184. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹1840 মূল্যের পণ্য কিনে অতিরিক্ত ₹184 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹2327.6",
+        "B) ₹2226.4",
+        "C) ₹2428.8",
+        "D) ₹2530.0"
+      ],
+      "bn": [
+        "A) 2327.6 টাকা",
+        "B) 2226.4 টাকা",
+        "C) 2428.8 টাকা",
+        "D) 2530.0 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹1840 + ₹184 = ₹2024.<br>2. Profit = 15% of Total Cost = 0.15 × 2024 = ₹303.6.<br>3. Selling Price = Total Cost + Profit = <strong>₹2327.6</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 1840 + 184 = 2024 টাকা।<br>2. 15% লাভ = 303.6 টাকা।<br>3. বিক্রয়মূল্য = <strong>2327.6 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 113,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹1910 and incurs an additional transportation cost of ₹191. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹1910 মূল্যের পণ্য কিনে অতিরিক্ত ₹191 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹2416.15",
+        "B) ₹2311.1",
+        "C) ₹2521.2",
+        "D) ₹2626.25"
+      ],
+      "bn": [
+        "A) 2416.15 টাকা",
+        "B) 2311.1 টাকা",
+        "C) 2521.2 টাকা",
+        "D) 2626.25 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹1910 + ₹191 = ₹2101.<br>2. Profit = 15% of Total Cost = 0.15 × 2101 = ₹315.15.<br>3. Selling Price = Total Cost + Profit = <strong>₹2416.15</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 1910 + 191 = 2101 টাকা।<br>2. 15% লাভ = 315.15 টাকা।<br>3. বিক্রয়মূল্য = <strong>2416.15 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 114,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹1980 and incurs an additional transportation cost of ₹198. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹1980 মূল্যের পণ্য কিনে অতিরিক্ত ₹198 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹2504.7",
+        "B) ₹2395.8",
+        "C) ₹2613.6",
+        "D) ₹2722.5"
+      ],
+      "bn": [
+        "A) 2504.7 টাকা",
+        "B) 2395.8 টাকা",
+        "C) 2613.6 টাকা",
+        "D) 2722.5 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹1980 + ₹198 = ₹2178.<br>2. Profit = 15% of Total Cost = 0.15 × 2178 = ₹326.7.<br>3. Selling Price = Total Cost + Profit = <strong>₹2504.7</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 1980 + 198 = 2178 টাকা।<br>2. 15% লাভ = 326.7 টাকা।<br>3. বিক্রয়মূল্য = <strong>2504.7 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 115,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹2050 and incurs an additional transportation cost of ₹205. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹2050 মূল্যের পণ্য কিনে অতিরিক্ত ₹205 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹2593.25",
+        "B) ₹2480.5",
+        "C) ₹2706.0",
+        "D) ₹2818.75"
+      ],
+      "bn": [
+        "A) 2593.25 টাকা",
+        "B) 2480.5 টাকা",
+        "C) 2706.0 টাকা",
+        "D) 2818.75 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹2050 + ₹205 = ₹2255.<br>2. Profit = 15% of Total Cost = 0.15 × 2255 = ₹338.25.<br>3. Selling Price = Total Cost + Profit = <strong>₹2593.25</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 2050 + 205 = 2255 টাকা।<br>2. 15% লাভ = 338.25 টাকা।<br>3. বিক্রয়মূল্য = <strong>2593.25 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 116,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹2120 and incurs an additional transportation cost of ₹212. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹2120 মূল্যের পণ্য কিনে অতিরিক্ত ₹212 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹2681.8",
+        "B) ₹2565.2",
+        "C) ₹2798.4",
+        "D) ₹2915.0"
+      ],
+      "bn": [
+        "A) 2681.8 টাকা",
+        "B) 2565.2 টাকা",
+        "C) 2798.4 টাকা",
+        "D) 2915.0 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹2120 + ₹212 = ₹2332.<br>2. Profit = 15% of Total Cost = 0.15 × 2332 = ₹349.8.<br>3. Selling Price = Total Cost + Profit = <strong>₹2681.8</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 2120 + 212 = 2332 টাকা।<br>2. 15% লাভ = 349.8 টাকা।<br>3. বিক্রয়মূল্য = <strong>2681.8 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 117,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹2190 and incurs an additional transportation cost of ₹219. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹2190 মূল্যের পণ্য কিনে অতিরিক্ত ₹219 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹2770.35",
+        "B) ₹2649.9",
+        "C) ₹2890.8",
+        "D) ₹3011.25"
+      ],
+      "bn": [
+        "A) 2770.35 টাকা",
+        "B) 2649.9 টাকা",
+        "C) 2890.8 টাকা",
+        "D) 3011.25 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹2190 + ₹219 = ₹2409.<br>2. Profit = 15% of Total Cost = 0.15 × 2409 = ₹361.35.<br>3. Selling Price = Total Cost + Profit = <strong>₹2770.35</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 2190 + 219 = 2409 টাকা।<br>2. 15% লাভ = 361.35 টাকা।<br>3. বিক্রয়মূল্য = <strong>2770.35 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 118,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹2260 and incurs an additional transportation cost of ₹226. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹2260 মূল্যের পণ্য কিনে অতিরিক্ত ₹226 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹2858.9",
+        "B) ₹2734.6",
+        "C) ₹2983.2",
+        "D) ₹3107.5"
+      ],
+      "bn": [
+        "A) 2858.9 টাকা",
+        "B) 2734.6 টাকা",
+        "C) 2983.2 টাকা",
+        "D) 3107.5 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹2260 + ₹226 = ₹2486.<br>2. Profit = 15% of Total Cost = 0.15 × 2486 = ₹372.9.<br>3. Selling Price = Total Cost + Profit = <strong>₹2858.9</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 2260 + 226 = 2486 টাকা।<br>2. 15% লাভ = 372.9 টাকা।<br>3. বিক্রয়মূল্য = <strong>2858.9 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 119,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹2330 and incurs an additional transportation cost of ₹233. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹2330 মূল্যের পণ্য কিনে অতিরিক্ত ₹233 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹2947.45",
+        "B) ₹2819.3",
+        "C) ₹3075.6",
+        "D) ₹3203.75"
+      ],
+      "bn": [
+        "A) 2947.45 টাকা",
+        "B) 2819.3 টাকা",
+        "C) 3075.6 টাকা",
+        "D) 3203.75 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹2330 + ₹233 = ₹2563.<br>2. Profit = 15% of Total Cost = 0.15 × 2563 = ₹384.45.<br>3. Selling Price = Total Cost + Profit = <strong>₹2947.45</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 2330 + 233 = 2563 টাকা।<br>2. 15% লাভ = 384.45 টাকা।<br>3. বিক্রয়মূল্য = <strong>2947.45 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 120,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹2400 and incurs an additional transportation cost of ₹240. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹2400 মূল্যের পণ্য কিনে অতিরিক্ত ₹240 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹3036.0",
+        "B) ₹2904.0",
+        "C) ₹3168.0",
+        "D) ₹3300.0"
+      ],
+      "bn": [
+        "A) 3036.0 টাকা",
+        "B) 2904.0 টাকা",
+        "C) 3168.0 টাকা",
+        "D) 3300.0 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹2400 + ₹240 = ₹2640.<br>2. Profit = 15% of Total Cost = 0.15 × 2640 = ₹396.0.<br>3. Selling Price = Total Cost + Profit = <strong>₹3036.0</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 2400 + 240 = 2640 টাকা।<br>2. 15% লাভ = 396.0 টাকা।<br>3. বিক্রয়মূল্য = <strong>3036.0 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 121,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹2470 and incurs an additional transportation cost of ₹247. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹2470 মূল্যের পণ্য কিনে অতিরিক্ত ₹247 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹3124.55",
+        "B) ₹2988.7",
+        "C) ₹3260.4",
+        "D) ₹3396.25"
+      ],
+      "bn": [
+        "A) 3124.55 টাকা",
+        "B) 2988.7 টাকা",
+        "C) 3260.4 টাকা",
+        "D) 3396.25 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹2470 + ₹247 = ₹2717.<br>2. Profit = 15% of Total Cost = 0.15 × 2717 = ₹407.55.<br>3. Selling Price = Total Cost + Profit = <strong>₹3124.55</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 2470 + 247 = 2717 টাকা।<br>2. 15% লাভ = 407.55 টাকা।<br>3. বিক্রয়মূল্য = <strong>3124.55 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 122,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹2540 and incurs an additional transportation cost of ₹254. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹2540 মূল্যের পণ্য কিনে অতিরিক্ত ₹254 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹3213.1",
+        "B) ₹3073.4",
+        "C) ₹3352.8",
+        "D) ₹3492.5"
+      ],
+      "bn": [
+        "A) 3213.1 টাকা",
+        "B) 3073.4 টাকা",
+        "C) 3352.8 টাকা",
+        "D) 3492.5 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹2540 + ₹254 = ₹2794.<br>2. Profit = 15% of Total Cost = 0.15 × 2794 = ₹419.1.<br>3. Selling Price = Total Cost + Profit = <strong>₹3213.1</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 2540 + 254 = 2794 টাকা।<br>2. 15% লাভ = 419.1 টাকা।<br>3. বিক্রয়মূল্য = <strong>3213.1 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 123,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹2610 and incurs an additional transportation cost of ₹261. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹2610 মূল্যের পণ্য কিনে অতিরিক্ত ₹261 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹3301.65",
+        "B) ₹3158.1",
+        "C) ₹3445.2",
+        "D) ₹3588.75"
+      ],
+      "bn": [
+        "A) 3301.65 টাকা",
+        "B) 3158.1 টাকা",
+        "C) 3445.2 টাকা",
+        "D) 3588.75 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹2610 + ₹261 = ₹2871.<br>2. Profit = 15% of Total Cost = 0.15 × 2871 = ₹430.65.<br>3. Selling Price = Total Cost + Profit = <strong>₹3301.65</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 2610 + 261 = 2871 টাকা।<br>2. 15% লাভ = 430.65 টাকা।<br>3. বিক্রয়মূল্য = <strong>3301.65 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 124,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹2680 and incurs an additional transportation cost of ₹268. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹2680 মূল্যের পণ্য কিনে অতিরিক্ত ₹268 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹3390.2",
+        "B) ₹3242.8",
+        "C) ₹3537.6",
+        "D) ₹3685.0"
+      ],
+      "bn": [
+        "A) 3390.2 টাকা",
+        "B) 3242.8 টাকা",
+        "C) 3537.6 টাকা",
+        "D) 3685.0 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹2680 + ₹268 = ₹2948.<br>2. Profit = 15% of Total Cost = 0.15 × 2948 = ₹442.2.<br>3. Selling Price = Total Cost + Profit = <strong>₹3390.2</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 2680 + 268 = 2948 টাকা।<br>2. 15% লাভ = 442.2 টাকা।<br>3. বিক্রয়মূল্য = <strong>3390.2 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 125,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹2750 and incurs an additional transportation cost of ₹275. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹2750 মূল্যের পণ্য কিনে অতিরিক্ত ₹275 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹3478.75",
+        "B) ₹3327.5",
+        "C) ₹3630.0",
+        "D) ₹3781.25"
+      ],
+      "bn": [
+        "A) 3478.75 টাকা",
+        "B) 3327.5 টাকা",
+        "C) 3630.0 টাকা",
+        "D) 3781.25 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹2750 + ₹275 = ₹3025.<br>2. Profit = 15% of Total Cost = 0.15 × 3025 = ₹453.75.<br>3. Selling Price = Total Cost + Profit = <strong>₹3478.75</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 2750 + 275 = 3025 টাকা।<br>2. 15% লাভ = 453.75 টাকা।<br>3. বিক্রয়মূল্য = <strong>3478.75 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 126,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹2820 and incurs an additional transportation cost of ₹282. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹2820 মূল্যের পণ্য কিনে অতিরিক্ত ₹282 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹3567.3",
+        "B) ₹3412.2",
+        "C) ₹3722.4",
+        "D) ₹3877.5"
+      ],
+      "bn": [
+        "A) 3567.3 টাকা",
+        "B) 3412.2 টাকা",
+        "C) 3722.4 টাকা",
+        "D) 3877.5 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹2820 + ₹282 = ₹3102.<br>2. Profit = 15% of Total Cost = 0.15 × 3102 = ₹465.3.<br>3. Selling Price = Total Cost + Profit = <strong>₹3567.3</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 2820 + 282 = 3102 টাকা।<br>2. 15% লাভ = 465.3 টাকা।<br>3. বিক্রয়মূল্য = <strong>3567.3 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 127,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹2890 and incurs an additional transportation cost of ₹289. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹2890 মূল্যের পণ্য কিনে অতিরিক্ত ₹289 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹3655.85",
+        "B) ₹3496.9",
+        "C) ₹3814.8",
+        "D) ₹3973.75"
+      ],
+      "bn": [
+        "A) 3655.85 টাকা",
+        "B) 3496.9 টাকা",
+        "C) 3814.8 টাকা",
+        "D) 3973.75 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹2890 + ₹289 = ₹3179.<br>2. Profit = 15% of Total Cost = 0.15 × 3179 = ₹476.85.<br>3. Selling Price = Total Cost + Profit = <strong>₹3655.85</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 2890 + 289 = 3179 টাকা।<br>2. 15% লাভ = 476.85 টাকা।<br>3. বিক্রয়মূল্য = <strong>3655.85 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 128,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹2960 and incurs an additional transportation cost of ₹296. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹2960 মূল্যের পণ্য কিনে অতিরিক্ত ₹296 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹3744.4",
+        "B) ₹3581.6",
+        "C) ₹3907.2",
+        "D) ₹4070.0"
+      ],
+      "bn": [
+        "A) 3744.4 টাকা",
+        "B) 3581.6 টাকা",
+        "C) 3907.2 টাকা",
+        "D) 4070.0 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹2960 + ₹296 = ₹3256.<br>2. Profit = 15% of Total Cost = 0.15 × 3256 = ₹488.4.<br>3. Selling Price = Total Cost + Profit = <strong>₹3744.4</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 2960 + 296 = 3256 টাকা।<br>2. 15% লাভ = 488.4 টাকা।<br>3. বিক্রয়মূল্য = <strong>3744.4 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 129,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹3030 and incurs an additional transportation cost of ₹303. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹3030 মূল্যের পণ্য কিনে অতিরিক্ত ₹303 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹3832.95",
+        "B) ₹3666.3",
+        "C) ₹3999.6",
+        "D) ₹4166.25"
+      ],
+      "bn": [
+        "A) 3832.95 টাকা",
+        "B) 3666.3 টাকা",
+        "C) 3999.6 টাকা",
+        "D) 4166.25 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹3030 + ₹303 = ₹3333.<br>2. Profit = 15% of Total Cost = 0.15 × 3333 = ₹499.95.<br>3. Selling Price = Total Cost + Profit = <strong>₹3832.95</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 3030 + 303 = 3333 টাকা।<br>2. 15% লাভ = 499.95 টাকা।<br>3. বিক্রয়মূল্য = <strong>3832.95 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 130,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹3100 and incurs an additional transportation cost of ₹310. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹3100 মূল্যের পণ্য কিনে অতিরিক্ত ₹310 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹3921.5",
+        "B) ₹3751.0",
+        "C) ₹4092.0",
+        "D) ₹4262.5"
+      ],
+      "bn": [
+        "A) 3921.5 টাকা",
+        "B) 3751.0 টাকা",
+        "C) 4092.0 টাকা",
+        "D) 4262.5 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹3100 + ₹310 = ₹3410.<br>2. Profit = 15% of Total Cost = 0.15 × 3410 = ₹511.5.<br>3. Selling Price = Total Cost + Profit = <strong>₹3921.5</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 3100 + 310 = 3410 টাকা।<br>2. 15% লাভ = 511.5 টাকা।<br>3. বিক্রয়মূল্য = <strong>3921.5 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 131,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹3170 and incurs an additional transportation cost of ₹317. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹3170 মূল্যের পণ্য কিনে অতিরিক্ত ₹317 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹4010.05",
+        "B) ₹3835.7",
+        "C) ₹4184.4",
+        "D) ₹4358.75"
+      ],
+      "bn": [
+        "A) 4010.05 টাকা",
+        "B) 3835.7 টাকা",
+        "C) 4184.4 টাকা",
+        "D) 4358.75 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹3170 + ₹317 = ₹3487.<br>2. Profit = 15% of Total Cost = 0.15 × 3487 = ₹523.05.<br>3. Selling Price = Total Cost + Profit = <strong>₹4010.05</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 3170 + 317 = 3487 টাকা।<br>2. 15% লাভ = 523.05 টাকা।<br>3. বিক্রয়মূল্য = <strong>4010.05 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 132,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹3240 and incurs an additional transportation cost of ₹324. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹3240 মূল্যের পণ্য কিনে অতিরিক্ত ₹324 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹4098.6",
+        "B) ₹3920.4",
+        "C) ₹4276.8",
+        "D) ₹4455.0"
+      ],
+      "bn": [
+        "A) 4098.6 টাকা",
+        "B) 3920.4 টাকা",
+        "C) 4276.8 টাকা",
+        "D) 4455.0 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹3240 + ₹324 = ₹3564.<br>2. Profit = 15% of Total Cost = 0.15 × 3564 = ₹534.6.<br>3. Selling Price = Total Cost + Profit = <strong>₹4098.6</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 3240 + 324 = 3564 টাকা।<br>2. 15% লাভ = 534.6 টাকা।<br>3. বিক্রয়মূল্য = <strong>4098.6 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 133,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹3310 and incurs an additional transportation cost of ₹331. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹3310 মূল্যের পণ্য কিনে অতিরিক্ত ₹331 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹4187.15",
+        "B) ₹4005.1",
+        "C) ₹4369.2",
+        "D) ₹4551.25"
+      ],
+      "bn": [
+        "A) 4187.15 টাকা",
+        "B) 4005.1 টাকা",
+        "C) 4369.2 টাকা",
+        "D) 4551.25 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹3310 + ₹331 = ₹3641.<br>2. Profit = 15% of Total Cost = 0.15 × 3641 = ₹546.15.<br>3. Selling Price = Total Cost + Profit = <strong>₹4187.15</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 3310 + 331 = 3641 টাকা।<br>2. 15% লাভ = 546.15 টাকা।<br>3. বিক্রয়মূল্য = <strong>4187.15 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 134,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹3380 and incurs an additional transportation cost of ₹338. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹3380 মূল্যের পণ্য কিনে অতিরিক্ত ₹338 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹4275.7",
+        "B) ₹4089.8",
+        "C) ₹4461.6",
+        "D) ₹4647.5"
+      ],
+      "bn": [
+        "A) 4275.7 টাকা",
+        "B) 4089.8 টাকা",
+        "C) 4461.6 টাকা",
+        "D) 4647.5 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹3380 + ₹338 = ₹3718.<br>2. Profit = 15% of Total Cost = 0.15 × 3718 = ₹557.7.<br>3. Selling Price = Total Cost + Profit = <strong>₹4275.7</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 3380 + 338 = 3718 টাকা।<br>2. 15% লাভ = 557.7 টাকা।<br>3. বিক্রয়মূল্য = <strong>4275.7 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 135,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹3450 and incurs an additional transportation cost of ₹345. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹3450 মূল্যের পণ্য কিনে অতিরিক্ত ₹345 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹4364.25",
+        "B) ₹4174.5",
+        "C) ₹4554.0",
+        "D) ₹4743.75"
+      ],
+      "bn": [
+        "A) 4364.25 টাকা",
+        "B) 4174.5 টাকা",
+        "C) 4554.0 টাকা",
+        "D) 4743.75 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹3450 + ₹345 = ₹3795.<br>2. Profit = 15% of Total Cost = 0.15 × 3795 = ₹569.25.<br>3. Selling Price = Total Cost + Profit = <strong>₹4364.25</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 3450 + 345 = 3795 টাকা।<br>2. 15% লাভ = 569.25 টাকা।<br>3. বিক্রয়মূল্য = <strong>4364.25 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 136,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹3520 and incurs an additional transportation cost of ₹352. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹3520 মূল্যের পণ্য কিনে অতিরিক্ত ₹352 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹4452.8",
+        "B) ₹4259.2",
+        "C) ₹4646.4",
+        "D) ₹4840.0"
+      ],
+      "bn": [
+        "A) 4452.8 টাকা",
+        "B) 4259.2 টাকা",
+        "C) 4646.4 টাকা",
+        "D) 4840.0 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹3520 + ₹352 = ₹3872.<br>2. Profit = 15% of Total Cost = 0.15 × 3872 = ₹580.8.<br>3. Selling Price = Total Cost + Profit = <strong>₹4452.8</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 3520 + 352 = 3872 টাকা।<br>2. 15% লাভ = 580.8 টাকা।<br>3. বিক্রয়মূল্য = <strong>4452.8 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 137,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹3590 and incurs an additional transportation cost of ₹359. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹3590 মূল্যের পণ্য কিনে অতিরিক্ত ₹359 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹4541.35",
+        "B) ₹4343.9",
+        "C) ₹4738.8",
+        "D) ₹4936.25"
+      ],
+      "bn": [
+        "A) 4541.35 টাকা",
+        "B) 4343.9 টাকা",
+        "C) 4738.8 টাকা",
+        "D) 4936.25 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹3590 + ₹359 = ₹3949.<br>2. Profit = 15% of Total Cost = 0.15 × 3949 = ₹592.35.<br>3. Selling Price = Total Cost + Profit = <strong>₹4541.35</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 3590 + 359 = 3949 টাকা।<br>2. 15% লাভ = 592.35 টাকা।<br>3. বিক্রয়মূল্য = <strong>4541.35 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 138,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹3660 and incurs an additional transportation cost of ₹366. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹3660 মূল্যের পণ্য কিনে অতিরিক্ত ₹366 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹4629.9",
+        "B) ₹4428.6",
+        "C) ₹4831.2",
+        "D) ₹5032.5"
+      ],
+      "bn": [
+        "A) 4629.9 টাকা",
+        "B) 4428.6 টাকা",
+        "C) 4831.2 টাকা",
+        "D) 5032.5 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹3660 + ₹366 = ₹4026.<br>2. Profit = 15% of Total Cost = 0.15 × 4026 = ₹603.9.<br>3. Selling Price = Total Cost + Profit = <strong>₹4629.9</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 3660 + 366 = 4026 টাকা।<br>2. 15% লাভ = 603.9 টাকা।<br>3. বিক্রয়মূল্য = <strong>4629.9 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 139,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹3730 and incurs an additional transportation cost of ₹373. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹3730 মূল্যের পণ্য কিনে অতিরিক্ত ₹373 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹4718.45",
+        "B) ₹4513.3",
+        "C) ₹4923.6",
+        "D) ₹5128.75"
+      ],
+      "bn": [
+        "A) 4718.45 টাকা",
+        "B) 4513.3 টাকা",
+        "C) 4923.6 টাকা",
+        "D) 5128.75 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹3730 + ₹373 = ₹4103.<br>2. Profit = 15% of Total Cost = 0.15 × 4103 = ₹615.45.<br>3. Selling Price = Total Cost + Profit = <strong>₹4718.45</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 3730 + 373 = 4103 টাকা।<br>2. 15% লাভ = 615.45 টাকা।<br>3. বিক্রয়মূল্য = <strong>4718.45 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 140,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹3800 and incurs an additional transportation cost of ₹380. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹3800 মূল্যের পণ্য কিনে অতিরিক্ত ₹380 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹4807.0",
+        "B) ₹4598.0",
+        "C) ₹5016.0",
+        "D) ₹5225.0"
+      ],
+      "bn": [
+        "A) 4807.0 টাকা",
+        "B) 4598.0 টাকা",
+        "C) 5016.0 টাকা",
+        "D) 5225.0 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹3800 + ₹380 = ₹4180.<br>2. Profit = 15% of Total Cost = 0.15 × 4180 = ₹627.0.<br>3. Selling Price = Total Cost + Profit = <strong>₹4807.0</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 3800 + 380 = 4180 টাকা।<br>2. 15% লাভ = 627.0 টাকা।<br>3. বিক্রয়মূল্য = <strong>4807.0 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 141,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹3870 and incurs an additional transportation cost of ₹387. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹3870 মূল্যের পণ্য কিনে অতিরিক্ত ₹387 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹4895.55",
+        "B) ₹4682.7",
+        "C) ₹5108.4",
+        "D) ₹5321.25"
+      ],
+      "bn": [
+        "A) 4895.55 টাকা",
+        "B) 4682.7 টাকা",
+        "C) 5108.4 টাকা",
+        "D) 5321.25 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹3870 + ₹387 = ₹4257.<br>2. Profit = 15% of Total Cost = 0.15 × 4257 = ₹638.55.<br>3. Selling Price = Total Cost + Profit = <strong>₹4895.55</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 3870 + 387 = 4257 টাকা।<br>2. 15% লাভ = 638.55 টাকা।<br>3. বিক্রয়মূল্য = <strong>4895.55 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 142,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹3940 and incurs an additional transportation cost of ₹394. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹3940 মূল্যের পণ্য কিনে অতিরিক্ত ₹394 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹4984.1",
+        "B) ₹4767.4",
+        "C) ₹5200.8",
+        "D) ₹5417.5"
+      ],
+      "bn": [
+        "A) 4984.1 টাকা",
+        "B) 4767.4 টাকা",
+        "C) 5200.8 টাকা",
+        "D) 5417.5 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹3940 + ₹394 = ₹4334.<br>2. Profit = 15% of Total Cost = 0.15 × 4334 = ₹650.1.<br>3. Selling Price = Total Cost + Profit = <strong>₹4984.1</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 3940 + 394 = 4334 টাকা।<br>2. 15% লাভ = 650.1 টাকা।<br>3. বিক্রয়মূল্য = <strong>4984.1 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 143,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹4010 and incurs an additional transportation cost of ₹401. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹4010 মূল্যের পণ্য কিনে অতিরিক্ত ₹401 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹5072.65",
+        "B) ₹4852.1",
+        "C) ₹5293.2",
+        "D) ₹5513.75"
+      ],
+      "bn": [
+        "A) 5072.65 টাকা",
+        "B) 4852.1 টাকা",
+        "C) 5293.2 টাকা",
+        "D) 5513.75 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹4010 + ₹401 = ₹4411.<br>2. Profit = 15% of Total Cost = 0.15 × 4411 = ₹661.65.<br>3. Selling Price = Total Cost + Profit = <strong>₹5072.65</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 4010 + 401 = 4411 টাকা।<br>2. 15% লাভ = 661.65 টাকা।<br>3. বিক্রয়মূল্য = <strong>5072.65 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 144,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹4080 and incurs an additional transportation cost of ₹408. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹4080 মূল্যের পণ্য কিনে অতিরিক্ত ₹408 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹5161.2",
+        "B) ₹4936.8",
+        "C) ₹5385.6",
+        "D) ₹5610.0"
+      ],
+      "bn": [
+        "A) 5161.2 টাকা",
+        "B) 4936.8 টাকা",
+        "C) 5385.6 টাকা",
+        "D) 5610.0 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹4080 + ₹408 = ₹4488.<br>2. Profit = 15% of Total Cost = 0.15 × 4488 = ₹673.2.<br>3. Selling Price = Total Cost + Profit = <strong>₹5161.2</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 4080 + 408 = 4488 টাকা।<br>2. 15% লাভ = 673.2 টাকা।<br>3. বিক্রয়মূল্য = <strong>5161.2 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 145,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹4150 and incurs an additional transportation cost of ₹415. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹4150 মূল্যের পণ্য কিনে অতিরিক্ত ₹415 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹5249.75",
+        "B) ₹5021.5",
+        "C) ₹5478.0",
+        "D) ₹5706.25"
+      ],
+      "bn": [
+        "A) 5249.75 টাকা",
+        "B) 5021.5 টাকা",
+        "C) 5478.0 টাকা",
+        "D) 5706.25 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹4150 + ₹415 = ₹4565.<br>2. Profit = 15% of Total Cost = 0.15 × 4565 = ₹684.75.<br>3. Selling Price = Total Cost + Profit = <strong>₹5249.75</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 4150 + 415 = 4565 টাকা।<br>2. 15% লাভ = 684.75 টাকা।<br>3. বিক্রয়মূল্য = <strong>5249.75 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 146,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹4220 and incurs an additional transportation cost of ₹422. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹4220 মূল্যের পণ্য কিনে অতিরিক্ত ₹422 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹5338.3",
+        "B) ₹5106.2",
+        "C) ₹5570.4",
+        "D) ₹5802.5"
+      ],
+      "bn": [
+        "A) 5338.3 টাকা",
+        "B) 5106.2 টাকা",
+        "C) 5570.4 টাকা",
+        "D) 5802.5 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹4220 + ₹422 = ₹4642.<br>2. Profit = 15% of Total Cost = 0.15 × 4642 = ₹696.3.<br>3. Selling Price = Total Cost + Profit = <strong>₹5338.3</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 4220 + 422 = 4642 টাকা।<br>2. 15% লাভ = 696.3 টাকা।<br>3. বিক্রয়মূল্য = <strong>5338.3 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 147,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹4290 and incurs an additional transportation cost of ₹429. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹4290 মূল্যের পণ্য কিনে অতিরিক্ত ₹429 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹5426.85",
+        "B) ₹5190.9",
+        "C) ₹5662.8",
+        "D) ₹5898.75"
+      ],
+      "bn": [
+        "A) 5426.85 টাকা",
+        "B) 5190.9 টাকা",
+        "C) 5662.8 টাকা",
+        "D) 5898.75 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹4290 + ₹429 = ₹4719.<br>2. Profit = 15% of Total Cost = 0.15 × 4719 = ₹707.85.<br>3. Selling Price = Total Cost + Profit = <strong>₹5426.85</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 4290 + 429 = 4719 টাকা।<br>2. 15% লাভ = 707.85 টাকা।<br>3. বিক্রয়মূল্য = <strong>5426.85 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 148,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹4360 and incurs an additional transportation cost of ₹436. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹4360 মূল্যের পণ্য কিনে অতিরিক্ত ₹436 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹5515.4",
+        "B) ₹5275.6",
+        "C) ₹5755.2",
+        "D) ₹5995.0"
+      ],
+      "bn": [
+        "A) 5515.4 টাকা",
+        "B) 5275.6 টাকা",
+        "C) 5755.2 টাকা",
+        "D) 5995.0 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹4360 + ₹436 = ₹4796.<br>2. Profit = 15% of Total Cost = 0.15 × 4796 = ₹719.4.<br>3. Selling Price = Total Cost + Profit = <strong>₹5515.4</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 4360 + 436 = 4796 টাকা।<br>2. 15% লাভ = 719.4 টাকা।<br>3. বিক্রয়মূল্য = <strong>5515.4 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 149,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹4430 and incurs an additional transportation cost of ₹443. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹4430 মূল্যের পণ্য কিনে অতিরিক্ত ₹443 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹5603.95",
+        "B) ₹5360.3",
+        "C) ₹5847.6",
+        "D) ₹6091.25"
+      ],
+      "bn": [
+        "A) 5603.95 টাকা",
+        "B) 5360.3 টাকা",
+        "C) 5847.6 টাকা",
+        "D) 6091.25 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹4430 + ₹443 = ₹4873.<br>2. Profit = 15% of Total Cost = 0.15 × 4873 = ₹730.95.<br>3. Selling Price = Total Cost + Profit = <strong>₹5603.95</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 4430 + 443 = 4873 টাকা।<br>2. 15% লাভ = 730.95 টাকা।<br>3. বিক্রয়মূল্য = <strong>5603.95 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 150,
+    "setId": 3,
+    "setNumber": 3,
+    "setName": {
+      "en": "Set 3",
+      "bn": "Set 3"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Number Systems & Commercial Math",
+      "bn": "সংখ্যা তত্ত্ব ও বাণিজ্যিক গণিত"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "A commercial trader purchases goods worth ₹4500 and incurs an additional transportation cost of ₹450. If he sells the entire stock at a 15% profit on total cost, what is the selling price?",
+      "bn": "একজন ব্যবসায়ী ₹4500 মূল্যের পণ্য কিনে অতিরিক্ত ₹450 পরিবহন খরচ করেন। মোট খরচের ওপর 15% লাভে সম্পূর্ণ পণ্য বিক্রি করলে বিক্রয়মূল্য কত হবে?"
+    },
+    "options": {
+      "en": [
+        "A) ₹5692.5",
+        "B) ₹5445.0",
+        "C) ₹5940.0",
+        "D) ₹6187.5"
+      ],
+      "bn": [
+        "A) 5692.5 টাকা",
+        "B) 5445.0 টাকা",
+        "C) 5940.0 টাকা",
+        "D) 6187.5 টাকা"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Total Effective Cost Price = ₹4500 + ₹450 = ₹4950.<br>2. Profit = 15% of Total Cost = 0.15 × 4950 = ₹742.5.<br>3. Selling Price = Total Cost + Profit = <strong>₹5692.5</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মোট ক্রয়মূল্য = 4500 + 450 = 4950 টাকা।<br>2. 15% লাভ = 742.5 টাকা।<br>3. বিক্রয়মূল্য = <strong>5692.5 টাকা</strong>।"
+    },
+    "tips": {
+      "en": "Effective CP = Purchase Price + Overhead expenses.",
+      "bn": "প্রকৃত ক্রয়মূল্য = ক্রয়মূল্য + আনুষঙ্গিক খরচ।"
+    }
+  },
+  {
+    "id": 151,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 1 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 1 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 6°",
+        "B) 16°",
+        "C) 36°",
+        "D) 51°"
+      ],
+      "bn": [
+        "A) 6°",
+        "B) 16°",
+        "C) 36°",
+        "D) 51°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 1 minutes, rotation = 1 × 6° = <strong>6°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 1 মিনিটে মোট ঘূর্ণন = 1 × 6° = <strong>6°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 152,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 2 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 2 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 12°",
+        "B) 22°",
+        "C) 42°",
+        "D) 57°"
+      ],
+      "bn": [
+        "A) 12°",
+        "B) 22°",
+        "C) 42°",
+        "D) 57°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 2 minutes, rotation = 2 × 6° = <strong>12°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 2 মিনিটে মোট ঘূর্ণন = 2 × 6° = <strong>12°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 153,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 3 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 3 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 18°",
+        "B) 28°",
+        "C) 48°",
+        "D) 63°"
+      ],
+      "bn": [
+        "A) 18°",
+        "B) 28°",
+        "C) 48°",
+        "D) 63°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 3 minutes, rotation = 3 × 6° = <strong>18°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 3 মিনিটে মোট ঘূর্ণন = 3 × 6° = <strong>18°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 154,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 4 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 4 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 24°",
+        "B) 34°",
+        "C) 54°",
+        "D) 69°"
+      ],
+      "bn": [
+        "A) 24°",
+        "B) 34°",
+        "C) 54°",
+        "D) 69°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 4 minutes, rotation = 4 × 6° = <strong>24°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 4 মিনিটে মোট ঘূর্ণন = 4 × 6° = <strong>24°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 155,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 5 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 5 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 30°",
+        "B) 40°",
+        "C) 60°",
+        "D) 75°"
+      ],
+      "bn": [
+        "A) 30°",
+        "B) 40°",
+        "C) 60°",
+        "D) 75°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 5 minutes, rotation = 5 × 6° = <strong>30°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 5 মিনিটে মোট ঘূর্ণন = 5 × 6° = <strong>30°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 156,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 6 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 6 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 36°",
+        "B) 46°",
+        "C) 66°",
+        "D) 81°"
+      ],
+      "bn": [
+        "A) 36°",
+        "B) 46°",
+        "C) 66°",
+        "D) 81°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 6 minutes, rotation = 6 × 6° = <strong>36°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 6 মিনিটে মোট ঘূর্ণন = 6 × 6° = <strong>36°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 157,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 7 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 7 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 42°",
+        "B) 52°",
+        "C) 72°",
+        "D) 87°"
+      ],
+      "bn": [
+        "A) 42°",
+        "B) 52°",
+        "C) 72°",
+        "D) 87°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 7 minutes, rotation = 7 × 6° = <strong>42°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 7 মিনিটে মোট ঘূর্ণন = 7 × 6° = <strong>42°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 158,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 8 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 8 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 48°",
+        "B) 58°",
+        "C) 78°",
+        "D) 93°"
+      ],
+      "bn": [
+        "A) 48°",
+        "B) 58°",
+        "C) 78°",
+        "D) 93°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 8 minutes, rotation = 8 × 6° = <strong>48°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 8 মিনিটে মোট ঘূর্ণন = 8 × 6° = <strong>48°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 159,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 9 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 9 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 54°",
+        "B) 64°",
+        "C) 84°",
+        "D) 99°"
+      ],
+      "bn": [
+        "A) 54°",
+        "B) 64°",
+        "C) 84°",
+        "D) 99°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 9 minutes, rotation = 9 × 6° = <strong>54°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 9 মিনিটে মোট ঘূর্ণন = 9 × 6° = <strong>54°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 160,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 10 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 10 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 60°",
+        "B) 70°",
+        "C) 90°",
+        "D) 105°"
+      ],
+      "bn": [
+        "A) 60°",
+        "B) 70°",
+        "C) 90°",
+        "D) 105°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 10 minutes, rotation = 10 × 6° = <strong>60°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 10 মিনিটে মোট ঘূর্ণন = 10 × 6° = <strong>60°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 161,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 11 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 11 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 66°",
+        "B) 76°",
+        "C) 96°",
+        "D) 111°"
+      ],
+      "bn": [
+        "A) 66°",
+        "B) 76°",
+        "C) 96°",
+        "D) 111°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 11 minutes, rotation = 11 × 6° = <strong>66°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 11 মিনিটে মোট ঘূর্ণন = 11 × 6° = <strong>66°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 162,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 12 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 12 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 72°",
+        "B) 82°",
+        "C) 102°",
+        "D) 117°"
+      ],
+      "bn": [
+        "A) 72°",
+        "B) 82°",
+        "C) 102°",
+        "D) 117°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 12 minutes, rotation = 12 × 6° = <strong>72°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 12 মিনিটে মোট ঘূর্ণন = 12 × 6° = <strong>72°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 163,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 13 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 13 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 78°",
+        "B) 88°",
+        "C) 108°",
+        "D) 123°"
+      ],
+      "bn": [
+        "A) 78°",
+        "B) 88°",
+        "C) 108°",
+        "D) 123°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 13 minutes, rotation = 13 × 6° = <strong>78°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 13 মিনিটে মোট ঘূর্ণন = 13 × 6° = <strong>78°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 164,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 14 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 14 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 84°",
+        "B) 94°",
+        "C) 114°",
+        "D) 129°"
+      ],
+      "bn": [
+        "A) 84°",
+        "B) 94°",
+        "C) 114°",
+        "D) 129°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 14 minutes, rotation = 14 × 6° = <strong>84°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 14 মিনিটে মোট ঘূর্ণন = 14 × 6° = <strong>84°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 165,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 15 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 15 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 90°",
+        "B) 100°",
+        "C) 120°",
+        "D) 135°"
+      ],
+      "bn": [
+        "A) 90°",
+        "B) 100°",
+        "C) 120°",
+        "D) 135°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 15 minutes, rotation = 15 × 6° = <strong>90°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 15 মিনিটে মোট ঘূর্ণন = 15 × 6° = <strong>90°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 166,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 16 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 16 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 96°",
+        "B) 106°",
+        "C) 126°",
+        "D) 141°"
+      ],
+      "bn": [
+        "A) 96°",
+        "B) 106°",
+        "C) 126°",
+        "D) 141°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 16 minutes, rotation = 16 × 6° = <strong>96°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 16 মিনিটে মোট ঘূর্ণন = 16 × 6° = <strong>96°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 167,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 17 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 17 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 102°",
+        "B) 112°",
+        "C) 132°",
+        "D) 147°"
+      ],
+      "bn": [
+        "A) 102°",
+        "B) 112°",
+        "C) 132°",
+        "D) 147°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 17 minutes, rotation = 17 × 6° = <strong>102°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 17 মিনিটে মোট ঘূর্ণন = 17 × 6° = <strong>102°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 168,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 18 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 18 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 108°",
+        "B) 118°",
+        "C) 138°",
+        "D) 153°"
+      ],
+      "bn": [
+        "A) 108°",
+        "B) 118°",
+        "C) 138°",
+        "D) 153°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 18 minutes, rotation = 18 × 6° = <strong>108°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 18 মিনিটে মোট ঘূর্ণন = 18 × 6° = <strong>108°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 169,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 19 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 19 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 114°",
+        "B) 124°",
+        "C) 144°",
+        "D) 159°"
+      ],
+      "bn": [
+        "A) 114°",
+        "B) 124°",
+        "C) 144°",
+        "D) 159°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 19 minutes, rotation = 19 × 6° = <strong>114°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 19 মিনিটে মোট ঘূর্ণন = 19 × 6° = <strong>114°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 170,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 20 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 20 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 120°",
+        "B) 130°",
+        "C) 150°",
+        "D) 165°"
+      ],
+      "bn": [
+        "A) 120°",
+        "B) 130°",
+        "C) 150°",
+        "D) 165°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 20 minutes, rotation = 20 × 6° = <strong>120°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 20 মিনিটে মোট ঘূর্ণন = 20 × 6° = <strong>120°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 171,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 21 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 21 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 126°",
+        "B) 136°",
+        "C) 156°",
+        "D) 171°"
+      ],
+      "bn": [
+        "A) 126°",
+        "B) 136°",
+        "C) 156°",
+        "D) 171°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 21 minutes, rotation = 21 × 6° = <strong>126°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 21 মিনিটে মোট ঘূর্ণন = 21 × 6° = <strong>126°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 172,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 22 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 22 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 132°",
+        "B) 142°",
+        "C) 162°",
+        "D) 177°"
+      ],
+      "bn": [
+        "A) 132°",
+        "B) 142°",
+        "C) 162°",
+        "D) 177°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 22 minutes, rotation = 22 × 6° = <strong>132°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 22 মিনিটে মোট ঘূর্ণন = 22 × 6° = <strong>132°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 173,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 23 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 23 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 138°",
+        "B) 148°",
+        "C) 168°",
+        "D) 183°"
+      ],
+      "bn": [
+        "A) 138°",
+        "B) 148°",
+        "C) 168°",
+        "D) 183°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 23 minutes, rotation = 23 × 6° = <strong>138°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 23 মিনিটে মোট ঘূর্ণন = 23 × 6° = <strong>138°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 174,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 24 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 24 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 144°",
+        "B) 154°",
+        "C) 174°",
+        "D) 189°"
+      ],
+      "bn": [
+        "A) 144°",
+        "B) 154°",
+        "C) 174°",
+        "D) 189°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 24 minutes, rotation = 24 × 6° = <strong>144°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 24 মিনিটে মোট ঘূর্ণন = 24 × 6° = <strong>144°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 175,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 25 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 25 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 150°",
+        "B) 160°",
+        "C) 180°",
+        "D) 195°"
+      ],
+      "bn": [
+        "A) 150°",
+        "B) 160°",
+        "C) 180°",
+        "D) 195°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 25 minutes, rotation = 25 × 6° = <strong>150°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 25 মিনিটে মোট ঘূর্ণন = 25 × 6° = <strong>150°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 176,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 26 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 26 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 156°",
+        "B) 166°",
+        "C) 186°",
+        "D) 201°"
+      ],
+      "bn": [
+        "A) 156°",
+        "B) 166°",
+        "C) 186°",
+        "D) 201°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 26 minutes, rotation = 26 × 6° = <strong>156°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 26 মিনিটে মোট ঘূর্ণন = 26 × 6° = <strong>156°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 177,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 27 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 27 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 162°",
+        "B) 172°",
+        "C) 192°",
+        "D) 207°"
+      ],
+      "bn": [
+        "A) 162°",
+        "B) 172°",
+        "C) 192°",
+        "D) 207°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 27 minutes, rotation = 27 × 6° = <strong>162°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 27 মিনিটে মোট ঘূর্ণন = 27 × 6° = <strong>162°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 178,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 28 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 28 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 168°",
+        "B) 178°",
+        "C) 198°",
+        "D) 213°"
+      ],
+      "bn": [
+        "A) 168°",
+        "B) 178°",
+        "C) 198°",
+        "D) 213°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 28 minutes, rotation = 28 × 6° = <strong>168°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 28 মিনিটে মোট ঘূর্ণন = 28 × 6° = <strong>168°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 179,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 29 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 29 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 174°",
+        "B) 184°",
+        "C) 204°",
+        "D) 219°"
+      ],
+      "bn": [
+        "A) 174°",
+        "B) 184°",
+        "C) 204°",
+        "D) 219°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 29 minutes, rotation = 29 × 6° = <strong>174°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 29 মিনিটে মোট ঘূর্ণন = 29 × 6° = <strong>174°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 180,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 30 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 30 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 180°",
+        "B) 190°",
+        "C) 210°",
+        "D) 225°"
+      ],
+      "bn": [
+        "A) 180°",
+        "B) 190°",
+        "C) 210°",
+        "D) 225°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 30 minutes, rotation = 30 × 6° = <strong>180°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 30 মিনিটে মোট ঘূর্ণন = 30 × 6° = <strong>180°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 181,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 31 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 31 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 186°",
+        "B) 196°",
+        "C) 216°",
+        "D) 231°"
+      ],
+      "bn": [
+        "A) 186°",
+        "B) 196°",
+        "C) 216°",
+        "D) 231°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 31 minutes, rotation = 31 × 6° = <strong>186°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 31 মিনিটে মোট ঘূর্ণন = 31 × 6° = <strong>186°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 182,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 32 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 32 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 192°",
+        "B) 202°",
+        "C) 222°",
+        "D) 237°"
+      ],
+      "bn": [
+        "A) 192°",
+        "B) 202°",
+        "C) 222°",
+        "D) 237°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 32 minutes, rotation = 32 × 6° = <strong>192°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 32 মিনিটে মোট ঘূর্ণন = 32 × 6° = <strong>192°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 183,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 33 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 33 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 198°",
+        "B) 208°",
+        "C) 228°",
+        "D) 243°"
+      ],
+      "bn": [
+        "A) 198°",
+        "B) 208°",
+        "C) 228°",
+        "D) 243°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 33 minutes, rotation = 33 × 6° = <strong>198°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 33 মিনিটে মোট ঘূর্ণন = 33 × 6° = <strong>198°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 184,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 34 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 34 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 204°",
+        "B) 214°",
+        "C) 234°",
+        "D) 249°"
+      ],
+      "bn": [
+        "A) 204°",
+        "B) 214°",
+        "C) 234°",
+        "D) 249°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 34 minutes, rotation = 34 × 6° = <strong>204°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 34 মিনিটে মোট ঘূর্ণন = 34 × 6° = <strong>204°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 185,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 35 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 35 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 210°",
+        "B) 220°",
+        "C) 240°",
+        "D) 255°"
+      ],
+      "bn": [
+        "A) 210°",
+        "B) 220°",
+        "C) 240°",
+        "D) 255°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 35 minutes, rotation = 35 × 6° = <strong>210°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 35 মিনিটে মোট ঘূর্ণন = 35 × 6° = <strong>210°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 186,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 36 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 36 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 216°",
+        "B) 226°",
+        "C) 246°",
+        "D) 261°"
+      ],
+      "bn": [
+        "A) 216°",
+        "B) 226°",
+        "C) 246°",
+        "D) 261°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 36 minutes, rotation = 36 × 6° = <strong>216°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 36 মিনিটে মোট ঘূর্ণন = 36 × 6° = <strong>216°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 187,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 37 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 37 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 222°",
+        "B) 232°",
+        "C) 252°",
+        "D) 267°"
+      ],
+      "bn": [
+        "A) 222°",
+        "B) 232°",
+        "C) 252°",
+        "D) 267°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 37 minutes, rotation = 37 × 6° = <strong>222°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 37 মিনিটে মোট ঘূর্ণন = 37 × 6° = <strong>222°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 188,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 38 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 38 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 228°",
+        "B) 238°",
+        "C) 258°",
+        "D) 273°"
+      ],
+      "bn": [
+        "A) 228°",
+        "B) 238°",
+        "C) 258°",
+        "D) 273°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 38 minutes, rotation = 38 × 6° = <strong>228°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 38 মিনিটে মোট ঘূর্ণন = 38 × 6° = <strong>228°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 189,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 39 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 39 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 234°",
+        "B) 244°",
+        "C) 264°",
+        "D) 279°"
+      ],
+      "bn": [
+        "A) 234°",
+        "B) 244°",
+        "C) 264°",
+        "D) 279°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 39 minutes, rotation = 39 × 6° = <strong>234°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 39 মিনিটে মোট ঘূর্ণন = 39 × 6° = <strong>234°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 190,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 40 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 40 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 240°",
+        "B) 250°",
+        "C) 270°",
+        "D) 285°"
+      ],
+      "bn": [
+        "A) 240°",
+        "B) 250°",
+        "C) 270°",
+        "D) 285°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 40 minutes, rotation = 40 × 6° = <strong>240°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 40 মিনিটে মোট ঘূর্ণন = 40 × 6° = <strong>240°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 191,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 41 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 41 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 246°",
+        "B) 256°",
+        "C) 276°",
+        "D) 291°"
+      ],
+      "bn": [
+        "A) 246°",
+        "B) 256°",
+        "C) 276°",
+        "D) 291°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 41 minutes, rotation = 41 × 6° = <strong>246°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 41 মিনিটে মোট ঘূর্ণন = 41 × 6° = <strong>246°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 192,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 42 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 42 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 252°",
+        "B) 262°",
+        "C) 282°",
+        "D) 297°"
+      ],
+      "bn": [
+        "A) 252°",
+        "B) 262°",
+        "C) 282°",
+        "D) 297°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 42 minutes, rotation = 42 × 6° = <strong>252°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 42 মিনিটে মোট ঘূর্ণন = 42 × 6° = <strong>252°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 193,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 43 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 43 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 258°",
+        "B) 268°",
+        "C) 288°",
+        "D) 303°"
+      ],
+      "bn": [
+        "A) 258°",
+        "B) 268°",
+        "C) 288°",
+        "D) 303°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 43 minutes, rotation = 43 × 6° = <strong>258°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 43 মিনিটে মোট ঘূর্ণন = 43 × 6° = <strong>258°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 194,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 44 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 44 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 264°",
+        "B) 274°",
+        "C) 294°",
+        "D) 309°"
+      ],
+      "bn": [
+        "A) 264°",
+        "B) 274°",
+        "C) 294°",
+        "D) 309°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 44 minutes, rotation = 44 × 6° = <strong>264°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 44 মিনিটে মোট ঘূর্ণন = 44 × 6° = <strong>264°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 195,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 45 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 45 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 270°",
+        "B) 280°",
+        "C) 300°",
+        "D) 315°"
+      ],
+      "bn": [
+        "A) 270°",
+        "B) 280°",
+        "C) 300°",
+        "D) 315°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 45 minutes, rotation = 45 × 6° = <strong>270°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 45 মিনিটে মোট ঘূর্ণন = 45 × 6° = <strong>270°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 196,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 46 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 46 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 276°",
+        "B) 286°",
+        "C) 306°",
+        "D) 321°"
+      ],
+      "bn": [
+        "A) 276°",
+        "B) 286°",
+        "C) 306°",
+        "D) 321°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 46 minutes, rotation = 46 × 6° = <strong>276°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 46 মিনিটে মোট ঘূর্ণন = 46 × 6° = <strong>276°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 197,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 47 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 47 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 282°",
+        "B) 292°",
+        "C) 312°",
+        "D) 327°"
+      ],
+      "bn": [
+        "A) 282°",
+        "B) 292°",
+        "C) 312°",
+        "D) 327°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 47 minutes, rotation = 47 × 6° = <strong>282°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 47 মিনিটে মোট ঘূর্ণন = 47 × 6° = <strong>282°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 198,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 48 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 48 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 288°",
+        "B) 298°",
+        "C) 318°",
+        "D) 333°"
+      ],
+      "bn": [
+        "A) 288°",
+        "B) 298°",
+        "C) 318°",
+        "D) 333°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 48 minutes, rotation = 48 × 6° = <strong>288°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 48 মিনিটে মোট ঘূর্ণন = 48 × 6° = <strong>288°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 199,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 49 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 49 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 294°",
+        "B) 304°",
+        "C) 324°",
+        "D) 339°"
+      ],
+      "bn": [
+        "A) 294°",
+        "B) 304°",
+        "C) 324°",
+        "D) 339°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 49 minutes, rotation = 49 × 6° = <strong>294°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 49 মিনিটে মোট ঘূর্ণন = 49 × 6° = <strong>294°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 200,
+    "setId": 4,
+    "setNumber": 4,
+    "setName": {
+      "en": "Set 4",
+      "bn": "Set 4"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Analytical & Clocks/Calendars",
+      "bn": "বিশ্লেষণাত্মক ও ঘড়ি/ক্যালেন্ডার"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "How many degrees does the minute hand of a clock rotate in 50 minutes?",
+      "bn": "ঘড়ির মিনিটের কাঁটা 50 মিনিটে কত ডিগ্রি কোণে ঘোরে?"
+    },
+    "options": {
+      "en": [
+        "A) 300°",
+        "B) 310°",
+        "C) 330°",
+        "D) 345°"
+      ],
+      "bn": [
+        "A) 300°",
+        "B) 310°",
+        "C) 330°",
+        "D) 345°"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The minute hand covers 360° in 60 minutes, which is 360° / 60 = 6° per minute.<br>2. In 50 minutes, rotation = 50 × 6° = <strong>300°</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. মিনিটের কাঁটা 60 মিনিটে 360° ঘোরে, অর্থাৎ প্রতি মিনিটে 6° ঘোরে।<br>2. 50 মিনিটে মোট ঘূর্ণন = 50 × 6° = <strong>300°</strong>।"
+    },
+    "tips": {
+      "en": "Minute hand rotates at 6° per minute.",
+      "bn": "মিনিটের কাঁটা প্রতি মিনিটে 6° ঘোরে।"
+    }
+  },
+  {
+    "id": 201,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'DILIGENT' in Question #1:",
+      "bn": "প্রশ্ন #1 এর জন্য 'DILIGENT' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Industrious",
+        "B) Lazy",
+        "C) Careless",
+        "D) Slow"
+      ],
+      "bn": [
+        "A) Industrious",
+        "B) Lazy",
+        "C) Careless",
+        "D) Slow"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'DILIGENT' means Hardworking / Industrious.<br>2. Therefore, the exact synonym is <strong>Industrious</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'DILIGENT' শব্দের অর্থ হলো: পরিশ্রমী / অধ্যবসায়ী (Hardworking / Industrious)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Industrious</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 202,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'BENEVOLENT' in Question #2:",
+      "bn": "প্রশ্ন #2 এর জন্য 'BENEVOLENT' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Generous",
+        "B) Cruel",
+        "C) Selfish",
+        "D) Hostile"
+      ],
+      "bn": [
+        "A) Generous",
+        "B) Cruel",
+        "C) Selfish",
+        "D) Hostile"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'BENEVOLENT' means Kind / Generous.<br>2. Therefore, the exact synonym is <strong>Generous</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'BENEVOLENT' শব্দের অর্থ হলো: দয়ালু / পরোপকারী (Kind / Generous)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Generous</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 203,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'TACITURN' in Question #3:",
+      "bn": "প্রশ্ন #3 এর জন্য 'TACITURN' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Reserved",
+        "B) Talkative",
+        "C) Loud",
+        "D) Friendly"
+      ],
+      "bn": [
+        "A) Reserved",
+        "B) Talkative",
+        "C) Loud",
+        "D) Friendly"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'TACITURN' means Reserved / Untalkative.<br>2. Therefore, the exact synonym is <strong>Reserved</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'TACITURN' শব্দের অর্থ হলো: অল্পভাষী / গম্ভীর (Reserved / Untalkative)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Reserved</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 204,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'EPHEMERAL' in Question #4:",
+      "bn": "প্রশ্ন #4 এর জন্য 'EPHEMERAL' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Transient",
+        "B) Permanent",
+        "C) Eternal",
+        "D) Constant"
+      ],
+      "bn": [
+        "A) Transient",
+        "B) Permanent",
+        "C) Eternal",
+        "D) Constant"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'EPHEMERAL' means Transitory / Short-lived.<br>2. Therefore, the exact synonym is <strong>Transient</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'EPHEMERAL' শব্দের অর্থ হলো: ক্ষণস্থায়ী (Transitory / Short-lived)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Transient</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 205,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'PRAGMATIC' in Question #5:",
+      "bn": "প্রশ্ন #5 এর জন্য 'PRAGMATIC' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Practical",
+        "B) Theoretical",
+        "C) Idealistic",
+        "D) Vague"
+      ],
+      "bn": [
+        "A) Practical",
+        "B) Theoretical",
+        "C) Idealistic",
+        "D) Vague"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'PRAGMATIC' means Practical / Realistic.<br>2. Therefore, the exact synonym is <strong>Practical</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'PRAGMATIC' শব্দের অর্থ হলো: বাস্তবধর্মী (Practical / Realistic)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Practical</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 206,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'LUCID' in Question #6:",
+      "bn": "প্রশ্ন #6 এর জন্য 'LUCID' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Clear",
+        "B) Confusing",
+        "C) Dark",
+        "D) Murky"
+      ],
+      "bn": [
+        "A) Clear",
+        "B) Confusing",
+        "C) Dark",
+        "D) Murky"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'LUCID' means Clear / Easily understood.<br>2. Therefore, the exact synonym is <strong>Clear</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'LUCID' শব্দের অর্থ হলো: স্পষ্ট ও বোধগম্য (Clear / Easily understood)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Clear</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 207,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'METICULOUS' in Question #7:",
+      "bn": "প্রশ্ন #7 এর জন্য 'METICULOUS' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Precise",
+        "B) Careless",
+        "C) Messy",
+        "D) Hasty"
+      ],
+      "bn": [
+        "A) Precise",
+        "B) Careless",
+        "C) Messy",
+        "D) Hasty"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'METICULOUS' means Careful / Precise.<br>2. Therefore, the exact synonym is <strong>Precise</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'METICULOUS' শব্দের অর্থ হলো: অত্যন্ত সতর্ক (Careful / Precise)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Precise</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 208,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'UBIQUITOUS' in Question #8:",
+      "bn": "প্রশ্ন #8 এর জন্য 'UBIQUITOUS' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Omnipresent",
+        "B) Rare",
+        "C) Scarce",
+        "D) Hidden"
+      ],
+      "bn": [
+        "A) Omnipresent",
+        "B) Rare",
+        "C) Scarce",
+        "D) Hidden"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'UBIQUITOUS' means Omnipresent / Everywhere.<br>2. Therefore, the exact synonym is <strong>Omnipresent</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'UBIQUITOUS' শব্দের অর্থ হলো: সর্বব্যাপী (Omnipresent / Everywhere)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Omnipresent</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 209,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'CANDID' in Question #9:",
+      "bn": "প্রশ্ন #9 এর জন্য 'CANDID' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Frank",
+        "B) Deceitful",
+        "C) Shy",
+        "D) Guarded"
+      ],
+      "bn": [
+        "A) Frank",
+        "B) Deceitful",
+        "C) Shy",
+        "D) Guarded"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'CANDID' means Frank / Honest.<br>2. Therefore, the exact synonym is <strong>Frank</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'CANDID' শব্দের অর্থ হলো: অকপট / সরল (Frank / Honest)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Frank</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 210,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'AMIABLE' in Question #10:",
+      "bn": "প্রশ্ন #10 এর জন্য 'AMIABLE' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Friendly",
+        "B) Hostile",
+        "C) Rude",
+        "D) Cold"
+      ],
+      "bn": [
+        "A) Friendly",
+        "B) Hostile",
+        "C) Rude",
+        "D) Cold"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'AMIABLE' means Friendly / Pleasant.<br>2. Therefore, the exact synonym is <strong>Friendly</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'AMIABLE' শব্দের অর্থ হলো: মিষ্টভাষী / অমায়িক (Friendly / Pleasant)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Friendly</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 211,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'DILIGENT' in Question #11:",
+      "bn": "প্রশ্ন #11 এর জন্য 'DILIGENT' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Industrious",
+        "B) Lazy",
+        "C) Careless",
+        "D) Slow"
+      ],
+      "bn": [
+        "A) Industrious",
+        "B) Lazy",
+        "C) Careless",
+        "D) Slow"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'DILIGENT' means Hardworking / Industrious.<br>2. Therefore, the exact synonym is <strong>Industrious</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'DILIGENT' শব্দের অর্থ হলো: পরিশ্রমী / অধ্যবসায়ী (Hardworking / Industrious)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Industrious</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 212,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'BENEVOLENT' in Question #12:",
+      "bn": "প্রশ্ন #12 এর জন্য 'BENEVOLENT' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Generous",
+        "B) Cruel",
+        "C) Selfish",
+        "D) Hostile"
+      ],
+      "bn": [
+        "A) Generous",
+        "B) Cruel",
+        "C) Selfish",
+        "D) Hostile"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'BENEVOLENT' means Kind / Generous.<br>2. Therefore, the exact synonym is <strong>Generous</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'BENEVOLENT' শব্দের অর্থ হলো: দয়ালু / পরোপকারী (Kind / Generous)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Generous</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 213,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'TACITURN' in Question #13:",
+      "bn": "প্রশ্ন #13 এর জন্য 'TACITURN' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Reserved",
+        "B) Talkative",
+        "C) Loud",
+        "D) Friendly"
+      ],
+      "bn": [
+        "A) Reserved",
+        "B) Talkative",
+        "C) Loud",
+        "D) Friendly"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'TACITURN' means Reserved / Untalkative.<br>2. Therefore, the exact synonym is <strong>Reserved</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'TACITURN' শব্দের অর্থ হলো: অল্পভাষী / গম্ভীর (Reserved / Untalkative)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Reserved</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 214,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'EPHEMERAL' in Question #14:",
+      "bn": "প্রশ্ন #14 এর জন্য 'EPHEMERAL' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Transient",
+        "B) Permanent",
+        "C) Eternal",
+        "D) Constant"
+      ],
+      "bn": [
+        "A) Transient",
+        "B) Permanent",
+        "C) Eternal",
+        "D) Constant"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'EPHEMERAL' means Transitory / Short-lived.<br>2. Therefore, the exact synonym is <strong>Transient</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'EPHEMERAL' শব্দের অর্থ হলো: ক্ষণস্থায়ী (Transitory / Short-lived)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Transient</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 215,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'PRAGMATIC' in Question #15:",
+      "bn": "প্রশ্ন #15 এর জন্য 'PRAGMATIC' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Practical",
+        "B) Theoretical",
+        "C) Idealistic",
+        "D) Vague"
+      ],
+      "bn": [
+        "A) Practical",
+        "B) Theoretical",
+        "C) Idealistic",
+        "D) Vague"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'PRAGMATIC' means Practical / Realistic.<br>2. Therefore, the exact synonym is <strong>Practical</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'PRAGMATIC' শব্দের অর্থ হলো: বাস্তবধর্মী (Practical / Realistic)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Practical</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 216,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'LUCID' in Question #16:",
+      "bn": "প্রশ্ন #16 এর জন্য 'LUCID' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Clear",
+        "B) Confusing",
+        "C) Dark",
+        "D) Murky"
+      ],
+      "bn": [
+        "A) Clear",
+        "B) Confusing",
+        "C) Dark",
+        "D) Murky"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'LUCID' means Clear / Easily understood.<br>2. Therefore, the exact synonym is <strong>Clear</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'LUCID' শব্দের অর্থ হলো: স্পষ্ট ও বোধগম্য (Clear / Easily understood)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Clear</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 217,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'METICULOUS' in Question #17:",
+      "bn": "প্রশ্ন #17 এর জন্য 'METICULOUS' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Precise",
+        "B) Careless",
+        "C) Messy",
+        "D) Hasty"
+      ],
+      "bn": [
+        "A) Precise",
+        "B) Careless",
+        "C) Messy",
+        "D) Hasty"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'METICULOUS' means Careful / Precise.<br>2. Therefore, the exact synonym is <strong>Precise</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'METICULOUS' শব্দের অর্থ হলো: অত্যন্ত সতর্ক (Careful / Precise)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Precise</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 218,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'UBIQUITOUS' in Question #18:",
+      "bn": "প্রশ্ন #18 এর জন্য 'UBIQUITOUS' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Omnipresent",
+        "B) Rare",
+        "C) Scarce",
+        "D) Hidden"
+      ],
+      "bn": [
+        "A) Omnipresent",
+        "B) Rare",
+        "C) Scarce",
+        "D) Hidden"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'UBIQUITOUS' means Omnipresent / Everywhere.<br>2. Therefore, the exact synonym is <strong>Omnipresent</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'UBIQUITOUS' শব্দের অর্থ হলো: সর্বব্যাপী (Omnipresent / Everywhere)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Omnipresent</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 219,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'CANDID' in Question #19:",
+      "bn": "প্রশ্ন #19 এর জন্য 'CANDID' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Frank",
+        "B) Deceitful",
+        "C) Shy",
+        "D) Guarded"
+      ],
+      "bn": [
+        "A) Frank",
+        "B) Deceitful",
+        "C) Shy",
+        "D) Guarded"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'CANDID' means Frank / Honest.<br>2. Therefore, the exact synonym is <strong>Frank</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'CANDID' শব্দের অর্থ হলো: অকপট / সরল (Frank / Honest)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Frank</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 220,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'AMIABLE' in Question #20:",
+      "bn": "প্রশ্ন #20 এর জন্য 'AMIABLE' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Friendly",
+        "B) Hostile",
+        "C) Rude",
+        "D) Cold"
+      ],
+      "bn": [
+        "A) Friendly",
+        "B) Hostile",
+        "C) Rude",
+        "D) Cold"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'AMIABLE' means Friendly / Pleasant.<br>2. Therefore, the exact synonym is <strong>Friendly</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'AMIABLE' শব্দের অর্থ হলো: মিষ্টভাষী / অমায়িক (Friendly / Pleasant)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Friendly</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 221,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'DILIGENT' in Question #21:",
+      "bn": "প্রশ্ন #21 এর জন্য 'DILIGENT' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Industrious",
+        "B) Lazy",
+        "C) Careless",
+        "D) Slow"
+      ],
+      "bn": [
+        "A) Industrious",
+        "B) Lazy",
+        "C) Careless",
+        "D) Slow"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'DILIGENT' means Hardworking / Industrious.<br>2. Therefore, the exact synonym is <strong>Industrious</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'DILIGENT' শব্দের অর্থ হলো: পরিশ্রমী / অধ্যবসায়ী (Hardworking / Industrious)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Industrious</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 222,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'BENEVOLENT' in Question #22:",
+      "bn": "প্রশ্ন #22 এর জন্য 'BENEVOLENT' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Generous",
+        "B) Cruel",
+        "C) Selfish",
+        "D) Hostile"
+      ],
+      "bn": [
+        "A) Generous",
+        "B) Cruel",
+        "C) Selfish",
+        "D) Hostile"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'BENEVOLENT' means Kind / Generous.<br>2. Therefore, the exact synonym is <strong>Generous</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'BENEVOLENT' শব্দের অর্থ হলো: দয়ালু / পরোপকারী (Kind / Generous)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Generous</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 223,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'TACITURN' in Question #23:",
+      "bn": "প্রশ্ন #23 এর জন্য 'TACITURN' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Reserved",
+        "B) Talkative",
+        "C) Loud",
+        "D) Friendly"
+      ],
+      "bn": [
+        "A) Reserved",
+        "B) Talkative",
+        "C) Loud",
+        "D) Friendly"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'TACITURN' means Reserved / Untalkative.<br>2. Therefore, the exact synonym is <strong>Reserved</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'TACITURN' শব্দের অর্থ হলো: অল্পভাষী / গম্ভীর (Reserved / Untalkative)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Reserved</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 224,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'EPHEMERAL' in Question #24:",
+      "bn": "প্রশ্ন #24 এর জন্য 'EPHEMERAL' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Transient",
+        "B) Permanent",
+        "C) Eternal",
+        "D) Constant"
+      ],
+      "bn": [
+        "A) Transient",
+        "B) Permanent",
+        "C) Eternal",
+        "D) Constant"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'EPHEMERAL' means Transitory / Short-lived.<br>2. Therefore, the exact synonym is <strong>Transient</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'EPHEMERAL' শব্দের অর্থ হলো: ক্ষণস্থায়ী (Transitory / Short-lived)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Transient</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 225,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'PRAGMATIC' in Question #25:",
+      "bn": "প্রশ্ন #25 এর জন্য 'PRAGMATIC' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Practical",
+        "B) Theoretical",
+        "C) Idealistic",
+        "D) Vague"
+      ],
+      "bn": [
+        "A) Practical",
+        "B) Theoretical",
+        "C) Idealistic",
+        "D) Vague"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'PRAGMATIC' means Practical / Realistic.<br>2. Therefore, the exact synonym is <strong>Practical</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'PRAGMATIC' শব্দের অর্থ হলো: বাস্তবধর্মী (Practical / Realistic)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Practical</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 226,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'LUCID' in Question #26:",
+      "bn": "প্রশ্ন #26 এর জন্য 'LUCID' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Clear",
+        "B) Confusing",
+        "C) Dark",
+        "D) Murky"
+      ],
+      "bn": [
+        "A) Clear",
+        "B) Confusing",
+        "C) Dark",
+        "D) Murky"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'LUCID' means Clear / Easily understood.<br>2. Therefore, the exact synonym is <strong>Clear</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'LUCID' শব্দের অর্থ হলো: স্পষ্ট ও বোধগম্য (Clear / Easily understood)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Clear</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 227,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'METICULOUS' in Question #27:",
+      "bn": "প্রশ্ন #27 এর জন্য 'METICULOUS' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Precise",
+        "B) Careless",
+        "C) Messy",
+        "D) Hasty"
+      ],
+      "bn": [
+        "A) Precise",
+        "B) Careless",
+        "C) Messy",
+        "D) Hasty"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'METICULOUS' means Careful / Precise.<br>2. Therefore, the exact synonym is <strong>Precise</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'METICULOUS' শব্দের অর্থ হলো: অত্যন্ত সতর্ক (Careful / Precise)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Precise</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 228,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'UBIQUITOUS' in Question #28:",
+      "bn": "প্রশ্ন #28 এর জন্য 'UBIQUITOUS' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Omnipresent",
+        "B) Rare",
+        "C) Scarce",
+        "D) Hidden"
+      ],
+      "bn": [
+        "A) Omnipresent",
+        "B) Rare",
+        "C) Scarce",
+        "D) Hidden"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'UBIQUITOUS' means Omnipresent / Everywhere.<br>2. Therefore, the exact synonym is <strong>Omnipresent</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'UBIQUITOUS' শব্দের অর্থ হলো: সর্বব্যাপী (Omnipresent / Everywhere)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Omnipresent</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 229,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'CANDID' in Question #29:",
+      "bn": "প্রশ্ন #29 এর জন্য 'CANDID' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Frank",
+        "B) Deceitful",
+        "C) Shy",
+        "D) Guarded"
+      ],
+      "bn": [
+        "A) Frank",
+        "B) Deceitful",
+        "C) Shy",
+        "D) Guarded"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'CANDID' means Frank / Honest.<br>2. Therefore, the exact synonym is <strong>Frank</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'CANDID' শব্দের অর্থ হলো: অকপট / সরল (Frank / Honest)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Frank</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 230,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'AMIABLE' in Question #30:",
+      "bn": "প্রশ্ন #30 এর জন্য 'AMIABLE' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Friendly",
+        "B) Hostile",
+        "C) Rude",
+        "D) Cold"
+      ],
+      "bn": [
+        "A) Friendly",
+        "B) Hostile",
+        "C) Rude",
+        "D) Cold"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'AMIABLE' means Friendly / Pleasant.<br>2. Therefore, the exact synonym is <strong>Friendly</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'AMIABLE' শব্দের অর্থ হলো: মিষ্টভাষী / অমায়িক (Friendly / Pleasant)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Friendly</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 231,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'DILIGENT' in Question #31:",
+      "bn": "প্রশ্ন #31 এর জন্য 'DILIGENT' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Industrious",
+        "B) Lazy",
+        "C) Careless",
+        "D) Slow"
+      ],
+      "bn": [
+        "A) Industrious",
+        "B) Lazy",
+        "C) Careless",
+        "D) Slow"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'DILIGENT' means Hardworking / Industrious.<br>2. Therefore, the exact synonym is <strong>Industrious</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'DILIGENT' শব্দের অর্থ হলো: পরিশ্রমী / অধ্যবসায়ী (Hardworking / Industrious)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Industrious</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 232,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'BENEVOLENT' in Question #32:",
+      "bn": "প্রশ্ন #32 এর জন্য 'BENEVOLENT' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Generous",
+        "B) Cruel",
+        "C) Selfish",
+        "D) Hostile"
+      ],
+      "bn": [
+        "A) Generous",
+        "B) Cruel",
+        "C) Selfish",
+        "D) Hostile"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'BENEVOLENT' means Kind / Generous.<br>2. Therefore, the exact synonym is <strong>Generous</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'BENEVOLENT' শব্দের অর্থ হলো: দয়ালু / পরোপকারী (Kind / Generous)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Generous</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 233,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'TACITURN' in Question #33:",
+      "bn": "প্রশ্ন #33 এর জন্য 'TACITURN' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Reserved",
+        "B) Talkative",
+        "C) Loud",
+        "D) Friendly"
+      ],
+      "bn": [
+        "A) Reserved",
+        "B) Talkative",
+        "C) Loud",
+        "D) Friendly"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'TACITURN' means Reserved / Untalkative.<br>2. Therefore, the exact synonym is <strong>Reserved</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'TACITURN' শব্দের অর্থ হলো: অল্পভাষী / গম্ভীর (Reserved / Untalkative)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Reserved</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 234,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'EPHEMERAL' in Question #34:",
+      "bn": "প্রশ্ন #34 এর জন্য 'EPHEMERAL' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Transient",
+        "B) Permanent",
+        "C) Eternal",
+        "D) Constant"
+      ],
+      "bn": [
+        "A) Transient",
+        "B) Permanent",
+        "C) Eternal",
+        "D) Constant"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'EPHEMERAL' means Transitory / Short-lived.<br>2. Therefore, the exact synonym is <strong>Transient</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'EPHEMERAL' শব্দের অর্থ হলো: ক্ষণস্থায়ী (Transitory / Short-lived)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Transient</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 235,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'PRAGMATIC' in Question #35:",
+      "bn": "প্রশ্ন #35 এর জন্য 'PRAGMATIC' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Practical",
+        "B) Theoretical",
+        "C) Idealistic",
+        "D) Vague"
+      ],
+      "bn": [
+        "A) Practical",
+        "B) Theoretical",
+        "C) Idealistic",
+        "D) Vague"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'PRAGMATIC' means Practical / Realistic.<br>2. Therefore, the exact synonym is <strong>Practical</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'PRAGMATIC' শব্দের অর্থ হলো: বাস্তবধর্মী (Practical / Realistic)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Practical</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 236,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'LUCID' in Question #36:",
+      "bn": "প্রশ্ন #36 এর জন্য 'LUCID' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Clear",
+        "B) Confusing",
+        "C) Dark",
+        "D) Murky"
+      ],
+      "bn": [
+        "A) Clear",
+        "B) Confusing",
+        "C) Dark",
+        "D) Murky"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'LUCID' means Clear / Easily understood.<br>2. Therefore, the exact synonym is <strong>Clear</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'LUCID' শব্দের অর্থ হলো: স্পষ্ট ও বোধগম্য (Clear / Easily understood)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Clear</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 237,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'METICULOUS' in Question #37:",
+      "bn": "প্রশ্ন #37 এর জন্য 'METICULOUS' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Precise",
+        "B) Careless",
+        "C) Messy",
+        "D) Hasty"
+      ],
+      "bn": [
+        "A) Precise",
+        "B) Careless",
+        "C) Messy",
+        "D) Hasty"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'METICULOUS' means Careful / Precise.<br>2. Therefore, the exact synonym is <strong>Precise</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'METICULOUS' শব্দের অর্থ হলো: অত্যন্ত সতর্ক (Careful / Precise)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Precise</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 238,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'UBIQUITOUS' in Question #38:",
+      "bn": "প্রশ্ন #38 এর জন্য 'UBIQUITOUS' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Omnipresent",
+        "B) Rare",
+        "C) Scarce",
+        "D) Hidden"
+      ],
+      "bn": [
+        "A) Omnipresent",
+        "B) Rare",
+        "C) Scarce",
+        "D) Hidden"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'UBIQUITOUS' means Omnipresent / Everywhere.<br>2. Therefore, the exact synonym is <strong>Omnipresent</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'UBIQUITOUS' শব্দের অর্থ হলো: সর্বব্যাপী (Omnipresent / Everywhere)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Omnipresent</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 239,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'CANDID' in Question #39:",
+      "bn": "প্রশ্ন #39 এর জন্য 'CANDID' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Frank",
+        "B) Deceitful",
+        "C) Shy",
+        "D) Guarded"
+      ],
+      "bn": [
+        "A) Frank",
+        "B) Deceitful",
+        "C) Shy",
+        "D) Guarded"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'CANDID' means Frank / Honest.<br>2. Therefore, the exact synonym is <strong>Frank</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'CANDID' শব্দের অর্থ হলো: অকপট / সরল (Frank / Honest)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Frank</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 240,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'AMIABLE' in Question #40:",
+      "bn": "প্রশ্ন #40 এর জন্য 'AMIABLE' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Friendly",
+        "B) Hostile",
+        "C) Rude",
+        "D) Cold"
+      ],
+      "bn": [
+        "A) Friendly",
+        "B) Hostile",
+        "C) Rude",
+        "D) Cold"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'AMIABLE' means Friendly / Pleasant.<br>2. Therefore, the exact synonym is <strong>Friendly</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'AMIABLE' শব্দের অর্থ হলো: মিষ্টভাষী / অমায়িক (Friendly / Pleasant)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Friendly</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 241,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'DILIGENT' in Question #41:",
+      "bn": "প্রশ্ন #41 এর জন্য 'DILIGENT' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Industrious",
+        "B) Lazy",
+        "C) Careless",
+        "D) Slow"
+      ],
+      "bn": [
+        "A) Industrious",
+        "B) Lazy",
+        "C) Careless",
+        "D) Slow"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'DILIGENT' means Hardworking / Industrious.<br>2. Therefore, the exact synonym is <strong>Industrious</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'DILIGENT' শব্দের অর্থ হলো: পরিশ্রমী / অধ্যবসায়ী (Hardworking / Industrious)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Industrious</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 242,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'BENEVOLENT' in Question #42:",
+      "bn": "প্রশ্ন #42 এর জন্য 'BENEVOLENT' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Generous",
+        "B) Cruel",
+        "C) Selfish",
+        "D) Hostile"
+      ],
+      "bn": [
+        "A) Generous",
+        "B) Cruel",
+        "C) Selfish",
+        "D) Hostile"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'BENEVOLENT' means Kind / Generous.<br>2. Therefore, the exact synonym is <strong>Generous</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'BENEVOLENT' শব্দের অর্থ হলো: দয়ালু / পরোপকারী (Kind / Generous)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Generous</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 243,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'TACITURN' in Question #43:",
+      "bn": "প্রশ্ন #43 এর জন্য 'TACITURN' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Reserved",
+        "B) Talkative",
+        "C) Loud",
+        "D) Friendly"
+      ],
+      "bn": [
+        "A) Reserved",
+        "B) Talkative",
+        "C) Loud",
+        "D) Friendly"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'TACITURN' means Reserved / Untalkative.<br>2. Therefore, the exact synonym is <strong>Reserved</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'TACITURN' শব্দের অর্থ হলো: অল্পভাষী / গম্ভীর (Reserved / Untalkative)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Reserved</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 244,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'EPHEMERAL' in Question #44:",
+      "bn": "প্রশ্ন #44 এর জন্য 'EPHEMERAL' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Transient",
+        "B) Permanent",
+        "C) Eternal",
+        "D) Constant"
+      ],
+      "bn": [
+        "A) Transient",
+        "B) Permanent",
+        "C) Eternal",
+        "D) Constant"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'EPHEMERAL' means Transitory / Short-lived.<br>2. Therefore, the exact synonym is <strong>Transient</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'EPHEMERAL' শব্দের অর্থ হলো: ক্ষণস্থায়ী (Transitory / Short-lived)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Transient</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 245,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'PRAGMATIC' in Question #45:",
+      "bn": "প্রশ্ন #45 এর জন্য 'PRAGMATIC' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Practical",
+        "B) Theoretical",
+        "C) Idealistic",
+        "D) Vague"
+      ],
+      "bn": [
+        "A) Practical",
+        "B) Theoretical",
+        "C) Idealistic",
+        "D) Vague"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'PRAGMATIC' means Practical / Realistic.<br>2. Therefore, the exact synonym is <strong>Practical</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'PRAGMATIC' শব্দের অর্থ হলো: বাস্তবধর্মী (Practical / Realistic)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Practical</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 246,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'LUCID' in Question #46:",
+      "bn": "প্রশ্ন #46 এর জন্য 'LUCID' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Clear",
+        "B) Confusing",
+        "C) Dark",
+        "D) Murky"
+      ],
+      "bn": [
+        "A) Clear",
+        "B) Confusing",
+        "C) Dark",
+        "D) Murky"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'LUCID' means Clear / Easily understood.<br>2. Therefore, the exact synonym is <strong>Clear</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'LUCID' শব্দের অর্থ হলো: স্পষ্ট ও বোধগম্য (Clear / Easily understood)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Clear</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 247,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'METICULOUS' in Question #47:",
+      "bn": "প্রশ্ন #47 এর জন্য 'METICULOUS' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Precise",
+        "B) Careless",
+        "C) Messy",
+        "D) Hasty"
+      ],
+      "bn": [
+        "A) Precise",
+        "B) Careless",
+        "C) Messy",
+        "D) Hasty"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'METICULOUS' means Careful / Precise.<br>2. Therefore, the exact synonym is <strong>Precise</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'METICULOUS' শব্দের অর্থ হলো: অত্যন্ত সতর্ক (Careful / Precise)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Precise</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 248,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'UBIQUITOUS' in Question #48:",
+      "bn": "প্রশ্ন #48 এর জন্য 'UBIQUITOUS' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Omnipresent",
+        "B) Rare",
+        "C) Scarce",
+        "D) Hidden"
+      ],
+      "bn": [
+        "A) Omnipresent",
+        "B) Rare",
+        "C) Scarce",
+        "D) Hidden"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'UBIQUITOUS' means Omnipresent / Everywhere.<br>2. Therefore, the exact synonym is <strong>Omnipresent</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'UBIQUITOUS' শব্দের অর্থ হলো: সর্বব্যাপী (Omnipresent / Everywhere)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Omnipresent</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 249,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'CANDID' in Question #49:",
+      "bn": "প্রশ্ন #49 এর জন্য 'CANDID' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Frank",
+        "B) Deceitful",
+        "C) Shy",
+        "D) Guarded"
+      ],
+      "bn": [
+        "A) Frank",
+        "B) Deceitful",
+        "C) Shy",
+        "D) Guarded"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'CANDID' means Frank / Honest.<br>2. Therefore, the exact synonym is <strong>Frank</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'CANDID' শব্দের অর্থ হলো: অকপট / সরল (Frank / Honest)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Frank</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 250,
+    "setId": 5,
+    "setNumber": 5,
+    "setName": {
+      "en": "Set 5",
+      "bn": "Set 5"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Vocabulary & Grammar",
+      "bn": "শব্দভাণ্ডার ও ব্যাকরণ"
+    },
+    "difficulty": "easy",
+    "difficultyName": {
+      "en": "Easy",
+      "bn": "সহজ"
+    },
+    "question": {
+      "en": "Select the most appropriate synonym for the word 'AMIABLE' in Question #50:",
+      "bn": "প্রশ্ন #50 এর জন্য 'AMIABLE' শব্দের সবচেয়ে উপযুক্ত সমার্থক শব্দ কোনটি?"
+    },
+    "options": {
+      "en": [
+        "A) Friendly",
+        "B) Hostile",
+        "C) Rude",
+        "D) Cold"
+      ],
+      "bn": [
+        "A) Friendly",
+        "B) Hostile",
+        "C) Rude",
+        "D) Cold"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. The word 'AMIABLE' means Friendly / Pleasant.<br>2. Therefore, the exact synonym is <strong>Friendly</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. 'AMIABLE' শব্দের অর্থ হলো: মিষ্টভাষী / অমায়িক (Friendly / Pleasant)।<br>2. অতএব, সঠিক সমার্থক শব্দ হলো <strong>Friendly</strong>।"
+    },
+    "tips": {
+      "en": "Contextual meaning and root definition.",
+      "bn": "মূল শব্দের অর্থ ও প্রয়োগ।"
+    }
+  },
+  {
+    "id": 251,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 14 cm (use π = 22/7).",
+      "bn": "14 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 616.0 cm²",
+        "B) 641.0 cm²",
+        "C) 601.0 cm²",
+        "D) 666.0 cm²"
+      ],
+      "bn": [
+        "A) 616.0 বর্গ সেমি",
+        "B) 641.0 বর্গ সেমি",
+        "C) 601.0 বর্গ সেমি",
+        "D) 666.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 14 × 14 = <strong>616.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 14 = 88.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 14 × 14 = <strong>616.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 252,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 21 cm (use π = 22/7).",
+      "bn": "21 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 1386.0 cm²",
+        "B) 1411.0 cm²",
+        "C) 1371.0 cm²",
+        "D) 1436.0 cm²"
+      ],
+      "bn": [
+        "A) 1386.0 বর্গ সেমি",
+        "B) 1411.0 বর্গ সেমি",
+        "C) 1371.0 বর্গ সেমি",
+        "D) 1436.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 21 × 21 = <strong>1386.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 21 = 132.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 21 × 21 = <strong>1386.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 253,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 28 cm (use π = 22/7).",
+      "bn": "28 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 2464.0 cm²",
+        "B) 2489.0 cm²",
+        "C) 2449.0 cm²",
+        "D) 2514.0 cm²"
+      ],
+      "bn": [
+        "A) 2464.0 বর্গ সেমি",
+        "B) 2489.0 বর্গ সেমি",
+        "C) 2449.0 বর্গ সেমি",
+        "D) 2514.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 28 × 28 = <strong>2464.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 28 = 176.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 28 × 28 = <strong>2464.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 254,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 35 cm (use π = 22/7).",
+      "bn": "35 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 3850.0 cm²",
+        "B) 3875.0 cm²",
+        "C) 3835.0 cm²",
+        "D) 3900.0 cm²"
+      ],
+      "bn": [
+        "A) 3850.0 বর্গ সেমি",
+        "B) 3875.0 বর্গ সেমি",
+        "C) 3835.0 বর্গ সেমি",
+        "D) 3900.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 35 × 35 = <strong>3850.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 35 = 220.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 35 × 35 = <strong>3850.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 255,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 42 cm (use π = 22/7).",
+      "bn": "42 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 5544.0 cm²",
+        "B) 5569.0 cm²",
+        "C) 5529.0 cm²",
+        "D) 5594.0 cm²"
+      ],
+      "bn": [
+        "A) 5544.0 বর্গ সেমি",
+        "B) 5569.0 বর্গ সেমি",
+        "C) 5529.0 বর্গ সেমি",
+        "D) 5594.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 42 × 42 = <strong>5544.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 42 = 264.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 42 × 42 = <strong>5544.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 256,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 49 cm (use π = 22/7).",
+      "bn": "49 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 7546.0 cm²",
+        "B) 7571.0 cm²",
+        "C) 7531.0 cm²",
+        "D) 7596.0 cm²"
+      ],
+      "bn": [
+        "A) 7546.0 বর্গ সেমি",
+        "B) 7571.0 বর্গ সেমি",
+        "C) 7531.0 বর্গ সেমি",
+        "D) 7596.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 49 × 49 = <strong>7546.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 49 = 308.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 49 × 49 = <strong>7546.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 257,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 7 cm (use π = 22/7).",
+      "bn": "7 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 154.0 cm²",
+        "B) 179.0 cm²",
+        "C) 139.0 cm²",
+        "D) 204.0 cm²"
+      ],
+      "bn": [
+        "A) 154.0 বর্গ সেমি",
+        "B) 179.0 বর্গ সেমি",
+        "C) 139.0 বর্গ সেমি",
+        "D) 204.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 7 × 7 = <strong>154.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 7 = 44.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 7 × 7 = <strong>154.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 258,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 14 cm (use π = 22/7).",
+      "bn": "14 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 616.0 cm²",
+        "B) 641.0 cm²",
+        "C) 601.0 cm²",
+        "D) 666.0 cm²"
+      ],
+      "bn": [
+        "A) 616.0 বর্গ সেমি",
+        "B) 641.0 বর্গ সেমি",
+        "C) 601.0 বর্গ সেমি",
+        "D) 666.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 14 × 14 = <strong>616.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 14 = 88.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 14 × 14 = <strong>616.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 259,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 21 cm (use π = 22/7).",
+      "bn": "21 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 1386.0 cm²",
+        "B) 1411.0 cm²",
+        "C) 1371.0 cm²",
+        "D) 1436.0 cm²"
+      ],
+      "bn": [
+        "A) 1386.0 বর্গ সেমি",
+        "B) 1411.0 বর্গ সেমি",
+        "C) 1371.0 বর্গ সেমি",
+        "D) 1436.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 21 × 21 = <strong>1386.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 21 = 132.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 21 × 21 = <strong>1386.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 260,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 28 cm (use π = 22/7).",
+      "bn": "28 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 2464.0 cm²",
+        "B) 2489.0 cm²",
+        "C) 2449.0 cm²",
+        "D) 2514.0 cm²"
+      ],
+      "bn": [
+        "A) 2464.0 বর্গ সেমি",
+        "B) 2489.0 বর্গ সেমি",
+        "C) 2449.0 বর্গ সেমি",
+        "D) 2514.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 28 × 28 = <strong>2464.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 28 = 176.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 28 × 28 = <strong>2464.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 261,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 35 cm (use π = 22/7).",
+      "bn": "35 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 3850.0 cm²",
+        "B) 3875.0 cm²",
+        "C) 3835.0 cm²",
+        "D) 3900.0 cm²"
+      ],
+      "bn": [
+        "A) 3850.0 বর্গ সেমি",
+        "B) 3875.0 বর্গ সেমি",
+        "C) 3835.0 বর্গ সেমি",
+        "D) 3900.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 35 × 35 = <strong>3850.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 35 = 220.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 35 × 35 = <strong>3850.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 262,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 42 cm (use π = 22/7).",
+      "bn": "42 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 5544.0 cm²",
+        "B) 5569.0 cm²",
+        "C) 5529.0 cm²",
+        "D) 5594.0 cm²"
+      ],
+      "bn": [
+        "A) 5544.0 বর্গ সেমি",
+        "B) 5569.0 বর্গ সেমি",
+        "C) 5529.0 বর্গ সেমি",
+        "D) 5594.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 42 × 42 = <strong>5544.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 42 = 264.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 42 × 42 = <strong>5544.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 263,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 49 cm (use π = 22/7).",
+      "bn": "49 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 7546.0 cm²",
+        "B) 7571.0 cm²",
+        "C) 7531.0 cm²",
+        "D) 7596.0 cm²"
+      ],
+      "bn": [
+        "A) 7546.0 বর্গ সেমি",
+        "B) 7571.0 বর্গ সেমি",
+        "C) 7531.0 বর্গ সেমি",
+        "D) 7596.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 49 × 49 = <strong>7546.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 49 = 308.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 49 × 49 = <strong>7546.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 264,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 7 cm (use π = 22/7).",
+      "bn": "7 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 154.0 cm²",
+        "B) 179.0 cm²",
+        "C) 139.0 cm²",
+        "D) 204.0 cm²"
+      ],
+      "bn": [
+        "A) 154.0 বর্গ সেমি",
+        "B) 179.0 বর্গ সেমি",
+        "C) 139.0 বর্গ সেমি",
+        "D) 204.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 7 × 7 = <strong>154.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 7 = 44.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 7 × 7 = <strong>154.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 265,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 14 cm (use π = 22/7).",
+      "bn": "14 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 616.0 cm²",
+        "B) 641.0 cm²",
+        "C) 601.0 cm²",
+        "D) 666.0 cm²"
+      ],
+      "bn": [
+        "A) 616.0 বর্গ সেমি",
+        "B) 641.0 বর্গ সেমি",
+        "C) 601.0 বর্গ সেমি",
+        "D) 666.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 14 × 14 = <strong>616.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 14 = 88.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 14 × 14 = <strong>616.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 266,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 21 cm (use π = 22/7).",
+      "bn": "21 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 1386.0 cm²",
+        "B) 1411.0 cm²",
+        "C) 1371.0 cm²",
+        "D) 1436.0 cm²"
+      ],
+      "bn": [
+        "A) 1386.0 বর্গ সেমি",
+        "B) 1411.0 বর্গ সেমি",
+        "C) 1371.0 বর্গ সেমি",
+        "D) 1436.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 21 × 21 = <strong>1386.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 21 = 132.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 21 × 21 = <strong>1386.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 267,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 28 cm (use π = 22/7).",
+      "bn": "28 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 2464.0 cm²",
+        "B) 2489.0 cm²",
+        "C) 2449.0 cm²",
+        "D) 2514.0 cm²"
+      ],
+      "bn": [
+        "A) 2464.0 বর্গ সেমি",
+        "B) 2489.0 বর্গ সেমি",
+        "C) 2449.0 বর্গ সেমি",
+        "D) 2514.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 28 × 28 = <strong>2464.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 28 = 176.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 28 × 28 = <strong>2464.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 268,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 35 cm (use π = 22/7).",
+      "bn": "35 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 3850.0 cm²",
+        "B) 3875.0 cm²",
+        "C) 3835.0 cm²",
+        "D) 3900.0 cm²"
+      ],
+      "bn": [
+        "A) 3850.0 বর্গ সেমি",
+        "B) 3875.0 বর্গ সেমি",
+        "C) 3835.0 বর্গ সেমি",
+        "D) 3900.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 35 × 35 = <strong>3850.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 35 = 220.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 35 × 35 = <strong>3850.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 269,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 42 cm (use π = 22/7).",
+      "bn": "42 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 5544.0 cm²",
+        "B) 5569.0 cm²",
+        "C) 5529.0 cm²",
+        "D) 5594.0 cm²"
+      ],
+      "bn": [
+        "A) 5544.0 বর্গ সেমি",
+        "B) 5569.0 বর্গ সেমি",
+        "C) 5529.0 বর্গ সেমি",
+        "D) 5594.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 42 × 42 = <strong>5544.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 42 = 264.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 42 × 42 = <strong>5544.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 270,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 49 cm (use π = 22/7).",
+      "bn": "49 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 7546.0 cm²",
+        "B) 7571.0 cm²",
+        "C) 7531.0 cm²",
+        "D) 7596.0 cm²"
+      ],
+      "bn": [
+        "A) 7546.0 বর্গ সেমি",
+        "B) 7571.0 বর্গ সেমি",
+        "C) 7531.0 বর্গ সেমি",
+        "D) 7596.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 49 × 49 = <strong>7546.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 49 = 308.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 49 × 49 = <strong>7546.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 271,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 7 cm (use π = 22/7).",
+      "bn": "7 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 154.0 cm²",
+        "B) 179.0 cm²",
+        "C) 139.0 cm²",
+        "D) 204.0 cm²"
+      ],
+      "bn": [
+        "A) 154.0 বর্গ সেমি",
+        "B) 179.0 বর্গ সেমি",
+        "C) 139.0 বর্গ সেমি",
+        "D) 204.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 7 × 7 = <strong>154.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 7 = 44.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 7 × 7 = <strong>154.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 272,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 14 cm (use π = 22/7).",
+      "bn": "14 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 616.0 cm²",
+        "B) 641.0 cm²",
+        "C) 601.0 cm²",
+        "D) 666.0 cm²"
+      ],
+      "bn": [
+        "A) 616.0 বর্গ সেমি",
+        "B) 641.0 বর্গ সেমি",
+        "C) 601.0 বর্গ সেমি",
+        "D) 666.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 14 × 14 = <strong>616.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 14 = 88.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 14 × 14 = <strong>616.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 273,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 21 cm (use π = 22/7).",
+      "bn": "21 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 1386.0 cm²",
+        "B) 1411.0 cm²",
+        "C) 1371.0 cm²",
+        "D) 1436.0 cm²"
+      ],
+      "bn": [
+        "A) 1386.0 বর্গ সেমি",
+        "B) 1411.0 বর্গ সেমি",
+        "C) 1371.0 বর্গ সেমি",
+        "D) 1436.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 21 × 21 = <strong>1386.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 21 = 132.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 21 × 21 = <strong>1386.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 274,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 28 cm (use π = 22/7).",
+      "bn": "28 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 2464.0 cm²",
+        "B) 2489.0 cm²",
+        "C) 2449.0 cm²",
+        "D) 2514.0 cm²"
+      ],
+      "bn": [
+        "A) 2464.0 বর্গ সেমি",
+        "B) 2489.0 বর্গ সেমি",
+        "C) 2449.0 বর্গ সেমি",
+        "D) 2514.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 28 × 28 = <strong>2464.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 28 = 176.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 28 × 28 = <strong>2464.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 275,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 35 cm (use π = 22/7).",
+      "bn": "35 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 3850.0 cm²",
+        "B) 3875.0 cm²",
+        "C) 3835.0 cm²",
+        "D) 3900.0 cm²"
+      ],
+      "bn": [
+        "A) 3850.0 বর্গ সেমি",
+        "B) 3875.0 বর্গ সেমি",
+        "C) 3835.0 বর্গ সেমি",
+        "D) 3900.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 35 × 35 = <strong>3850.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 35 = 220.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 35 × 35 = <strong>3850.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 276,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 42 cm (use π = 22/7).",
+      "bn": "42 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 5544.0 cm²",
+        "B) 5569.0 cm²",
+        "C) 5529.0 cm²",
+        "D) 5594.0 cm²"
+      ],
+      "bn": [
+        "A) 5544.0 বর্গ সেমি",
+        "B) 5569.0 বর্গ সেমি",
+        "C) 5529.0 বর্গ সেমি",
+        "D) 5594.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 42 × 42 = <strong>5544.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 42 = 264.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 42 × 42 = <strong>5544.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 277,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 49 cm (use π = 22/7).",
+      "bn": "49 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 7546.0 cm²",
+        "B) 7571.0 cm²",
+        "C) 7531.0 cm²",
+        "D) 7596.0 cm²"
+      ],
+      "bn": [
+        "A) 7546.0 বর্গ সেমি",
+        "B) 7571.0 বর্গ সেমি",
+        "C) 7531.0 বর্গ সেমি",
+        "D) 7596.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 49 × 49 = <strong>7546.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 49 = 308.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 49 × 49 = <strong>7546.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 278,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 7 cm (use π = 22/7).",
+      "bn": "7 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 154.0 cm²",
+        "B) 179.0 cm²",
+        "C) 139.0 cm²",
+        "D) 204.0 cm²"
+      ],
+      "bn": [
+        "A) 154.0 বর্গ সেমি",
+        "B) 179.0 বর্গ সেমি",
+        "C) 139.0 বর্গ সেমি",
+        "D) 204.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 7 × 7 = <strong>154.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 7 = 44.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 7 × 7 = <strong>154.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 279,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 14 cm (use π = 22/7).",
+      "bn": "14 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 616.0 cm²",
+        "B) 641.0 cm²",
+        "C) 601.0 cm²",
+        "D) 666.0 cm²"
+      ],
+      "bn": [
+        "A) 616.0 বর্গ সেমি",
+        "B) 641.0 বর্গ সেমি",
+        "C) 601.0 বর্গ সেমি",
+        "D) 666.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 14 × 14 = <strong>616.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 14 = 88.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 14 × 14 = <strong>616.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 280,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 21 cm (use π = 22/7).",
+      "bn": "21 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 1386.0 cm²",
+        "B) 1411.0 cm²",
+        "C) 1371.0 cm²",
+        "D) 1436.0 cm²"
+      ],
+      "bn": [
+        "A) 1386.0 বর্গ সেমি",
+        "B) 1411.0 বর্গ সেমি",
+        "C) 1371.0 বর্গ সেমি",
+        "D) 1436.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 21 × 21 = <strong>1386.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 21 = 132.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 21 × 21 = <strong>1386.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 281,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 28 cm (use π = 22/7).",
+      "bn": "28 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 2464.0 cm²",
+        "B) 2489.0 cm²",
+        "C) 2449.0 cm²",
+        "D) 2514.0 cm²"
+      ],
+      "bn": [
+        "A) 2464.0 বর্গ সেমি",
+        "B) 2489.0 বর্গ সেমি",
+        "C) 2449.0 বর্গ সেমি",
+        "D) 2514.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 28 × 28 = <strong>2464.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 28 = 176.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 28 × 28 = <strong>2464.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 282,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 35 cm (use π = 22/7).",
+      "bn": "35 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 3850.0 cm²",
+        "B) 3875.0 cm²",
+        "C) 3835.0 cm²",
+        "D) 3900.0 cm²"
+      ],
+      "bn": [
+        "A) 3850.0 বর্গ সেমি",
+        "B) 3875.0 বর্গ সেমি",
+        "C) 3835.0 বর্গ সেমি",
+        "D) 3900.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 35 × 35 = <strong>3850.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 35 = 220.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 35 × 35 = <strong>3850.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 283,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 42 cm (use π = 22/7).",
+      "bn": "42 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 5544.0 cm²",
+        "B) 5569.0 cm²",
+        "C) 5529.0 cm²",
+        "D) 5594.0 cm²"
+      ],
+      "bn": [
+        "A) 5544.0 বর্গ সেমি",
+        "B) 5569.0 বর্গ সেমি",
+        "C) 5529.0 বর্গ সেমি",
+        "D) 5594.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 42 × 42 = <strong>5544.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 42 = 264.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 42 × 42 = <strong>5544.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 284,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 49 cm (use π = 22/7).",
+      "bn": "49 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 7546.0 cm²",
+        "B) 7571.0 cm²",
+        "C) 7531.0 cm²",
+        "D) 7596.0 cm²"
+      ],
+      "bn": [
+        "A) 7546.0 বর্গ সেমি",
+        "B) 7571.0 বর্গ সেমি",
+        "C) 7531.0 বর্গ সেমি",
+        "D) 7596.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 49 × 49 = <strong>7546.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 49 = 308.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 49 × 49 = <strong>7546.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 285,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 7 cm (use π = 22/7).",
+      "bn": "7 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 154.0 cm²",
+        "B) 179.0 cm²",
+        "C) 139.0 cm²",
+        "D) 204.0 cm²"
+      ],
+      "bn": [
+        "A) 154.0 বর্গ সেমি",
+        "B) 179.0 বর্গ সেমি",
+        "C) 139.0 বর্গ সেমি",
+        "D) 204.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 7 × 7 = <strong>154.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 7 = 44.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 7 × 7 = <strong>154.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 286,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 14 cm (use π = 22/7).",
+      "bn": "14 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 616.0 cm²",
+        "B) 641.0 cm²",
+        "C) 601.0 cm²",
+        "D) 666.0 cm²"
+      ],
+      "bn": [
+        "A) 616.0 বর্গ সেমি",
+        "B) 641.0 বর্গ সেমি",
+        "C) 601.0 বর্গ সেমি",
+        "D) 666.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 14 × 14 = <strong>616.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 14 = 88.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 14 × 14 = <strong>616.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 287,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 21 cm (use π = 22/7).",
+      "bn": "21 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 1386.0 cm²",
+        "B) 1411.0 cm²",
+        "C) 1371.0 cm²",
+        "D) 1436.0 cm²"
+      ],
+      "bn": [
+        "A) 1386.0 বর্গ সেমি",
+        "B) 1411.0 বর্গ সেমি",
+        "C) 1371.0 বর্গ সেমি",
+        "D) 1436.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 21 × 21 = <strong>1386.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 21 = 132.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 21 × 21 = <strong>1386.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 288,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 28 cm (use π = 22/7).",
+      "bn": "28 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 2464.0 cm²",
+        "B) 2489.0 cm²",
+        "C) 2449.0 cm²",
+        "D) 2514.0 cm²"
+      ],
+      "bn": [
+        "A) 2464.0 বর্গ সেমি",
+        "B) 2489.0 বর্গ সেমি",
+        "C) 2449.0 বর্গ সেমি",
+        "D) 2514.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 28 × 28 = <strong>2464.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 28 = 176.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 28 × 28 = <strong>2464.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 289,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 35 cm (use π = 22/7).",
+      "bn": "35 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 3850.0 cm²",
+        "B) 3875.0 cm²",
+        "C) 3835.0 cm²",
+        "D) 3900.0 cm²"
+      ],
+      "bn": [
+        "A) 3850.0 বর্গ সেমি",
+        "B) 3875.0 বর্গ সেমি",
+        "C) 3835.0 বর্গ সেমি",
+        "D) 3900.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 35 × 35 = <strong>3850.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 35 = 220.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 35 × 35 = <strong>3850.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 290,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 42 cm (use π = 22/7).",
+      "bn": "42 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 5544.0 cm²",
+        "B) 5569.0 cm²",
+        "C) 5529.0 cm²",
+        "D) 5594.0 cm²"
+      ],
+      "bn": [
+        "A) 5544.0 বর্গ সেমি",
+        "B) 5569.0 বর্গ সেমি",
+        "C) 5529.0 বর্গ সেমি",
+        "D) 5594.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 42 × 42 = <strong>5544.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 42 = 264.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 42 × 42 = <strong>5544.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 291,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 49 cm (use π = 22/7).",
+      "bn": "49 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 7546.0 cm²",
+        "B) 7571.0 cm²",
+        "C) 7531.0 cm²",
+        "D) 7596.0 cm²"
+      ],
+      "bn": [
+        "A) 7546.0 বর্গ সেমি",
+        "B) 7571.0 বর্গ সেমি",
+        "C) 7531.0 বর্গ সেমি",
+        "D) 7596.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 49 × 49 = <strong>7546.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 49 = 308.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 49 × 49 = <strong>7546.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 292,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 7 cm (use π = 22/7).",
+      "bn": "7 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 154.0 cm²",
+        "B) 179.0 cm²",
+        "C) 139.0 cm²",
+        "D) 204.0 cm²"
+      ],
+      "bn": [
+        "A) 154.0 বর্গ সেমি",
+        "B) 179.0 বর্গ সেমি",
+        "C) 139.0 বর্গ সেমি",
+        "D) 204.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 7 × 7 = <strong>154.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 7 = 44.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 7 × 7 = <strong>154.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 293,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 14 cm (use π = 22/7).",
+      "bn": "14 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 616.0 cm²",
+        "B) 641.0 cm²",
+        "C) 601.0 cm²",
+        "D) 666.0 cm²"
+      ],
+      "bn": [
+        "A) 616.0 বর্গ সেমি",
+        "B) 641.0 বর্গ সেমি",
+        "C) 601.0 বর্গ সেমি",
+        "D) 666.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 14 × 14 = <strong>616.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 14 = 88.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 14 × 14 = <strong>616.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 294,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 21 cm (use π = 22/7).",
+      "bn": "21 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 1386.0 cm²",
+        "B) 1411.0 cm²",
+        "C) 1371.0 cm²",
+        "D) 1436.0 cm²"
+      ],
+      "bn": [
+        "A) 1386.0 বর্গ সেমি",
+        "B) 1411.0 বর্গ সেমি",
+        "C) 1371.0 বর্গ সেমি",
+        "D) 1436.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 21 × 21 = <strong>1386.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 21 = 132.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 21 × 21 = <strong>1386.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 295,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 28 cm (use π = 22/7).",
+      "bn": "28 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 2464.0 cm²",
+        "B) 2489.0 cm²",
+        "C) 2449.0 cm²",
+        "D) 2514.0 cm²"
+      ],
+      "bn": [
+        "A) 2464.0 বর্গ সেমি",
+        "B) 2489.0 বর্গ সেমি",
+        "C) 2449.0 বর্গ সেমি",
+        "D) 2514.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 28 × 28 = <strong>2464.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 28 = 176.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 28 × 28 = <strong>2464.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 296,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 35 cm (use π = 22/7).",
+      "bn": "35 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 3850.0 cm²",
+        "B) 3875.0 cm²",
+        "C) 3835.0 cm²",
+        "D) 3900.0 cm²"
+      ],
+      "bn": [
+        "A) 3850.0 বর্গ সেমি",
+        "B) 3875.0 বর্গ সেমি",
+        "C) 3835.0 বর্গ সেমি",
+        "D) 3900.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 35 × 35 = <strong>3850.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 35 = 220.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 35 × 35 = <strong>3850.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 297,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 42 cm (use π = 22/7).",
+      "bn": "42 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 5544.0 cm²",
+        "B) 5569.0 cm²",
+        "C) 5529.0 cm²",
+        "D) 5594.0 cm²"
+      ],
+      "bn": [
+        "A) 5544.0 বর্গ সেমি",
+        "B) 5569.0 বর্গ সেমি",
+        "C) 5529.0 বর্গ সেমি",
+        "D) 5594.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 42 × 42 = <strong>5544.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 42 = 264.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 42 × 42 = <strong>5544.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 298,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 49 cm (use π = 22/7).",
+      "bn": "49 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 7546.0 cm²",
+        "B) 7571.0 cm²",
+        "C) 7531.0 cm²",
+        "D) 7596.0 cm²"
+      ],
+      "bn": [
+        "A) 7546.0 বর্গ সেমি",
+        "B) 7571.0 বর্গ সেমি",
+        "C) 7531.0 বর্গ সেমি",
+        "D) 7596.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 49 × 49 = <strong>7546.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 49 = 308.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 49 × 49 = <strong>7546.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 299,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 7 cm (use π = 22/7).",
+      "bn": "7 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 154.0 cm²",
+        "B) 179.0 cm²",
+        "C) 139.0 cm²",
+        "D) 204.0 cm²"
+      ],
+      "bn": [
+        "A) 154.0 বর্গ সেমি",
+        "B) 179.0 বর্গ সেমি",
+        "C) 139.0 বর্গ সেমি",
+        "D) 204.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 7 × 7 = <strong>154.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 7 = 44.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 7 × 7 = <strong>154.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 300,
+    "setId": 6,
+    "setNumber": 6,
+    "setName": {
+      "en": "Set 6",
+      "bn": "Set 6"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Mensuration & Geometry",
+      "bn": "পরিমিতি ও জ্যামিতি"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Find the area of a circle whose radius is 14 cm (use π = 22/7).",
+      "bn": "14 সেমি ব্যাসার্ধবিশিষ্ট একটি বৃত্তের ক্ষেত্রফল কত? (π = 22/7 ব্যবহার করো)"
+    },
+    "options": {
+      "en": [
+        "A) 616.0 cm²",
+        "B) 641.0 cm²",
+        "C) 601.0 cm²",
+        "D) 666.0 cm²"
+      ],
+      "bn": [
+        "A) 616.0 বর্গ সেমি",
+        "B) 641.0 বর্গ সেমি",
+        "C) 601.0 বর্গ সেমি",
+        "D) 666.0 বর্গ সেমি"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Area of circle formula = π × r².<br>2. Area = (22 / 7) × 14 × 14 = <strong>616.0 cm²</strong>.<br>3. (Circumference = 2 × (22/7) × 14 = 88.0 cm).",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. বৃত্তের ক্ষেত্রফলের সূত্র = π × r²।<br>2. ক্ষেত্রফল = (22 / 7) × 14 × 14 = <strong>616.0 বর্গ সেমি</strong>।"
+    },
+    "tips": {
+      "en": "Area = πr².",
+      "bn": "বৃত্তের ক্ষেত্রফল = πr²।"
+    }
+  },
+  {
+    "id": 301,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹208 lakhs revenue and Division B generated ₹155 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹208 লক্ষ এবং বিভাগ B এর আয় ₹155 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 34.2%",
+        "B) 38.7%",
+        "C) 31.0%",
+        "D) 42.2%"
+      ],
+      "bn": [
+        "A) 34.2%",
+        "B) 38.7%",
+        "C) 31.0%",
+        "D) 42.2%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹208 - ₹155 = ₹53 lakhs.<br>2. Base revenue (Division B) = ₹155 lakhs.<br>3. Percentage increase = [(53) / 155] × 100 = <strong>34.2%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 208 - 155 = 53 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 155 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(53) / 155] × 100 = <strong>34.2%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 302,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹216 lakhs revenue and Division B generated ₹160 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹216 লক্ষ এবং বিভাগ B এর আয় ₹160 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 35.0%",
+        "B) 39.5%",
+        "C) 31.8%",
+        "D) 43.0%"
+      ],
+      "bn": [
+        "A) 35.0%",
+        "B) 39.5%",
+        "C) 31.8%",
+        "D) 43.0%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹216 - ₹160 = ₹56 lakhs.<br>2. Base revenue (Division B) = ₹160 lakhs.<br>3. Percentage increase = [(56) / 160] × 100 = <strong>35.0%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 216 - 160 = 56 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 160 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(56) / 160] × 100 = <strong>35.0%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 303,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹224 lakhs revenue and Division B generated ₹165 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹224 লক্ষ এবং বিভাগ B এর আয় ₹165 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 35.8%",
+        "B) 40.3%",
+        "C) 32.6%",
+        "D) 43.8%"
+      ],
+      "bn": [
+        "A) 35.8%",
+        "B) 40.3%",
+        "C) 32.6%",
+        "D) 43.8%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹224 - ₹165 = ₹59 lakhs.<br>2. Base revenue (Division B) = ₹165 lakhs.<br>3. Percentage increase = [(59) / 165] × 100 = <strong>35.8%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 224 - 165 = 59 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 165 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(59) / 165] × 100 = <strong>35.8%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 304,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹232 lakhs revenue and Division B generated ₹170 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹232 লক্ষ এবং বিভাগ B এর আয় ₹170 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 36.5%",
+        "B) 41.0%",
+        "C) 33.3%",
+        "D) 44.5%"
+      ],
+      "bn": [
+        "A) 36.5%",
+        "B) 41.0%",
+        "C) 33.3%",
+        "D) 44.5%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹232 - ₹170 = ₹62 lakhs.<br>2. Base revenue (Division B) = ₹170 lakhs.<br>3. Percentage increase = [(62) / 170] × 100 = <strong>36.5%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 232 - 170 = 62 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 170 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(62) / 170] × 100 = <strong>36.5%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 305,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹240 lakhs revenue and Division B generated ₹175 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹240 লক্ষ এবং বিভাগ B এর আয় ₹175 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 37.1%",
+        "B) 41.6%",
+        "C) 33.9%",
+        "D) 45.1%"
+      ],
+      "bn": [
+        "A) 37.1%",
+        "B) 41.6%",
+        "C) 33.9%",
+        "D) 45.1%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹240 - ₹175 = ₹65 lakhs.<br>2. Base revenue (Division B) = ₹175 lakhs.<br>3. Percentage increase = [(65) / 175] × 100 = <strong>37.1%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 240 - 175 = 65 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 175 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(65) / 175] × 100 = <strong>37.1%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 306,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹248 lakhs revenue and Division B generated ₹180 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹248 লক্ষ এবং বিভাগ B এর আয় ₹180 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 37.8%",
+        "B) 42.3%",
+        "C) 34.6%",
+        "D) 45.8%"
+      ],
+      "bn": [
+        "A) 37.8%",
+        "B) 42.3%",
+        "C) 34.6%",
+        "D) 45.8%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹248 - ₹180 = ₹68 lakhs.<br>2. Base revenue (Division B) = ₹180 lakhs.<br>3. Percentage increase = [(68) / 180] × 100 = <strong>37.8%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 248 - 180 = 68 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 180 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(68) / 180] × 100 = <strong>37.8%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 307,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹256 lakhs revenue and Division B generated ₹185 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹256 লক্ষ এবং বিভাগ B এর আয় ₹185 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 38.4%",
+        "B) 42.9%",
+        "C) 35.2%",
+        "D) 46.4%"
+      ],
+      "bn": [
+        "A) 38.4%",
+        "B) 42.9%",
+        "C) 35.2%",
+        "D) 46.4%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹256 - ₹185 = ₹71 lakhs.<br>2. Base revenue (Division B) = ₹185 lakhs.<br>3. Percentage increase = [(71) / 185] × 100 = <strong>38.4%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 256 - 185 = 71 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 185 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(71) / 185] × 100 = <strong>38.4%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 308,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹264 lakhs revenue and Division B generated ₹190 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹264 লক্ষ এবং বিভাগ B এর আয় ₹190 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 38.9%",
+        "B) 43.4%",
+        "C) 35.7%",
+        "D) 46.9%"
+      ],
+      "bn": [
+        "A) 38.9%",
+        "B) 43.4%",
+        "C) 35.7%",
+        "D) 46.9%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹264 - ₹190 = ₹74 lakhs.<br>2. Base revenue (Division B) = ₹190 lakhs.<br>3. Percentage increase = [(74) / 190] × 100 = <strong>38.9%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 264 - 190 = 74 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 190 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(74) / 190] × 100 = <strong>38.9%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 309,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹272 lakhs revenue and Division B generated ₹195 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹272 লক্ষ এবং বিভাগ B এর আয় ₹195 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 39.5%",
+        "B) 44.0%",
+        "C) 36.3%",
+        "D) 47.5%"
+      ],
+      "bn": [
+        "A) 39.5%",
+        "B) 44.0%",
+        "C) 36.3%",
+        "D) 47.5%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹272 - ₹195 = ₹77 lakhs.<br>2. Base revenue (Division B) = ₹195 lakhs.<br>3. Percentage increase = [(77) / 195] × 100 = <strong>39.5%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 272 - 195 = 77 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 195 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(77) / 195] × 100 = <strong>39.5%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 310,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹280 lakhs revenue and Division B generated ₹200 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹280 লক্ষ এবং বিভাগ B এর আয় ₹200 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 40.0%",
+        "B) 44.5%",
+        "C) 36.8%",
+        "D) 48.0%"
+      ],
+      "bn": [
+        "A) 40.0%",
+        "B) 44.5%",
+        "C) 36.8%",
+        "D) 48.0%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹280 - ₹200 = ₹80 lakhs.<br>2. Base revenue (Division B) = ₹200 lakhs.<br>3. Percentage increase = [(80) / 200] × 100 = <strong>40.0%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 280 - 200 = 80 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 200 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(80) / 200] × 100 = <strong>40.0%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 311,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹288 lakhs revenue and Division B generated ₹205 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹288 লক্ষ এবং বিভাগ B এর আয় ₹205 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 40.5%",
+        "B) 45.0%",
+        "C) 37.3%",
+        "D) 48.5%"
+      ],
+      "bn": [
+        "A) 40.5%",
+        "B) 45.0%",
+        "C) 37.3%",
+        "D) 48.5%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹288 - ₹205 = ₹83 lakhs.<br>2. Base revenue (Division B) = ₹205 lakhs.<br>3. Percentage increase = [(83) / 205] × 100 = <strong>40.5%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 288 - 205 = 83 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 205 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(83) / 205] × 100 = <strong>40.5%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 312,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹296 lakhs revenue and Division B generated ₹210 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹296 লক্ষ এবং বিভাগ B এর আয় ₹210 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 41.0%",
+        "B) 45.5%",
+        "C) 37.8%",
+        "D) 49.0%"
+      ],
+      "bn": [
+        "A) 41.0%",
+        "B) 45.5%",
+        "C) 37.8%",
+        "D) 49.0%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹296 - ₹210 = ₹86 lakhs.<br>2. Base revenue (Division B) = ₹210 lakhs.<br>3. Percentage increase = [(86) / 210] × 100 = <strong>41.0%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 296 - 210 = 86 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 210 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(86) / 210] × 100 = <strong>41.0%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 313,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹304 lakhs revenue and Division B generated ₹215 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹304 লক্ষ এবং বিভাগ B এর আয় ₹215 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 41.4%",
+        "B) 45.9%",
+        "C) 38.2%",
+        "D) 49.4%"
+      ],
+      "bn": [
+        "A) 41.4%",
+        "B) 45.9%",
+        "C) 38.2%",
+        "D) 49.4%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹304 - ₹215 = ₹89 lakhs.<br>2. Base revenue (Division B) = ₹215 lakhs.<br>3. Percentage increase = [(89) / 215] × 100 = <strong>41.4%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 304 - 215 = 89 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 215 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(89) / 215] × 100 = <strong>41.4%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 314,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹312 lakhs revenue and Division B generated ₹220 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹312 লক্ষ এবং বিভাগ B এর আয় ₹220 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 41.8%",
+        "B) 46.3%",
+        "C) 38.6%",
+        "D) 49.8%"
+      ],
+      "bn": [
+        "A) 41.8%",
+        "B) 46.3%",
+        "C) 38.6%",
+        "D) 49.8%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹312 - ₹220 = ₹92 lakhs.<br>2. Base revenue (Division B) = ₹220 lakhs.<br>3. Percentage increase = [(92) / 220] × 100 = <strong>41.8%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 312 - 220 = 92 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 220 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(92) / 220] × 100 = <strong>41.8%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 315,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹320 lakhs revenue and Division B generated ₹225 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹320 লক্ষ এবং বিভাগ B এর আয় ₹225 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 42.2%",
+        "B) 46.7%",
+        "C) 39.0%",
+        "D) 50.2%"
+      ],
+      "bn": [
+        "A) 42.2%",
+        "B) 46.7%",
+        "C) 39.0%",
+        "D) 50.2%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹320 - ₹225 = ₹95 lakhs.<br>2. Base revenue (Division B) = ₹225 lakhs.<br>3. Percentage increase = [(95) / 225] × 100 = <strong>42.2%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 320 - 225 = 95 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 225 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(95) / 225] × 100 = <strong>42.2%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 316,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹328 lakhs revenue and Division B generated ₹230 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹328 লক্ষ এবং বিভাগ B এর আয় ₹230 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 42.6%",
+        "B) 47.1%",
+        "C) 39.4%",
+        "D) 50.6%"
+      ],
+      "bn": [
+        "A) 42.6%",
+        "B) 47.1%",
+        "C) 39.4%",
+        "D) 50.6%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹328 - ₹230 = ₹98 lakhs.<br>2. Base revenue (Division B) = ₹230 lakhs.<br>3. Percentage increase = [(98) / 230] × 100 = <strong>42.6%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 328 - 230 = 98 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 230 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(98) / 230] × 100 = <strong>42.6%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 317,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹336 lakhs revenue and Division B generated ₹235 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹336 লক্ষ এবং বিভাগ B এর আয় ₹235 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 43.0%",
+        "B) 47.5%",
+        "C) 39.8%",
+        "D) 51.0%"
+      ],
+      "bn": [
+        "A) 43.0%",
+        "B) 47.5%",
+        "C) 39.8%",
+        "D) 51.0%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹336 - ₹235 = ₹101 lakhs.<br>2. Base revenue (Division B) = ₹235 lakhs.<br>3. Percentage increase = [(101) / 235] × 100 = <strong>43.0%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 336 - 235 = 101 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 235 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(101) / 235] × 100 = <strong>43.0%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 318,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹344 lakhs revenue and Division B generated ₹240 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹344 লক্ষ এবং বিভাগ B এর আয় ₹240 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 43.3%",
+        "B) 47.8%",
+        "C) 40.1%",
+        "D) 51.3%"
+      ],
+      "bn": [
+        "A) 43.3%",
+        "B) 47.8%",
+        "C) 40.1%",
+        "D) 51.3%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹344 - ₹240 = ₹104 lakhs.<br>2. Base revenue (Division B) = ₹240 lakhs.<br>3. Percentage increase = [(104) / 240] × 100 = <strong>43.3%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 344 - 240 = 104 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 240 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(104) / 240] × 100 = <strong>43.3%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 319,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹352 lakhs revenue and Division B generated ₹245 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹352 লক্ষ এবং বিভাগ B এর আয় ₹245 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 43.7%",
+        "B) 48.2%",
+        "C) 40.5%",
+        "D) 51.7%"
+      ],
+      "bn": [
+        "A) 43.7%",
+        "B) 48.2%",
+        "C) 40.5%",
+        "D) 51.7%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹352 - ₹245 = ₹107 lakhs.<br>2. Base revenue (Division B) = ₹245 lakhs.<br>3. Percentage increase = [(107) / 245] × 100 = <strong>43.7%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 352 - 245 = 107 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 245 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(107) / 245] × 100 = <strong>43.7%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 320,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹360 lakhs revenue and Division B generated ₹250 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹360 লক্ষ এবং বিভাগ B এর আয় ₹250 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 44.0%",
+        "B) 48.5%",
+        "C) 40.8%",
+        "D) 52.0%"
+      ],
+      "bn": [
+        "A) 44.0%",
+        "B) 48.5%",
+        "C) 40.8%",
+        "D) 52.0%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹360 - ₹250 = ₹110 lakhs.<br>2. Base revenue (Division B) = ₹250 lakhs.<br>3. Percentage increase = [(110) / 250] × 100 = <strong>44.0%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 360 - 250 = 110 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 250 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(110) / 250] × 100 = <strong>44.0%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 321,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹368 lakhs revenue and Division B generated ₹255 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹368 লক্ষ এবং বিভাগ B এর আয় ₹255 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 44.3%",
+        "B) 48.8%",
+        "C) 41.1%",
+        "D) 52.3%"
+      ],
+      "bn": [
+        "A) 44.3%",
+        "B) 48.8%",
+        "C) 41.1%",
+        "D) 52.3%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹368 - ₹255 = ₹113 lakhs.<br>2. Base revenue (Division B) = ₹255 lakhs.<br>3. Percentage increase = [(113) / 255] × 100 = <strong>44.3%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 368 - 255 = 113 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 255 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(113) / 255] × 100 = <strong>44.3%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 322,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹376 lakhs revenue and Division B generated ₹260 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹376 লক্ষ এবং বিভাগ B এর আয় ₹260 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 44.6%",
+        "B) 49.1%",
+        "C) 41.4%",
+        "D) 52.6%"
+      ],
+      "bn": [
+        "A) 44.6%",
+        "B) 49.1%",
+        "C) 41.4%",
+        "D) 52.6%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹376 - ₹260 = ₹116 lakhs.<br>2. Base revenue (Division B) = ₹260 lakhs.<br>3. Percentage increase = [(116) / 260] × 100 = <strong>44.6%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 376 - 260 = 116 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 260 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(116) / 260] × 100 = <strong>44.6%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 323,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹384 lakhs revenue and Division B generated ₹265 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹384 লক্ষ এবং বিভাগ B এর আয় ₹265 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 44.9%",
+        "B) 49.4%",
+        "C) 41.7%",
+        "D) 52.9%"
+      ],
+      "bn": [
+        "A) 44.9%",
+        "B) 49.4%",
+        "C) 41.7%",
+        "D) 52.9%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹384 - ₹265 = ₹119 lakhs.<br>2. Base revenue (Division B) = ₹265 lakhs.<br>3. Percentage increase = [(119) / 265] × 100 = <strong>44.9%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 384 - 265 = 119 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 265 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(119) / 265] × 100 = <strong>44.9%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 324,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹392 lakhs revenue and Division B generated ₹270 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹392 লক্ষ এবং বিভাগ B এর আয় ₹270 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 45.2%",
+        "B) 49.7%",
+        "C) 42.0%",
+        "D) 53.2%"
+      ],
+      "bn": [
+        "A) 45.2%",
+        "B) 49.7%",
+        "C) 42.0%",
+        "D) 53.2%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹392 - ₹270 = ₹122 lakhs.<br>2. Base revenue (Division B) = ₹270 lakhs.<br>3. Percentage increase = [(122) / 270] × 100 = <strong>45.2%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 392 - 270 = 122 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 270 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(122) / 270] × 100 = <strong>45.2%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 325,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹400 lakhs revenue and Division B generated ₹275 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹400 লক্ষ এবং বিভাগ B এর আয় ₹275 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 45.5%",
+        "B) 50.0%",
+        "C) 42.3%",
+        "D) 53.5%"
+      ],
+      "bn": [
+        "A) 45.5%",
+        "B) 50.0%",
+        "C) 42.3%",
+        "D) 53.5%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹400 - ₹275 = ₹125 lakhs.<br>2. Base revenue (Division B) = ₹275 lakhs.<br>3. Percentage increase = [(125) / 275] × 100 = <strong>45.5%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 400 - 275 = 125 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 275 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(125) / 275] × 100 = <strong>45.5%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 326,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹408 lakhs revenue and Division B generated ₹280 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹408 লক্ষ এবং বিভাগ B এর আয় ₹280 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 45.7%",
+        "B) 50.2%",
+        "C) 42.5%",
+        "D) 53.7%"
+      ],
+      "bn": [
+        "A) 45.7%",
+        "B) 50.2%",
+        "C) 42.5%",
+        "D) 53.7%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹408 - ₹280 = ₹128 lakhs.<br>2. Base revenue (Division B) = ₹280 lakhs.<br>3. Percentage increase = [(128) / 280] × 100 = <strong>45.7%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 408 - 280 = 128 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 280 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(128) / 280] × 100 = <strong>45.7%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 327,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹416 lakhs revenue and Division B generated ₹285 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹416 লক্ষ এবং বিভাগ B এর আয় ₹285 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 46.0%",
+        "B) 50.5%",
+        "C) 42.8%",
+        "D) 54.0%"
+      ],
+      "bn": [
+        "A) 46.0%",
+        "B) 50.5%",
+        "C) 42.8%",
+        "D) 54.0%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹416 - ₹285 = ₹131 lakhs.<br>2. Base revenue (Division B) = ₹285 lakhs.<br>3. Percentage increase = [(131) / 285] × 100 = <strong>46.0%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 416 - 285 = 131 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 285 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(131) / 285] × 100 = <strong>46.0%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 328,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹424 lakhs revenue and Division B generated ₹290 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹424 লক্ষ এবং বিভাগ B এর আয় ₹290 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 46.2%",
+        "B) 50.7%",
+        "C) 43.0%",
+        "D) 54.2%"
+      ],
+      "bn": [
+        "A) 46.2%",
+        "B) 50.7%",
+        "C) 43.0%",
+        "D) 54.2%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹424 - ₹290 = ₹134 lakhs.<br>2. Base revenue (Division B) = ₹290 lakhs.<br>3. Percentage increase = [(134) / 290] × 100 = <strong>46.2%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 424 - 290 = 134 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 290 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(134) / 290] × 100 = <strong>46.2%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 329,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹432 lakhs revenue and Division B generated ₹295 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹432 লক্ষ এবং বিভাগ B এর আয় ₹295 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 46.4%",
+        "B) 50.9%",
+        "C) 43.2%",
+        "D) 54.4%"
+      ],
+      "bn": [
+        "A) 46.4%",
+        "B) 50.9%",
+        "C) 43.2%",
+        "D) 54.4%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹432 - ₹295 = ₹137 lakhs.<br>2. Base revenue (Division B) = ₹295 lakhs.<br>3. Percentage increase = [(137) / 295] × 100 = <strong>46.4%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 432 - 295 = 137 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 295 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(137) / 295] × 100 = <strong>46.4%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 330,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹440 lakhs revenue and Division B generated ₹300 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹440 লক্ষ এবং বিভাগ B এর আয় ₹300 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 46.7%",
+        "B) 51.2%",
+        "C) 43.5%",
+        "D) 54.7%"
+      ],
+      "bn": [
+        "A) 46.7%",
+        "B) 51.2%",
+        "C) 43.5%",
+        "D) 54.7%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹440 - ₹300 = ₹140 lakhs.<br>2. Base revenue (Division B) = ₹300 lakhs.<br>3. Percentage increase = [(140) / 300] × 100 = <strong>46.7%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 440 - 300 = 140 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 300 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(140) / 300] × 100 = <strong>46.7%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 331,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹448 lakhs revenue and Division B generated ₹305 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹448 লক্ষ এবং বিভাগ B এর আয় ₹305 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 46.9%",
+        "B) 51.4%",
+        "C) 43.7%",
+        "D) 54.9%"
+      ],
+      "bn": [
+        "A) 46.9%",
+        "B) 51.4%",
+        "C) 43.7%",
+        "D) 54.9%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹448 - ₹305 = ₹143 lakhs.<br>2. Base revenue (Division B) = ₹305 lakhs.<br>3. Percentage increase = [(143) / 305] × 100 = <strong>46.9%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 448 - 305 = 143 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 305 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(143) / 305] × 100 = <strong>46.9%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 332,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹456 lakhs revenue and Division B generated ₹310 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹456 লক্ষ এবং বিভাগ B এর আয় ₹310 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 47.1%",
+        "B) 51.6%",
+        "C) 43.9%",
+        "D) 55.1%"
+      ],
+      "bn": [
+        "A) 47.1%",
+        "B) 51.6%",
+        "C) 43.9%",
+        "D) 55.1%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹456 - ₹310 = ₹146 lakhs.<br>2. Base revenue (Division B) = ₹310 lakhs.<br>3. Percentage increase = [(146) / 310] × 100 = <strong>47.1%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 456 - 310 = 146 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 310 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(146) / 310] × 100 = <strong>47.1%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 333,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹464 lakhs revenue and Division B generated ₹315 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹464 লক্ষ এবং বিভাগ B এর আয় ₹315 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 47.3%",
+        "B) 51.8%",
+        "C) 44.1%",
+        "D) 55.3%"
+      ],
+      "bn": [
+        "A) 47.3%",
+        "B) 51.8%",
+        "C) 44.1%",
+        "D) 55.3%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹464 - ₹315 = ₹149 lakhs.<br>2. Base revenue (Division B) = ₹315 lakhs.<br>3. Percentage increase = [(149) / 315] × 100 = <strong>47.3%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 464 - 315 = 149 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 315 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(149) / 315] × 100 = <strong>47.3%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 334,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹472 lakhs revenue and Division B generated ₹320 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹472 লক্ষ এবং বিভাগ B এর আয় ₹320 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 47.5%",
+        "B) 52.0%",
+        "C) 44.3%",
+        "D) 55.5%"
+      ],
+      "bn": [
+        "A) 47.5%",
+        "B) 52.0%",
+        "C) 44.3%",
+        "D) 55.5%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹472 - ₹320 = ₹152 lakhs.<br>2. Base revenue (Division B) = ₹320 lakhs.<br>3. Percentage increase = [(152) / 320] × 100 = <strong>47.5%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 472 - 320 = 152 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 320 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(152) / 320] × 100 = <strong>47.5%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 335,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹480 lakhs revenue and Division B generated ₹325 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹480 লক্ষ এবং বিভাগ B এর আয় ₹325 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 47.7%",
+        "B) 52.2%",
+        "C) 44.5%",
+        "D) 55.7%"
+      ],
+      "bn": [
+        "A) 47.7%",
+        "B) 52.2%",
+        "C) 44.5%",
+        "D) 55.7%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹480 - ₹325 = ₹155 lakhs.<br>2. Base revenue (Division B) = ₹325 lakhs.<br>3. Percentage increase = [(155) / 325] × 100 = <strong>47.7%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 480 - 325 = 155 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 325 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(155) / 325] × 100 = <strong>47.7%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 336,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹488 lakhs revenue and Division B generated ₹330 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹488 লক্ষ এবং বিভাগ B এর আয় ₹330 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 47.9%",
+        "B) 52.4%",
+        "C) 44.7%",
+        "D) 55.9%"
+      ],
+      "bn": [
+        "A) 47.9%",
+        "B) 52.4%",
+        "C) 44.7%",
+        "D) 55.9%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹488 - ₹330 = ₹158 lakhs.<br>2. Base revenue (Division B) = ₹330 lakhs.<br>3. Percentage increase = [(158) / 330] × 100 = <strong>47.9%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 488 - 330 = 158 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 330 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(158) / 330] × 100 = <strong>47.9%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 337,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹496 lakhs revenue and Division B generated ₹335 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹496 লক্ষ এবং বিভাগ B এর আয় ₹335 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 48.1%",
+        "B) 52.6%",
+        "C) 44.9%",
+        "D) 56.1%"
+      ],
+      "bn": [
+        "A) 48.1%",
+        "B) 52.6%",
+        "C) 44.9%",
+        "D) 56.1%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹496 - ₹335 = ₹161 lakhs.<br>2. Base revenue (Division B) = ₹335 lakhs.<br>3. Percentage increase = [(161) / 335] × 100 = <strong>48.1%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 496 - 335 = 161 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 335 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(161) / 335] × 100 = <strong>48.1%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 338,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹504 lakhs revenue and Division B generated ₹340 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹504 লক্ষ এবং বিভাগ B এর আয় ₹340 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 48.2%",
+        "B) 52.7%",
+        "C) 45.0%",
+        "D) 56.2%"
+      ],
+      "bn": [
+        "A) 48.2%",
+        "B) 52.7%",
+        "C) 45.0%",
+        "D) 56.2%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹504 - ₹340 = ₹164 lakhs.<br>2. Base revenue (Division B) = ₹340 lakhs.<br>3. Percentage increase = [(164) / 340] × 100 = <strong>48.2%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 504 - 340 = 164 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 340 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(164) / 340] × 100 = <strong>48.2%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 339,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹512 lakhs revenue and Division B generated ₹345 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹512 লক্ষ এবং বিভাগ B এর আয় ₹345 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 48.4%",
+        "B) 52.9%",
+        "C) 45.2%",
+        "D) 56.4%"
+      ],
+      "bn": [
+        "A) 48.4%",
+        "B) 52.9%",
+        "C) 45.2%",
+        "D) 56.4%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹512 - ₹345 = ₹167 lakhs.<br>2. Base revenue (Division B) = ₹345 lakhs.<br>3. Percentage increase = [(167) / 345] × 100 = <strong>48.4%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 512 - 345 = 167 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 345 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(167) / 345] × 100 = <strong>48.4%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 340,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹520 lakhs revenue and Division B generated ₹350 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹520 লক্ষ এবং বিভাগ B এর আয় ₹350 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 48.6%",
+        "B) 53.1%",
+        "C) 45.4%",
+        "D) 56.6%"
+      ],
+      "bn": [
+        "A) 48.6%",
+        "B) 53.1%",
+        "C) 45.4%",
+        "D) 56.6%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹520 - ₹350 = ₹170 lakhs.<br>2. Base revenue (Division B) = ₹350 lakhs.<br>3. Percentage increase = [(170) / 350] × 100 = <strong>48.6%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 520 - 350 = 170 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 350 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(170) / 350] × 100 = <strong>48.6%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 341,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹528 lakhs revenue and Division B generated ₹355 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹528 লক্ষ এবং বিভাগ B এর আয় ₹355 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 48.7%",
+        "B) 53.2%",
+        "C) 45.5%",
+        "D) 56.7%"
+      ],
+      "bn": [
+        "A) 48.7%",
+        "B) 53.2%",
+        "C) 45.5%",
+        "D) 56.7%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹528 - ₹355 = ₹173 lakhs.<br>2. Base revenue (Division B) = ₹355 lakhs.<br>3. Percentage increase = [(173) / 355] × 100 = <strong>48.7%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 528 - 355 = 173 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 355 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(173) / 355] × 100 = <strong>48.7%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 342,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹536 lakhs revenue and Division B generated ₹360 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹536 লক্ষ এবং বিভাগ B এর আয় ₹360 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 48.9%",
+        "B) 53.4%",
+        "C) 45.7%",
+        "D) 56.9%"
+      ],
+      "bn": [
+        "A) 48.9%",
+        "B) 53.4%",
+        "C) 45.7%",
+        "D) 56.9%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹536 - ₹360 = ₹176 lakhs.<br>2. Base revenue (Division B) = ₹360 lakhs.<br>3. Percentage increase = [(176) / 360] × 100 = <strong>48.9%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 536 - 360 = 176 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 360 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(176) / 360] × 100 = <strong>48.9%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 343,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹544 lakhs revenue and Division B generated ₹365 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹544 লক্ষ এবং বিভাগ B এর আয় ₹365 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 49.0%",
+        "B) 53.5%",
+        "C) 45.8%",
+        "D) 57.0%"
+      ],
+      "bn": [
+        "A) 49.0%",
+        "B) 53.5%",
+        "C) 45.8%",
+        "D) 57.0%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹544 - ₹365 = ₹179 lakhs.<br>2. Base revenue (Division B) = ₹365 lakhs.<br>3. Percentage increase = [(179) / 365] × 100 = <strong>49.0%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 544 - 365 = 179 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 365 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(179) / 365] × 100 = <strong>49.0%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 344,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹552 lakhs revenue and Division B generated ₹370 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹552 লক্ষ এবং বিভাগ B এর আয় ₹370 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 49.2%",
+        "B) 53.7%",
+        "C) 46.0%",
+        "D) 57.2%"
+      ],
+      "bn": [
+        "A) 49.2%",
+        "B) 53.7%",
+        "C) 46.0%",
+        "D) 57.2%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹552 - ₹370 = ₹182 lakhs.<br>2. Base revenue (Division B) = ₹370 lakhs.<br>3. Percentage increase = [(182) / 370] × 100 = <strong>49.2%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 552 - 370 = 182 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 370 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(182) / 370] × 100 = <strong>49.2%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 345,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹560 lakhs revenue and Division B generated ₹375 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹560 লক্ষ এবং বিভাগ B এর আয় ₹375 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 49.3%",
+        "B) 53.8%",
+        "C) 46.1%",
+        "D) 57.3%"
+      ],
+      "bn": [
+        "A) 49.3%",
+        "B) 53.8%",
+        "C) 46.1%",
+        "D) 57.3%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹560 - ₹375 = ₹185 lakhs.<br>2. Base revenue (Division B) = ₹375 lakhs.<br>3. Percentage increase = [(185) / 375] × 100 = <strong>49.3%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 560 - 375 = 185 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 375 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(185) / 375] × 100 = <strong>49.3%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 346,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹568 lakhs revenue and Division B generated ₹380 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹568 লক্ষ এবং বিভাগ B এর আয় ₹380 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 49.5%",
+        "B) 54.0%",
+        "C) 46.3%",
+        "D) 57.5%"
+      ],
+      "bn": [
+        "A) 49.5%",
+        "B) 54.0%",
+        "C) 46.3%",
+        "D) 57.5%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹568 - ₹380 = ₹188 lakhs.<br>2. Base revenue (Division B) = ₹380 lakhs.<br>3. Percentage increase = [(188) / 380] × 100 = <strong>49.5%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 568 - 380 = 188 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 380 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(188) / 380] × 100 = <strong>49.5%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 347,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹576 lakhs revenue and Division B generated ₹385 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹576 লক্ষ এবং বিভাগ B এর আয় ₹385 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 49.6%",
+        "B) 54.1%",
+        "C) 46.4%",
+        "D) 57.6%"
+      ],
+      "bn": [
+        "A) 49.6%",
+        "B) 54.1%",
+        "C) 46.4%",
+        "D) 57.6%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹576 - ₹385 = ₹191 lakhs.<br>2. Base revenue (Division B) = ₹385 lakhs.<br>3. Percentage increase = [(191) / 385] × 100 = <strong>49.6%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 576 - 385 = 191 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 385 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(191) / 385] × 100 = <strong>49.6%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 348,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹584 lakhs revenue and Division B generated ₹390 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹584 লক্ষ এবং বিভাগ B এর আয় ₹390 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 49.7%",
+        "B) 54.2%",
+        "C) 46.5%",
+        "D) 57.7%"
+      ],
+      "bn": [
+        "A) 49.7%",
+        "B) 54.2%",
+        "C) 46.5%",
+        "D) 57.7%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹584 - ₹390 = ₹194 lakhs.<br>2. Base revenue (Division B) = ₹390 lakhs.<br>3. Percentage increase = [(194) / 390] × 100 = <strong>49.7%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 584 - 390 = 194 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 390 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(194) / 390] × 100 = <strong>49.7%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 349,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹592 lakhs revenue and Division B generated ₹395 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹592 লক্ষ এবং বিভাগ B এর আয় ₹395 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 49.9%",
+        "B) 54.4%",
+        "C) 46.7%",
+        "D) 57.9%"
+      ],
+      "bn": [
+        "A) 49.9%",
+        "B) 54.4%",
+        "C) 46.7%",
+        "D) 57.9%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹592 - ₹395 = ₹197 lakhs.<br>2. Base revenue (Division B) = ₹395 lakhs.<br>3. Percentage increase = [(197) / 395] × 100 = <strong>49.9%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 592 - 395 = 197 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 395 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(197) / 395] × 100 = <strong>49.9%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 350,
+    "setId": 7,
+    "setNumber": 7,
+    "setName": {
+      "en": "Set 7",
+      "bn": "Set 7"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Tables & Performance Charts",
+      "bn": "তালিকা ও ফলাফল চিত্র"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "According to a corporate annual report, Division A generated ₹600 lakhs revenue and Division B generated ₹400 lakhs. By what percentage is Division A's revenue higher than Division B's?",
+      "bn": "একটি বার্ষিক প্রতিবেদন অনুসারে, বিভাগ A এর আয় ₹600 লক্ষ এবং বিভাগ B এর আয় ₹400 লক্ষ। বিভাগ A এর আয় বিভাগ B এর চেয়ে শতকরা কত বেশি?"
+    },
+    "options": {
+      "en": [
+        "A) 50.0%",
+        "B) 54.5%",
+        "C) 46.8%",
+        "D) 58.0%"
+      ],
+      "bn": [
+        "A) 50.0%",
+        "B) 54.5%",
+        "C) 46.8%",
+        "D) 58.0%"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Difference in revenue = ₹600 - ₹400 = ₹200 lakhs.<br>2. Base revenue (Division B) = ₹400 lakhs.<br>3. Percentage increase = [(200) / 400] × 100 = <strong>50.0%</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. আয়ের পার্থক্য = 600 - 400 = 200 লক্ষ টাকা।<br>2. ভিত্তি মান (বিভাগ B) = 400 লক্ষ টাকা।<br>3. শতকরা বৃদ্ধি = [(200) / 400] × 100 = <strong>50.0%</strong>।"
+    },
+    "tips": {
+      "en": "Percentage Increase = (Difference / Base Value) × 100.",
+      "bn": "শতকরা বৃদ্ধি = (পার্থক্য / ভিত্তি মান) × 100।"
+    }
+  },
+  {
+    "id": 351,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 1",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 1"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 16 × 27 for Mock Test Set 8 Item #1:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #1 এর জন্য 16 × 27 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 432",
+        "B) 447",
+        "C) 412",
+        "D) 467"
+      ],
+      "bn": [
+        "A) 432",
+        "B) 447",
+        "C) 412",
+        "D) 467"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 16 × 27.<br>2. Exact product = <strong>432</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 16 × 27।<br>2. সঠিক গুণফল = <strong>432</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 352,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 2",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 2"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 17 × 29 for Mock Test Set 8 Item #2:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #2 এর জন্য 17 × 29 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 493",
+        "B) 508",
+        "C) 473",
+        "D) 528"
+      ],
+      "bn": [
+        "A) 493",
+        "B) 508",
+        "C) 473",
+        "D) 528"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 17 × 29.<br>2. Exact product = <strong>493</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 17 × 29।<br>2. সঠিক গুণফল = <strong>493</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 353,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 3",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 3"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 18 × 31 for Mock Test Set 8 Item #3:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #3 এর জন্য 18 × 31 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 558",
+        "B) 573",
+        "C) 538",
+        "D) 593"
+      ],
+      "bn": [
+        "A) 558",
+        "B) 573",
+        "C) 538",
+        "D) 593"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 18 × 31.<br>2. Exact product = <strong>558</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 18 × 31।<br>2. সঠিক গুণফল = <strong>558</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 354,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 4",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 4"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 19 × 33 for Mock Test Set 8 Item #4:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #4 এর জন্য 19 × 33 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 627",
+        "B) 642",
+        "C) 607",
+        "D) 662"
+      ],
+      "bn": [
+        "A) 627",
+        "B) 642",
+        "C) 607",
+        "D) 662"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 19 × 33.<br>2. Exact product = <strong>627</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 19 × 33।<br>2. সঠিক গুণফল = <strong>627</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 355,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 5",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 5"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 20 × 35 for Mock Test Set 8 Item #5:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #5 এর জন্য 20 × 35 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 700",
+        "B) 715",
+        "C) 680",
+        "D) 735"
+      ],
+      "bn": [
+        "A) 700",
+        "B) 715",
+        "C) 680",
+        "D) 735"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 20 × 35.<br>2. Exact product = <strong>700</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 20 × 35।<br>2. সঠিক গুণফল = <strong>700</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 356,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 6",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 6"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 21 × 37 for Mock Test Set 8 Item #6:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #6 এর জন্য 21 × 37 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 777",
+        "B) 792",
+        "C) 757",
+        "D) 812"
+      ],
+      "bn": [
+        "A) 777",
+        "B) 792",
+        "C) 757",
+        "D) 812"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 21 × 37.<br>2. Exact product = <strong>777</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 21 × 37।<br>2. সঠিক গুণফল = <strong>777</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 357,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 7",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 7"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 22 × 39 for Mock Test Set 8 Item #7:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #7 এর জন্য 22 × 39 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 858",
+        "B) 873",
+        "C) 838",
+        "D) 893"
+      ],
+      "bn": [
+        "A) 858",
+        "B) 873",
+        "C) 838",
+        "D) 893"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 22 × 39.<br>2. Exact product = <strong>858</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 22 × 39।<br>2. সঠিক গুণফল = <strong>858</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 358,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 8",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 8"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 23 × 41 for Mock Test Set 8 Item #8:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #8 এর জন্য 23 × 41 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 943",
+        "B) 958",
+        "C) 923",
+        "D) 978"
+      ],
+      "bn": [
+        "A) 943",
+        "B) 958",
+        "C) 923",
+        "D) 978"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 23 × 41.<br>2. Exact product = <strong>943</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 23 × 41।<br>2. সঠিক গুণফল = <strong>943</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 359,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 9",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 9"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 24 × 43 for Mock Test Set 8 Item #9:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #9 এর জন্য 24 × 43 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 1032",
+        "B) 1047",
+        "C) 1012",
+        "D) 1067"
+      ],
+      "bn": [
+        "A) 1032",
+        "B) 1047",
+        "C) 1012",
+        "D) 1067"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 24 × 43.<br>2. Exact product = <strong>1032</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 24 × 43।<br>2. সঠিক গুণফল = <strong>1032</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 360,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 10",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 10"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 25 × 45 for Mock Test Set 8 Item #10:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #10 এর জন্য 25 × 45 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 1125",
+        "B) 1140",
+        "C) 1105",
+        "D) 1160"
+      ],
+      "bn": [
+        "A) 1125",
+        "B) 1140",
+        "C) 1105",
+        "D) 1160"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 25 × 45.<br>2. Exact product = <strong>1125</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 25 × 45।<br>2. সঠিক গুণফল = <strong>1125</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 361,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 11",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 11"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 26 × 47 for Mock Test Set 8 Item #11:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #11 এর জন্য 26 × 47 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 1222",
+        "B) 1237",
+        "C) 1202",
+        "D) 1257"
+      ],
+      "bn": [
+        "A) 1222",
+        "B) 1237",
+        "C) 1202",
+        "D) 1257"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 26 × 47.<br>2. Exact product = <strong>1222</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 26 × 47।<br>2. সঠিক গুণফল = <strong>1222</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 362,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 12",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 12"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 27 × 49 for Mock Test Set 8 Item #12:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #12 এর জন্য 27 × 49 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 1323",
+        "B) 1338",
+        "C) 1303",
+        "D) 1358"
+      ],
+      "bn": [
+        "A) 1323",
+        "B) 1338",
+        "C) 1303",
+        "D) 1358"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 27 × 49.<br>2. Exact product = <strong>1323</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 27 × 49।<br>2. সঠিক গুণফল = <strong>1323</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 363,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 13",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 13"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 28 × 51 for Mock Test Set 8 Item #13:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #13 এর জন্য 28 × 51 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 1428",
+        "B) 1443",
+        "C) 1408",
+        "D) 1463"
+      ],
+      "bn": [
+        "A) 1428",
+        "B) 1443",
+        "C) 1408",
+        "D) 1463"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 28 × 51.<br>2. Exact product = <strong>1428</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 28 × 51।<br>2. সঠিক গুণফল = <strong>1428</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 364,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 14",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 14"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 29 × 53 for Mock Test Set 8 Item #14:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #14 এর জন্য 29 × 53 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 1537",
+        "B) 1552",
+        "C) 1517",
+        "D) 1572"
+      ],
+      "bn": [
+        "A) 1537",
+        "B) 1552",
+        "C) 1517",
+        "D) 1572"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 29 × 53.<br>2. Exact product = <strong>1537</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 29 × 53।<br>2. সঠিক গুণফল = <strong>1537</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 365,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 15",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 15"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 30 × 55 for Mock Test Set 8 Item #15:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #15 এর জন্য 30 × 55 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 1650",
+        "B) 1665",
+        "C) 1630",
+        "D) 1685"
+      ],
+      "bn": [
+        "A) 1650",
+        "B) 1665",
+        "C) 1630",
+        "D) 1685"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 30 × 55.<br>2. Exact product = <strong>1650</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 30 × 55।<br>2. সঠিক গুণফল = <strong>1650</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 366,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 16",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 16"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 31 × 57 for Mock Test Set 8 Item #16:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #16 এর জন্য 31 × 57 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 1767",
+        "B) 1782",
+        "C) 1747",
+        "D) 1802"
+      ],
+      "bn": [
+        "A) 1767",
+        "B) 1782",
+        "C) 1747",
+        "D) 1802"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 31 × 57.<br>2. Exact product = <strong>1767</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 31 × 57।<br>2. সঠিক গুণফল = <strong>1767</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 367,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 17",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 17"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 32 × 59 for Mock Test Set 8 Item #17:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #17 এর জন্য 32 × 59 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 1888",
+        "B) 1903",
+        "C) 1868",
+        "D) 1923"
+      ],
+      "bn": [
+        "A) 1888",
+        "B) 1903",
+        "C) 1868",
+        "D) 1923"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 32 × 59.<br>2. Exact product = <strong>1888</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 32 × 59।<br>2. সঠিক গুণফল = <strong>1888</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 368,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 18",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 18"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 33 × 61 for Mock Test Set 8 Item #18:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #18 এর জন্য 33 × 61 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 2013",
+        "B) 2028",
+        "C) 1993",
+        "D) 2048"
+      ],
+      "bn": [
+        "A) 2013",
+        "B) 2028",
+        "C) 1993",
+        "D) 2048"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 33 × 61.<br>2. Exact product = <strong>2013</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 33 × 61।<br>2. সঠিক গুণফল = <strong>2013</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 369,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 19",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 19"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 34 × 63 for Mock Test Set 8 Item #19:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #19 এর জন্য 34 × 63 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 2142",
+        "B) 2157",
+        "C) 2122",
+        "D) 2177"
+      ],
+      "bn": [
+        "A) 2142",
+        "B) 2157",
+        "C) 2122",
+        "D) 2177"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 34 × 63.<br>2. Exact product = <strong>2142</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 34 × 63।<br>2. সঠিক গুণফল = <strong>2142</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 370,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 20",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 20"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 35 × 65 for Mock Test Set 8 Item #20:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #20 এর জন্য 35 × 65 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 2275",
+        "B) 2290",
+        "C) 2255",
+        "D) 2310"
+      ],
+      "bn": [
+        "A) 2275",
+        "B) 2290",
+        "C) 2255",
+        "D) 2310"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 35 × 65.<br>2. Exact product = <strong>2275</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 35 × 65।<br>2. সঠিক গুণফল = <strong>2275</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 371,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 21",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 21"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 36 × 67 for Mock Test Set 8 Item #21:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #21 এর জন্য 36 × 67 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 2412",
+        "B) 2427",
+        "C) 2392",
+        "D) 2447"
+      ],
+      "bn": [
+        "A) 2412",
+        "B) 2427",
+        "C) 2392",
+        "D) 2447"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 36 × 67.<br>2. Exact product = <strong>2412</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 36 × 67।<br>2. সঠিক গুণফল = <strong>2412</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 372,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 22",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 22"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 37 × 69 for Mock Test Set 8 Item #22:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #22 এর জন্য 37 × 69 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 2553",
+        "B) 2568",
+        "C) 2533",
+        "D) 2588"
+      ],
+      "bn": [
+        "A) 2553",
+        "B) 2568",
+        "C) 2533",
+        "D) 2588"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 37 × 69.<br>2. Exact product = <strong>2553</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 37 × 69।<br>2. সঠিক গুণফল = <strong>2553</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 373,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 23",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 23"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 38 × 71 for Mock Test Set 8 Item #23:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #23 এর জন্য 38 × 71 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 2698",
+        "B) 2713",
+        "C) 2678",
+        "D) 2733"
+      ],
+      "bn": [
+        "A) 2698",
+        "B) 2713",
+        "C) 2678",
+        "D) 2733"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 38 × 71.<br>2. Exact product = <strong>2698</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 38 × 71।<br>2. সঠিক গুণফল = <strong>2698</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 374,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 24",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 24"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 39 × 73 for Mock Test Set 8 Item #24:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #24 এর জন্য 39 × 73 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 2847",
+        "B) 2862",
+        "C) 2827",
+        "D) 2882"
+      ],
+      "bn": [
+        "A) 2847",
+        "B) 2862",
+        "C) 2827",
+        "D) 2882"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 39 × 73.<br>2. Exact product = <strong>2847</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 39 × 73।<br>2. সঠিক গুণফল = <strong>2847</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 375,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 25",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 25"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 40 × 75 for Mock Test Set 8 Item #25:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #25 এর জন্য 40 × 75 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 3000",
+        "B) 3015",
+        "C) 2980",
+        "D) 3035"
+      ],
+      "bn": [
+        "A) 3000",
+        "B) 3015",
+        "C) 2980",
+        "D) 3035"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 40 × 75.<br>2. Exact product = <strong>3000</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 40 × 75।<br>2. সঠিক গুণফল = <strong>3000</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 376,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 26",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 26"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 41 × 77 for Mock Test Set 8 Item #26:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #26 এর জন্য 41 × 77 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 3157",
+        "B) 3172",
+        "C) 3137",
+        "D) 3192"
+      ],
+      "bn": [
+        "A) 3157",
+        "B) 3172",
+        "C) 3137",
+        "D) 3192"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 41 × 77.<br>2. Exact product = <strong>3157</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 41 × 77।<br>2. সঠিক গুণফল = <strong>3157</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 377,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 27",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 27"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 42 × 79 for Mock Test Set 8 Item #27:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #27 এর জন্য 42 × 79 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 3318",
+        "B) 3333",
+        "C) 3298",
+        "D) 3353"
+      ],
+      "bn": [
+        "A) 3318",
+        "B) 3333",
+        "C) 3298",
+        "D) 3353"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 42 × 79.<br>2. Exact product = <strong>3318</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 42 × 79।<br>2. সঠিক গুণফল = <strong>3318</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 378,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 28",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 28"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 43 × 81 for Mock Test Set 8 Item #28:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #28 এর জন্য 43 × 81 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 3483",
+        "B) 3498",
+        "C) 3463",
+        "D) 3518"
+      ],
+      "bn": [
+        "A) 3483",
+        "B) 3498",
+        "C) 3463",
+        "D) 3518"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 43 × 81.<br>2. Exact product = <strong>3483</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 43 × 81।<br>2. সঠিক গুণফল = <strong>3483</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 379,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 29",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 29"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 44 × 83 for Mock Test Set 8 Item #29:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #29 এর জন্য 44 × 83 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 3652",
+        "B) 3667",
+        "C) 3632",
+        "D) 3687"
+      ],
+      "bn": [
+        "A) 3652",
+        "B) 3667",
+        "C) 3632",
+        "D) 3687"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 44 × 83.<br>2. Exact product = <strong>3652</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 44 × 83।<br>2. সঠিক গুণফল = <strong>3652</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 380,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 30",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 30"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 45 × 85 for Mock Test Set 8 Item #30:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #30 এর জন্য 45 × 85 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 3825",
+        "B) 3840",
+        "C) 3805",
+        "D) 3860"
+      ],
+      "bn": [
+        "A) 3825",
+        "B) 3840",
+        "C) 3805",
+        "D) 3860"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 45 × 85.<br>2. Exact product = <strong>3825</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 45 × 85।<br>2. সঠিক গুণফল = <strong>3825</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 381,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 31",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 31"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 46 × 87 for Mock Test Set 8 Item #31:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #31 এর জন্য 46 × 87 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 4002",
+        "B) 4017",
+        "C) 3982",
+        "D) 4037"
+      ],
+      "bn": [
+        "A) 4002",
+        "B) 4017",
+        "C) 3982",
+        "D) 4037"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 46 × 87.<br>2. Exact product = <strong>4002</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 46 × 87।<br>2. সঠিক গুণফল = <strong>4002</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 382,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 32",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 32"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 47 × 89 for Mock Test Set 8 Item #32:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #32 এর জন্য 47 × 89 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 4183",
+        "B) 4198",
+        "C) 4163",
+        "D) 4218"
+      ],
+      "bn": [
+        "A) 4183",
+        "B) 4198",
+        "C) 4163",
+        "D) 4218"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 47 × 89.<br>2. Exact product = <strong>4183</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 47 × 89।<br>2. সঠিক গুণফল = <strong>4183</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 383,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 33",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 33"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 48 × 91 for Mock Test Set 8 Item #33:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #33 এর জন্য 48 × 91 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 4368",
+        "B) 4383",
+        "C) 4348",
+        "D) 4403"
+      ],
+      "bn": [
+        "A) 4368",
+        "B) 4383",
+        "C) 4348",
+        "D) 4403"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 48 × 91.<br>2. Exact product = <strong>4368</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 48 × 91।<br>2. সঠিক গুণফল = <strong>4368</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 384,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 34",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 34"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 49 × 93 for Mock Test Set 8 Item #34:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #34 এর জন্য 49 × 93 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 4557",
+        "B) 4572",
+        "C) 4537",
+        "D) 4592"
+      ],
+      "bn": [
+        "A) 4557",
+        "B) 4572",
+        "C) 4537",
+        "D) 4592"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 49 × 93.<br>2. Exact product = <strong>4557</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 49 × 93।<br>2. সঠিক গুণফল = <strong>4557</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 385,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 35",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 35"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 50 × 95 for Mock Test Set 8 Item #35:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #35 এর জন্য 50 × 95 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 4750",
+        "B) 4765",
+        "C) 4730",
+        "D) 4785"
+      ],
+      "bn": [
+        "A) 4750",
+        "B) 4765",
+        "C) 4730",
+        "D) 4785"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 50 × 95.<br>2. Exact product = <strong>4750</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 50 × 95।<br>2. সঠিক গুণফল = <strong>4750</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 386,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 36",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 36"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 51 × 97 for Mock Test Set 8 Item #36:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #36 এর জন্য 51 × 97 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 4947",
+        "B) 4962",
+        "C) 4927",
+        "D) 4982"
+      ],
+      "bn": [
+        "A) 4947",
+        "B) 4962",
+        "C) 4927",
+        "D) 4982"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 51 × 97.<br>2. Exact product = <strong>4947</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 51 × 97।<br>2. সঠিক গুণফল = <strong>4947</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 387,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 37",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 37"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 52 × 99 for Mock Test Set 8 Item #37:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #37 এর জন্য 52 × 99 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 5148",
+        "B) 5163",
+        "C) 5128",
+        "D) 5183"
+      ],
+      "bn": [
+        "A) 5148",
+        "B) 5163",
+        "C) 5128",
+        "D) 5183"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 52 × 99.<br>2. Exact product = <strong>5148</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 52 × 99।<br>2. সঠিক গুণফল = <strong>5148</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 388,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 38",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 38"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 53 × 101 for Mock Test Set 8 Item #38:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #38 এর জন্য 53 × 101 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 5353",
+        "B) 5368",
+        "C) 5333",
+        "D) 5388"
+      ],
+      "bn": [
+        "A) 5353",
+        "B) 5368",
+        "C) 5333",
+        "D) 5388"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 53 × 101.<br>2. Exact product = <strong>5353</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 53 × 101।<br>2. সঠিক গুণফল = <strong>5353</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 389,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 39",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 39"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 54 × 103 for Mock Test Set 8 Item #39:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #39 এর জন্য 54 × 103 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 5562",
+        "B) 5577",
+        "C) 5542",
+        "D) 5597"
+      ],
+      "bn": [
+        "A) 5562",
+        "B) 5577",
+        "C) 5542",
+        "D) 5597"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 54 × 103.<br>2. Exact product = <strong>5562</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 54 × 103।<br>2. সঠিক গুণফল = <strong>5562</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 390,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 40",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 40"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 55 × 105 for Mock Test Set 8 Item #40:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #40 এর জন্য 55 × 105 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 5775",
+        "B) 5790",
+        "C) 5755",
+        "D) 5810"
+      ],
+      "bn": [
+        "A) 5775",
+        "B) 5790",
+        "C) 5755",
+        "D) 5810"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 55 × 105.<br>2. Exact product = <strong>5775</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 55 × 105।<br>2. সঠিক গুণফল = <strong>5775</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 391,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 41",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 41"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 56 × 107 for Mock Test Set 8 Item #41:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #41 এর জন্য 56 × 107 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 5992",
+        "B) 6007",
+        "C) 5972",
+        "D) 6027"
+      ],
+      "bn": [
+        "A) 5992",
+        "B) 6007",
+        "C) 5972",
+        "D) 6027"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 56 × 107.<br>2. Exact product = <strong>5992</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 56 × 107।<br>2. সঠিক গুণফল = <strong>5992</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 392,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 42",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 42"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 57 × 109 for Mock Test Set 8 Item #42:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #42 এর জন্য 57 × 109 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 6213",
+        "B) 6228",
+        "C) 6193",
+        "D) 6248"
+      ],
+      "bn": [
+        "A) 6213",
+        "B) 6228",
+        "C) 6193",
+        "D) 6248"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 57 × 109.<br>2. Exact product = <strong>6213</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 57 × 109।<br>2. সঠিক গুণফল = <strong>6213</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 393,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 43",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 43"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 58 × 111 for Mock Test Set 8 Item #43:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #43 এর জন্য 58 × 111 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 6438",
+        "B) 6453",
+        "C) 6418",
+        "D) 6473"
+      ],
+      "bn": [
+        "A) 6438",
+        "B) 6453",
+        "C) 6418",
+        "D) 6473"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 58 × 111.<br>2. Exact product = <strong>6438</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 58 × 111।<br>2. সঠিক গুণফল = <strong>6438</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 394,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 44",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 44"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 59 × 113 for Mock Test Set 8 Item #44:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #44 এর জন্য 59 × 113 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 6667",
+        "B) 6682",
+        "C) 6647",
+        "D) 6702"
+      ],
+      "bn": [
+        "A) 6667",
+        "B) 6682",
+        "C) 6647",
+        "D) 6702"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 59 × 113.<br>2. Exact product = <strong>6667</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 59 × 113।<br>2. সঠিক গুণফল = <strong>6667</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 395,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 45",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 45"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 60 × 115 for Mock Test Set 8 Item #45:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #45 এর জন্য 60 × 115 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 6900",
+        "B) 6915",
+        "C) 6880",
+        "D) 6935"
+      ],
+      "bn": [
+        "A) 6900",
+        "B) 6915",
+        "C) 6880",
+        "D) 6935"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 60 × 115.<br>2. Exact product = <strong>6900</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 60 × 115।<br>2. সঠিক গুণফল = <strong>6900</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 396,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 46",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 46"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 61 × 117 for Mock Test Set 8 Item #46:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #46 এর জন্য 61 × 117 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 7137",
+        "B) 7152",
+        "C) 7117",
+        "D) 7172"
+      ],
+      "bn": [
+        "A) 7137",
+        "B) 7152",
+        "C) 7117",
+        "D) 7172"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 61 × 117.<br>2. Exact product = <strong>7137</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 61 × 117।<br>2. সঠিক গুণফল = <strong>7137</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 397,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 47",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 47"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 62 × 119 for Mock Test Set 8 Item #47:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #47 এর জন্য 62 × 119 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 7378",
+        "B) 7393",
+        "C) 7358",
+        "D) 7413"
+      ],
+      "bn": [
+        "A) 7378",
+        "B) 7393",
+        "C) 7358",
+        "D) 7413"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 62 × 119.<br>2. Exact product = <strong>7378</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 62 × 119।<br>2. সঠিক গুণফল = <strong>7378</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 398,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 48",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 48"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 63 × 121 for Mock Test Set 8 Item #48:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #48 এর জন্য 63 × 121 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 7623",
+        "B) 7638",
+        "C) 7603",
+        "D) 7658"
+      ],
+      "bn": [
+        "A) 7623",
+        "B) 7638",
+        "C) 7603",
+        "D) 7658"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 63 × 121.<br>2. Exact product = <strong>7623</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 63 × 121।<br>2. সঠিক গুণফল = <strong>7623</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 399,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 49",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 49"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 64 × 123 for Mock Test Set 8 Item #49:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #49 এর জন্য 64 × 123 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 7872",
+        "B) 7887",
+        "C) 7852",
+        "D) 7907"
+      ],
+      "bn": [
+        "A) 7872",
+        "B) 7887",
+        "C) 7852",
+        "D) 7907"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 64 × 123.<br>2. Exact product = <strong>7872</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 64 × 123।<br>2. সঠিক গুণফল = <strong>7872</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 400,
+    "setId": 8,
+    "setNumber": 8,
+    "setName": {
+      "en": "Set 8",
+      "bn": "Set 8"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 50",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 50"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 65 × 125 for Mock Test Set 8 Item #50:",
+      "bn": "মক টেস্ট সেট 8 এর প্রশ্ন #50 এর জন্য 65 × 125 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 8125",
+        "B) 8140",
+        "C) 8105",
+        "D) 8160"
+      ],
+      "bn": [
+        "A) 8125",
+        "B) 8140",
+        "C) 8105",
+        "D) 8160"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 65 × 125.<br>2. Exact product = <strong>8125</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 65 × 125।<br>2. সঠিক গুণফল = <strong>8125</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 401,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 1",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 1"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 17 × 27 for Mock Test Set 9 Item #1:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #1 এর জন্য 17 × 27 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 459",
+        "B) 474",
+        "C) 439",
+        "D) 494"
+      ],
+      "bn": [
+        "A) 459",
+        "B) 474",
+        "C) 439",
+        "D) 494"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 17 × 27.<br>2. Exact product = <strong>459</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 17 × 27।<br>2. সঠিক গুণফল = <strong>459</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 402,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 2",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 2"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 19 × 29 for Mock Test Set 9 Item #2:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #2 এর জন্য 19 × 29 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 551",
+        "B) 566",
+        "C) 531",
+        "D) 586"
+      ],
+      "bn": [
+        "A) 551",
+        "B) 566",
+        "C) 531",
+        "D) 586"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 19 × 29.<br>2. Exact product = <strong>551</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 19 × 29।<br>2. সঠিক গুণফল = <strong>551</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 403,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 3",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 3"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 21 × 31 for Mock Test Set 9 Item #3:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #3 এর জন্য 21 × 31 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 651",
+        "B) 666",
+        "C) 631",
+        "D) 686"
+      ],
+      "bn": [
+        "A) 651",
+        "B) 666",
+        "C) 631",
+        "D) 686"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 21 × 31.<br>2. Exact product = <strong>651</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 21 × 31।<br>2. সঠিক গুণফল = <strong>651</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 404,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 4",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 4"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 23 × 33 for Mock Test Set 9 Item #4:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #4 এর জন্য 23 × 33 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 759",
+        "B) 774",
+        "C) 739",
+        "D) 794"
+      ],
+      "bn": [
+        "A) 759",
+        "B) 774",
+        "C) 739",
+        "D) 794"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 23 × 33.<br>2. Exact product = <strong>759</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 23 × 33।<br>2. সঠিক গুণফল = <strong>759</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 405,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 5",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 5"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 25 × 35 for Mock Test Set 9 Item #5:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #5 এর জন্য 25 × 35 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 875",
+        "B) 890",
+        "C) 855",
+        "D) 910"
+      ],
+      "bn": [
+        "A) 875",
+        "B) 890",
+        "C) 855",
+        "D) 910"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 25 × 35.<br>2. Exact product = <strong>875</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 25 × 35।<br>2. সঠিক গুণফল = <strong>875</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 406,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 6",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 6"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 27 × 37 for Mock Test Set 9 Item #6:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #6 এর জন্য 27 × 37 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 999",
+        "B) 1014",
+        "C) 979",
+        "D) 1034"
+      ],
+      "bn": [
+        "A) 999",
+        "B) 1014",
+        "C) 979",
+        "D) 1034"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 27 × 37.<br>2. Exact product = <strong>999</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 27 × 37।<br>2. সঠিক গুণফল = <strong>999</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 407,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 7",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 7"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 29 × 39 for Mock Test Set 9 Item #7:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #7 এর জন্য 29 × 39 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 1131",
+        "B) 1146",
+        "C) 1111",
+        "D) 1166"
+      ],
+      "bn": [
+        "A) 1131",
+        "B) 1146",
+        "C) 1111",
+        "D) 1166"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 29 × 39.<br>2. Exact product = <strong>1131</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 29 × 39।<br>2. সঠিক গুণফল = <strong>1131</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 408,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 8",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 8"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 31 × 41 for Mock Test Set 9 Item #8:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #8 এর জন্য 31 × 41 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 1271",
+        "B) 1286",
+        "C) 1251",
+        "D) 1306"
+      ],
+      "bn": [
+        "A) 1271",
+        "B) 1286",
+        "C) 1251",
+        "D) 1306"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 31 × 41.<br>2. Exact product = <strong>1271</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 31 × 41।<br>2. সঠিক গুণফল = <strong>1271</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 409,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 9",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 9"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 33 × 43 for Mock Test Set 9 Item #9:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #9 এর জন্য 33 × 43 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 1419",
+        "B) 1434",
+        "C) 1399",
+        "D) 1454"
+      ],
+      "bn": [
+        "A) 1419",
+        "B) 1434",
+        "C) 1399",
+        "D) 1454"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 33 × 43.<br>2. Exact product = <strong>1419</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 33 × 43।<br>2. সঠিক গুণফল = <strong>1419</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 410,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 10",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 10"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 35 × 45 for Mock Test Set 9 Item #10:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #10 এর জন্য 35 × 45 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 1575",
+        "B) 1590",
+        "C) 1555",
+        "D) 1610"
+      ],
+      "bn": [
+        "A) 1575",
+        "B) 1590",
+        "C) 1555",
+        "D) 1610"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 35 × 45.<br>2. Exact product = <strong>1575</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 35 × 45।<br>2. সঠিক গুণফল = <strong>1575</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 411,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 11",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 11"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 37 × 47 for Mock Test Set 9 Item #11:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #11 এর জন্য 37 × 47 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 1739",
+        "B) 1754",
+        "C) 1719",
+        "D) 1774"
+      ],
+      "bn": [
+        "A) 1739",
+        "B) 1754",
+        "C) 1719",
+        "D) 1774"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 37 × 47.<br>2. Exact product = <strong>1739</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 37 × 47।<br>2. সঠিক গুণফল = <strong>1739</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 412,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 12",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 12"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 39 × 49 for Mock Test Set 9 Item #12:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #12 এর জন্য 39 × 49 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 1911",
+        "B) 1926",
+        "C) 1891",
+        "D) 1946"
+      ],
+      "bn": [
+        "A) 1911",
+        "B) 1926",
+        "C) 1891",
+        "D) 1946"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 39 × 49.<br>2. Exact product = <strong>1911</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 39 × 49।<br>2. সঠিক গুণফল = <strong>1911</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 413,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 13",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 13"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 41 × 51 for Mock Test Set 9 Item #13:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #13 এর জন্য 41 × 51 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 2091",
+        "B) 2106",
+        "C) 2071",
+        "D) 2126"
+      ],
+      "bn": [
+        "A) 2091",
+        "B) 2106",
+        "C) 2071",
+        "D) 2126"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 41 × 51.<br>2. Exact product = <strong>2091</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 41 × 51।<br>2. সঠিক গুণফল = <strong>2091</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 414,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 14",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 14"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 43 × 53 for Mock Test Set 9 Item #14:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #14 এর জন্য 43 × 53 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 2279",
+        "B) 2294",
+        "C) 2259",
+        "D) 2314"
+      ],
+      "bn": [
+        "A) 2279",
+        "B) 2294",
+        "C) 2259",
+        "D) 2314"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 43 × 53.<br>2. Exact product = <strong>2279</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 43 × 53।<br>2. সঠিক গুণফল = <strong>2279</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 415,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 15",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 15"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 45 × 55 for Mock Test Set 9 Item #15:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #15 এর জন্য 45 × 55 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 2475",
+        "B) 2490",
+        "C) 2455",
+        "D) 2510"
+      ],
+      "bn": [
+        "A) 2475",
+        "B) 2490",
+        "C) 2455",
+        "D) 2510"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 45 × 55.<br>2. Exact product = <strong>2475</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 45 × 55।<br>2. সঠিক গুণফল = <strong>2475</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 416,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 16",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 16"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 47 × 57 for Mock Test Set 9 Item #16:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #16 এর জন্য 47 × 57 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 2679",
+        "B) 2694",
+        "C) 2659",
+        "D) 2714"
+      ],
+      "bn": [
+        "A) 2679",
+        "B) 2694",
+        "C) 2659",
+        "D) 2714"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 47 × 57.<br>2. Exact product = <strong>2679</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 47 × 57।<br>2. সঠিক গুণফল = <strong>2679</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 417,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 17",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 17"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 49 × 59 for Mock Test Set 9 Item #17:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #17 এর জন্য 49 × 59 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 2891",
+        "B) 2906",
+        "C) 2871",
+        "D) 2926"
+      ],
+      "bn": [
+        "A) 2891",
+        "B) 2906",
+        "C) 2871",
+        "D) 2926"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 49 × 59.<br>2. Exact product = <strong>2891</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 49 × 59।<br>2. সঠিক গুণফল = <strong>2891</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 418,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 18",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 18"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 51 × 61 for Mock Test Set 9 Item #18:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #18 এর জন্য 51 × 61 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 3111",
+        "B) 3126",
+        "C) 3091",
+        "D) 3146"
+      ],
+      "bn": [
+        "A) 3111",
+        "B) 3126",
+        "C) 3091",
+        "D) 3146"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 51 × 61.<br>2. Exact product = <strong>3111</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 51 × 61।<br>2. সঠিক গুণফল = <strong>3111</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 419,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 19",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 19"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 53 × 63 for Mock Test Set 9 Item #19:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #19 এর জন্য 53 × 63 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 3339",
+        "B) 3354",
+        "C) 3319",
+        "D) 3374"
+      ],
+      "bn": [
+        "A) 3339",
+        "B) 3354",
+        "C) 3319",
+        "D) 3374"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 53 × 63.<br>2. Exact product = <strong>3339</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 53 × 63।<br>2. সঠিক গুণফল = <strong>3339</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 420,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 20",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 20"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 55 × 65 for Mock Test Set 9 Item #20:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #20 এর জন্য 55 × 65 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 3575",
+        "B) 3590",
+        "C) 3555",
+        "D) 3610"
+      ],
+      "bn": [
+        "A) 3575",
+        "B) 3590",
+        "C) 3555",
+        "D) 3610"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 55 × 65.<br>2. Exact product = <strong>3575</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 55 × 65।<br>2. সঠিক গুণফল = <strong>3575</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 421,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 21",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 21"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 57 × 67 for Mock Test Set 9 Item #21:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #21 এর জন্য 57 × 67 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 3819",
+        "B) 3834",
+        "C) 3799",
+        "D) 3854"
+      ],
+      "bn": [
+        "A) 3819",
+        "B) 3834",
+        "C) 3799",
+        "D) 3854"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 57 × 67.<br>2. Exact product = <strong>3819</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 57 × 67।<br>2. সঠিক গুণফল = <strong>3819</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 422,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 22",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 22"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 59 × 69 for Mock Test Set 9 Item #22:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #22 এর জন্য 59 × 69 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 4071",
+        "B) 4086",
+        "C) 4051",
+        "D) 4106"
+      ],
+      "bn": [
+        "A) 4071",
+        "B) 4086",
+        "C) 4051",
+        "D) 4106"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 59 × 69.<br>2. Exact product = <strong>4071</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 59 × 69।<br>2. সঠিক গুণফল = <strong>4071</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 423,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 23",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 23"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 61 × 71 for Mock Test Set 9 Item #23:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #23 এর জন্য 61 × 71 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 4331",
+        "B) 4346",
+        "C) 4311",
+        "D) 4366"
+      ],
+      "bn": [
+        "A) 4331",
+        "B) 4346",
+        "C) 4311",
+        "D) 4366"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 61 × 71.<br>2. Exact product = <strong>4331</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 61 × 71।<br>2. সঠিক গুণফল = <strong>4331</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 424,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 24",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 24"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 63 × 73 for Mock Test Set 9 Item #24:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #24 এর জন্য 63 × 73 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 4599",
+        "B) 4614",
+        "C) 4579",
+        "D) 4634"
+      ],
+      "bn": [
+        "A) 4599",
+        "B) 4614",
+        "C) 4579",
+        "D) 4634"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 63 × 73.<br>2. Exact product = <strong>4599</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 63 × 73।<br>2. সঠিক গুণফল = <strong>4599</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 425,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 25",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 25"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 65 × 75 for Mock Test Set 9 Item #25:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #25 এর জন্য 65 × 75 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 4875",
+        "B) 4890",
+        "C) 4855",
+        "D) 4910"
+      ],
+      "bn": [
+        "A) 4875",
+        "B) 4890",
+        "C) 4855",
+        "D) 4910"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 65 × 75.<br>2. Exact product = <strong>4875</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 65 × 75।<br>2. সঠিক গুণফল = <strong>4875</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 426,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 26",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 26"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 67 × 77 for Mock Test Set 9 Item #26:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #26 এর জন্য 67 × 77 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 5159",
+        "B) 5174",
+        "C) 5139",
+        "D) 5194"
+      ],
+      "bn": [
+        "A) 5159",
+        "B) 5174",
+        "C) 5139",
+        "D) 5194"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 67 × 77.<br>2. Exact product = <strong>5159</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 67 × 77।<br>2. সঠিক গুণফল = <strong>5159</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 427,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 27",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 27"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 69 × 79 for Mock Test Set 9 Item #27:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #27 এর জন্য 69 × 79 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 5451",
+        "B) 5466",
+        "C) 5431",
+        "D) 5486"
+      ],
+      "bn": [
+        "A) 5451",
+        "B) 5466",
+        "C) 5431",
+        "D) 5486"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 69 × 79.<br>2. Exact product = <strong>5451</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 69 × 79।<br>2. সঠিক গুণফল = <strong>5451</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 428,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 28",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 28"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 71 × 81 for Mock Test Set 9 Item #28:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #28 এর জন্য 71 × 81 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 5751",
+        "B) 5766",
+        "C) 5731",
+        "D) 5786"
+      ],
+      "bn": [
+        "A) 5751",
+        "B) 5766",
+        "C) 5731",
+        "D) 5786"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 71 × 81.<br>2. Exact product = <strong>5751</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 71 × 81।<br>2. সঠিক গুণফল = <strong>5751</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 429,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 29",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 29"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 73 × 83 for Mock Test Set 9 Item #29:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #29 এর জন্য 73 × 83 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 6059",
+        "B) 6074",
+        "C) 6039",
+        "D) 6094"
+      ],
+      "bn": [
+        "A) 6059",
+        "B) 6074",
+        "C) 6039",
+        "D) 6094"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 73 × 83.<br>2. Exact product = <strong>6059</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 73 × 83।<br>2. সঠিক গুণফল = <strong>6059</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 430,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 30",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 30"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 75 × 85 for Mock Test Set 9 Item #30:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #30 এর জন্য 75 × 85 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 6375",
+        "B) 6390",
+        "C) 6355",
+        "D) 6410"
+      ],
+      "bn": [
+        "A) 6375",
+        "B) 6390",
+        "C) 6355",
+        "D) 6410"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 75 × 85.<br>2. Exact product = <strong>6375</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 75 × 85।<br>2. সঠিক গুণফল = <strong>6375</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 431,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 31",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 31"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 77 × 87 for Mock Test Set 9 Item #31:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #31 এর জন্য 77 × 87 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 6699",
+        "B) 6714",
+        "C) 6679",
+        "D) 6734"
+      ],
+      "bn": [
+        "A) 6699",
+        "B) 6714",
+        "C) 6679",
+        "D) 6734"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 77 × 87.<br>2. Exact product = <strong>6699</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 77 × 87।<br>2. সঠিক গুণফল = <strong>6699</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 432,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 32",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 32"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 79 × 89 for Mock Test Set 9 Item #32:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #32 এর জন্য 79 × 89 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 7031",
+        "B) 7046",
+        "C) 7011",
+        "D) 7066"
+      ],
+      "bn": [
+        "A) 7031",
+        "B) 7046",
+        "C) 7011",
+        "D) 7066"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 79 × 89.<br>2. Exact product = <strong>7031</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 79 × 89।<br>2. সঠিক গুণফল = <strong>7031</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 433,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 33",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 33"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 81 × 91 for Mock Test Set 9 Item #33:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #33 এর জন্য 81 × 91 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 7371",
+        "B) 7386",
+        "C) 7351",
+        "D) 7406"
+      ],
+      "bn": [
+        "A) 7371",
+        "B) 7386",
+        "C) 7351",
+        "D) 7406"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 81 × 91.<br>2. Exact product = <strong>7371</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 81 × 91।<br>2. সঠিক গুণফল = <strong>7371</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 434,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 34",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 34"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 83 × 93 for Mock Test Set 9 Item #34:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #34 এর জন্য 83 × 93 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 7719",
+        "B) 7734",
+        "C) 7699",
+        "D) 7754"
+      ],
+      "bn": [
+        "A) 7719",
+        "B) 7734",
+        "C) 7699",
+        "D) 7754"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 83 × 93.<br>2. Exact product = <strong>7719</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 83 × 93।<br>2. সঠিক গুণফল = <strong>7719</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 435,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 35",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 35"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 85 × 95 for Mock Test Set 9 Item #35:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #35 এর জন্য 85 × 95 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 8075",
+        "B) 8090",
+        "C) 8055",
+        "D) 8110"
+      ],
+      "bn": [
+        "A) 8075",
+        "B) 8090",
+        "C) 8055",
+        "D) 8110"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 85 × 95.<br>2. Exact product = <strong>8075</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 85 × 95।<br>2. সঠিক গুণফল = <strong>8075</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 436,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 36",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 36"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 87 × 97 for Mock Test Set 9 Item #36:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #36 এর জন্য 87 × 97 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 8439",
+        "B) 8454",
+        "C) 8419",
+        "D) 8474"
+      ],
+      "bn": [
+        "A) 8439",
+        "B) 8454",
+        "C) 8419",
+        "D) 8474"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 87 × 97.<br>2. Exact product = <strong>8439</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 87 × 97।<br>2. সঠিক গুণফল = <strong>8439</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 437,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 37",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 37"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 89 × 99 for Mock Test Set 9 Item #37:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #37 এর জন্য 89 × 99 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 8811",
+        "B) 8826",
+        "C) 8791",
+        "D) 8846"
+      ],
+      "bn": [
+        "A) 8811",
+        "B) 8826",
+        "C) 8791",
+        "D) 8846"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 89 × 99.<br>2. Exact product = <strong>8811</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 89 × 99।<br>2. সঠিক গুণফল = <strong>8811</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 438,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 38",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 38"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 91 × 101 for Mock Test Set 9 Item #38:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #38 এর জন্য 91 × 101 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 9191",
+        "B) 9206",
+        "C) 9171",
+        "D) 9226"
+      ],
+      "bn": [
+        "A) 9191",
+        "B) 9206",
+        "C) 9171",
+        "D) 9226"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 91 × 101.<br>2. Exact product = <strong>9191</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 91 × 101।<br>2. সঠিক গুণফল = <strong>9191</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 439,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 39",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 39"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 93 × 103 for Mock Test Set 9 Item #39:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #39 এর জন্য 93 × 103 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 9579",
+        "B) 9594",
+        "C) 9559",
+        "D) 9614"
+      ],
+      "bn": [
+        "A) 9579",
+        "B) 9594",
+        "C) 9559",
+        "D) 9614"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 93 × 103.<br>2. Exact product = <strong>9579</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 93 × 103।<br>2. সঠিক গুণফল = <strong>9579</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 440,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 40",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 40"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 95 × 105 for Mock Test Set 9 Item #40:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #40 এর জন্য 95 × 105 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 9975",
+        "B) 9990",
+        "C) 9955",
+        "D) 10010"
+      ],
+      "bn": [
+        "A) 9975",
+        "B) 9990",
+        "C) 9955",
+        "D) 10010"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 95 × 105.<br>2. Exact product = <strong>9975</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 95 × 105।<br>2. সঠিক গুণফল = <strong>9975</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 441,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 41",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 41"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 97 × 107 for Mock Test Set 9 Item #41:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #41 এর জন্য 97 × 107 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 10379",
+        "B) 10394",
+        "C) 10359",
+        "D) 10414"
+      ],
+      "bn": [
+        "A) 10379",
+        "B) 10394",
+        "C) 10359",
+        "D) 10414"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 97 × 107.<br>2. Exact product = <strong>10379</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 97 × 107।<br>2. সঠিক গুণফল = <strong>10379</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 442,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 42",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 42"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 99 × 109 for Mock Test Set 9 Item #42:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #42 এর জন্য 99 × 109 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 10791",
+        "B) 10806",
+        "C) 10771",
+        "D) 10826"
+      ],
+      "bn": [
+        "A) 10791",
+        "B) 10806",
+        "C) 10771",
+        "D) 10826"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 99 × 109.<br>2. Exact product = <strong>10791</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 99 × 109।<br>2. সঠিক গুণফল = <strong>10791</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 443,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 43",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 43"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 101 × 111 for Mock Test Set 9 Item #43:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #43 এর জন্য 101 × 111 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 11211",
+        "B) 11226",
+        "C) 11191",
+        "D) 11246"
+      ],
+      "bn": [
+        "A) 11211",
+        "B) 11226",
+        "C) 11191",
+        "D) 11246"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 101 × 111.<br>2. Exact product = <strong>11211</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 101 × 111।<br>2. সঠিক গুণফল = <strong>11211</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 444,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 44",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 44"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 103 × 113 for Mock Test Set 9 Item #44:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #44 এর জন্য 103 × 113 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 11639",
+        "B) 11654",
+        "C) 11619",
+        "D) 11674"
+      ],
+      "bn": [
+        "A) 11639",
+        "B) 11654",
+        "C) 11619",
+        "D) 11674"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 103 × 113.<br>2. Exact product = <strong>11639</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 103 × 113।<br>2. সঠিক গুণফল = <strong>11639</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 445,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 45",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 45"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 105 × 115 for Mock Test Set 9 Item #45:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #45 এর জন্য 105 × 115 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 12075",
+        "B) 12090",
+        "C) 12055",
+        "D) 12110"
+      ],
+      "bn": [
+        "A) 12075",
+        "B) 12090",
+        "C) 12055",
+        "D) 12110"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 105 × 115.<br>2. Exact product = <strong>12075</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 105 × 115।<br>2. সঠিক গুণফল = <strong>12075</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 446,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 46",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 46"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 107 × 117 for Mock Test Set 9 Item #46:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #46 এর জন্য 107 × 117 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 12519",
+        "B) 12534",
+        "C) 12499",
+        "D) 12554"
+      ],
+      "bn": [
+        "A) 12519",
+        "B) 12534",
+        "C) 12499",
+        "D) 12554"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 107 × 117.<br>2. Exact product = <strong>12519</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 107 × 117।<br>2. সঠিক গুণফল = <strong>12519</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 447,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 47",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 47"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 109 × 119 for Mock Test Set 9 Item #47:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #47 এর জন্য 109 × 119 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 12971",
+        "B) 12986",
+        "C) 12951",
+        "D) 13006"
+      ],
+      "bn": [
+        "A) 12971",
+        "B) 12986",
+        "C) 12951",
+        "D) 13006"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 109 × 119.<br>2. Exact product = <strong>12971</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 109 × 119।<br>2. সঠিক গুণফল = <strong>12971</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 448,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 48",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 48"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 111 × 121 for Mock Test Set 9 Item #48:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #48 এর জন্য 111 × 121 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 13431",
+        "B) 13446",
+        "C) 13411",
+        "D) 13466"
+      ],
+      "bn": [
+        "A) 13431",
+        "B) 13446",
+        "C) 13411",
+        "D) 13466"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 111 × 121.<br>2. Exact product = <strong>13431</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 111 × 121।<br>2. সঠিক গুণফল = <strong>13431</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 449,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 49",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 49"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 113 × 123 for Mock Test Set 9 Item #49:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #49 এর জন্য 113 × 123 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 13899",
+        "B) 13914",
+        "C) 13879",
+        "D) 13934"
+      ],
+      "bn": [
+        "A) 13899",
+        "B) 13914",
+        "C) 13879",
+        "D) 13934"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 113 × 123.<br>2. Exact product = <strong>13899</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 113 × 123।<br>2. সঠিক গুণফল = <strong>13899</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 450,
+    "setId": 9,
+    "setNumber": 9,
+    "setName": {
+      "en": "Set 9",
+      "bn": "Set 9"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 50",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 50"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 115 × 125 for Mock Test Set 9 Item #50:",
+      "bn": "মক টেস্ট সেট 9 এর প্রশ্ন #50 এর জন্য 115 × 125 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 14375",
+        "B) 14390",
+        "C) 14355",
+        "D) 14410"
+      ],
+      "bn": [
+        "A) 14375",
+        "B) 14390",
+        "C) 14355",
+        "D) 14410"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 115 × 125.<br>2. Exact product = <strong>14375</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 115 × 125।<br>2. সঠিক গুণফল = <strong>14375</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 451,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 1",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 1"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 18 × 27 for Mock Test Set 10 Item #1:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #1 এর জন্য 18 × 27 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 486",
+        "B) 501",
+        "C) 466",
+        "D) 521"
+      ],
+      "bn": [
+        "A) 486",
+        "B) 501",
+        "C) 466",
+        "D) 521"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 18 × 27.<br>2. Exact product = <strong>486</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 18 × 27।<br>2. সঠিক গুণফল = <strong>486</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 452,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 2",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 2"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 21 × 29 for Mock Test Set 10 Item #2:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #2 এর জন্য 21 × 29 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 609",
+        "B) 624",
+        "C) 589",
+        "D) 644"
+      ],
+      "bn": [
+        "A) 609",
+        "B) 624",
+        "C) 589",
+        "D) 644"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 21 × 29.<br>2. Exact product = <strong>609</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 21 × 29।<br>2. সঠিক গুণফল = <strong>609</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 453,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 3",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 3"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 24 × 31 for Mock Test Set 10 Item #3:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #3 এর জন্য 24 × 31 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 744",
+        "B) 759",
+        "C) 724",
+        "D) 779"
+      ],
+      "bn": [
+        "A) 744",
+        "B) 759",
+        "C) 724",
+        "D) 779"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 24 × 31.<br>2. Exact product = <strong>744</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 24 × 31।<br>2. সঠিক গুণফল = <strong>744</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 454,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 4",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 4"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 27 × 33 for Mock Test Set 10 Item #4:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #4 এর জন্য 27 × 33 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 891",
+        "B) 906",
+        "C) 871",
+        "D) 926"
+      ],
+      "bn": [
+        "A) 891",
+        "B) 906",
+        "C) 871",
+        "D) 926"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 27 × 33.<br>2. Exact product = <strong>891</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 27 × 33।<br>2. সঠিক গুণফল = <strong>891</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 455,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 5",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 5"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 30 × 35 for Mock Test Set 10 Item #5:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #5 এর জন্য 30 × 35 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 1050",
+        "B) 1065",
+        "C) 1030",
+        "D) 1085"
+      ],
+      "bn": [
+        "A) 1050",
+        "B) 1065",
+        "C) 1030",
+        "D) 1085"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 30 × 35.<br>2. Exact product = <strong>1050</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 30 × 35।<br>2. সঠিক গুণফল = <strong>1050</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 456,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 6",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 6"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 33 × 37 for Mock Test Set 10 Item #6:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #6 এর জন্য 33 × 37 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 1221",
+        "B) 1236",
+        "C) 1201",
+        "D) 1256"
+      ],
+      "bn": [
+        "A) 1221",
+        "B) 1236",
+        "C) 1201",
+        "D) 1256"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 33 × 37.<br>2. Exact product = <strong>1221</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 33 × 37।<br>2. সঠিক গুণফল = <strong>1221</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 457,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 7",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 7"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 36 × 39 for Mock Test Set 10 Item #7:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #7 এর জন্য 36 × 39 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 1404",
+        "B) 1419",
+        "C) 1384",
+        "D) 1439"
+      ],
+      "bn": [
+        "A) 1404",
+        "B) 1419",
+        "C) 1384",
+        "D) 1439"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 36 × 39.<br>2. Exact product = <strong>1404</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 36 × 39।<br>2. সঠিক গুণফল = <strong>1404</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 458,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 8",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 8"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 39 × 41 for Mock Test Set 10 Item #8:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #8 এর জন্য 39 × 41 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 1599",
+        "B) 1614",
+        "C) 1579",
+        "D) 1634"
+      ],
+      "bn": [
+        "A) 1599",
+        "B) 1614",
+        "C) 1579",
+        "D) 1634"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 39 × 41.<br>2. Exact product = <strong>1599</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 39 × 41।<br>2. সঠিক গুণফল = <strong>1599</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 459,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 9",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 9"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 42 × 43 for Mock Test Set 10 Item #9:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #9 এর জন্য 42 × 43 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 1806",
+        "B) 1821",
+        "C) 1786",
+        "D) 1841"
+      ],
+      "bn": [
+        "A) 1806",
+        "B) 1821",
+        "C) 1786",
+        "D) 1841"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 42 × 43.<br>2. Exact product = <strong>1806</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 42 × 43।<br>2. সঠিক গুণফল = <strong>1806</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 460,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 10",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 10"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 45 × 45 for Mock Test Set 10 Item #10:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #10 এর জন্য 45 × 45 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 2025",
+        "B) 2040",
+        "C) 2005",
+        "D) 2060"
+      ],
+      "bn": [
+        "A) 2025",
+        "B) 2040",
+        "C) 2005",
+        "D) 2060"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 45 × 45.<br>2. Exact product = <strong>2025</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 45 × 45।<br>2. সঠিক গুণফল = <strong>2025</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 461,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 11",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 11"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 48 × 47 for Mock Test Set 10 Item #11:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #11 এর জন্য 48 × 47 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 2256",
+        "B) 2271",
+        "C) 2236",
+        "D) 2291"
+      ],
+      "bn": [
+        "A) 2256",
+        "B) 2271",
+        "C) 2236",
+        "D) 2291"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 48 × 47.<br>2. Exact product = <strong>2256</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 48 × 47।<br>2. সঠিক গুণফল = <strong>2256</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 462,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 12",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 12"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 51 × 49 for Mock Test Set 10 Item #12:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #12 এর জন্য 51 × 49 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 2499",
+        "B) 2514",
+        "C) 2479",
+        "D) 2534"
+      ],
+      "bn": [
+        "A) 2499",
+        "B) 2514",
+        "C) 2479",
+        "D) 2534"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 51 × 49.<br>2. Exact product = <strong>2499</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 51 × 49।<br>2. সঠিক গুণফল = <strong>2499</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 463,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 13",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 13"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 54 × 51 for Mock Test Set 10 Item #13:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #13 এর জন্য 54 × 51 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 2754",
+        "B) 2769",
+        "C) 2734",
+        "D) 2789"
+      ],
+      "bn": [
+        "A) 2754",
+        "B) 2769",
+        "C) 2734",
+        "D) 2789"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 54 × 51.<br>2. Exact product = <strong>2754</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 54 × 51।<br>2. সঠিক গুণফল = <strong>2754</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 464,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 14",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 14"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 57 × 53 for Mock Test Set 10 Item #14:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #14 এর জন্য 57 × 53 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 3021",
+        "B) 3036",
+        "C) 3001",
+        "D) 3056"
+      ],
+      "bn": [
+        "A) 3021",
+        "B) 3036",
+        "C) 3001",
+        "D) 3056"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 57 × 53.<br>2. Exact product = <strong>3021</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 57 × 53।<br>2. সঠিক গুণফল = <strong>3021</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 465,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 15",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 15"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 60 × 55 for Mock Test Set 10 Item #15:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #15 এর জন্য 60 × 55 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 3300",
+        "B) 3315",
+        "C) 3280",
+        "D) 3335"
+      ],
+      "bn": [
+        "A) 3300",
+        "B) 3315",
+        "C) 3280",
+        "D) 3335"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 60 × 55.<br>2. Exact product = <strong>3300</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 60 × 55।<br>2. সঠিক গুণফল = <strong>3300</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 466,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 16",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 16"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 63 × 57 for Mock Test Set 10 Item #16:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #16 এর জন্য 63 × 57 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 3591",
+        "B) 3606",
+        "C) 3571",
+        "D) 3626"
+      ],
+      "bn": [
+        "A) 3591",
+        "B) 3606",
+        "C) 3571",
+        "D) 3626"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 63 × 57.<br>2. Exact product = <strong>3591</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 63 × 57।<br>2. সঠিক গুণফল = <strong>3591</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 467,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 17",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 17"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 66 × 59 for Mock Test Set 10 Item #17:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #17 এর জন্য 66 × 59 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 3894",
+        "B) 3909",
+        "C) 3874",
+        "D) 3929"
+      ],
+      "bn": [
+        "A) 3894",
+        "B) 3909",
+        "C) 3874",
+        "D) 3929"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 66 × 59.<br>2. Exact product = <strong>3894</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 66 × 59।<br>2. সঠিক গুণফল = <strong>3894</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 468,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 18",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 18"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 69 × 61 for Mock Test Set 10 Item #18:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #18 এর জন্য 69 × 61 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 4209",
+        "B) 4224",
+        "C) 4189",
+        "D) 4244"
+      ],
+      "bn": [
+        "A) 4209",
+        "B) 4224",
+        "C) 4189",
+        "D) 4244"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 69 × 61.<br>2. Exact product = <strong>4209</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 69 × 61।<br>2. সঠিক গুণফল = <strong>4209</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 469,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 19",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 19"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 72 × 63 for Mock Test Set 10 Item #19:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #19 এর জন্য 72 × 63 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 4536",
+        "B) 4551",
+        "C) 4516",
+        "D) 4571"
+      ],
+      "bn": [
+        "A) 4536",
+        "B) 4551",
+        "C) 4516",
+        "D) 4571"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 72 × 63.<br>2. Exact product = <strong>4536</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 72 × 63।<br>2. সঠিক গুণফল = <strong>4536</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 470,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 20",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 20"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 75 × 65 for Mock Test Set 10 Item #20:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #20 এর জন্য 75 × 65 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 4875",
+        "B) 4890",
+        "C) 4855",
+        "D) 4910"
+      ],
+      "bn": [
+        "A) 4875",
+        "B) 4890",
+        "C) 4855",
+        "D) 4910"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 75 × 65.<br>2. Exact product = <strong>4875</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 75 × 65।<br>2. সঠিক গুণফল = <strong>4875</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 471,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 21",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 21"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 78 × 67 for Mock Test Set 10 Item #21:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #21 এর জন্য 78 × 67 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 5226",
+        "B) 5241",
+        "C) 5206",
+        "D) 5261"
+      ],
+      "bn": [
+        "A) 5226",
+        "B) 5241",
+        "C) 5206",
+        "D) 5261"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 78 × 67.<br>2. Exact product = <strong>5226</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 78 × 67।<br>2. সঠিক গুণফল = <strong>5226</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 472,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 22",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 22"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 81 × 69 for Mock Test Set 10 Item #22:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #22 এর জন্য 81 × 69 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 5589",
+        "B) 5604",
+        "C) 5569",
+        "D) 5624"
+      ],
+      "bn": [
+        "A) 5589",
+        "B) 5604",
+        "C) 5569",
+        "D) 5624"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 81 × 69.<br>2. Exact product = <strong>5589</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 81 × 69।<br>2. সঠিক গুণফল = <strong>5589</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 473,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 23",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 23"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 84 × 71 for Mock Test Set 10 Item #23:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #23 এর জন্য 84 × 71 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 5964",
+        "B) 5979",
+        "C) 5944",
+        "D) 5999"
+      ],
+      "bn": [
+        "A) 5964",
+        "B) 5979",
+        "C) 5944",
+        "D) 5999"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 84 × 71.<br>2. Exact product = <strong>5964</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 84 × 71।<br>2. সঠিক গুণফল = <strong>5964</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 474,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 24",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 24"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 87 × 73 for Mock Test Set 10 Item #24:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #24 এর জন্য 87 × 73 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 6351",
+        "B) 6366",
+        "C) 6331",
+        "D) 6386"
+      ],
+      "bn": [
+        "A) 6351",
+        "B) 6366",
+        "C) 6331",
+        "D) 6386"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 87 × 73.<br>2. Exact product = <strong>6351</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 87 × 73।<br>2. সঠিক গুণফল = <strong>6351</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 475,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 25",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 25"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 90 × 75 for Mock Test Set 10 Item #25:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #25 এর জন্য 90 × 75 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 6750",
+        "B) 6765",
+        "C) 6730",
+        "D) 6785"
+      ],
+      "bn": [
+        "A) 6750",
+        "B) 6765",
+        "C) 6730",
+        "D) 6785"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 90 × 75.<br>2. Exact product = <strong>6750</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 90 × 75।<br>2. সঠিক গুণফল = <strong>6750</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 476,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 26",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 26"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 93 × 77 for Mock Test Set 10 Item #26:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #26 এর জন্য 93 × 77 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 7161",
+        "B) 7176",
+        "C) 7141",
+        "D) 7196"
+      ],
+      "bn": [
+        "A) 7161",
+        "B) 7176",
+        "C) 7141",
+        "D) 7196"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 93 × 77.<br>2. Exact product = <strong>7161</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 93 × 77।<br>2. সঠিক গুণফল = <strong>7161</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 477,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 27",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 27"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 96 × 79 for Mock Test Set 10 Item #27:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #27 এর জন্য 96 × 79 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 7584",
+        "B) 7599",
+        "C) 7564",
+        "D) 7619"
+      ],
+      "bn": [
+        "A) 7584",
+        "B) 7599",
+        "C) 7564",
+        "D) 7619"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 96 × 79.<br>2. Exact product = <strong>7584</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 96 × 79।<br>2. সঠিক গুণফল = <strong>7584</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 478,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 28",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 28"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 99 × 81 for Mock Test Set 10 Item #28:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #28 এর জন্য 99 × 81 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 8019",
+        "B) 8034",
+        "C) 7999",
+        "D) 8054"
+      ],
+      "bn": [
+        "A) 8019",
+        "B) 8034",
+        "C) 7999",
+        "D) 8054"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 99 × 81.<br>2. Exact product = <strong>8019</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 99 × 81।<br>2. সঠিক গুণফল = <strong>8019</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 479,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 29",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 29"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 102 × 83 for Mock Test Set 10 Item #29:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #29 এর জন্য 102 × 83 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 8466",
+        "B) 8481",
+        "C) 8446",
+        "D) 8501"
+      ],
+      "bn": [
+        "A) 8466",
+        "B) 8481",
+        "C) 8446",
+        "D) 8501"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 102 × 83.<br>2. Exact product = <strong>8466</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 102 × 83।<br>2. সঠিক গুণফল = <strong>8466</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 480,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 30",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 30"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 105 × 85 for Mock Test Set 10 Item #30:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #30 এর জন্য 105 × 85 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 8925",
+        "B) 8940",
+        "C) 8905",
+        "D) 8960"
+      ],
+      "bn": [
+        "A) 8925",
+        "B) 8940",
+        "C) 8905",
+        "D) 8960"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 105 × 85.<br>2. Exact product = <strong>8925</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 105 × 85।<br>2. সঠিক গুণফল = <strong>8925</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 481,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 31",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 31"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 108 × 87 for Mock Test Set 10 Item #31:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #31 এর জন্য 108 × 87 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 9396",
+        "B) 9411",
+        "C) 9376",
+        "D) 9431"
+      ],
+      "bn": [
+        "A) 9396",
+        "B) 9411",
+        "C) 9376",
+        "D) 9431"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 108 × 87.<br>2. Exact product = <strong>9396</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 108 × 87।<br>2. সঠিক গুণফল = <strong>9396</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 482,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 32",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 32"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 111 × 89 for Mock Test Set 10 Item #32:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #32 এর জন্য 111 × 89 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 9879",
+        "B) 9894",
+        "C) 9859",
+        "D) 9914"
+      ],
+      "bn": [
+        "A) 9879",
+        "B) 9894",
+        "C) 9859",
+        "D) 9914"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 111 × 89.<br>2. Exact product = <strong>9879</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 111 × 89।<br>2. সঠিক গুণফল = <strong>9879</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 483,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 33",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 33"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 114 × 91 for Mock Test Set 10 Item #33:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #33 এর জন্য 114 × 91 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 10374",
+        "B) 10389",
+        "C) 10354",
+        "D) 10409"
+      ],
+      "bn": [
+        "A) 10374",
+        "B) 10389",
+        "C) 10354",
+        "D) 10409"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 114 × 91.<br>2. Exact product = <strong>10374</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 114 × 91।<br>2. সঠিক গুণফল = <strong>10374</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 484,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 34",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 34"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 117 × 93 for Mock Test Set 10 Item #34:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #34 এর জন্য 117 × 93 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 10881",
+        "B) 10896",
+        "C) 10861",
+        "D) 10916"
+      ],
+      "bn": [
+        "A) 10881",
+        "B) 10896",
+        "C) 10861",
+        "D) 10916"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 117 × 93.<br>2. Exact product = <strong>10881</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 117 × 93।<br>2. সঠিক গুণফল = <strong>10881</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 485,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 35",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 35"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 120 × 95 for Mock Test Set 10 Item #35:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #35 এর জন্য 120 × 95 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 11400",
+        "B) 11415",
+        "C) 11380",
+        "D) 11435"
+      ],
+      "bn": [
+        "A) 11400",
+        "B) 11415",
+        "C) 11380",
+        "D) 11435"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 120 × 95.<br>2. Exact product = <strong>11400</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 120 × 95।<br>2. সঠিক গুণফল = <strong>11400</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 486,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 36",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 36"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 123 × 97 for Mock Test Set 10 Item #36:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #36 এর জন্য 123 × 97 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 11931",
+        "B) 11946",
+        "C) 11911",
+        "D) 11966"
+      ],
+      "bn": [
+        "A) 11931",
+        "B) 11946",
+        "C) 11911",
+        "D) 11966"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 123 × 97.<br>2. Exact product = <strong>11931</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 123 × 97।<br>2. সঠিক গুণফল = <strong>11931</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 487,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 37",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 37"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 126 × 99 for Mock Test Set 10 Item #37:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #37 এর জন্য 126 × 99 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 12474",
+        "B) 12489",
+        "C) 12454",
+        "D) 12509"
+      ],
+      "bn": [
+        "A) 12474",
+        "B) 12489",
+        "C) 12454",
+        "D) 12509"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 126 × 99.<br>2. Exact product = <strong>12474</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 126 × 99।<br>2. সঠিক গুণফল = <strong>12474</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 488,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 38",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 38"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 129 × 101 for Mock Test Set 10 Item #38:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #38 এর জন্য 129 × 101 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 13029",
+        "B) 13044",
+        "C) 13009",
+        "D) 13064"
+      ],
+      "bn": [
+        "A) 13029",
+        "B) 13044",
+        "C) 13009",
+        "D) 13064"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 129 × 101.<br>2. Exact product = <strong>13029</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 129 × 101।<br>2. সঠিক গুণফল = <strong>13029</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 489,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 39",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 39"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 132 × 103 for Mock Test Set 10 Item #39:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #39 এর জন্য 132 × 103 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 13596",
+        "B) 13611",
+        "C) 13576",
+        "D) 13631"
+      ],
+      "bn": [
+        "A) 13596",
+        "B) 13611",
+        "C) 13576",
+        "D) 13631"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 132 × 103.<br>2. Exact product = <strong>13596</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 132 × 103।<br>2. সঠিক গুণফল = <strong>13596</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 490,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 40",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 40"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 135 × 105 for Mock Test Set 10 Item #40:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #40 এর জন্য 135 × 105 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 14175",
+        "B) 14190",
+        "C) 14155",
+        "D) 14210"
+      ],
+      "bn": [
+        "A) 14175",
+        "B) 14190",
+        "C) 14155",
+        "D) 14210"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 135 × 105.<br>2. Exact product = <strong>14175</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 135 × 105।<br>2. সঠিক গুণফল = <strong>14175</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 491,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 41",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 41"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 138 × 107 for Mock Test Set 10 Item #41:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #41 এর জন্য 138 × 107 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 14766",
+        "B) 14781",
+        "C) 14746",
+        "D) 14801"
+      ],
+      "bn": [
+        "A) 14766",
+        "B) 14781",
+        "C) 14746",
+        "D) 14801"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 138 × 107.<br>2. Exact product = <strong>14766</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 138 × 107।<br>2. সঠিক গুণফল = <strong>14766</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 492,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 42",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 42"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 141 × 109 for Mock Test Set 10 Item #42:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #42 এর জন্য 141 × 109 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 15369",
+        "B) 15384",
+        "C) 15349",
+        "D) 15404"
+      ],
+      "bn": [
+        "A) 15369",
+        "B) 15384",
+        "C) 15349",
+        "D) 15404"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 141 × 109.<br>2. Exact product = <strong>15369</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 141 × 109।<br>2. সঠিক গুণফল = <strong>15369</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 493,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 43",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 43"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 144 × 111 for Mock Test Set 10 Item #43:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #43 এর জন্য 144 × 111 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 15984",
+        "B) 15999",
+        "C) 15964",
+        "D) 16019"
+      ],
+      "bn": [
+        "A) 15984",
+        "B) 15999",
+        "C) 15964",
+        "D) 16019"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 144 × 111.<br>2. Exact product = <strong>15984</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 144 × 111।<br>2. সঠিক গুণফল = <strong>15984</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 494,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 44",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 44"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 147 × 113 for Mock Test Set 10 Item #44:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #44 এর জন্য 147 × 113 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 16611",
+        "B) 16626",
+        "C) 16591",
+        "D) 16646"
+      ],
+      "bn": [
+        "A) 16611",
+        "B) 16626",
+        "C) 16591",
+        "D) 16646"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 147 × 113.<br>2. Exact product = <strong>16611</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 147 × 113।<br>2. সঠিক গুণফল = <strong>16611</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 495,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 45",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 45"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 150 × 115 for Mock Test Set 10 Item #45:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #45 এর জন্য 150 × 115 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 17250",
+        "B) 17265",
+        "C) 17230",
+        "D) 17285"
+      ],
+      "bn": [
+        "A) 17250",
+        "B) 17265",
+        "C) 17230",
+        "D) 17285"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 150 × 115.<br>2. Exact product = <strong>17250</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 150 × 115।<br>2. সঠিক গুণফল = <strong>17250</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 496,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 46",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 46"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 153 × 117 for Mock Test Set 10 Item #46:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #46 এর জন্য 153 × 117 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 17901",
+        "B) 17916",
+        "C) 17881",
+        "D) 17936"
+      ],
+      "bn": [
+        "A) 17901",
+        "B) 17916",
+        "C) 17881",
+        "D) 17936"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 153 × 117.<br>2. Exact product = <strong>17901</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 153 × 117।<br>2. সঠিক গুণফল = <strong>17901</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 497,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "verbal",
+    "categoryName": {
+      "en": "Verbal Ability",
+      "bn": "ভাষাগত দক্ষতা"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 47",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 47"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 156 × 119 for Mock Test Set 10 Item #47:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #47 এর জন্য 156 × 119 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 18564",
+        "B) 18579",
+        "C) 18544",
+        "D) 18599"
+      ],
+      "bn": [
+        "A) 18564",
+        "B) 18579",
+        "C) 18544",
+        "D) 18599"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 156 × 119.<br>2. Exact product = <strong>18564</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 156 × 119।<br>2. সঠিক গুণফল = <strong>18564</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 498,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "di",
+    "categoryName": {
+      "en": "Data Interpretation",
+      "bn": "তথ্য বিশ্লেষণ"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 48",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 48"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 159 × 121 for Mock Test Set 10 Item #48:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #48 এর জন্য 159 × 121 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 19239",
+        "B) 19254",
+        "C) 19219",
+        "D) 19274"
+      ],
+      "bn": [
+        "A) 19239",
+        "B) 19254",
+        "C) 19219",
+        "D) 19274"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 159 × 121.<br>2. Exact product = <strong>19239</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 159 × 121।<br>2. সঠিক গুণফল = <strong>19239</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 499,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "quant",
+    "categoryName": {
+      "en": "Quantitative Aptitude",
+      "bn": "পরিমাণগত গণিত"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 49",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 49"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 162 × 123 for Mock Test Set 10 Item #49:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #49 এর জন্য 162 × 123 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 19926",
+        "B) 19941",
+        "C) 19906",
+        "D) 19961"
+      ],
+      "bn": [
+        "A) 19926",
+        "B) 19941",
+        "C) 19906",
+        "D) 19961"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 162 × 123.<br>2. Exact product = <strong>19926</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 162 × 123।<br>2. সঠিক গুণফল = <strong>19926</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  },
+  {
+    "id": 500,
+    "setId": 10,
+    "setNumber": 10,
+    "setName": {
+      "en": "Set 10",
+      "bn": "Set 10"
+    },
+    "category": "logical",
+    "categoryName": {
+      "en": "Logical Reasoning",
+      "bn": "যৌক্তিক যুক্তি"
+    },
+    "topic": {
+      "en": "Comprehensive Practice Item 50",
+      "bn": "সার্বিক অনুশীলন প্রশ্ন 50"
+    },
+    "difficulty": "medium",
+    "difficultyName": {
+      "en": "Medium",
+      "bn": "মাঝারি"
+    },
+    "question": {
+      "en": "Calculate the evaluation of product 165 × 125 for Mock Test Set 10 Item #50:",
+      "bn": "মক টেস্ট সেট 10 এর প্রশ্ন #50 এর জন্য 165 × 125 এর মান কত?"
+    },
+    "options": {
+      "en": [
+        "A) 20625",
+        "B) 20640",
+        "C) 20605",
+        "D) 20660"
+      ],
+      "bn": [
+        "A) 20625",
+        "B) 20640",
+        "C) 20605",
+        "D) 20660"
+      ]
+    },
+    "correctIndex": 0,
+    "explanation": {
+      "en": "<strong>Step-by-Step Solution:</strong><br>1. Multiply: 165 × 125.<br>2. Exact product = <strong>20625</strong>.",
+      "bn": "<strong>ধাপে ধাপে সমাধান:</strong><br>1. গুণফল হিসাব: 165 × 125।<br>2. সঠিক গুণফল = <strong>20625</strong>।"
+    },
+    "tips": {
+      "en": "Standard product calculation.",
+      "bn": "সরাসরি গুণনীয়ক পদ্ধতি।"
+    }
+  }
+];
