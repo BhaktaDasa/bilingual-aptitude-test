@@ -248,6 +248,30 @@ body {
   background: rgba(255, 255, 255, 0.05);
 }
 
+/* Student Profile Chip Button */
+.btn-student-profile {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(6, 182, 212, 0.15));
+  border: 1px solid var(--border-accent);
+  color: var(--accent-cyan);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.84rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.btn-student-profile:hover {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-cyan));
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
 /* Practice Timer Widget */
 .practice-timer-widget {
   display: flex;
@@ -1401,6 +1425,124 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+/* =========================================================
+   Single Question 1-by-1 Focus Mode
+   ========================================================= */
+.single-q-wrapper {
+  max-width: 900px;
+  margin: 0 auto 2.5rem;
+  animation: fadeIn 0.25s ease;
+}
+
+.single-q-progress-bar-container {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.25rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.single-q-progress-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.single-q-progress-track {
+  width: 100%;
+  height: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.single-q-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-primary), var(--accent-cyan));
+  border-radius: var(--radius-full);
+  transition: width 0.4s ease;
+}
+
+.single-q-action-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.5rem;
+  margin-top: 1.5rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+  box-shadow: var(--shadow-lg);
+}
+
+.btn-nav-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: var(--radius-full);
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  border: 1px solid var(--border-glass);
+}
+
+.btn-nav-action:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.btn-nav-prev {
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+.btn-nav-prev:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateX(-2px);
+}
+
+.btn-nav-skip {
+  background: rgba(245, 158, 11, 0.12);
+  border-color: rgba(245, 158, 11, 0.3);
+  color: #f59e0b;
+}
+
+.btn-nav-skip:hover {
+  background: #f59e0b;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.btn-nav-next {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-cyan));
+  border: none;
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+}
+
+.btn-nav-next:hover {
+  transform: translateX(2px);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.5);
+}
+
+.btn-nav-jump {
+  background: var(--bg-primary);
+  color: var(--text-secondary);
+  padding: 8px 14px;
+  font-size: 0.84rem;
 }
 
 /* Toast Notifications */

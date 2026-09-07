@@ -1,6 +1,7 @@
 // =========================================================
 // Bilingual General Aptitude Testing System - Logic Engine
 // Features: Dual-language switching, 10 Sets x 50 Questions (500 Total),
+// Student Login & Profile System, 1-by-1 Single Question Focus Mode,
 // Interactive Practice Stopwatch & Test Countdown Timers,
 // Mistakes Vault, Performance Analytics & Skill Diagnostics,
 // Interactive Scratchpad, Formula Sheet, and Scoring Engine.
@@ -92,11 +93,14 @@ const formulaSheetData = [
 const state = {
   language: 'both', // 'both', 'en', 'bn'
   mode: 'practice', // 'practice', 'test', 'mistakes', 'bookmarks', 'analytics'
+  viewMode: 'single', // 'single' (1-by-1 Focus Mode), 'list' (Scrolling List)
+  singleCurrentIndex: 0, // 0-based index in the current filtered list
   selectedSet: 'all', // 'all', '1', '2', ..., '10'
   category: 'all',
   difficulty: 'all',
   searchQuery: '',
   theme: localStorage.getItem('aptitude_theme') || 'dark',
+  currentStudent: JSON.parse(localStorage.getItem('aptitude_current_student') || 'null'),
   bookmarks: JSON.parse(localStorage.getItem('aptitude_bookmarks') || '[]'),
   mistakesVault: JSON.parse(localStorage.getItem('aptitude_mistakes') || '[]'),
   testHistory: JSON.parse(localStorage.getItem('aptitude_test_history') || '[]'),
@@ -113,8 +117,7 @@ const state = {
   timerSeconds: 45 * 60, // 45 minutes for 50 questions
   timerInterval: null,
   testAnswers: {}, // { [questionId]: selectedOptionIndex }
-  testFlags: new Set(), // Set of question IDs flagged for review
-  currentTestIndex: 0
+  testFlags: new Set() // Set of question IDs flagged for review
 };
 
 // DOM Element Selectors
@@ -128,6 +131,10 @@ const elements = {
   bookmarkCount: document.getElementById('bookmarkCount'),
   bookmarkModeCount: document.getElementById('bookmarkModeCount'),
   mistakesCount: document.getElementById('mistakesCount'),
+  studentNavName: document.getElementById('studentNavName'),
+  btnStudentProfile: document.getElementById('btnStudentProfile'),
+  btnViewToggle: document.getElementById('btnViewToggle'),
+  viewToggleText: document.getElementById('viewToggleText'),
   
   // Stopwatch elements
   practiceStopwatchDisplay: document.getElementById('practiceStopwatchDisplay'),
@@ -150,6 +157,7 @@ const elements = {
   btnSubmitTest: document.getElementById('btnSubmitTest'),
   
   // Modals
+  studentModal: document.getElementById('studentModal'),
   scratchpadModal: document.getElementById('scratchpadModal'),
   formulaModal: document.getElementById('formulaModal'),
   resultsModal: document.getElementById('resultsModal'),
@@ -218,11 +226,69 @@ const sfx = new SoundFX();
 // Initialize Application
 function initApp() {
   applyTheme(state.theme);
+  updateStudentUI();
   setupEventListeners();
   setupStopwatch();
   renderFormulaSheet();
   initScratchpad();
   updateStats();
+  renderQuestions();
+}
+
+// Student Login / Profile Controller
+function updateStudentUI() {
+  if (state.currentStudent && state.currentStudent.name) {
+    if (elements.studentNavName) {
+      elements.studentNavName.innerText = `${state.currentStudent.name} (${state.currentStudent.targetExam || 'Student'})`;
+    }
+    const nameInput = document.getElementById('studentNameInput');
+    const examSelect = document.getElementById('studentTargetExam');
+    const goalSelect = document.getElementById('studentDailyGoal');
+    const logoutBtn = document.getElementById('btnLogoutStudent');
+    if (nameInput) nameInput.value = state.currentStudent.name;
+    if (examSelect) examSelect.value = state.currentStudent.targetExam || 'General Preparation';
+    if (goalSelect) goalSelect.value = state.currentStudent.dailyGoal || '20';
+    if (logoutBtn) logoutBtn.style.display = 'inline-block';
+  } else {
+    if (elements.studentNavName) {
+      elements.studentNavName.innerText = 'Student Login / লগইন';
+    }
+    const logoutBtn = document.getElementById('btnLogoutStudent');
+    if (logoutBtn) logoutBtn.style.display = 'none';
+  }
+}
+
+function saveStudentProfile() {
+  const name = document.getElementById('studentNameInput').value.trim();
+  const targetExam = document.getElementById('studentTargetExam').value;
+  const dailyGoal = document.getElementById('studentDailyGoal').value;
+  
+  if (!name) return;
+
+  state.currentStudent = { name, targetExam, dailyGoal };
+  localStorage.setItem('aptitude_current_student', JSON.stringify(state.currentStudent));
+  updateStudentUI();
+  closeModal(elements.studentModal);
+  showToast(`Welcome, ${name}! (${targetExam}) 🎉`);
+}
+
+function logoutStudent() {
+  if (confirm('Do you want to log out? Your progress remains saved locally.')) {
+    state.currentStudent = null;
+    localStorage.removeItem('aptitude_current_student');
+    updateStudentUI();
+    closeModal(elements.studentModal);
+    showToast('Logged out successfully');
+  }
+}
+
+// View Toggle (1-by-1 Focus vs Full List)
+function toggleViewMode() {
+  state.viewMode = (state.viewMode === 'single') ? 'list' : 'single';
+  if (elements.viewToggleText) {
+    elements.viewToggleText.innerText = (state.viewMode === 'single') ? '1-by-1 View' : 'List View';
+  }
+  showToast(state.viewMode === 'single' ? '1-by-1 Focus Mode' : 'All Questions List View');
   renderQuestions();
 }
 
@@ -293,6 +359,22 @@ function setupEventListeners() {
     showToast(state.soundEnabled ? 'Audio Feedback Enabled' : 'Audio Feedback Muted');
   });
 
+  // Student Profile Button
+  if (elements.btnStudentProfile) {
+    elements.btnStudentProfile.addEventListener('click', () => {
+      openModal(elements.studentModal);
+    });
+  }
+  const closeStudentModalBtn = document.getElementById('btnCloseStudentModal');
+  if (closeStudentModalBtn) {
+    closeStudentModalBtn.addEventListener('click', () => closeModal(elements.studentModal));
+  }
+
+  // View Toggle Button
+  if (elements.btnViewToggle) {
+    elements.btnViewToggle.addEventListener('click', toggleViewMode);
+  }
+
   // Language switch buttons
   document.querySelectorAll('.lang-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
@@ -327,6 +409,7 @@ function setupEventListeners() {
         e.currentTarget.classList.add('active');
         const setVal = e.currentTarget.dataset.set;
         state.selectedSet = setVal;
+        state.singleCurrentIndex = 0; // Reset to Q1 of selected set
         if (elements.setFilter) elements.setFilter.value = setVal;
         if (state.mode === 'test') {
           renderTestPalette();
@@ -343,6 +426,7 @@ function setupEventListeners() {
     elements.setFilter.addEventListener('change', (e) => {
       const setVal = e.target.value;
       state.selectedSet = setVal;
+      state.singleCurrentIndex = 0;
       if (elements.setPillsList) {
         elements.setPillsList.querySelectorAll('.set-pill').forEach(p => {
           p.classList.toggle('active', p.dataset.set === setVal);
@@ -361,18 +445,21 @@ function setupEventListeners() {
   // Search input
   elements.searchInput.addEventListener('input', (e) => {
     state.searchQuery = e.target.value.toLowerCase().trim();
+    state.singleCurrentIndex = 0;
     renderQuestions();
   });
 
   // Category filter
   elements.categoryFilter.addEventListener('change', (e) => {
     state.category = e.target.value;
+    state.singleCurrentIndex = 0;
     renderQuestions();
   });
 
   // Difficulty filter
   elements.difficultyFilter.addEventListener('change', (e) => {
     state.difficulty = e.target.value;
+    state.singleCurrentIndex = 0;
     renderQuestions();
   });
 
@@ -414,6 +501,7 @@ function setupEventListeners() {
 // Mode Management
 function setMode(mode) {
   state.mode = mode;
+  state.singleCurrentIndex = 0;
   
   if (mode === 'test') {
     elements.questionsContainer.style.display = 'block';
@@ -447,6 +535,7 @@ function startTestMode() {
   state.testActive = true;
   state.testAnswers = {};
   state.testFlags.clear();
+  state.singleCurrentIndex = 0;
   
   // Set default timer: 45 minutes for 50 questions
   state.timerSeconds = 45 * 60;
@@ -498,12 +587,26 @@ function renderTestPalette() {
   elements.testPalette.innerHTML = filtered.map((q, idx) => {
     const isAnswered = state.testAnswers[q.id] !== undefined;
     const isFlagged = state.testFlags.has(q.id);
+    const isCurrent = (state.viewMode === 'single' && state.singleCurrentIndex === idx);
     let classes = 'palette-btn';
     if (isAnswered) classes += ' answered';
     if (isFlagged) classes += ' flagged';
+    if (isCurrent) classes += ' current';
     
-    return `<button class="${classes}" onclick="scrollToQuestion(${q.id})">${idx + 1}</button>`;
+    return `<button class="${classes}" onclick="jumpToQuestion(${idx})">${idx + 1}</button>`;
   }).join('');
+}
+
+function jumpToQuestion(idx) {
+  state.singleCurrentIndex = idx;
+  if (state.viewMode === 'single') {
+    renderQuestions();
+  } else {
+    const filtered = getFilteredQuestions();
+    const targetQ = filtered[idx];
+    if (targetQ) scrollToQuestion(targetQ.id);
+  }
+  renderTestPalette();
 }
 
 function updateTestProgress() {
@@ -594,6 +697,7 @@ function finishTestMode() {
   elements.testHud.classList.remove('visible');
   elements.testPalette.classList.remove('visible');
   state.mode = 'practice';
+  state.viewMode = 'list'; // Switch to list view for easy review
   renderQuestions(true); // render with test results review
 }
 
@@ -678,14 +782,14 @@ function renderAnalyticsDashboard() {
     <div class="analytics-header-card">
       <div>
         <h2 style="font-size: 1.4rem; font-weight: 800; margin-bottom: 4px;">
-          ${state.language === 'bn' ? 'আপনার সামগ্রিক প্রস্তুতি ও অগ্রগতি' : 'Preparation & Performance Analytics'}
+          ${state.currentStudent ? `${state.currentStudent.name}'s Preparation Analytics` : (state.language === 'bn' ? 'আপনার সামগ্রিক প্রস্তুতি ও অগ্রগতি' : 'Preparation & Performance Analytics')}
         </h2>
         <p style="font-size: 0.88rem; color: var(--text-secondary);">
-          ${state.language === 'bn' ? 'প্রতিটি বিষয়ের পারদর্শিতা ও মক টেস্টের ফলাফল বিশদভাবে পর্যালোচনা করুন।' : 'Real-time skill diagnostics, accuracy tracking and historical mock test records.'}
+          ${state.currentStudent ? `Target Exam: ${state.currentStudent.targetExam} &bull; Daily Goal: ${state.currentStudent.dailyGoal || 20} Qs` : (state.language === 'bn' ? 'প্রতিটি বিষয়ের পারদর্শিতা ও মক টেস্টের ফলাফল বিশদভাবে পর্যালোচনা করুন।' : 'Real-time skill diagnostics, accuracy tracking and historical mock test records.')}
         </p>
       </div>
       <div class="streak-chip">
-        <i class="fas fa-fire"></i> Study Streak: 3 Days
+        <i class="fas fa-fire"></i> Study Streak: Active
       </div>
     </div>
 
@@ -805,7 +909,36 @@ function clearTestHistory() {
   }
 }
 
-// Render Questions List
+// 1-by-1 Focus Navigation Handlers
+function navPrevQuestion() {
+  if (state.singleCurrentIndex > 0) {
+    state.singleCurrentIndex--;
+    renderQuestions();
+    if (state.mode === 'test') renderTestPalette();
+  }
+}
+
+function navNextQuestion() {
+  const filtered = getFilteredQuestions();
+  if (state.singleCurrentIndex < filtered.length - 1) {
+    state.singleCurrentIndex++;
+    renderQuestions();
+    if (state.mode === 'test') renderTestPalette();
+  } else if (state.mode === 'test') {
+    if (confirm('You have reached the last question. Do you want to submit your test?')) {
+      finishTestMode();
+    }
+  } else {
+    showToast('You have completed this question set! 🎉');
+  }
+}
+
+function navSkipQuestion() {
+  showToast('Question Skipped ⏭️');
+  navNextQuestion();
+}
+
+// Render Questions List / 1-by-1 Single Focus View
 function renderQuestions(reviewMode = false) {
   const filtered = getFilteredQuestions();
   if (elements.totalQuestionsCount) {
@@ -844,25 +977,26 @@ function renderQuestions(reviewMode = false) {
     return;
   }
 
-  // Mistakes Vault Banner
-  let mistakesBanner = '';
-  if (state.mode === 'mistakes') {
-    mistakesBanner = `
-      <div class="mistakes-vault-banner">
-        <div>
-          <strong style="color: #ef4444;"><i class="fas fa-exclamation-triangle"></i> Mistakes Revision Vault:</strong>
-          <span style="font-size: 0.9rem; margin-left: 6px;">You are practicing ${filtered.length} questions previously answered incorrectly. Re-answering correctly will master and remove them!</span>
-        </div>
-        <button class="btn-secondary" style="font-size: 0.8rem; padding: 5px 12px;" onclick="clearMistakesVault()">Clear Vault</button>
-      </div>
-    `;
+  // Ensure singleCurrentIndex is within bounds
+  if (state.singleCurrentIndex >= filtered.length) {
+    state.singleCurrentIndex = filtered.length - 1;
+  }
+  if (state.singleCurrentIndex < 0) {
+    state.singleCurrentIndex = 0;
   }
 
-  elements.questionsContainer.innerHTML = mistakesBanner + filtered.map((q, idx) => {
+  // ==========================================
+  // VIEW MODE: SINGLE 1-BY-1 QUESTION FOCUS
+  // ==========================================
+  if (state.viewMode === 'single' && !reviewMode) {
+    const q = filtered[state.singleCurrentIndex];
+    const idx = state.singleCurrentIndex;
     const isBookmarked = state.bookmarks.includes(q.id);
     const isFlagged = state.testFlags.has(q.id);
     const selectedAnswer = state.testAnswers[q.id];
-    const isPractice = state.mode === 'practice' || state.mode === 'mistakes' || state.mode === 'bookmarks' || reviewMode;
+    const isPractice = state.mode !== 'test';
+    const total = filtered.length;
+    const progressPct = Math.round(((idx + 1) / total) * 100);
 
     // Badges
     const categoryClass = `badge-${q.category}`;
@@ -904,7 +1038,160 @@ function renderQuestions(reviewMode = false) {
       </div>
     `;
 
-    // Explanation Box (Rich Step-by-Step Descriptive Solution)
+    // Explanation Box
+    const isExplanationVisible = isPractice && selectedAnswer !== undefined;
+    const explanationHtml = `
+      <div class="explanation-box ${isExplanationVisible ? 'visible' : ''}" id="exp-${q.id}">
+        <div class="explanation-title">
+          <i class="fas fa-lightbulb"></i>
+          <span>${state.language === 'bn' ? 'ধাপে ধাপে বিস্তারিত সমাধান' : 'Step-by-Step Descriptive Solution'}</span>
+        </div>
+        <div class="explanation-content">
+          ${state.language !== 'bn' ? `<div style="margin-bottom: 8px;">${q.explanation.en}</div>` : ''}
+          ${state.language !== 'en' ? `<div class="lang-bn" style="color: #67e8f9;">${q.explanation.bn}</div>` : ''}
+        </div>
+        ${q.tips ? `
+          <div class="explanation-tip">
+            <strong><i class="fas fa-bolt"></i> Shortcut Trick / শর্টকাট কৌশল:</strong><br>
+            ${state.language !== 'bn' ? `<div>${q.tips.en}</div>` : ''}
+            ${state.language !== 'en' ? `<div class="lang-bn">${q.tips.bn}</div>` : ''}
+          </div>
+        ` : ''}
+      </div>
+    `;
+
+    // Render Single Question Structure
+    elements.questionsContainer.innerHTML = `
+      <div class="single-q-wrapper">
+        <!-- 1-by-1 Top Progress Track -->
+        <div class="single-q-progress-bar-container">
+          <div class="single-q-progress-info">
+            <span><i class="fas fa-bullseye" style="color: var(--accent-cyan);"></i> Question ${idx + 1} of ${total} (${progressPct}%)</span>
+            <span>Set ${q.setId || 1} &bull; ${state.language === 'bn' ? q.topic.bn : q.topic.en}</span>
+          </div>
+          <div class="single-q-progress-track">
+            <div class="single-q-progress-fill" style="width: ${progressPct}%;"></div>
+          </div>
+        </div>
+
+        <!-- Question Card -->
+        <div class="question-card" id="qcard-${q.id}">
+          <div class="card-header">
+            <div class="card-badges">
+              <span class="badge badge-qnum">Q #${idx + 1} / ${total}</span>
+              <span class="badge ${categoryClass}">
+                ${state.language === 'bn' ? q.categoryName.bn : q.categoryName.en}
+              </span>
+              <span class="badge" style="background: rgba(255,255,255,0.06); color: var(--text-secondary);">
+                ${state.language === 'bn' ? q.topic.bn : q.topic.en}
+              </span>
+              <span class="badge ${diffClass}">
+                ${state.language === 'bn' ? q.difficultyName.bn : q.difficultyName.en}
+              </span>
+            </div>
+            <div class="card-actions">
+              ${state.mode === 'test' ? `
+                <button class="card-tool-btn ${isFlagged ? 'bookmarked' : ''}" title="Flag for review" onclick="toggleTestFlag(${q.id})">
+                  <i class="fas fa-flag"></i>
+                </button>
+              ` : ''}
+              <button class="card-tool-btn ${isBookmarked ? 'bookmarked' : ''}" title="Bookmark Question" onclick="toggleBookmark(${q.id})">
+                <i class="fas fa-bookmark"></i>
+              </button>
+            </div>
+          </div>
+
+          ${questionHtml}
+
+          <div class="options-grid">
+            ${optionsHtml}
+          </div>
+
+          ${explanationHtml}
+        </div>
+
+        <!-- 1-by-1 Bottom Action Bar (Previous, Skip, Next/Submit) -->
+        <div class="single-q-action-bar">
+          <button class="btn-nav-action btn-nav-prev" onclick="navPrevQuestion()" ${idx === 0 ? 'disabled' : ''}>
+            <i class="fas fa-arrow-left"></i> Previous
+          </button>
+
+          <button class="btn-nav-action btn-nav-skip" onclick="navSkipQuestion()">
+            Skip <i class="fas fa-forward"></i>
+          </button>
+
+          <button class="btn-nav-action btn-nav-next" onclick="navNextQuestion()">
+            ${idx === total - 1 ? (state.mode === 'test' ? '<i class="fas fa-paper-plane"></i> Submit Test' : 'Finish Set 🎉') : 'Next Question <i class="fas fa-arrow-right"></i>'}
+          </button>
+        </div>
+      </div>
+    `;
+    return;
+  }
+
+  // ==========================================
+  // VIEW MODE: SCROLLING LIST VIEW
+  // ==========================================
+  let mistakesBanner = '';
+  if (state.mode === 'mistakes') {
+    mistakesBanner = `
+      <div class="mistakes-vault-banner">
+        <div>
+          <strong style="color: #ef4444;"><i class="fas fa-exclamation-triangle"></i> Mistakes Revision Vault:</strong>
+          <span style="font-size: 0.9rem; margin-left: 6px;">You are practicing ${filtered.length} questions previously answered incorrectly. Re-answering correctly will master and remove them!</span>
+        </div>
+        <button class="btn-secondary" style="font-size: 0.8rem; padding: 5px 12px;" onclick="clearMistakesVault()">Clear Vault</button>
+      </div>
+    `;
+  }
+
+  elements.questionsContainer.innerHTML = mistakesBanner + filtered.map((q, idx) => {
+    const isBookmarked = state.bookmarks.includes(q.id);
+    const isFlagged = state.testFlags.has(q.id);
+    const selectedAnswer = state.testAnswers[q.id];
+    const isPractice = state.mode !== 'test' || reviewMode;
+
+    // Badges
+    const categoryClass = `badge-${q.category}`;
+    const diffClass = `badge-${q.difficulty}`;
+    
+    // Options rendering
+    const optionsHtml = q.options.en.map((optEn, optIdx) => {
+      const optBn = q.options.bn[optIdx];
+      let itemClass = 'option-item';
+      
+      if (isPractice && selectedAnswer !== undefined) {
+        if (optIdx === q.correctIndex) {
+          itemClass += ' correct';
+        } else if (optIdx === selectedAnswer) {
+          itemClass += ' wrong';
+        }
+      } else if (selectedAnswer === optIdx) {
+        itemClass += ' selected';
+      }
+
+      return `
+        <div class="${itemClass}" onclick="handleOptionSelect(${q.id}, ${optIdx}, ${reviewMode})" id="opt-${q.id}-${optIdx}">
+          <div class="option-text-container">
+            ${state.language !== 'bn' ? `<div class="option-text-en">${optEn}</div>` : ''}
+            ${state.language !== 'en' ? `<div class="option-text-bn">${optBn}</div>` : ''}
+          </div>
+          <div class="option-indicator">
+            ${String.fromCharCode(65 + optIdx)}
+          </div>
+        </div>
+      `;
+    }).join('');
+
+    // Question statement
+    const questionHtml = `
+      <div class="question-text-wrapper">
+        ${state.language !== 'bn' ? `<div class="question-text-en">${q.question.en}</div>` : ''}
+        ${state.language !== 'en' ? `<div class="question-text-bn">${q.question.bn}</div>` : ''}
+      </div>
+    `;
+
+    // Explanation Box
     const isExplanationVisible = (isPractice && selectedAnswer !== undefined) || reviewMode;
     const explanationHtml = `
       <div class="explanation-box ${isExplanationVisible ? 'visible' : ''}" id="exp-${q.id}">
@@ -1087,6 +1374,7 @@ function resetFilters() {
   state.category = 'all';
   state.difficulty = 'all';
   state.searchQuery = '';
+  state.singleCurrentIndex = 0;
   if (elements.setFilter) elements.setFilter.value = 'all';
   if (elements.setPillsList) {
     elements.setPillsList.querySelectorAll('.set-pill').forEach(p => {

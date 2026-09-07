@@ -48,6 +48,12 @@
         </div>
 
         <!-- Quick Utility Tools -->
+        <!-- Student Profile / Sign-in Chip Button -->
+        <button class="btn-student-profile" id="btnStudentProfile" title="Student Profile & Login">
+          <i class="fas fa-user-graduate"></i>
+          <span id="studentNavName">Student Login</span>
+        </button>
+
         <!-- Practice Stopwatch / Live Timer Widget -->
         <div class="practice-timer-widget" id="practiceTimerWidget" title="Practice Stopwatch">
           <i class="fas fa-stopwatch"></i>
@@ -208,6 +214,11 @@
           <option value="medium">Medium / মাঝারি</option>
           <option value="hard">Hard / কঠিন</option>
         </select>
+
+        <!-- View Mode Toggle (1-by-1 Focus View vs List View) -->
+        <button class="btn-secondary" id="btnViewToggle" title="Toggle between 1-by-1 Focus View and Scrolling List View" style="font-weight: 600; white-space: nowrap;">
+          <i class="fas fa-clone"></i> <span id="viewToggleText">1-by-1 View</span>
+        </button>
       </div>
     </section>
 
@@ -216,18 +227,16 @@
       <!-- Generated dynamically in app.js -->
     </section>
 
-    <!-- Main Questions List Container -->
+    <!-- Main Questions Container (Supports 1-by-1 Focus View and Full List View) -->
     <main id="questionsContainer">
-      <!-- Dynamic Question Cards will render here -->
-    </main>
-      <!-- Dynamic Question Cards will render here -->
+      <!-- Dynamic Question Cards and 1-by-1 controls render here -->
     </main>
 
     <!-- Footer -->
     <footer class="app-footer">
       <p>
         Bilingual General Aptitude & Logical Reasoning Platform &bull; Bengali & English &bull; 
-        <span style="color: var(--accent-cyan);">Total Available Questions: <span id="totalQuestionsCount">20</span></span>
+        <span style="color: var(--accent-cyan);">Total Available Questions: <span id="totalQuestionsCount">500</span></span>
       </p>
       <p style="margin-top: 0.5rem; font-size: 0.8rem;">
         Designed for WBCS, SSC CGL, CHSL, IBPS Bank PO/Clerk, RRB NTPC, Campus Placement & Competitive Exams.
@@ -236,6 +245,52 @@
   </div>
 
   <!-- ==================== MODALS ==================== -->
+
+  <!-- 0. Student Profile & Sign-in Modal -->
+  <div class="modal-backdrop" id="studentModal">
+    <div class="modal-content" style="max-width: 480px;">
+      <div class="modal-header">
+        <div class="modal-title">
+          <i class="fas fa-user-graduate" style="color: var(--accent-cyan);"></i>
+          <span>Student Profile & Login / ছাত্র প্রোফাইল</span>
+        </div>
+        <button class="icon-btn" id="btnCloseStudentModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="studentLoginForm" onsubmit="event.preventDefault(); saveStudentProfile();">
+          <div style="margin-bottom: 1rem;">
+            <label style="display: block; margin-bottom: 6px; font-weight: 600; font-size: 0.88rem;">Student Name / শিক্ষার্থীর নাম:</label>
+            <input type="text" id="studentNameInput" required placeholder="e.g. Rahul Sharma" style="width: 100%; padding: 10px 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary);">
+          </div>
+          <div style="margin-bottom: 1rem;">
+            <label style="display: block; margin-bottom: 6px; font-weight: 600; font-size: 0.88rem;">Target Competitive Exam / উদ্দিষ্ট পরীক্ষা:</label>
+            <select id="studentTargetExam" style="width: 100%; padding: 10px 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary);">
+              <option value="WBCS (Executive & Allied)">WBCS (Executive & Allied)</option>
+              <option value="SSC CGL / CHSL">SSC CGL / CHSL</option>
+              <option value="Banking (IBPS PO / Clerk / SBI)">Banking (IBPS PO / Clerk / SBI)</option>
+              <option value="UPSC Civil Services">UPSC Civil Services</option>
+              <option value="Railways RRB NTPC / Group D">Railways RRB NTPC / Group D</option>
+              <option value="Campus Placements & IT">Campus Placements & IT</option>
+              <option value="General Preparation">General Preparation</option>
+            </select>
+          </div>
+          <div style="margin-bottom: 1.5rem;">
+            <label style="display: block; margin-bottom: 6px; font-weight: 600; font-size: 0.88rem;">Daily Study Goal / দৈনিক লক্ষ্য:</label>
+            <select id="studentDailyGoal" style="width: 100%; padding: 10px 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary);">
+              <option value="10">10 Questions per Day</option>
+              <option value="20" selected>20 Questions per Day</option>
+              <option value="30">30 Questions per Day</option>
+              <option value="50">50 Questions (1 Full Set) per Day</option>
+            </select>
+          </div>
+          <div style="display: flex; gap: 10px; justify-content: flex-end;">
+            <button type="button" class="btn-secondary" id="btnLogoutStudent" style="display: none;" onclick="logoutStudent()">Log Out</button>
+            <button type="submit" class="btn-primary" style="background: linear-gradient(135deg, var(--accent-primary), var(--accent-cyan));">Save & Continue</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
 
   <!-- 1. Formula Sheet Modal -->
   <div class="modal-backdrop" id="formulaModal">
