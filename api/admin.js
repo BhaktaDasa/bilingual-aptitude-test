@@ -5,8 +5,8 @@
 const { getPool } = require('./_db');
 const { getUserFromRequest, setCors } = require('./_auth');
 
-// Admin identifiers — add your own email/username here
-const ADMIN_IDS = ['admin', 'admin@aptitudemaster.com', 'bhaktadasa'];
+// Admin identifier — strictly restricted
+const ADMIN_EMAIL = 'bhaktadas12345@gmail.com';
 
 module.exports = async function handler(req, res) {
   setCors(res);
@@ -15,11 +15,11 @@ module.exports = async function handler(req, res) {
   if (req.method !== 'GET') return res.status(405).json({ error: 'Method not allowed' });
 
   const user = getUserFromRequest(req);
-  if (!user) return res.status(401).json({ error: 'Unauthorized' });
+  if (!user) return res.status(401).json({ error: 'Unauthorized — please sign in' });
 
-  // Check admin access
-  const isAdmin = ADMIN_IDS.includes(user.identifier) || user.identifier.includes('admin');
-  if (!isAdmin) return res.status(403).json({ error: 'Forbidden — admin access only' });
+  // Strict check: only bhaktadas12345@gmail.com can access the admin portal
+  const isAdmin = user.identifier && user.identifier.trim().toLowerCase() === ADMIN_EMAIL.toLowerCase();
+  if (!isAdmin) return res.status(403).json({ error: 'Forbidden — admin access restricted' });
 
   try {
     const pool = getPool();

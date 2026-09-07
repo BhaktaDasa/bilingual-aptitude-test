@@ -92,7 +92,7 @@ const formulaSheetData = [
 // Application State
 const state = {
   language: 'both', // 'both', 'en', 'bn'
-  mode: 'practice', // 'practice', 'test', 'mistakes', 'bookmarks', 'analytics'
+  mode: 'home', // 'home', 'practice', 'test', 'mistakes', 'bookmarks', 'analytics', 'admin'
   viewMode: 'single', // 'single' (1-by-1 Focus Mode), 'list' (Scrolling List)
   singleCurrentIndex: 0, // 0-based index in the current filtered list
   selectedSet: 'all', // 'all', '1', '2', ..., '10'
@@ -239,8 +239,8 @@ function initApp() {
   renderFormulaSheet();
   initScratchpad();
   updateStats();
-  renderQuestions();
   updateStreakDisplay();
+  setMode('home');
 
   // If user has saved auth token, silently verify session & sync latest data from Neon DB
   if (state.authToken) {
@@ -496,6 +496,14 @@ async function handleStudentSignIn(e) {
   }
 }
 
+// Admin check: STRICTLY RESTRICTED TO bhaktadas12345@gmail.com
+const ADMIN_EMAIL = 'bhaktadas12345@gmail.com';
+
+function isCurrentUserAdmin() {
+  return !!(state.currentStudent && state.currentStudent.identifier && state.currentStudent.identifier.trim().toLowerCase() === ADMIN_EMAIL.toLowerCase());
+}
+window.isCurrentUserAdmin = isCurrentUserAdmin;
+
 function updateStudentUI() {
   const authTabs = document.getElementById('authTabs');
   const signInForm = document.getElementById('signInForm');
@@ -503,10 +511,15 @@ function updateStudentUI() {
   const loggedInProfileView = document.getElementById('loggedInProfileView');
   const studentModalTitle = document.getElementById('studentModalTitle');
 
-  const homeGuestAuthView = document.getElementById('homeGuestAuthView');
-  const homeUserActiveView = document.getElementById('homeUserActiveView');
-  const homeUserCardName = document.getElementById('homeUserCardName');
-  const homeUserCardExam = document.getElementById('homeUserCardExam');
+  const guestCard = document.getElementById('homeGuestAuthCard');
+  const studentCard = document.getElementById('homeStudentActiveCard');
+  const adminTab = document.getElementById('adminModeTab');
+
+  // Admin visibility check: STRICTLY ONLY FOR bhaktadas12345@gmail.com
+  const isAdmin = isCurrentUserAdmin();
+  if (adminTab) {
+    adminTab.style.display = isAdmin ? 'inline-flex' : 'none';
+  }
 
   if (state.currentStudent && state.currentStudent.name) {
     if (elements.studentNavName) {
@@ -525,23 +538,45 @@ function updateStudentUI() {
     if (pExam) pExam.innerText = `Target: ${state.currentStudent.targetExam || 'General Preparation'}`;
     if (pEmail) pEmail.innerText = state.currentStudent.identifier || 'Signed In';
 
-    // Update Home Auth card view
-    if (homeGuestAuthView) homeGuestAuthView.style.display = 'none';
-    if (homeUserActiveView) homeUserActiveView.style.display = 'block';
-    if (homeUserCardName) homeUserCardName.innerText = state.currentStudent.name;
-    if (homeUserCardExam) homeUserCardExam.innerText = `Target Exam: ${state.currentStudent.targetExam || 'General Preparation'}`;
+    // Update Home Active Student Card
+    if (guestCard) guestCard.style.display = 'none';
+    if (studentCard) studentCard.style.display = 'block';
+
+    const nameEl = document.getElementById('homeStudentName');
+    const examEl = document.getElementById('homeStudentExam');
+    const avatarEl = document.getElementById('homeStudentAvatar');
+    const attEl = document.getElementById('homeKpiAttempted');
+    const accEl = document.getElementById('homeKpiAccuracy');
+    const strkEl = document.getElementById('homeKpiStreak');
+
+    if (nameEl) nameEl.innerText = state.currentStudent.name;
+    if (examEl) examEl.innerText = `Target Exam: ${state.currentStudent.targetExam || 'General Preparation'}`;
+    if (avatarEl) avatarEl.innerText = (state.currentStudent.name || 'S').charAt(0).toUpperCase();
+
+    const attemptsList = Object.values(state.practiceAttempts);
+    const attCount = attemptsList.length;
+    const correctCount = attemptsList.filter(a => a.correct).length;
+    const accPct = attCount > 0 ? Math.round((correctCount / attCount) * 100) : 0;
+    const streak = getStreakData();
+
+    if (attEl) attEl.innerText = attCount;
+    if (accEl) accEl.innerText = `${accPct}%`;
+    if (strkEl) strkEl.innerText = streak.count || 0;
+
+    renderProfileProgressSummary();
+
   } else {
     if (elements.studentNavName) {
-      elements.studentNavName.innerText = 'Student Login';
+      elements.studentNavName.innerText = 'Sign In';
     }
     if (authTabs) authTabs.style.display = 'flex';
     if (loggedInProfileView) loggedInProfileView.style.display = 'none';
     if (studentModalTitle) studentModalTitle.innerText = 'Student Account / ছাত্র অ্যাকাউন্ট';
     switchAuthTab('signin');
 
-    // Update Home Auth card view
-    if (homeGuestAuthView) homeGuestAuthView.style.display = 'block';
-    if (homeUserActiveView) homeUserActiveView.style.display = 'none';
+    // Update Home Auth card view for guest
+    if (guestCard) guestCard.style.display = 'block';
+    if (studentCard) studentCard.style.display = 'none';
   }
 }
 
@@ -557,56 +592,120 @@ function logoutStudent() {
   }
 }
 
-function switchHomeAuthTab(tab) {
-  const tabSignIn = document.getElementById('homeTabSignIn');
-  const tabSignUp = document.getElementById('homeTabSignUp');
-  const signInForm = document.getElementById('homeSignInForm');
-  const signUpForm = document.getElementById('homeSignUpForm');
-
-  if (!tabSignIn || !tabSignUp || !signInForm || !signUpForm) return;
+function switchHomeAuthCardTab(tab) {
+  const tabSignIn = document.getElementById('homeAuthTabSignIn');
+  const tabSignUp = document.getElementById('homeAuthTabSignUp');
+  const formSignIn = document.getElementById('homeCardSignInForm');
+  const formSignUp = document.getElementById('homeCardSignUpForm');
+  if (!tabSignIn || !tabSignUp || !formSignIn || !formSignUp) return;
 
   if (tab === 'signup') {
     tabSignUp.classList.add('active');
     tabSignIn.classList.remove('active');
-    signInForm.style.display = 'none';
-    signUpForm.style.display = 'block';
+    formSignIn.style.display = 'none';
+    formSignUp.style.display = 'block';
   } else {
     tabSignIn.classList.add('active');
     tabSignUp.classList.remove('active');
-    signInForm.style.display = 'block';
-    signUpForm.style.display = 'none';
+    formSignIn.style.display = 'block';
+    formSignUp.style.display = 'none';
   }
 }
+window.switchHomeAuthCardTab = switchHomeAuthCardTab;
 
-function handleHomeSignIn(e) {
+async function handleHomeCardSignIn(e) {
   if (e) e.preventDefault();
-  const idInput = document.getElementById('homeLoginId');
-  const passInput = document.getElementById('homeLoginPass');
-  const modalIdInput = document.getElementById('loginIdentifier');
-  const modalPassInput = document.getElementById('loginPassword');
+  const identifier = document.getElementById('homeCardLoginId')?.value?.trim();
+  const password = document.getElementById('homeCardLoginPass')?.value;
+  const btn = document.getElementById('btnHomeCardSignIn');
+  if (!identifier || !password) { showToast('Please enter your email and password'); return; }
 
-  if (modalIdInput && idInput) modalIdInput.value = idInput.value;
-  if (modalPassInput && passInput) modalPassInput.value = passInput.value;
+  if (btn) { btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Signing in...'; }
 
-  handleStudentSignIn(e);
+  try {
+    const res = await apiCall('/api/auth/signin', 'POST', { identifier, password });
+    if (res.ok && res.data.token) {
+      setAuthToken(res.data.token);
+      state.currentStudent = res.data.user;
+      localStorage.setItem('aptitude_current_student', JSON.stringify(res.data.user));
+      updateStudentUI();
+      showToast(`Welcome back, ${res.data.user.name}! 🎉`);
+      await loadUserDataFromAPI();
+    } else {
+      // Offline local fallback
+      const students = getRegisteredStudents();
+      const student = students[identifier];
+      if (student && student.password === password) {
+        state.currentStudent = { name: student.name, identifier, targetExam: student.targetExam, dailyGoal: student.dailyGoal };
+        localStorage.setItem('aptitude_current_student', JSON.stringify(state.currentStudent));
+        updateStudentUI();
+        showToast(`Welcome back, ${student.name}!`);
+      } else {
+        showToast(res.data?.error || 'Invalid credentials. Please check your details.');
+      }
+    }
+  } catch (err) {
+    showToast('Sign in failed. Check your connection.');
+  } finally {
+    if (btn) { btn.disabled = false; btn.innerHTML = '<i class="fas fa-sign-in-alt"></i> Sign In to Save Progress'; }
+  }
 }
+window.handleHomeCardSignIn = handleHomeCardSignIn;
 
-function handleHomeSignUp(e) {
+async function handleHomeCardSignUp(e) {
   if (e) e.preventDefault();
-  const regName = document.getElementById('homeRegName');
-  const regId = document.getElementById('homeRegId');
-  const regPass = document.getElementById('homeRegPass');
-  const regConfirm = document.getElementById('homeRegConfirm');
-  const regExam = document.getElementById('homeRegExam');
+  const name = document.getElementById('homeCardRegName')?.value?.trim();
+  const identifier = document.getElementById('homeCardRegId')?.value?.trim();
+  const targetExam = document.getElementById('homeCardRegExam')?.value;
+  const password = document.getElementById('homeCardRegPass')?.value;
+  const btn = document.getElementById('btnHomeCardSignUp');
 
-  if (document.getElementById('regName') && regName) document.getElementById('regName').value = regName.value;
-  if (document.getElementById('regIdentifier') && regId) document.getElementById('regIdentifier').value = regId.value;
-  if (document.getElementById('regPassword') && regPass) document.getElementById('regPassword').value = regPass.value;
-  if (document.getElementById('regConfirmPassword') && regConfirm) document.getElementById('regConfirmPassword').value = regConfirm.value;
-  if (document.getElementById('regTargetExam') && regExam) document.getElementById('regTargetExam').value = regExam.value;
+  if (!name || !identifier || !password) { showToast('Please complete all required fields'); return; }
+  if (password.length < 6) { showToast('Password must be at least 6 characters'); return; }
 
-  handleStudentSignUp(e);
+  if (btn) { btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating account...'; }
+
+  try {
+    const res = await apiCall('/api/auth/signup', 'POST', { name, identifier, password, targetExam, dailyGoal: 20 });
+    if (res.ok && res.data.token) {
+      setAuthToken(res.data.token);
+      state.currentStudent = res.data.user;
+      localStorage.setItem('aptitude_current_student', JSON.stringify(res.data.user));
+      updateStudentUI();
+      showToast(`Welcome to AptitudeMaster, ${name}! Your account is ready.`);
+      await loadUserDataFromAPI();
+    } else {
+      // Local storage fallback if offline
+      const students = getRegisteredStudents();
+      if (students[identifier]) {
+        showToast('An account with this email/username already exists.');
+      } else {
+        students[identifier] = { name, identifier, password, targetExam, dailyGoal: 20, registeredAt: new Date().toLocaleDateString('en-GB') };
+        saveRegisteredStudents(students);
+        state.currentStudent = { name, identifier, targetExam, dailyGoal: 20 };
+        localStorage.setItem('aptitude_current_student', JSON.stringify(state.currentStudent));
+        updateStudentUI();
+        showToast(`Account created! Welcome, ${name}!`);
+      }
+    }
+  } catch (err) {
+    showToast('Registration failed. Please check your connection.');
+  } finally {
+    if (btn) { btn.disabled = false; btn.innerHTML = '<i class="fas fa-user-check"></i> Create Free Account'; }
+  }
 }
+window.handleHomeCardSignUp = handleHomeCardSignUp;
+
+function startPracticeTopic(cat) {
+  state.category = cat;
+  state.singleCurrentIndex = 0;
+  // Update topic pills in toolbar
+  document.querySelectorAll('.topic-pill').forEach(p => {
+    p.classList.toggle('active', p.dataset.topic === cat);
+  });
+  setMode('practice');
+}
+window.startPracticeTopic = startPracticeTopic;
 
 function selectTopicCard(cat) {
   state.category = cat;
@@ -921,10 +1020,47 @@ function setupEventListeners() {
 
 // Mode Management
 function setMode(mode) {
+  // Admin guard: only bhaktadas12345@gmail.com is authorized
+  if (mode === 'admin') {
+    if (!isCurrentUserAdmin()) {
+      showToast('Admin access restricted to bhaktadas12345@gmail.com', 'error');
+      setMode('home');
+      return;
+    }
+  }
+
   state.mode = mode;
   state.singleCurrentIndex = 0;
-  
-  if (mode === 'test') {
+
+  // Sync desktop mode tabs active state
+  document.querySelectorAll('.mode-tab').forEach(tab => {
+    tab.classList.toggle('active', tab.getAttribute('data-mode') === mode);
+  });
+
+  // Sync mobile bottom nav buttons active state
+  document.querySelectorAll('.mob-nav-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-mode') === mode);
+  });
+
+  const homeView = document.getElementById('homeView');
+  const studyStrip = document.getElementById('studyControlStrip');
+
+  if (mode === 'home') {
+    stopTestTimer();
+    if (elements.testHud) elements.testHud.classList.remove('visible');
+    if (elements.testPalette) elements.testPalette.classList.remove('visible');
+    if (homeView) homeView.style.display = 'block';
+    if (studyStrip) studyStrip.style.display = 'none';
+    if (elements.questionsContainer) elements.questionsContainer.style.display = 'none';
+    if (elements.analyticsDashboard) elements.analyticsDashboard.style.display = 'none';
+    if (elements.adminDashboard) elements.adminDashboard.style.display = 'none';
+    if (elements.mainToolbar) elements.mainToolbar.style.display = 'none';
+    if (elements.setPillsContainer) elements.setPillsContainer.style.display = 'none';
+    updateStudentUI();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else if (mode === 'test') {
+    if (homeView) homeView.style.display = 'none';
+    if (studyStrip) studyStrip.style.display = 'block';
     elements.questionsContainer.style.display = 'block';
     elements.analyticsDashboard.style.display = 'none';
     if (elements.adminDashboard) elements.adminDashboard.style.display = 'none';
@@ -933,8 +1069,10 @@ function setMode(mode) {
     startTestMode();
   } else if (mode === 'analytics') {
     stopTestTimer();
-    elements.testHud.classList.remove('visible');
-    elements.testPalette.classList.remove('visible');
+    if (homeView) homeView.style.display = 'none';
+    if (studyStrip) studyStrip.style.display = 'block';
+    if (elements.testHud) elements.testHud.classList.remove('visible');
+    if (elements.testPalette) elements.testPalette.classList.remove('visible');
     elements.questionsContainer.style.display = 'none';
     elements.analyticsDashboard.style.display = 'block';
     if (elements.adminDashboard) elements.adminDashboard.style.display = 'none';
@@ -943,8 +1081,10 @@ function setMode(mode) {
     renderAnalyticsDashboard();
   } else if (mode === 'admin') {
     stopTestTimer();
-    elements.testHud.classList.remove('visible');
-    elements.testPalette.classList.remove('visible');
+    if (homeView) homeView.style.display = 'none';
+    if (studyStrip) studyStrip.style.display = 'none';
+    if (elements.testHud) elements.testHud.classList.remove('visible');
+    if (elements.testPalette) elements.testPalette.classList.remove('visible');
     elements.questionsContainer.style.display = 'none';
     elements.analyticsDashboard.style.display = 'none';
     if (elements.adminDashboard) elements.adminDashboard.style.display = 'block';
@@ -952,9 +1092,12 @@ function setMode(mode) {
     if (elements.setPillsContainer) elements.setPillsContainer.style.display = 'none';
     renderAdminDashboard();
   } else {
+    // 'practice', 'mistakes', 'bookmarks'
     stopTestTimer();
-    elements.testHud.classList.remove('visible');
-    elements.testPalette.classList.remove('visible');
+    if (homeView) homeView.style.display = 'none';
+    if (studyStrip) studyStrip.style.display = 'block';
+    if (elements.testHud) elements.testHud.classList.remove('visible');
+    if (elements.testPalette) elements.testPalette.classList.remove('visible');
     elements.questionsContainer.style.display = 'block';
     elements.analyticsDashboard.style.display = 'none';
     if (elements.adminDashboard) elements.adminDashboard.style.display = 'none';
@@ -1816,11 +1959,19 @@ window.renderAdminDashboard = renderAdminDashboard;
 window.selectThemeSetting = selectThemeSetting;
 
 // 1-by-1 Focus Navigation Handlers
+function scrollToActiveQuestion() {
+  const target = document.querySelector('.single-q-wrapper') || elements.questionsContainer;
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
 function navPrevQuestion() {
   if (state.singleCurrentIndex > 0) {
     state.singleCurrentIndex--;
     renderQuestions();
     if (state.mode === 'test') renderTestPalette();
+    scrollToActiveQuestion();
   }
 }
 
@@ -1830,6 +1981,7 @@ function navNextQuestion() {
     state.singleCurrentIndex++;
     renderQuestions();
     if (state.mode === 'test') renderTestPalette();
+    scrollToActiveQuestion();
   } else if (state.mode === 'test') {
     if (confirm('You have reached the last question. Do you want to submit your test?')) {
       finishTestMode();

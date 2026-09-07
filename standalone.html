@@ -1778,14 +1778,238 @@ body {
   }
 }
 
-.home-auth-card {
+/* =========================================================
+   CLEAN, CLUTTER-FREE HOME VIEW & VALUE SHOWCASE
+   ========================================================= */
+.home-view {
+  display: block;
+  margin-bottom: 2rem;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.home-hero {
+  text-align: center;
+  padding: 2.2rem 1.5rem 1.8rem;
+  background: radial-gradient(circle at top, rgba(99, 102, 241, 0.12) 0%, transparent 70%), var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.home-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: rgba(99, 102, 241, 0.12);
+  border: 1px solid rgba(99, 102, 241, 0.3);
+  color: var(--accent-primary);
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.home-hero-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: var(--text-primary);
+  max-width: 780px;
+  margin: 0 auto 0.85rem;
+  letter-spacing: -0.02em;
+}
+
+.home-hero-desc {
+  font-size: 0.96rem;
+  color: var(--text-secondary);
+  max-width: 650px;
+  margin: 0 auto 1.4rem;
+  line-height: 1.6;
+}
+
+.home-stats-strip {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.home-stat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.home-stat-chip strong {
+  color: var(--text-primary);
+}
+
+/* 2-Column Main Grid */
+.home-main-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+@media (max-width: 860px) {
+  .home-main-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+/* Value Perks Card */
+.home-value-card {
   background: var(--bg-card);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid var(--border-accent);
+  border: 1px solid var(--border-glass);
   border-radius: var(--radius-lg);
   padding: 1.5rem;
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.home-section-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.home-section-header i {
+  font-size: 1.5rem;
+  margin-top: 2px;
+}
+
+.home-section-header h3 {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.home-section-header p {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+}
+
+.value-perks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.value-perk-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 10px 12px;
+  border-radius: var(--radius-md);
+  background: var(--bg-primary);
+  border: 1px solid var(--border-glass);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.value-perk-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-primary);
+}
+
+.perk-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15rem;
+  flex-shrink: 0;
+}
+
+.perk-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.perk-text strong {
+  font-size: 0.92rem;
+  color: var(--text-primary);
+}
+
+.perk-text span {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  line-height: 1.45;
+}
+
+/* Topic Preview in Value Card */
+.home-topics-preview {
+  padding-top: 1rem;
+  border-top: 1px solid var(--border-glass);
+}
+
+.home-topics-preview-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.home-topics-pills {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.home-topic-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 12px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.home-topic-btn:hover {
+  background: rgba(99, 102, 241, 0.12);
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+/* Auth Card Right Column */
+.home-auth-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.home-auth-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
 }
 
 .home-auth-tabs {
@@ -1793,35 +2017,145 @@ body {
   background: var(--bg-primary);
   border-radius: var(--radius-full);
   padding: 4px;
-  margin-bottom: 1.15rem;
+  margin-bottom: 1.25rem;
   border: 1px solid var(--border-glass);
 }
 
 .home-auth-tab {
   flex: 1;
-  padding: 8px 12px;
+  padding: 9px 12px;
   border: none;
   border-radius: var(--radius-full);
   font-weight: 700;
-  font-size: 0.86rem;
+  font-size: 0.85rem;
   cursor: pointer;
   transition: all var(--transition-fast);
   background: transparent;
   color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
 }
 
 .home-auth-tab.active {
   background: linear-gradient(135deg, var(--accent-primary), var(--accent-cyan));
   color: #ffffff;
-  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.35);
 }
 
-.home-user-card {
-  background: var(--bg-primary);
-  border: 1px solid var(--border-accent);
-  border-radius: var(--radius-md);
-  padding: 1.25rem;
+.home-auth-footer {
   text-align: center;
+  margin-top: 1rem;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.home-guest-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  margin: 1.25rem 0 1rem;
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.home-guest-divider::before,
+.home-guest-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.home-guest-divider span {
+  padding: 0 10px;
+}
+
+/* Active Student Hub Card */
+.home-student-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.student-card-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1.15rem;
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.student-card-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-cyan));
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+}
+
+.student-card-greeting {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+}
+
+.student-card-name {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.student-card-badge {
+  display: inline-block;
+  font-size: 0.74rem;
+  color: var(--accent-cyan);
+  font-weight: 600;
+}
+
+.student-kpi-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin-bottom: 1.25rem;
+}
+
+.student-kpi-cell {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-sm);
+  padding: 10px 8px;
+  text-align: center;
+}
+
+.kpi-num {
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 2px;
+}
+
+.kpi-txt {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+}
+
+.student-action-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 /* Study Setup Hub */
@@ -2647,6 +2981,50 @@ input, select {
     font-size: 0.7rem;
   }
 
+  /* Home View Mobile */
+  .home-hero {
+    padding: 1.35rem 0.9rem 1.15rem;
+    margin-bottom: 1rem;
+  }
+
+  .home-hero-title {
+    font-size: 1.35rem;
+    line-height: 1.3;
+  }
+
+  .home-hero-desc {
+    font-size: 0.84rem;
+    margin-bottom: 1rem;
+  }
+
+  .home-stats-strip {
+    gap: 6px;
+  }
+
+  .home-stat-chip {
+    padding: 5px 9px;
+    font-size: 0.74rem;
+  }
+
+  .home-value-card {
+    padding: 1.1rem 0.85rem;
+  }
+
+  .value-perk-item {
+    padding: 8px 10px;
+    gap: 10px;
+  }
+
+  .perk-icon {
+    width: 34px;
+    height: 34px;
+    font-size: 1rem;
+  }
+
+  .home-topics-pills {
+    grid-template-columns: 1fr 1fr;
+  }
+
   /* Mode Tabs — hide labels, show icons only */
   .mode-tabs {
     display: none; /* Hidden on mobile; use bottom nav instead */
@@ -2786,6 +3164,7 @@ input, select {
     gap: 6px;
     border-radius: var(--radius-md);
     margin-top: 1.25rem;
+    margin-bottom: 2.5rem;
   }
 
   .btn-nav-action {
@@ -3637,44 +4016,12 @@ input, select {
       </div>
     </aside>
 
-    <!-- HERO SECTION -->
-    <section class="hero-section">
-      <div class="hero-content">
-        <div class="hero-text">
-          <div class="hero-badge"><i class="fas fa-brain"></i> Bilingual Aptitude &amp; Reasoning Prep</div>
-          <h1>General Aptitude &amp; Reasoning Master</h1>
-          <p>Comprehensive English &amp; Bengali prep with 10 full sets (50 questions each) covering Quantitative, Reasoning, Verbal &amp; Data Interpretation — with step-by-step solutions.</p>
-          <div class="streak-hero-row" id="streakHeroRow" style="display:none;">
-            <div class="streak-badge-pill"><i class="fas fa-fire streak-fire"></i> <span id="streakCount">0</span> day streak</div>
-            <div class="streak-badge-pill" style="background:rgba(16,185,129,0.15);border-color:rgba(16,185,129,0.35);color:var(--accent-emerald);">
-              <i class="fas fa-bullseye"></i> Daily goal: <span id="dailyGoalDisplay">20</span> Qs
-            </div>
-          </div>
-        </div>
-        <div class="hero-stats">
-          <div class="stat-chip">
-            <div class="stat-number" id="practiceCount">500</div>
-            <div class="stat-label">Questions</div>
-          </div>
-          <div class="stat-chip">
-            <div class="stat-number" style="color:var(--accent-cyan);">10</div>
-            <div class="stat-label">Full Sets</div>
-          </div>
-          <div class="stat-chip">
-            <div class="stat-number" id="bookmarkCount">0</div>
-            <div class="stat-label">Saved ⭐</div>
-          </div>
-          <div class="stat-chip">
-            <div class="stat-number" id="accuracyDisplay" style="color:var(--accent-emerald);">—%</div>
-            <div class="stat-label">Accuracy</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- MODE TABS -->
     <nav class="mode-tabs" id="modeTabs">
-      <button class="mode-tab active" data-mode="practice">
+      <button class="mode-tab active" data-mode="home" id="tabModeHome">
+        <i class="fas fa-home"></i><span class="mode-tab-label">Home</span>
+      </button>
+      <button class="mode-tab" data-mode="practice">
         <i class="fas fa-book-reader"></i><span class="mode-tab-label">Practice</span>
       </button>
       <button class="mode-tab" data-mode="test">
@@ -3689,10 +4036,259 @@ input, select {
       <button class="mode-tab" data-mode="analytics">
         <i class="fas fa-chart-pie"></i><span class="mode-tab-label">Analytics</span>
       </button>
-      <button class="mode-tab" data-mode="admin">
+      <button class="mode-tab" data-mode="admin" id="adminModeTab" style="display:none;">
         <i class="fas fa-user-shield"></i><span class="mode-tab-label">Admin</span>
       </button>
     </nav>
+
+    <!-- ========================================================= -->
+    <!-- HOME VIEW (Clean, Clutter-Free Value & Auth Gateway Hub) -->
+    <!-- ========================================================= -->
+    <section class="home-view" id="homeView">
+      
+      <!-- Top Hero / Welcome Banner -->
+      <div class="home-hero">
+        <div class="home-hero-badge">
+          <i class="fas fa-graduation-cap"></i> Bilingual Exam Prep Hub &bull; বাংলা ও ইংরেজি
+        </div>
+        <h1 class="home-hero-title">
+          Master General Aptitude &amp; Reasoning with Step-by-Step Clarity
+        </h1>
+        <p class="home-hero-desc">
+          Structured bilingual practice with 500 hand-picked questions across 10 full sets with instant solutions and shortcuts. Tailored for WBCS, SSC CGL, IBPS, Railways RRB, UPSC &amp; campus placements.
+        </p>
+
+        <!-- Quick Platform Stats Pills -->
+        <div class="home-stats-strip">
+          <div class="home-stat-chip">
+            <i class="fas fa-check-double" style="color:var(--accent-primary);"></i>
+            <span><strong>500</strong> Bilingual Questions</span>
+          </div>
+          <div class="home-stat-chip">
+            <i class="fas fa-layer-group" style="color:var(--accent-cyan);"></i>
+            <span><strong>10</strong> Full 50-Q Sets</span>
+          </div>
+          <div class="home-stat-chip">
+            <i class="fas fa-language" style="color:var(--accent-emerald);"></i>
+            <span><strong>English &amp; Bengali</strong></span>
+          </div>
+          <div class="home-stat-chip">
+            <i class="fas fa-bolt" style="color:var(--accent-amber);"></i>
+            <span><strong>Shortcuts &amp; Tricks</strong></span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Two-Column Section: What You Get vs Account Gateway -->
+      <div class="home-main-grid">
+
+        <!-- Left Column: What You Get (Value Proposition) -->
+        <div class="home-value-card">
+          <div class="home-section-header">
+            <i class="fas fa-gift" style="color:var(--accent-cyan);"></i>
+            <div>
+              <h3>What You Get When You Join Free</h3>
+              <p>Everything you need to excel in your competitive examinations</p>
+            </div>
+          </div>
+
+          <div class="value-perks-list">
+            <div class="value-perk-item">
+              <div class="perk-icon" style="background:rgba(99,102,241,0.15);color:var(--accent-primary);">
+                <i class="fas fa-brain"></i>
+              </div>
+              <div class="perk-text">
+                <strong>4 Core Subject Coverage</strong>
+                <span>Quantitative Aptitude, Logical Reasoning, Verbal Ability &amp; Data Interpretation in one unified portal.</span>
+              </div>
+            </div>
+
+            <div class="value-perk-item">
+              <div class="perk-icon" style="background:rgba(16,185,129,0.15);color:var(--accent-emerald);">
+                <i class="fas fa-stopwatch"></i>
+              </div>
+              <div class="perk-text">
+                <strong>1-by-1 Focus Mode &amp; 45-Min Mock Tests</strong>
+                <span>Practice calmly one question at a time or simulate real exam conditions with negative marking.</span>
+              </div>
+            </div>
+
+            <div class="value-perk-item">
+              <div class="perk-icon" style="background:rgba(244,63,94,0.15);color:var(--accent-rose);">
+                <i class="fas fa-history"></i>
+              </div>
+              <div class="perk-text">
+                <strong>Smart Mistakes Vault</strong>
+                <span>Questions you miss are saved automatically to your vault so you can practice until 100% mastered.</span>
+              </div>
+            </div>
+
+            <div class="value-perk-item">
+              <div class="perk-icon" style="background:rgba(245,158,11,0.15);color:var(--accent-amber);">
+                <i class="fas fa-cloud"></i>
+              </div>
+              <div class="perk-text">
+                <strong>Cloud Sync &amp; All-India Leaderboard</strong>
+                <span>Your practice streaks, accuracy diagnostics, and saved bookmarks sync across phone and laptop via Neon PostgreSQL.</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Topic Jump Buttons -->
+          <div class="home-topics-preview">
+            <div class="home-topics-preview-title">Choose Topic to Explore:</div>
+            <div class="home-topics-pills">
+              <button class="home-topic-btn" onclick="startPracticeTopic('quant')">
+                <i class="fas fa-calculator"></i> Quant
+              </button>
+              <button class="home-topic-btn" onclick="startPracticeTopic('logical')">
+                <i class="fas fa-brain"></i> Reasoning
+              </button>
+              <button class="home-topic-btn" onclick="startPracticeTopic('verbal')">
+                <i class="fas fa-book-open"></i> Verbal
+              </button>
+              <button class="home-topic-btn" onclick="startPracticeTopic('di')">
+                <i class="fas fa-chart-pie"></i> Data Interp.
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Interactive Auth or Active Student Dashboard -->
+        <div class="home-auth-column">
+          
+          <!-- 1. Guest Auth Card (when logged out) -->
+          <div class="home-auth-card" id="homeGuestAuthCard">
+            <div class="home-auth-tabs">
+              <button type="button" class="home-auth-tab active" id="homeAuthTabSignIn" onclick="switchHomeAuthCardTab('signin')">
+                <i class="fas fa-sign-in-alt"></i> Sign In
+              </button>
+              <button type="button" class="home-auth-tab" id="homeAuthTabSignUp" onclick="switchHomeAuthCardTab('signup')">
+                <i class="fas fa-user-plus"></i> Create Account
+              </button>
+            </div>
+
+            <!-- Inline Sign In Form -->
+            <form id="homeCardSignInForm" onsubmit="handleHomeCardSignIn(event)">
+              <div class="form-group">
+                <label class="form-label">Email or Username</label>
+                <input type="text" id="homeCardLoginId" required placeholder="name@example.com" class="form-input" autocomplete="username">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Password</label>
+                <div class="password-input-wrap">
+                  <input type="password" id="homeCardLoginPass" required placeholder="Enter password" class="form-input" autocomplete="current-password">
+                  <button type="button" class="pwd-toggle-btn" onclick="togglePwdVisibility('homeCardLoginPass', this)">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+              <button type="submit" class="btn-primary" id="btnHomeCardSignIn" style="width:100%;justify-content:center;padding:12px;margin-top:0.5rem;">
+                <i class="fas fa-sign-in-alt"></i> Sign In to Save Progress
+              </button>
+              <div class="home-auth-footer">
+                <span>New here?</span>
+                <button type="button" class="inline-link-btn" onclick="switchHomeAuthCardTab('signup')">Create Free Account</button>
+              </div>
+            </form>
+
+            <!-- Inline Sign Up Form -->
+            <form id="homeCardSignUpForm" onsubmit="handleHomeCardSignUp(event)" style="display:none;">
+              <div class="form-group">
+                <label class="form-label">Your Full Name</label>
+                <input type="text" id="homeCardRegName" required placeholder="e.g. Rahul Sen" class="form-input">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email or Phone Number</label>
+                <input type="text" id="homeCardRegId" required placeholder="e.g. rahul@gmail.com" class="form-input" autocomplete="username">
+              </div>
+              <div class="form-group">
+                <label class="form-label">Target Examination</label>
+                <select id="homeCardRegExam" class="form-input custom-select">
+                  <option value="WBCS">WBCS (West Bengal Civil Service)</option>
+                  <option value="SSC CGL">SSC CGL / CHSL</option>
+                  <option value="IBPS">Banking (IBPS PO / Clerk / SBI)</option>
+                  <option value="Railways RRB">Railways (RRB NTPC / Group D)</option>
+                  <option value="UPSC CSAT">UPSC CSAT</option>
+                  <option value="Campus Placement">Campus Placements / IT Job</option>
+                  <option value="General Preparation">General All-Round Prep</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">Password (min 6 characters)</label>
+                <div class="password-input-wrap">
+                  <input type="password" id="homeCardRegPass" required minlength="6" placeholder="Create a strong password" class="form-input" autocomplete="new-password">
+                  <button type="button" class="pwd-toggle-btn" onclick="togglePwdVisibility('homeCardRegPass', this)">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </div>
+              </div>
+              <button type="submit" class="btn-primary" id="btnHomeCardSignUp" style="width:100%;justify-content:center;padding:12px;margin-top:0.5rem;background:linear-gradient(135deg,var(--accent-emerald),var(--accent-cyan));">
+                <i class="fas fa-user-check"></i> Create Free Account
+              </button>
+              <div class="home-auth-footer">
+                <span>Already registered?</span>
+                <button type="button" class="inline-link-btn" onclick="switchHomeAuthCardTab('signin')">Sign In</button>
+              </div>
+            </form>
+
+            <div class="home-guest-divider">
+              <span>OR</span>
+            </div>
+            <button type="button" class="btn-secondary" style="width:100%;justify-content:center;padding:10px;font-size:0.88rem;" onclick="setMode('practice')">
+              <i class="fas fa-play-circle"></i> Try Demo Practice as Guest &rarr;
+            </button>
+          </div>
+
+          <!-- 2. Active Student Card (when logged in) -->
+          <div class="home-student-card" id="homeStudentActiveCard" style="display:none;">
+            <div class="student-card-header">
+              <div class="student-card-avatar" id="homeStudentAvatar">S</div>
+              <div>
+                <div class="student-card-greeting">Welcome back,</div>
+                <div class="student-card-name" id="homeStudentName">Student</div>
+                <div class="student-card-badge" id="homeStudentExam">Target: WBCS</div>
+              </div>
+            </div>
+
+            <!-- Student KPI Mini Grid -->
+            <div class="student-kpi-row">
+              <div class="student-kpi-cell">
+                <div class="kpi-num" id="homeKpiAttempted" style="color:var(--accent-cyan);">0</div>
+                <div class="kpi-txt">Attempted</div>
+              </div>
+              <div class="student-kpi-cell">
+                <div class="kpi-num" id="homeKpiAccuracy" style="color:var(--accent-emerald);">0%</div>
+                <div class="kpi-txt">Accuracy</div>
+              </div>
+              <div class="student-kpi-cell">
+                <div class="kpi-num" id="homeKpiStreak" style="color:var(--accent-amber);">0</div>
+                <div class="kpi-txt">Day Streak 🔥</div>
+              </div>
+            </div>
+
+            <!-- Quick Action Buttons -->
+            <div class="student-action-stack">
+              <button class="btn-primary" style="width:100%;justify-content:center;padding:12px;" onclick="setMode('practice')">
+                <i class="fas fa-book-reader"></i> Resume Daily Practice
+              </button>
+              <button class="btn-secondary" style="width:100%;justify-content:center;padding:10px;" onclick="setMode('test')">
+                <i class="fas fa-stopwatch"></i> Take 45-Min Mock Test
+              </button>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;">
+                <button class="btn-secondary" style="justify-content:center;padding:8px;font-size:0.82rem;" onclick="setMode('mistakes')">
+                  <i class="fas fa-history" style="color:var(--accent-rose);"></i> Mistakes Vault
+                </button>
+                <button class="btn-secondary" style="justify-content:center;padding:8px;font-size:0.82rem;" onclick="openLeaderboard()">
+                  <i class="fas fa-trophy" style="color:var(--accent-amber);"></i> Leaderboard
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
     <!-- TEST HUD -->
     <div class="test-hud-panel" id="testHud">
@@ -3776,10 +4372,10 @@ input, select {
 
   <!-- MOBILE BOTTOM NAV -->
   <nav class="mobile-bottom-nav" id="mobileBottomNav">
-    <button class="mob-nav-btn active" data-mode="practice"><i class="fas fa-book-reader"></i><span>Practice</span></button>
-    <button class="mob-nav-btn" data-mode="test"><i class="fas fa-stopwatch"></i><span>Test</span></button>
+    <button class="mob-nav-btn active" data-mode="home"><i class="fas fa-home"></i><span>Home</span></button>
+    <button class="mob-nav-btn" data-mode="practice"><i class="fas fa-book-reader"></i><span>Practice</span></button>
+    <button class="mob-nav-btn" data-mode="test"><i class="fas fa-stopwatch"></i><span>Mock Test</span></button>
     <button class="mob-nav-btn" data-mode="mistakes"><i class="fas fa-history"></i><span>Mistakes</span></button>
-    <button class="mob-nav-btn" data-mode="analytics"><i class="fas fa-chart-pie"></i><span>Analytics</span></button>
     <button class="mob-nav-btn" data-mode="bookmarks"><i class="fas fa-star"></i><span>Saved</span></button>
   </nav>
 
@@ -29202,7 +29798,7 @@ const formulaSheetData = [
 // Application State
 const state = {
   language: 'both', // 'both', 'en', 'bn'
-  mode: 'practice', // 'practice', 'test', 'mistakes', 'bookmarks', 'analytics'
+  mode: 'home', // 'home', 'practice', 'test', 'mistakes', 'bookmarks', 'analytics', 'admin'
   viewMode: 'single', // 'single' (1-by-1 Focus Mode), 'list' (Scrolling List)
   singleCurrentIndex: 0, // 0-based index in the current filtered list
   selectedSet: 'all', // 'all', '1', '2', ..., '10'
@@ -29349,8 +29945,8 @@ function initApp() {
   renderFormulaSheet();
   initScratchpad();
   updateStats();
-  renderQuestions();
   updateStreakDisplay();
+  setMode('home');
 
   // If user has saved auth token, silently verify session & sync latest data from Neon DB
   if (state.authToken) {
@@ -29606,6 +30202,14 @@ async function handleStudentSignIn(e) {
   }
 }
 
+// Admin check: STRICTLY RESTRICTED TO bhaktadas12345@gmail.com
+const ADMIN_EMAIL = 'bhaktadas12345@gmail.com';
+
+function isCurrentUserAdmin() {
+  return !!(state.currentStudent && state.currentStudent.identifier && state.currentStudent.identifier.trim().toLowerCase() === ADMIN_EMAIL.toLowerCase());
+}
+window.isCurrentUserAdmin = isCurrentUserAdmin;
+
 function updateStudentUI() {
   const authTabs = document.getElementById('authTabs');
   const signInForm = document.getElementById('signInForm');
@@ -29613,10 +30217,15 @@ function updateStudentUI() {
   const loggedInProfileView = document.getElementById('loggedInProfileView');
   const studentModalTitle = document.getElementById('studentModalTitle');
 
-  const homeGuestAuthView = document.getElementById('homeGuestAuthView');
-  const homeUserActiveView = document.getElementById('homeUserActiveView');
-  const homeUserCardName = document.getElementById('homeUserCardName');
-  const homeUserCardExam = document.getElementById('homeUserCardExam');
+  const guestCard = document.getElementById('homeGuestAuthCard');
+  const studentCard = document.getElementById('homeStudentActiveCard');
+  const adminTab = document.getElementById('adminModeTab');
+
+  // Admin visibility check: STRICTLY ONLY FOR bhaktadas12345@gmail.com
+  const isAdmin = isCurrentUserAdmin();
+  if (adminTab) {
+    adminTab.style.display = isAdmin ? 'inline-flex' : 'none';
+  }
 
   if (state.currentStudent && state.currentStudent.name) {
     if (elements.studentNavName) {
@@ -29635,23 +30244,45 @@ function updateStudentUI() {
     if (pExam) pExam.innerText = `Target: ${state.currentStudent.targetExam || 'General Preparation'}`;
     if (pEmail) pEmail.innerText = state.currentStudent.identifier || 'Signed In';
 
-    // Update Home Auth card view
-    if (homeGuestAuthView) homeGuestAuthView.style.display = 'none';
-    if (homeUserActiveView) homeUserActiveView.style.display = 'block';
-    if (homeUserCardName) homeUserCardName.innerText = state.currentStudent.name;
-    if (homeUserCardExam) homeUserCardExam.innerText = `Target Exam: ${state.currentStudent.targetExam || 'General Preparation'}`;
+    // Update Home Active Student Card
+    if (guestCard) guestCard.style.display = 'none';
+    if (studentCard) studentCard.style.display = 'block';
+
+    const nameEl = document.getElementById('homeStudentName');
+    const examEl = document.getElementById('homeStudentExam');
+    const avatarEl = document.getElementById('homeStudentAvatar');
+    const attEl = document.getElementById('homeKpiAttempted');
+    const accEl = document.getElementById('homeKpiAccuracy');
+    const strkEl = document.getElementById('homeKpiStreak');
+
+    if (nameEl) nameEl.innerText = state.currentStudent.name;
+    if (examEl) examEl.innerText = `Target Exam: ${state.currentStudent.targetExam || 'General Preparation'}`;
+    if (avatarEl) avatarEl.innerText = (state.currentStudent.name || 'S').charAt(0).toUpperCase();
+
+    const attemptsList = Object.values(state.practiceAttempts);
+    const attCount = attemptsList.length;
+    const correctCount = attemptsList.filter(a => a.correct).length;
+    const accPct = attCount > 0 ? Math.round((correctCount / attCount) * 100) : 0;
+    const streak = getStreakData();
+
+    if (attEl) attEl.innerText = attCount;
+    if (accEl) accEl.innerText = `${accPct}%`;
+    if (strkEl) strkEl.innerText = streak.count || 0;
+
+    renderProfileProgressSummary();
+
   } else {
     if (elements.studentNavName) {
-      elements.studentNavName.innerText = 'Student Login';
+      elements.studentNavName.innerText = 'Sign In';
     }
     if (authTabs) authTabs.style.display = 'flex';
     if (loggedInProfileView) loggedInProfileView.style.display = 'none';
     if (studentModalTitle) studentModalTitle.innerText = 'Student Account / ছাত্র অ্যাকাউন্ট';
     switchAuthTab('signin');
 
-    // Update Home Auth card view
-    if (homeGuestAuthView) homeGuestAuthView.style.display = 'block';
-    if (homeUserActiveView) homeUserActiveView.style.display = 'none';
+    // Update Home Auth card view for guest
+    if (guestCard) guestCard.style.display = 'block';
+    if (studentCard) studentCard.style.display = 'none';
   }
 }
 
@@ -29667,56 +30298,120 @@ function logoutStudent() {
   }
 }
 
-function switchHomeAuthTab(tab) {
-  const tabSignIn = document.getElementById('homeTabSignIn');
-  const tabSignUp = document.getElementById('homeTabSignUp');
-  const signInForm = document.getElementById('homeSignInForm');
-  const signUpForm = document.getElementById('homeSignUpForm');
-
-  if (!tabSignIn || !tabSignUp || !signInForm || !signUpForm) return;
+function switchHomeAuthCardTab(tab) {
+  const tabSignIn = document.getElementById('homeAuthTabSignIn');
+  const tabSignUp = document.getElementById('homeAuthTabSignUp');
+  const formSignIn = document.getElementById('homeCardSignInForm');
+  const formSignUp = document.getElementById('homeCardSignUpForm');
+  if (!tabSignIn || !tabSignUp || !formSignIn || !formSignUp) return;
 
   if (tab === 'signup') {
     tabSignUp.classList.add('active');
     tabSignIn.classList.remove('active');
-    signInForm.style.display = 'none';
-    signUpForm.style.display = 'block';
+    formSignIn.style.display = 'none';
+    formSignUp.style.display = 'block';
   } else {
     tabSignIn.classList.add('active');
     tabSignUp.classList.remove('active');
-    signInForm.style.display = 'block';
-    signUpForm.style.display = 'none';
+    formSignIn.style.display = 'block';
+    formSignUp.style.display = 'none';
   }
 }
+window.switchHomeAuthCardTab = switchHomeAuthCardTab;
 
-function handleHomeSignIn(e) {
+async function handleHomeCardSignIn(e) {
   if (e) e.preventDefault();
-  const idInput = document.getElementById('homeLoginId');
-  const passInput = document.getElementById('homeLoginPass');
-  const modalIdInput = document.getElementById('loginIdentifier');
-  const modalPassInput = document.getElementById('loginPassword');
+  const identifier = document.getElementById('homeCardLoginId')?.value?.trim();
+  const password = document.getElementById('homeCardLoginPass')?.value;
+  const btn = document.getElementById('btnHomeCardSignIn');
+  if (!identifier || !password) { showToast('Please enter your email and password'); return; }
 
-  if (modalIdInput && idInput) modalIdInput.value = idInput.value;
-  if (modalPassInput && passInput) modalPassInput.value = passInput.value;
+  if (btn) { btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Signing in...'; }
 
-  handleStudentSignIn(e);
+  try {
+    const res = await apiCall('/api/auth/signin', 'POST', { identifier, password });
+    if (res.ok && res.data.token) {
+      setAuthToken(res.data.token);
+      state.currentStudent = res.data.user;
+      localStorage.setItem('aptitude_current_student', JSON.stringify(res.data.user));
+      updateStudentUI();
+      showToast(`Welcome back, ${res.data.user.name}! 🎉`);
+      await loadUserDataFromAPI();
+    } else {
+      // Offline local fallback
+      const students = getRegisteredStudents();
+      const student = students[identifier];
+      if (student && student.password === password) {
+        state.currentStudent = { name: student.name, identifier, targetExam: student.targetExam, dailyGoal: student.dailyGoal };
+        localStorage.setItem('aptitude_current_student', JSON.stringify(state.currentStudent));
+        updateStudentUI();
+        showToast(`Welcome back, ${student.name}!`);
+      } else {
+        showToast(res.data?.error || 'Invalid credentials. Please check your details.');
+      }
+    }
+  } catch (err) {
+    showToast('Sign in failed. Check your connection.');
+  } finally {
+    if (btn) { btn.disabled = false; btn.innerHTML = '<i class="fas fa-sign-in-alt"></i> Sign In to Save Progress'; }
+  }
 }
+window.handleHomeCardSignIn = handleHomeCardSignIn;
 
-function handleHomeSignUp(e) {
+async function handleHomeCardSignUp(e) {
   if (e) e.preventDefault();
-  const regName = document.getElementById('homeRegName');
-  const regId = document.getElementById('homeRegId');
-  const regPass = document.getElementById('homeRegPass');
-  const regConfirm = document.getElementById('homeRegConfirm');
-  const regExam = document.getElementById('homeRegExam');
+  const name = document.getElementById('homeCardRegName')?.value?.trim();
+  const identifier = document.getElementById('homeCardRegId')?.value?.trim();
+  const targetExam = document.getElementById('homeCardRegExam')?.value;
+  const password = document.getElementById('homeCardRegPass')?.value;
+  const btn = document.getElementById('btnHomeCardSignUp');
 
-  if (document.getElementById('regName') && regName) document.getElementById('regName').value = regName.value;
-  if (document.getElementById('regIdentifier') && regId) document.getElementById('regIdentifier').value = regId.value;
-  if (document.getElementById('regPassword') && regPass) document.getElementById('regPassword').value = regPass.value;
-  if (document.getElementById('regConfirmPassword') && regConfirm) document.getElementById('regConfirmPassword').value = regConfirm.value;
-  if (document.getElementById('regTargetExam') && regExam) document.getElementById('regTargetExam').value = regExam.value;
+  if (!name || !identifier || !password) { showToast('Please complete all required fields'); return; }
+  if (password.length < 6) { showToast('Password must be at least 6 characters'); return; }
 
-  handleStudentSignUp(e);
+  if (btn) { btn.disabled = true; btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating account...'; }
+
+  try {
+    const res = await apiCall('/api/auth/signup', 'POST', { name, identifier, password, targetExam, dailyGoal: 20 });
+    if (res.ok && res.data.token) {
+      setAuthToken(res.data.token);
+      state.currentStudent = res.data.user;
+      localStorage.setItem('aptitude_current_student', JSON.stringify(res.data.user));
+      updateStudentUI();
+      showToast(`Welcome to AptitudeMaster, ${name}! Your account is ready.`);
+      await loadUserDataFromAPI();
+    } else {
+      // Local storage fallback if offline
+      const students = getRegisteredStudents();
+      if (students[identifier]) {
+        showToast('An account with this email/username already exists.');
+      } else {
+        students[identifier] = { name, identifier, password, targetExam, dailyGoal: 20, registeredAt: new Date().toLocaleDateString('en-GB') };
+        saveRegisteredStudents(students);
+        state.currentStudent = { name, identifier, targetExam, dailyGoal: 20 };
+        localStorage.setItem('aptitude_current_student', JSON.stringify(state.currentStudent));
+        updateStudentUI();
+        showToast(`Account created! Welcome, ${name}!`);
+      }
+    }
+  } catch (err) {
+    showToast('Registration failed. Please check your connection.');
+  } finally {
+    if (btn) { btn.disabled = false; btn.innerHTML = '<i class="fas fa-user-check"></i> Create Free Account'; }
+  }
 }
+window.handleHomeCardSignUp = handleHomeCardSignUp;
+
+function startPracticeTopic(cat) {
+  state.category = cat;
+  state.singleCurrentIndex = 0;
+  // Update topic pills in toolbar
+  document.querySelectorAll('.topic-pill').forEach(p => {
+    p.classList.toggle('active', p.dataset.topic === cat);
+  });
+  setMode('practice');
+}
+window.startPracticeTopic = startPracticeTopic;
 
 function selectTopicCard(cat) {
   state.category = cat;
@@ -30031,10 +30726,47 @@ function setupEventListeners() {
 
 // Mode Management
 function setMode(mode) {
+  // Admin guard: only bhaktadas12345@gmail.com is authorized
+  if (mode === 'admin') {
+    if (!isCurrentUserAdmin()) {
+      showToast('Admin access restricted to bhaktadas12345@gmail.com', 'error');
+      setMode('home');
+      return;
+    }
+  }
+
   state.mode = mode;
   state.singleCurrentIndex = 0;
-  
-  if (mode === 'test') {
+
+  // Sync desktop mode tabs active state
+  document.querySelectorAll('.mode-tab').forEach(tab => {
+    tab.classList.toggle('active', tab.getAttribute('data-mode') === mode);
+  });
+
+  // Sync mobile bottom nav buttons active state
+  document.querySelectorAll('.mob-nav-btn').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-mode') === mode);
+  });
+
+  const homeView = document.getElementById('homeView');
+  const studyStrip = document.getElementById('studyControlStrip');
+
+  if (mode === 'home') {
+    stopTestTimer();
+    if (elements.testHud) elements.testHud.classList.remove('visible');
+    if (elements.testPalette) elements.testPalette.classList.remove('visible');
+    if (homeView) homeView.style.display = 'block';
+    if (studyStrip) studyStrip.style.display = 'none';
+    if (elements.questionsContainer) elements.questionsContainer.style.display = 'none';
+    if (elements.analyticsDashboard) elements.analyticsDashboard.style.display = 'none';
+    if (elements.adminDashboard) elements.adminDashboard.style.display = 'none';
+    if (elements.mainToolbar) elements.mainToolbar.style.display = 'none';
+    if (elements.setPillsContainer) elements.setPillsContainer.style.display = 'none';
+    updateStudentUI();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else if (mode === 'test') {
+    if (homeView) homeView.style.display = 'none';
+    if (studyStrip) studyStrip.style.display = 'block';
     elements.questionsContainer.style.display = 'block';
     elements.analyticsDashboard.style.display = 'none';
     if (elements.adminDashboard) elements.adminDashboard.style.display = 'none';
@@ -30043,8 +30775,10 @@ function setMode(mode) {
     startTestMode();
   } else if (mode === 'analytics') {
     stopTestTimer();
-    elements.testHud.classList.remove('visible');
-    elements.testPalette.classList.remove('visible');
+    if (homeView) homeView.style.display = 'none';
+    if (studyStrip) studyStrip.style.display = 'block';
+    if (elements.testHud) elements.testHud.classList.remove('visible');
+    if (elements.testPalette) elements.testPalette.classList.remove('visible');
     elements.questionsContainer.style.display = 'none';
     elements.analyticsDashboard.style.display = 'block';
     if (elements.adminDashboard) elements.adminDashboard.style.display = 'none';
@@ -30053,8 +30787,10 @@ function setMode(mode) {
     renderAnalyticsDashboard();
   } else if (mode === 'admin') {
     stopTestTimer();
-    elements.testHud.classList.remove('visible');
-    elements.testPalette.classList.remove('visible');
+    if (homeView) homeView.style.display = 'none';
+    if (studyStrip) studyStrip.style.display = 'none';
+    if (elements.testHud) elements.testHud.classList.remove('visible');
+    if (elements.testPalette) elements.testPalette.classList.remove('visible');
     elements.questionsContainer.style.display = 'none';
     elements.analyticsDashboard.style.display = 'none';
     if (elements.adminDashboard) elements.adminDashboard.style.display = 'block';
@@ -30062,9 +30798,12 @@ function setMode(mode) {
     if (elements.setPillsContainer) elements.setPillsContainer.style.display = 'none';
     renderAdminDashboard();
   } else {
+    // 'practice', 'mistakes', 'bookmarks'
     stopTestTimer();
-    elements.testHud.classList.remove('visible');
-    elements.testPalette.classList.remove('visible');
+    if (homeView) homeView.style.display = 'none';
+    if (studyStrip) studyStrip.style.display = 'block';
+    if (elements.testHud) elements.testHud.classList.remove('visible');
+    if (elements.testPalette) elements.testPalette.classList.remove('visible');
     elements.questionsContainer.style.display = 'block';
     elements.analyticsDashboard.style.display = 'none';
     if (elements.adminDashboard) elements.adminDashboard.style.display = 'none';
@@ -30928,11 +31667,19 @@ window.renderAdminDashboard = renderAdminDashboard;
 window.selectThemeSetting = selectThemeSetting;
 
 // 1-by-1 Focus Navigation Handlers
+function scrollToActiveQuestion() {
+  const target = document.querySelector('.single-q-wrapper') || elements.questionsContainer;
+  if (target) {
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
 function navPrevQuestion() {
   if (state.singleCurrentIndex > 0) {
     state.singleCurrentIndex--;
     renderQuestions();
     if (state.mode === 'test') renderTestPalette();
+    scrollToActiveQuestion();
   }
 }
 
@@ -30942,6 +31689,7 @@ function navNextQuestion() {
     state.singleCurrentIndex++;
     renderQuestions();
     if (state.mode === 'test') renderTestPalette();
+    scrollToActiveQuestion();
   } else if (state.mode === 'test') {
     if (confirm('You have reached the last question. Do you want to submit your test?')) {
       finishTestMode();
