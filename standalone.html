@@ -1702,15 +1702,133 @@ body {
   transition: width 0.4s ease;
 }
 
+/* =========================================================
+   Home Auth Gateway & Study Topic Setup Hub
+   ========================================================= */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+@media (max-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.home-auth-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-lg);
+}
+
+.home-auth-tabs {
+  display: flex;
+  background: var(--bg-primary);
+  border-radius: var(--radius-full);
+  padding: 4px;
+  margin-bottom: 1.15rem;
+  border: 1px solid var(--border-glass);
+}
+
+.home-auth-tab {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  border-radius: var(--radius-full);
+  font-weight: 700;
+  font-size: 0.86rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  background: transparent;
+  color: var(--text-secondary);
+}
+
+.home-auth-tab.active {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-cyan));
+  color: #ffffff;
+  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.4);
+}
+
+.home-user-card {
+  background: var(--bg-primary);
+  border: 1px solid var(--border-accent);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  text-align: center;
+}
+
+/* Study Setup Hub */
+.study-setup-hub {
+  background: var(--bg-card);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 1.75rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-md);
+}
+
+.study-topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1rem;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.study-topic-card {
+  background: var(--bg-primary);
+  border: 2px solid var(--border-glass);
+  border-radius: var(--radius-md);
+  padding: 1.1rem;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.study-topic-card:hover {
+  border-color: var(--accent-cyan);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.study-topic-card.active {
+  border-color: var(--accent-primary);
+  background: rgba(99, 102, 241, 0.1);
+  box-shadow: 0 0 0 2px var(--accent-primary);
+}
+
+.topic-icon-wrap {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+}
+
+/* World-Class 1-by-1 Action Bar */
 .single-q-action-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--bg-secondary);
+  background: var(--bg-card);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border: 1px solid var(--border-accent);
   border-radius: var(--radius-lg);
-  padding: 1rem 1.5rem;
-  margin-top: 1.5rem;
+  padding: 1.15rem 1.75rem;
+  margin-top: 1.75rem;
   gap: 1rem;
   flex-wrap: wrap;
   box-shadow: var(--shadow-lg);
@@ -1720,13 +1838,13 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 10px 20px;
+  padding: 11px 22px;
   border-radius: var(--radius-full);
   font-size: 0.92rem;
   font-weight: 700;
   cursor: pointer;
   transition: all var(--transition-fast);
-  border: 1px solid var(--border-glass);
+  border: 1px solid transparent;
 }
 
 .btn-nav-action:disabled {
@@ -1736,44 +1854,42 @@ body {
 }
 
 .btn-nav-prev {
-  background: var(--bg-card);
+  background: var(--bg-primary);
+  border-color: var(--border-glass);
   color: var(--text-primary);
 }
 
 .btn-nav-prev:hover:not(:disabled) {
-  background: rgba(255, 255, 255, 0.08);
-  transform: translateX(-2px);
+  background: rgba(99, 102, 241, 0.12);
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+  transform: translateX(-3px);
 }
 
 .btn-nav-skip {
   background: rgba(245, 158, 11, 0.12);
-  border-color: rgba(245, 158, 11, 0.3);
+  border-color: rgba(245, 158, 11, 0.4);
   color: #f59e0b;
 }
 
 .btn-nav-skip:hover {
-  background: #f59e0b;
-  color: #fff;
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  border-color: #f59e0b;
+  color: #ffffff;
   transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
 }
 
 .btn-nav-next {
   background: linear-gradient(135deg, var(--accent-primary), var(--accent-cyan));
   border: none;
   color: #ffffff;
-  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.35);
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.35);
 }
 
 .btn-nav-next:hover {
-  transform: translateX(2px);
-  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.5);
-}
-
-.btn-nav-jump {
-  background: var(--bg-primary);
-  color: var(--text-secondary);
-  padding: 8px 14px;
-  font-size: 0.84rem;
+  transform: translateX(3px) scale(1.02);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.55);
 }
 
 /* Toast Notifications */
@@ -2291,33 +2407,216 @@ input, select {
       </div>
     </header>
 
-    <!-- Hero Section with Summary Stats -->
+    <!-- Hero Section with Dual-Grid: Info & Live Home Auth Gateway -->
     <section class="hero-section">
-      <div class="hero-content">
+      <div class="hero-grid">
         <div class="hero-text">
-          <h1>General Aptitude & Reasoning Master</h1>
-          <p>
-            Comprehensive English & Bengali bilingual preparation with 10 full sets (50 questions each) covering Quantitative Aptitude, Logical Reasoning, Verbal Ability & Data Interpretation with descriptive step-by-step solutions.
+          <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(99, 102, 241, 0.15); border: 1px solid var(--border-accent); color: var(--accent-cyan); padding: 5px 14px; border-radius: var(--radius-full); font-size: 0.84rem; font-weight: 700; margin-bottom: 1rem;">
+            <i class="fas fa-certificate"></i> Premium Bilingual Preparation Engine
+          </div>
+          <h1 style="font-size: 2.1rem; line-height: 1.25; margin-bottom: 0.75rem;">
+            General Aptitude & Reasoning Master
+          </h1>
+          <p style="font-size: 0.96rem; line-height: 1.6; color: var(--text-secondary); margin-bottom: 1.5rem;">
+            Comprehensive English & Bengali bilingual preparation with 10 full sets (50 questions each) covering Quantitative Aptitude, Logical Reasoning, Verbal Ability & Data Interpretation with step-by-step solutions and 1-by-1 Focus Mode.
           </p>
+
+          <div class="hero-stats" style="margin-bottom: 0;">
+            <div class="stat-chip">
+              <div class="stat-number" id="practiceCount">500</div>
+              <div class="stat-label">Total Questions</div>
+            </div>
+            <div class="stat-chip">
+              <div class="stat-number" style="color: var(--accent-cyan);">10</div>
+              <div class="stat-label">Full Sets</div>
+            </div>
+            <div class="stat-chip">
+              <div class="stat-number" id="bookmarkCount">0</div>
+              <div class="stat-label">Saved ⭐</div>
+            </div>
+            <div class="stat-chip">
+              <div class="stat-number" style="color: var(--accent-emerald);">100%</div>
+              <div class="stat-label">Bilingual</div>
+            </div>
+          </div>
         </div>
-        <div class="hero-stats">
-          <div class="stat-chip">
-            <div class="stat-number" id="practiceCount">500</div>
-            <div class="stat-label">Total Questions</div>
+
+        <!-- Right Side: Home Auth Gateway / Student Welcome Hub -->
+        <div class="home-auth-card" id="homeAuthBox">
+          <!-- Guest / Not Logged In View -->
+          <div id="homeGuestAuthView">
+            <div class="home-auth-tabs">
+              <button type="button" class="home-auth-tab active" id="homeTabSignIn" onclick="switchHomeAuthTab('signin')">
+                <i class="fas fa-sign-in-alt"></i> Sign In
+              </button>
+              <button type="button" class="home-auth-tab" id="homeTabSignUp" onclick="switchHomeAuthTab('signup')">
+                <i class="fas fa-user-plus"></i> Sign Up
+              </button>
+            </div>
+
+            <!-- Home Sign In Form -->
+            <form id="homeSignInForm" onsubmit="handleHomeSignIn(event)">
+              <div style="margin-bottom: 0.85rem;">
+                <label style="display: block; font-size: 0.84rem; font-weight: 600; margin-bottom: 4px;">Email or Username:</label>
+                <input type="text" id="homeLoginId" required placeholder="e.g. student@gmail.com" style="width: 100%; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary); font-size: 0.88rem;">
+              </div>
+              <div style="margin-bottom: 1rem;">
+                <label style="display: block; font-size: 0.84rem; font-weight: 600; margin-bottom: 4px;">Password:</label>
+                <input type="password" id="homeLoginPass" required placeholder="Enter password" style="width: 100%; padding: 9px 12px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary); font-size: 0.88rem;">
+              </div>
+              <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; padding: 10px; font-weight: 700; margin-bottom: 0.75rem;">
+                <i class="fas fa-arrow-right"></i> Sign In & Select Topic
+              </button>
+              <button type="button" class="btn-secondary" style="width: 100%; justify-content: center; padding: 8px; font-size: 0.82rem;" onclick="scrollToStudyHub()">
+                <i class="fas fa-bolt"></i> Practice as Guest (No login required)
+              </button>
+            </form>
+
+            <!-- Home Sign Up Form -->
+            <form id="homeSignUpForm" onsubmit="handleHomeSignUp(event)" style="display: none;">
+              <div style="margin-bottom: 0.65rem;">
+                <label style="display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 3px;">Full Name / পুরো নাম:</label>
+                <input type="text" id="homeRegName" required placeholder="e.g. Rahul Sharma" style="width: 100%; padding: 8px 10px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary); font-size: 0.85rem;">
+              </div>
+              <div style="margin-bottom: 0.65rem;">
+                <label style="display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 3px;">Email or Username:</label>
+                <input type="text" id="homeRegId" required placeholder="e.g. rahul@wbcs.in" style="width: 100%; padding: 8px 10px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary); font-size: 0.85rem;">
+              </div>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 0.65rem;">
+                <div>
+                  <label style="display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 3px;">Password:</label>
+                  <input type="password" id="homeRegPass" required placeholder="Min 4 chars" style="width: 100%; padding: 8px 10px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary); font-size: 0.85rem;">
+                </div>
+                <div>
+                  <label style="display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 3px;">Confirm:</label>
+                  <input type="password" id="homeRegConfirm" required placeholder="Re-enter" style="width: 100%; padding: 8px 10px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary); font-size: 0.85rem;">
+                </div>
+              </div>
+              <div style="margin-bottom: 0.85rem;">
+                <label style="display: block; font-size: 0.8rem; font-weight: 600; margin-bottom: 3px;">Target Exam:</label>
+                <select id="homeRegExam" style="width: 100%; padding: 8px 10px; border-radius: var(--radius-sm); border: 1px solid var(--border-glass); background: var(--bg-primary); color: var(--text-primary); font-size: 0.85rem;">
+                  <option value="WBCS (Executive & Allied)">WBCS (Executive & Allied)</option>
+                  <option value="SSC CGL / CHSL">SSC CGL / CHSL</option>
+                  <option value="Banking (IBPS PO / Clerk / SBI)">Banking (IBPS/SBI)</option>
+                  <option value="UPSC Civil Services">UPSC Civil Services</option>
+                  <option value="Railways RRB NTPC / Group D">Railways RRB</option>
+                  <option value="Campus Placements & IT">Campus Placements & IT</option>
+                  <option value="General Preparation">General Preparation</option>
+                </select>
+              </div>
+              <button type="submit" class="btn-primary" style="width: 100%; justify-content: center; padding: 10px; font-weight: 700; background: linear-gradient(135deg, var(--accent-emerald), #059669);">
+                <i class="fas fa-user-check"></i> Register & Start Learning
+              </button>
+            </form>
           </div>
-          <div class="stat-chip">
-            <div class="stat-number" style="color: var(--accent-cyan);">10</div>
-            <div class="stat-label">Full Sets</div>
-          </div>
-          <div class="stat-chip">
-            <div class="stat-number" id="bookmarkCount">0</div>
-            <div class="stat-label">Saved ⭐</div>
-          </div>
-          <div class="stat-chip">
-            <div class="stat-number" style="color: var(--accent-emerald);">100%</div>
-            <div class="stat-label">Bilingual</div>
+
+          <!-- Logged In Student Quick Hub -->
+          <div id="homeUserActiveView" style="display: none;">
+            <div class="home-user-card">
+              <div style="width: 52px; height: 52px; border-radius: 50%; background: linear-gradient(135deg, var(--accent-primary), var(--accent-cyan)); color: #fff; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin: 0 auto 0.75rem;">
+                <i class="fas fa-user-graduate"></i>
+              </div>
+              <h3 id="homeUserCardName" style="font-size: 1.25rem; font-weight: 800; margin-bottom: 2px;">Student Name</h3>
+              <p id="homeUserCardExam" style="color: var(--accent-cyan); font-weight: 600; font-size: 0.85rem; margin-bottom: 0.85rem;">Target Exam</p>
+              
+              <div style="display: flex; gap: 8px; justify-content: center;">
+                <button class="btn-primary" style="flex: 1; justify-content: center; padding: 9px;" onclick="scrollToStudyHub()">
+                  <i class="fas fa-rocket"></i> Select Set & Topic
+                </button>
+                <button class="btn-secondary" style="padding: 9px 14px;" onclick="logoutStudent()">
+                  <i class="fas fa-sign-out-alt"></i>
+                </button>
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!-- Interactive Study Topic & Set Setup Hub -->
+    <section class="study-setup-hub" id="studySetupHub">
+      <div class="hub-title">
+        <i class="fas fa-compass" style="color: var(--accent-cyan);"></i>
+        <span>Study Setup: Select Topic & Set / বিষয় ও সেট নির্বাচন করুন</span>
+      </div>
+      <p style="color: var(--text-secondary); font-size: 0.88rem;">
+        Choose your desired subject or set below to launch a focused 1-by-1 question session with instant explanations.
+      </p>
+
+      <!-- 4 Core Topic Cards Grid -->
+      <div class="study-topic-grid">
+        <div class="study-topic-card active" data-cat="all" onclick="selectTopicCard('all')">
+          <div class="topic-icon-wrap" style="background: rgba(99, 102, 241, 0.15); color: var(--accent-primary);">
+            <i class="fas fa-globe"></i>
+          </div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem;">All Topics / সকল বিষয়</div>
+            <div style="font-size: 0.78rem; color: var(--text-muted);">500 Questions (Mixed Sets)</div>
+          </div>
+        </div>
+
+        <div class="study-topic-card" data-cat="quant" onclick="selectTopicCard('quant')">
+          <div class="topic-icon-wrap" style="background: rgba(6, 182, 212, 0.15); color: var(--accent-cyan);">
+            <i class="fas fa-calculator"></i>
+          </div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem;">Quantitative Aptitude (গণিত)</div>
+            <div style="font-size: 0.78rem; color: var(--text-muted);">Arithmetic, Algebra, Speed & Work</div>
+          </div>
+        </div>
+
+        <div class="study-topic-card" data-cat="logical" onclick="selectTopicCard('logical')">
+          <div class="topic-icon-wrap" style="background: rgba(245, 158, 11, 0.15); color: var(--accent-amber);">
+            <i class="fas fa-brain"></i>
+          </div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem;">Logical Reasoning (রিজনিং)</div>
+            <div style="font-size: 0.78rem; color: var(--text-muted);">Puzzles, Series, Blood Relations</div>
+          </div>
+        </div>
+
+        <div class="study-topic-card" data-cat="verbal" onclick="selectTopicCard('verbal')">
+          <div class="topic-icon-wrap" style="background: rgba(16, 185, 129, 0.15); color: var(--accent-emerald);">
+            <i class="fas fa-book-open"></i>
+          </div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem;">Verbal Ability (ইংরেজি ও ভাষা)</div>
+            <div style="font-size: 0.78rem; color: var(--text-muted);">Vocabulary, Grammar & Comprehension</div>
+          </div>
+        </div>
+
+        <div class="study-topic-card" data-cat="di" onclick="selectTopicCard('di')">
+          <div class="topic-icon-wrap" style="background: rgba(168, 85, 247, 0.15); color: var(--accent-purple);">
+            <i class="fas fa-chart-pie"></i>
+          </div>
+          <div>
+            <div style="font-weight: 700; font-size: 0.95rem;">Data Interpretation (তথ্য বিশ্লেষণ)</div>
+            <div style="font-size: 0.78rem; color: var(--text-muted);">Tables, Graphs & Sufficiency</div>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 12px; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+        <div style="display: flex; gap: 10px; align-items: center; flex-wrap: wrap;">
+          <span style="font-size: 0.88rem; font-weight: 700; color: var(--text-secondary);"><i class="fas fa-layer-group"></i> Quick Launch Set:</span>
+          <select id="hubSetSelect" onchange="syncHubSet(this.value)" style="padding: 9px 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-accent); background: var(--bg-primary); color: var(--text-primary); font-weight: 600; font-size: 0.88rem;">
+            <option value="all">📚 All Sets (500 Questions)</option>
+            <option value="1">Set 1: Quant Foundations (Q1–50)</option>
+            <option value="2">Set 2: Logical Reasoning I (Q51–100)</option>
+            <option value="3">Set 3: Quant - Commercial (Q101–150)</option>
+            <option value="4">Set 4: Logical Reasoning II (Q151–200)</option>
+            <option value="5">Set 5: Verbal Ability (Q201–250)</option>
+            <option value="6">Set 6: Advanced Quant (Q251–300)</option>
+            <option value="7">Set 7: Data Interpretation (Q301–350)</option>
+            <option value="8">Set 8: Full Mock Set 1 (Q351–400)</option>
+            <option value="9">Set 9: Full Mock Set 2 (Q401–450)</option>
+            <option value="10">Set 10: Full Mock Set 3 (Q451–500)</option>
+          </select>
+        </div>
+
+        <button class="btn-primary" style="padding: 12px 24px; font-size: 1rem; font-weight: 800; background: linear-gradient(135deg, var(--accent-primary), var(--accent-cyan)); box-shadow: 0 4px 18px rgba(99, 102, 241, 0.45);" onclick="launchFocusSession()">
+          <i class="fas fa-play"></i> Start 1-by-1 Questions <i class="fas fa-arrow-right"></i>
+        </button>
       </div>
     </section>
 
@@ -28152,6 +28451,11 @@ function updateStudentUI() {
   const loggedInProfileView = document.getElementById('loggedInProfileView');
   const studentModalTitle = document.getElementById('studentModalTitle');
 
+  const homeGuestAuthView = document.getElementById('homeGuestAuthView');
+  const homeUserActiveView = document.getElementById('homeUserActiveView');
+  const homeUserCardName = document.getElementById('homeUserCardName');
+  const homeUserCardExam = document.getElementById('homeUserCardExam');
+
   if (state.currentStudent && state.currentStudent.name) {
     if (elements.studentNavName) {
       elements.studentNavName.innerText = `${state.currentStudent.name}`;
@@ -28168,6 +28472,12 @@ function updateStudentUI() {
     if (pName) pName.innerText = state.currentStudent.name;
     if (pExam) pExam.innerText = `Target: ${state.currentStudent.targetExam || 'General Preparation'}`;
     if (pEmail) pEmail.innerText = state.currentStudent.identifier || 'Signed In';
+
+    // Update Home Auth card view
+    if (homeGuestAuthView) homeGuestAuthView.style.display = 'none';
+    if (homeUserActiveView) homeUserActiveView.style.display = 'block';
+    if (homeUserCardName) homeUserCardName.innerText = state.currentStudent.name;
+    if (homeUserCardExam) homeUserCardExam.innerText = `Target Exam: ${state.currentStudent.targetExam || 'General Preparation'}`;
   } else {
     if (elements.studentNavName) {
       elements.studentNavName.innerText = 'Student Login';
@@ -28176,6 +28486,10 @@ function updateStudentUI() {
     if (loggedInProfileView) loggedInProfileView.style.display = 'none';
     if (studentModalTitle) studentModalTitle.innerText = 'Student Account / ছাত্র অ্যাকাউন্ট';
     switchAuthTab('signin');
+
+    // Update Home Auth card view
+    if (homeGuestAuthView) homeGuestAuthView.style.display = 'block';
+    if (homeUserActiveView) homeUserActiveView.style.display = 'none';
   }
 }
 
@@ -28190,10 +28504,122 @@ function logoutStudent() {
   }
 }
 
+function switchHomeAuthTab(tab) {
+  const tabSignIn = document.getElementById('homeTabSignIn');
+  const tabSignUp = document.getElementById('homeTabSignUp');
+  const signInForm = document.getElementById('homeSignInForm');
+  const signUpForm = document.getElementById('homeSignUpForm');
+
+  if (!tabSignIn || !tabSignUp || !signInForm || !signUpForm) return;
+
+  if (tab === 'signup') {
+    tabSignUp.classList.add('active');
+    tabSignIn.classList.remove('active');
+    signInForm.style.display = 'none';
+    signUpForm.style.display = 'block';
+  } else {
+    tabSignIn.classList.add('active');
+    tabSignUp.classList.remove('active');
+    signInForm.style.display = 'block';
+    signUpForm.style.display = 'none';
+  }
+}
+
+function handleHomeSignIn(e) {
+  if (e) e.preventDefault();
+  const idInput = document.getElementById('homeLoginId');
+  const passInput = document.getElementById('homeLoginPass');
+  const modalIdInput = document.getElementById('loginIdentifier');
+  const modalPassInput = document.getElementById('loginPassword');
+
+  if (modalIdInput && idInput) modalIdInput.value = idInput.value;
+  if (modalPassInput && passInput) modalPassInput.value = passInput.value;
+
+  handleStudentSignIn(e);
+}
+
+function handleHomeSignUp(e) {
+  if (e) e.preventDefault();
+  const regName = document.getElementById('homeRegName');
+  const regId = document.getElementById('homeRegId');
+  const regPass = document.getElementById('homeRegPass');
+  const regConfirm = document.getElementById('homeRegConfirm');
+  const regExam = document.getElementById('homeRegExam');
+
+  if (document.getElementById('regName') && regName) document.getElementById('regName').value = regName.value;
+  if (document.getElementById('regIdentifier') && regId) document.getElementById('regIdentifier').value = regId.value;
+  if (document.getElementById('regPassword') && regPass) document.getElementById('regPassword').value = regPass.value;
+  if (document.getElementById('regConfirmPassword') && regConfirm) document.getElementById('regConfirmPassword').value = regConfirm.value;
+  if (document.getElementById('regTargetExam') && regExam) document.getElementById('regTargetExam').value = regExam.value;
+
+  handleStudentSignUp(e);
+}
+
+function selectTopicCard(cat) {
+  state.category = cat;
+  state.singleCurrentIndex = 0;
+  
+  document.querySelectorAll('.study-topic-card').forEach(card => {
+    card.classList.toggle('active', card.dataset.cat === cat);
+  });
+
+  if (elements.categoryFilter) {
+    elements.categoryFilter.value = cat;
+  }
+
+  showToast(`Selected Topic: ${cat === 'all' ? 'All Topics' : cat.toUpperCase()}`);
+  renderQuestions();
+}
+
+function syncHubSet(setVal) {
+  state.selectedSet = setVal;
+  state.singleCurrentIndex = 0;
+
+  if (elements.setFilter) {
+    elements.setFilter.value = setVal;
+  }
+  if (elements.setPillsList) {
+    elements.setPillsList.querySelectorAll('.set-pill').forEach(p => {
+      p.classList.toggle('active', p.dataset.set === setVal);
+    });
+  }
+  showToast(setVal === 'all' ? 'All Sets (500 Questions)' : `Selected Set ${setVal} (50 Questions)`);
+  renderQuestions();
+}
+
+function scrollToStudyHub() {
+  const hub = document.getElementById('studySetupHub');
+  if (hub) {
+    hub.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+function launchFocusSession() {
+  state.viewMode = 'single';
+  state.singleCurrentIndex = 0;
+  if (elements.viewToggleText) {
+    elements.viewToggleText.innerText = '1-by-1 View';
+  }
+  renderQuestions();
+
+  const container = document.getElementById('questionsContainer');
+  if (container) {
+    container.scrollIntoView({ behavior: 'smooth' });
+  }
+  showToast('Starting 1-by-1 Questions! 🎯');
+}
+
 window.switchAuthTab = switchAuthTab;
 window.handleStudentSignIn = handleStudentSignIn;
 window.handleStudentSignUp = handleStudentSignUp;
 window.logoutStudent = logoutStudent;
+window.switchHomeAuthTab = switchHomeAuthTab;
+window.handleHomeSignIn = handleHomeSignIn;
+window.handleHomeSignUp = handleHomeSignUp;
+window.selectTopicCard = selectTopicCard;
+window.syncHubSet = syncHubSet;
+window.scrollToStudyHub = scrollToStudyHub;
+window.launchFocusSession = launchFocusSession;
 
 // View Toggle (1-by-1 Focus vs Full List)
 function toggleViewMode() {

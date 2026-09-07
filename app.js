@@ -421,6 +421,11 @@ function updateStudentUI() {
   const loggedInProfileView = document.getElementById('loggedInProfileView');
   const studentModalTitle = document.getElementById('studentModalTitle');
 
+  const homeGuestAuthView = document.getElementById('homeGuestAuthView');
+  const homeUserActiveView = document.getElementById('homeUserActiveView');
+  const homeUserCardName = document.getElementById('homeUserCardName');
+  const homeUserCardExam = document.getElementById('homeUserCardExam');
+
   if (state.currentStudent && state.currentStudent.name) {
     if (elements.studentNavName) {
       elements.studentNavName.innerText = `${state.currentStudent.name}`;
@@ -437,6 +442,12 @@ function updateStudentUI() {
     if (pName) pName.innerText = state.currentStudent.name;
     if (pExam) pExam.innerText = `Target: ${state.currentStudent.targetExam || 'General Preparation'}`;
     if (pEmail) pEmail.innerText = state.currentStudent.identifier || 'Signed In';
+
+    // Update Home Auth card view
+    if (homeGuestAuthView) homeGuestAuthView.style.display = 'none';
+    if (homeUserActiveView) homeUserActiveView.style.display = 'block';
+    if (homeUserCardName) homeUserCardName.innerText = state.currentStudent.name;
+    if (homeUserCardExam) homeUserCardExam.innerText = `Target Exam: ${state.currentStudent.targetExam || 'General Preparation'}`;
   } else {
     if (elements.studentNavName) {
       elements.studentNavName.innerText = 'Student Login';
@@ -445,6 +456,10 @@ function updateStudentUI() {
     if (loggedInProfileView) loggedInProfileView.style.display = 'none';
     if (studentModalTitle) studentModalTitle.innerText = 'Student Account / ছাত্র অ্যাকাউন্ট';
     switchAuthTab('signin');
+
+    // Update Home Auth card view
+    if (homeGuestAuthView) homeGuestAuthView.style.display = 'block';
+    if (homeUserActiveView) homeUserActiveView.style.display = 'none';
   }
 }
 
@@ -459,10 +474,122 @@ function logoutStudent() {
   }
 }
 
+function switchHomeAuthTab(tab) {
+  const tabSignIn = document.getElementById('homeTabSignIn');
+  const tabSignUp = document.getElementById('homeTabSignUp');
+  const signInForm = document.getElementById('homeSignInForm');
+  const signUpForm = document.getElementById('homeSignUpForm');
+
+  if (!tabSignIn || !tabSignUp || !signInForm || !signUpForm) return;
+
+  if (tab === 'signup') {
+    tabSignUp.classList.add('active');
+    tabSignIn.classList.remove('active');
+    signInForm.style.display = 'none';
+    signUpForm.style.display = 'block';
+  } else {
+    tabSignIn.classList.add('active');
+    tabSignUp.classList.remove('active');
+    signInForm.style.display = 'block';
+    signUpForm.style.display = 'none';
+  }
+}
+
+function handleHomeSignIn(e) {
+  if (e) e.preventDefault();
+  const idInput = document.getElementById('homeLoginId');
+  const passInput = document.getElementById('homeLoginPass');
+  const modalIdInput = document.getElementById('loginIdentifier');
+  const modalPassInput = document.getElementById('loginPassword');
+
+  if (modalIdInput && idInput) modalIdInput.value = idInput.value;
+  if (modalPassInput && passInput) modalPassInput.value = passInput.value;
+
+  handleStudentSignIn(e);
+}
+
+function handleHomeSignUp(e) {
+  if (e) e.preventDefault();
+  const regName = document.getElementById('homeRegName');
+  const regId = document.getElementById('homeRegId');
+  const regPass = document.getElementById('homeRegPass');
+  const regConfirm = document.getElementById('homeRegConfirm');
+  const regExam = document.getElementById('homeRegExam');
+
+  if (document.getElementById('regName') && regName) document.getElementById('regName').value = regName.value;
+  if (document.getElementById('regIdentifier') && regId) document.getElementById('regIdentifier').value = regId.value;
+  if (document.getElementById('regPassword') && regPass) document.getElementById('regPassword').value = regPass.value;
+  if (document.getElementById('regConfirmPassword') && regConfirm) document.getElementById('regConfirmPassword').value = regConfirm.value;
+  if (document.getElementById('regTargetExam') && regExam) document.getElementById('regTargetExam').value = regExam.value;
+
+  handleStudentSignUp(e);
+}
+
+function selectTopicCard(cat) {
+  state.category = cat;
+  state.singleCurrentIndex = 0;
+  
+  document.querySelectorAll('.study-topic-card').forEach(card => {
+    card.classList.toggle('active', card.dataset.cat === cat);
+  });
+
+  if (elements.categoryFilter) {
+    elements.categoryFilter.value = cat;
+  }
+
+  showToast(`Selected Topic: ${cat === 'all' ? 'All Topics' : cat.toUpperCase()}`);
+  renderQuestions();
+}
+
+function syncHubSet(setVal) {
+  state.selectedSet = setVal;
+  state.singleCurrentIndex = 0;
+
+  if (elements.setFilter) {
+    elements.setFilter.value = setVal;
+  }
+  if (elements.setPillsList) {
+    elements.setPillsList.querySelectorAll('.set-pill').forEach(p => {
+      p.classList.toggle('active', p.dataset.set === setVal);
+    });
+  }
+  showToast(setVal === 'all' ? 'All Sets (500 Questions)' : `Selected Set ${setVal} (50 Questions)`);
+  renderQuestions();
+}
+
+function scrollToStudyHub() {
+  const hub = document.getElementById('studySetupHub');
+  if (hub) {
+    hub.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+
+function launchFocusSession() {
+  state.viewMode = 'single';
+  state.singleCurrentIndex = 0;
+  if (elements.viewToggleText) {
+    elements.viewToggleText.innerText = '1-by-1 View';
+  }
+  renderQuestions();
+
+  const container = document.getElementById('questionsContainer');
+  if (container) {
+    container.scrollIntoView({ behavior: 'smooth' });
+  }
+  showToast('Starting 1-by-1 Questions! 🎯');
+}
+
 window.switchAuthTab = switchAuthTab;
 window.handleStudentSignIn = handleStudentSignIn;
 window.handleStudentSignUp = handleStudentSignUp;
 window.logoutStudent = logoutStudent;
+window.switchHomeAuthTab = switchHomeAuthTab;
+window.handleHomeSignIn = handleHomeSignIn;
+window.handleHomeSignUp = handleHomeSignUp;
+window.selectTopicCard = selectTopicCard;
+window.syncHubSet = syncHubSet;
+window.scrollToStudyHub = scrollToStudyHub;
+window.launchFocusSession = launchFocusSession;
 
 // View Toggle (1-by-1 Focus vs Full List)
 function toggleViewMode() {
